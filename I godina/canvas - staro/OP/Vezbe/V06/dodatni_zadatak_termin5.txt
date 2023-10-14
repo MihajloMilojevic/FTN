@@ -1,0 +1,15 @@
+1. Datoteka mountains.txt sadrži podatke o planinskim vrhovima višim od 6000m. Od podataka navedeno je ime vrha, visina u metrima, visina u ft, planinski venac kome pripadaju i država (ili države ukoliko su smešteni na granici) u kojoj se nalazi. Na osnovu podataka iz ove datoteke:
+	a) Ispisati sve planinske vrhove za zadatu državu
+	b) Ispisati sve planinske vrhove na granici 2 zemlje više od 7700m a niže od 8100m.
+	c) Ispisati tabelu broja vrhova iznad 6000m za zadatu državu.
+	d) Ispisati tabelu broja vrhova iznad 6000m po državi. Vrhove koji se nalaze na granici, računati kod obe (tj. svih) države. Primer tabele:
+		Country   Num
+		--------------
+		Nepal     54
+		India     23
+		China     32
+
+		Napomena: U prvoj implementaciji bazirati postupak na zadatku c). Zatim pokušajte da implementirate efikasniji postupak.
+
+	e) Pronaći sve planinske vrhove koji pripadaju zadatom planinskom vencu, pa za te vrhove kreirati tabelu kao u zadatku c). Vrhove koji se nalaze na granici, računati kod obe (tj. svih) države.
+	f) Izdvojiti planinske vrhove koji se nalaze na granici dve (ili više) država. Pronaći planinski venac koji ima najveći broj 'graničnih' vrhova.

@@ -1,0 +1,9 @@
+TODO:
+1. Pročitati strane 1,2 i 3 praktikuma sa predmeta
+    Arhitektura računara (akcenat na rad sa fajlovima, putanjama itd).
+
+2. Proći još jednom kroz prezentaciju sa prošlog
+    termina predavanja (stringovi i fajlovi)
+
+3. Posetiti https://codingbat.com/python. Primeri su grupisani po oblastima pa
+ je odabir zadataka za vežbanje jednostavan.
