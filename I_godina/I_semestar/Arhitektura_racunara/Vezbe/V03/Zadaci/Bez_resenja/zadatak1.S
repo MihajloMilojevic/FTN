@@ -21,7 +21,8 @@ petlja:                     # sabira elemente u opsegu [ind1, ind2)
 
 deli:
     movl $0, %edx
-    divl $N
+    movl $N, %ecx
+    divl %ecx
     movl %eax, sredina_celo
     movl %edx, sredina_ost
 
