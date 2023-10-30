@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DC83EC69-ABCC-7876-9156-BBCD9B9C16D3" name="FILM">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:48:39 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sifra" id="134B900F-8F93-D5DE-2AC1-AA7197AC4E60">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:48:43 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="naziv" id="4700DFB7-B825-9841-7411-EFC1EE0A379E">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:49:02 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zanr" id="AB4F8309-51E1-53AB-DB88-1D9BF424259E">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:49:09 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="trajanje" id="9E52E885-A2B7-018A-2B53-D7EE32B27846">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:49:40 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="reziser" id="9F41D290-7235-221F-74B7-469AD9D1C3F8">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:50:14 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="glavne_uloge" id="D9327AF7-BE2B-8B11-6152-3792E262D9E9">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:50:36 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zemlja_porekla" id="0B702C37-C180-9765-2A16-61D02F421C4F">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:50:49 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="godina_proizvodnje" id="38819AB5-0F37-5E03-8428-1E0D738F3267">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:52:10 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="opis" id="0A95046B-FB84-B9EA-5776-9B5B11448B17">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:52:26 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="92EAD131-FD9A-07D1-481C-7D3A63C0A139" name="FILM PK">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:48:59 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>134B900F-8F93-D5DE-2AC1-AA7197AC4E60</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
