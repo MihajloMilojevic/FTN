@@ -24,5 +24,5 @@ if __name__ == '__main__':
     # db.korisnici.Insert(k)
     print(db.korisnici.SelectById("mihajlo").uloga)
     db.save()
-    print(db.toJson())
+    # print(db.toJsonString())
 

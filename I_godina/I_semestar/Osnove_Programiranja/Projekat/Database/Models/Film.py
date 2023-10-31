@@ -1,6 +1,10 @@
 import json
 
 class Film:
+
+    primary_key = "sifra"
+    name = "Film"
+    
     def __init__(self, sifra, naziv, zanrovi, trajanje, reziser, glavne_uloge,
                  zemlja_porekla, godina_proizvodnje, opis):
         self.sifra = sifra
@@ -59,8 +63,11 @@ class Film:
             case _:
                 raise "Invalid key"
     
-    def toJson(self):
-        return json.dumps({
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "sifra": self.sifra,
             "naziv": self.naziv,
             "zanrovi": self.zanrovi,
@@ -70,20 +77,23 @@ class Film:
             "zemlja_porekla": self.zemlja_porekla,
             "godina_proizvodnje": self.godina_proizvodnje,
             "opis": self.opis
-        })
+        }
 
     @staticmethod
-    def fromJson(str):
-        val = json.loads(str)
+    def fromJsonString(str):
+        return Film.fromJsonObject(json.loads(str))
+
+    @staticmethod
+    def fromJsonObject(obj):
         return Film(
-            val["sifra"], 
-            val["naziv"], 
-            val["zanrovi"], 
-            val["trajanje"], 
-            val["reziser"],
-            val["glavne_uloge"], 
-            val["zemlja_porekla"], 
-            val["godina_proizvodnje"], 
-            val["opis"]
+            obj["sifra"], 
+            obj["naziv"], 
+            obj["zanrovi"], 
+            obj["trajanje"], 
+            obj["reziser"],
+            obj["glavne_uloge"], 
+            obj["zemlja_porekla"], 
+            obj["godina_proizvodnje"], 
+            obj["opis"]
         )
     

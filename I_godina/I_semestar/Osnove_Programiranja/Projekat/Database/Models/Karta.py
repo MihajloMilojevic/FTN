@@ -3,6 +3,9 @@ from datetime import datetime
 
 
 class Karta:
+    
+    primary_key = "sifra"
+    name = "Karta"
 
     def __init__(self, sifra, sifra_termina, oznaka_sedista, rezervisano, datum_prodaje, korisnicko_ime, ime_i_prezime):
         self.sifra = sifra
@@ -51,8 +54,11 @@ class Karta:
             case _:
                 raise "Invalid key"
     
-    def toJson(self):
-        return json.dumps({
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "sifra": self.sifra,
             "sifra_termina": self.sifra_termina,
             "oznaka_sedista": self.oznaka_sedista,
@@ -60,17 +66,20 @@ class Karta:
             "datum_prodaje": datetime.strftime(self.datum_prodaje, "%x"),
             "korisnicko_ime": self.korisnicko_ime,
             "ime_i_prezime": self.ime_i_prezime
-        })
+        }
     
     @staticmethod
     def fromJson(str):
-        v = json.loads(str)
+        return Karta.fromJsonObject(json.loads(str))
+    
+    @staticmethod
+    def fromJsonObject(obj):
         return Karta(
-            v["sifra"],
-            v["sifra_termina"],
-            v["oznaka_sedista"],
-            v["rezervisano"],
-            datetime.strptime(v["datum_prodaje"], "%x"),
-            v["korisnicko_ime"],
-            v["ime_i_prezime"],
+            obj["sifra"],
+            obj["sifra_termina"],
+            obj["oznaka_sedista"],
+            obj["rezervisano"],
+            datetime.strptime(obj["datum_prodaje"], "%x"),
+            obj["korisnicko_ime"],
+            obj["ime_i_prezime"],
         )

@@ -1,42 +1,49 @@
 from Database.Table import Table
+import Database.Models as Models
 import json
 
 
 class Database:
     def __init__(self):
-        self.korisnici = Table("Korisnik", "korisnicko_ime")
-        self.sale = Table("Sala", "sifra")
-        self.filmovi = Table("Film", "sifra")
-        self.projekcije = Table("Projekcija", "sifra")
-        self.termini = Table("Termin", "sifra")
-        self.karte = Table("Karta", "sifra")
+        self.korisnici = Table(Models.Korisnik)
+        self.sale = Table(Models.Sala)
+        self.filmovi = Table(Models.Film)
+        self.projekcije = Table(Models.Projekcija)
+        self.termini = Table(Models.Termin)
+        self.karte = Table(Models.Karta)
 
-    def toJson(self):
-        return json.dumps({
-            "korisnici": self.korisnici.toJson(),
-            "sale": self.sale.toJson(),
-            "filmovi": self.filmovi.toJson(),
-            "projekcije": self.projekcije.toJson(),
-            "termini": self.termini.toJson(),
-            "karte": self.karte.toJson()
-        })
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
+            "korisnici": self.korisnici.toJsonObject(),
+            "sale": self.sale.toJsonObject(),
+            "filmovi": self.filmovi.toJsonObject(),
+            "projekcije": self.projekcije.toJsonObject(),
+            "termini": self.termini.toJsonObject(),
+            "karte": self.karte.toJsonObject()
+        }
     
     @staticmethod
-    def fromJson(str):
-        v = json.loads(str)
+    def fromJsonString(str):
+        return Database.fromJsonObject(json.loads(str))
+        
+    @staticmethod
+    def fromJsonObject(obj):
         db = Database()
-        db.korisnici = Table.fromJson(v["korisnici"])
-        db.sale = Table.fromJson(v["sale"])
-        db.filmovi = Table.fromJson(v["filmovi"])
-        db.projekcije = Table.fromJson(v["projekcije"])
-        db.termini = Table.fromJson(v["termini"])
-        db.karte = Table.fromJson(v["karte"])
+        db.korisnici = Table.fromJsonObject(obj["korisnici"])
+        db.sale = Table.fromJsonObject(obj["sale"])
+        db.filmovi = Table.fromJsonObject(obj["filmovi"])
+        db.projekcije = Table.fromJsonObject(obj["projekcije"])
+        db.termini = Table.fromJsonObject(obj["termini"])
+        db.karte = Table.fromJsonObject(obj["karte"])
         return db
 
     def setup(self):
         file = open("data.json", "r")
         str = file.read()
-        db = Database.fromJson(str)
+        db = Database.fromJsonString(str)
         self.korisnici = db.korisnici
         self.sale = db.sale
         self.filmovi = db.filmovi
@@ -47,6 +54,6 @@ class Database:
 
     def save(self):
         file = open("data.json", "w")
-        file.write(self.toJson())
+        file.write(self.toJsonString())
         file.close()
 

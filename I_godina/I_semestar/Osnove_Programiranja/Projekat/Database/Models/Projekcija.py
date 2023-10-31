@@ -3,6 +3,10 @@ from datetime import datetime
 
 
 class Projekcija:
+
+    primary_key = "sifra"
+    name = "Projekcija"
+
     def __init__(self, sifra, sifra_sale, sifra_filma, vreme_pocetka, vreme_kraja, dani, cena):
         self.sifra = sifra
         self.sifra_sale = sifra_sale
@@ -49,8 +53,12 @@ class Projekcija:
                 self.cena = value
             case _:
                 raise "Invalid key"
-    def toJson(self):
-        return json.dumps({
+            
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "sifra": self.sifra,
             "sifra_sale": self.sifra_sale,
             "sifra_filma": self.sifra_filma,
@@ -58,17 +66,21 @@ class Projekcija:
             "vreme_kraja": datetime.strftime(self.vreme_kraja, "%X"),
             "dani": self.dani,
             "cena": self.cena
-        })
+        }
 
     @staticmethod
-    def fromJson(str):
-        v = json.loads(str)
+    def fromJsonString(str):
+        return Projekcija.toJsonObject(json.loads(str))
+        
+
+    @staticmethod
+    def fromJsonObject(obj):
         return Projekcija(
-            v["sifra"],
-            v["sifra_sale"],
-            v["sifra_filma"],
-            datetime.strptime(v["vreme_pocetka"], "%X"),
-            datetime.strptime(v["vreme_kraja"], "%X"),
-            v["dani"],
-            v["cena"],
+            obj["sifra"],
+            obj["sifra_sale"],
+            obj["sifra_filma"],
+            datetime.strptime(obj["vreme_pocetka"], "%X"),
+            datetime.strptime(obj["vreme_kraja"], "%X"),
+            obj["dani"],
+            obj["cena"],
         )

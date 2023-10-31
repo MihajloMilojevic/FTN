@@ -2,13 +2,12 @@ import json
 from Database.Models import models_by_name
 
 class Table:
-    def __init__(self, name, primary_key):
-        self.name = name
-        self.primary_key = primary_key
+    def __init__(self, model):
+        self.model = model
         self.rows = []
     def SelectById(self, id):
         for row in self.rows:
-            if row[self.primary_key] == id:
+            if row[self.model.primary_key] == id:
                 return row
         return None
     def Select(self, condition):
@@ -17,29 +16,31 @@ class Table:
                 return row
         return None
     def Insert(self, row):
-        if self.SelectById(row[self.primary_key]) is not None:
+        if self.SelectById(row[self.model.primary_key]) is not None:
             raise "Duplicate key"
         self.rows.append(row)
 
     def DeleteById(self, id):
-        self.rows = [row for row in self.rows if row[self.primary_key] != id]
+        self.rows = [row for row in self.rows if row[self.model.primary_key] != id]
 
     def Delete(self, condition):
         self.rows = [row for row in self.rows if not condition(row)]
 
-    def toJson(self):
-        return json.dumps({
-            "name": self.name,
-            "primary_key": self.primary_key,
-            "rows": [row.toJson() for row in self.rows]
-        })
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    def toJsonObject(self):
+        return {
+            "model": self.model.name,
+            "rows": [row.toJsonObject() for row in self.rows]
+        }
     @staticmethod
-    def fromJson(str):
-        v = json.loads(str)
+    def fromJsonString(str):
+        return Table.fromJsonObject(json.loads(str))
+        
+    @staticmethod
+    def fromJsonObject(obj):
         table = Table(
-            v["name"],
-            v["primary_key"]
+           models_by_name[obj["model"]],
         )
-        table.rows = [models_by_name[table.name].fromJson(row) for row in v["rows"]]
+        table.rows = [table.model.fromJsonObject(row) for row in obj["rows"]]
         return table
-

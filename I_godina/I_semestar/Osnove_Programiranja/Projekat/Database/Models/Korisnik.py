@@ -2,6 +2,10 @@ import json
 
 
 class Korisnik:
+
+    primary_key = "korisnicko_ime"
+    name = "Korisnik"
+
     def __init__(self, korisnicko_ime, lozinka, ime, prezime, uloga):
         self.korisnicko_ime = korisnicko_ime
         self.lozinka = lozinka
@@ -38,21 +42,29 @@ class Korisnik:
                 self.uloga = value
             case _:
                 raise "Invalid key"
-    def toJson(self):
-        return json.dumps({
+            
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "korisnicko_ime": self.korisnicko_ime,
             "lozinka": self.lozinka,
             "ime": self.ime,
             "prezime": self.prezime,
             "uloga": self.uloga
-        })
+        }
+    
     @staticmethod
-    def fromJson(str):
-        v = json.loads(str)
+    def fromJsonString(str):
+        return Korisnik.fromJsonObject(json.loads(str))
+        
+    @staticmethod
+    def fromJsonObject(obj):
         return Korisnik(
-            v["korisnicko_ime"],
-            v["lozinka"],
-            v["ime"],
-            v["prezime"],
-            v["uloga"],
+            obj["korisnicko_ime"],
+            obj["lozinka"],
+            obj["ime"],
+            obj["prezime"],
+            obj["uloga"],
         )

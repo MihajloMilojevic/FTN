@@ -2,6 +2,10 @@ import json
 
 
 class Sala:
+
+    primary_key = "sifra"
+    name = "Sala"
+
     def __init__(self, sifra, naziv, broj_redova, broj_kolona):
         self.sifra = sifra
         self.naziv = naziv
@@ -32,20 +36,26 @@ class Sala:
                 self.broj_kolona = value
             case _:
                 raise "Invalid key"
-    def toJson(self):
-        return json.dumps({
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "sifra": self.sifra,
             "naziv": self.naziv,
             "broj_redova": self.broj_redova,
             "broj_kolona": self.broj_kolona
-        })
+        }
     
     @staticmethod
-    def fromJson(str):
-        value = json.loads(str)
+    def fromJsonString(str):
+        return Sala.fromJsonObject(json.loads(str))
+        
+    @staticmethod
+    def fromJsonObject(obj):
         return Sala(
-            value["sifra"], 
-            value["naziv"], 
-            value["broj_redova"], 
-            value["broj_kolona"]
+            obj["sifra"], 
+            obj["naziv"], 
+            obj["broj_redova"], 
+            obj["broj_kolona"]
         )

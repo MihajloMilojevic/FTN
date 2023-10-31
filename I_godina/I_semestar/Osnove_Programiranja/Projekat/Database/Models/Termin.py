@@ -3,6 +3,10 @@ from datetime import datetime
 
 
 class Termin:
+
+    primary_key = "sifra"
+    name = "Termin"
+
     def __init__(self, sifra, sifra_projekcije, datum_odrzavanja):
         self.sifra = sifra
         self.sifra_projekcije = sifra_projekcije
@@ -30,14 +34,24 @@ class Termin:
             case _:
                 raise "Invalid key"
             
-    def toJson(self):
-        return json.dumps({
+    def toJsonString(self):
+        return json.dumps(self.toJsonObject())
+    
+    def toJsonObject(self):
+        return {
             "sifra": self.sifra,
             "sifra_projekcije": self.sifra_projekcije,
             "datum_odrzavanja": datetime.strftime(self.datum_odrzavanja, "%x")
-        })
+        }
     
     @staticmethod
-    def fromJson(str):
-        v = json.loads(str)
-        return Termin(v["sifra"], v["sifra_projekcije"], datetime.strptime(v["datum_odrzavanja"], "%x"))
+    def fromJsonString(str):
+        return Termin.fromJsonObject(json.loads(str))
+    
+    @staticmethod
+    def fromJsonObject(obj):
+        return Termin(
+            obj["sifra"], 
+            obj["sifra_projekcije"], 
+            datetime.strptime(obj["datum_odrzavanja"], "%x")
+        )
