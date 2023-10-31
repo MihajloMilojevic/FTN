@@ -9,7 +9,7 @@ def main():
 
 if __name__ == '__main__':
     pass
-    # main()
+    main()
     # k = Sala("aaa", "Sala 1", 2, 3)
     # str = k.toJson()
     # s = Sala.fromJson(str)
