@@ -1,9 +1,13 @@
 from Database.Table import Table
 import Database.Models as Models
 import json
+import os
 
 
 class Database:
+
+    SEPARATOR = "|"
+
     def __init__(self):
         self.korisnici = Table(Models.Korisnik)
         self.sale = Table(Models.Sala)
@@ -11,6 +15,22 @@ class Database:
         self.projekcije = Table(Models.Projekcija)
         self.termini = Table(Models.Termin)
         self.karte = Table(Models.Karta)
+
+    def load(self):
+        self.korisnici.load()
+        self.sale.load()
+        self.filmovi.load()
+        self.projekcije.load()
+        self.termini.load()
+        self.karte.load()
+
+    def save(self):
+        self.korisnici.save()
+        self.sale.save()
+        self.filmovi.save()
+        self.projekcije.save()
+        self.termini.save()
+        self.karte.save()
 
     def toJsonString(self):
         return json.dumps(self.toJsonObject())
@@ -40,7 +60,7 @@ class Database:
         db.karte = Table.fromJsonObject(obj["karte"])
         return db
 
-    def setup(self):
+    def setupJson(self):
         file = open("data.json", "r")
         str = file.read()
         db = Database.fromJsonString(str)
@@ -52,7 +72,7 @@ class Database:
         self.karte = db.karte
         file.close()
 
-    def save(self):
+    def saveJson(self):
         file = open("data.json", "w")
         file.write(self.toJsonString())
         file.close()

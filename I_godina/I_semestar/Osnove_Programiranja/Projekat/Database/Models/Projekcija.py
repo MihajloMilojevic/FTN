@@ -1,5 +1,7 @@
 import json
+from Constants import SEPARATOR
 from datetime import datetime
+from Utils.Serialize import serialize_time, deserialize_time, serialize_list, deserialize_list
 
 
 class Projekcija:
@@ -7,7 +9,7 @@ class Projekcija:
     primary_key = "sifra"
     name = "Projekcija"
 
-    def __init__(self, sifra, sifra_sale, sifra_filma, vreme_pocetka, vreme_kraja, dani, cena):
+    def __init__(self, sifra: str, sifra_sale: str, sifra_filma: str, vreme_pocetka: datetime, vreme_kraja: datetime, dani: list[str], cena: float):
         self.sifra = sifra
         self.sifra_sale = sifra_sale
         self.sifra_filma = sifra_filma
@@ -16,7 +18,7 @@ class Projekcija:
         self.dani = dani
         self.cena = cena
     
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> str|datetime|float|list[str]:
         match key:
             case "sifra":
                 return self.sifra
@@ -35,7 +37,7 @@ class Projekcija:
             case _:
                 raise "Invalid key"
         
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: str, value: str|datetime|float|list[str]) -> None:
         match key:
             case "sifra":
                 self.sifra = value
@@ -53,7 +55,33 @@ class Projekcija:
                 self.cena = value
             case _:
                 raise "Invalid key"
-            
+
+    @staticmethod
+    def serialize(obj: 'Projekcija') -> str:
+        data = [
+            obj.sifra,
+            obj.sifra_sale,
+            obj.sifra_filma,
+            serialize_time(obj.vreme_pocetka),
+            serialize_time(obj.vreme_kraja),
+            serialize_list(obj.dani),
+            obj.cena
+        ]
+        return SEPARATOR.join(data)
+    
+    @staticmethod
+    def deserialize(str: str) -> 'Projekcija':
+        data = str.split(SEPARATOR)
+        return Projekcija(
+            data[0],
+            data[1],
+            data[2],
+            deserialize_time(data[3]),
+            deserialize_time(data[4]),
+            deserialize_list(data[5]),
+            float(data[6])
+        )
+
     def toJsonString(self):
         return json.dumps(self.toJsonObject())
     
@@ -72,7 +100,6 @@ class Projekcija:
     def fromJsonString(str):
         return Projekcija.toJsonObject(json.loads(str))
         
-
     @staticmethod
     def fromJsonObject(obj):
         return Projekcija(

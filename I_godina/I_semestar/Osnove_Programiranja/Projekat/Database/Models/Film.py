@@ -1,12 +1,14 @@
 import json
+from Constants import SEPARATOR
+from Utils.Serialize import serialize_list, deserialize_list
 
 class Film:
 
     primary_key = "sifra"
     name = "Film"
     
-    def __init__(self, sifra, naziv, zanrovi, trajanje, reziser, glavne_uloge,
-                 zemlja_porekla, godina_proizvodnje, opis):
+    def __init__(self, sifra: str, naziv: str, zanrovi: list[str], trajanje: int, reziser: str, glavne_uloge: list[str],
+                 zemlja_porekla: str, godina_proizvodnje: int, opis: str):
         self.sifra = sifra
         self.naziv = naziv,
         self.zanrovi = zanrovi,
@@ -17,7 +19,7 @@ class Film:
         self.godina_proizvodnje = godina_proizvodnje
         self.opis = opis
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> str|int|list[str]:
         match key:
             case "sifra":
                 return self.sifra
@@ -40,7 +42,7 @@ class Film:
             case _:
                 raise "Invalid key"
         
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: str, value: str|int|list[str]) -> None:
         match key:
             case "sifra":
                 self.sifra = value
@@ -63,6 +65,36 @@ class Film:
             case _:
                 raise "Invalid key"
     
+    @staticmethod
+    def serialize(obj: 'Film') -> str:
+        data = [
+            obj.sifra,
+            obj.naziv,
+            serialize_list(obj.zanrovi),
+            obj.trajanje,
+            obj.reziser,
+            serialize_list(obj.glavne_uloge),
+            obj.zemlja_porekla,
+            obj.godina_proizvodnje,
+            obj.opis
+        ]
+        return SEPARATOR.join(data)
+    
+    @staticmethod
+    def deserialize(str: str) -> 'Film':
+        data = str.split(SEPARATOR)
+        return Film(
+            data[0],
+            data[1],
+            deserialize_list(data[2]),
+            int(data[3]),
+            data[4],
+            deserialize_list(data[5]),
+            data[6],
+            int(data[7]),
+            data[8]
+        )
+    
     def toJsonString(self):
         return json.dumps(self.toJsonObject())
     
@@ -78,7 +110,7 @@ class Film:
             "godina_proizvodnje": self.godina_proizvodnje,
             "opis": self.opis
         }
-
+    
     @staticmethod
     def fromJsonString(str):
         return Film.fromJsonObject(json.loads(str))

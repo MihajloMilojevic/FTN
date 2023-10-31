@@ -1,4 +1,5 @@
 import json
+from Constants import SEPARATOR
 
 
 class Korisnik:
@@ -6,14 +7,14 @@ class Korisnik:
     primary_key = "korisnicko_ime"
     name = "Korisnik"
 
-    def __init__(self, korisnicko_ime, lozinka, ime, prezime, uloga):
+    def __init__(self, korisnicko_ime: str, lozinka: str, ime: str, prezime: str, uloga: str):
         self.korisnicko_ime = korisnicko_ime
         self.lozinka = lozinka
         self.ime = ime
         self.prezime = prezime
         self.uloga = uloga
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> str:
         match key:
             case "korisnicko_ime":
                 return self.korisnicko_ime
@@ -28,7 +29,7 @@ class Korisnik:
             case _:
                 raise "Invalid key"
         
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: str, value: str) -> None:
         match key:
             case "korisnicko_ime":
                 self.korisnicko_ime = value
@@ -42,7 +43,29 @@ class Korisnik:
                 self.uloga = value
             case _:
                 raise "Invalid key"
-            
+
+    @staticmethod
+    def serialize(obj: 'Korisnik') -> str:
+        data = [
+            obj.korisnicko_ime,
+            obj.lozinka,
+            obj.ime,
+            obj.prezime,
+            obj.uloga
+        ]
+        return SEPARATOR.join(data)
+    
+    @staticmethod
+    def deserialize(str: str) -> 'Korisnik':
+        data = str.split(SEPARATOR)
+        return Korisnik(
+            data[0],
+            data[1],
+            data[2],
+            data[3],
+            data[4]
+        )
+
     def toJsonString(self):
         return json.dumps(self.toJsonObject())
     

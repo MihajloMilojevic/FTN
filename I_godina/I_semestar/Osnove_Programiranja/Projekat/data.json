@@ -1,1 +1,0 @@
-{"korisnici": {"model": "Korisnik", "rows": [{"korisnicko_ime": "mihajlo", "lozinka": "Mihajlo123", "ime": "Mihajlo", "prezime": "Milojevic", "uloga": "menadzer"}]}, "sale": {"model": "Sala", "rows": []}, "filmovi": {"model": "Film", "rows": []}, "projekcije": {"model": "Projekcija", "rows": []}, "termini": {"model": "Termin", "rows": []}, "karte": {"model": "Karta", "rows": []}}

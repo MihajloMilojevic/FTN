@@ -1,5 +1,7 @@
 import json
 from datetime import datetime
+from Constants import SEPARATOR
+from Utils.Serialize import serialize_date, deserialize_date
 
 
 class Karta:
@@ -7,7 +9,8 @@ class Karta:
     primary_key = "sifra"
     name = "Karta"
 
-    def __init__(self, sifra, sifra_termina, oznaka_sedista, rezervisano, datum_prodaje, korisnicko_ime, ime_i_prezime):
+    def __init__(self, sifra: str, sifra_termina: str, oznaka_sedista: str, rezervisano: bool, 
+                 datum_prodaje: datetime, korisnicko_ime: str|None, ime_i_prezime: str|None):
         self.sifra = sifra
         self.sifra_termina = sifra_termina
         self.oznaka_sedista = oznaka_sedista
@@ -16,7 +19,7 @@ class Karta:
         self.korisnicko_ime = korisnicko_ime
         self.ime_i_prezime = ime_i_prezime
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> str|bool|datetime|None:
         match key:
             case "sifra":
                 return self.sifra
@@ -35,7 +38,7 @@ class Karta:
             case _:
                 raise "Invalid key"
         
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: str, value: str|bool|datetime|None) -> None:
         match key:
             case "sifra":
                 self.sifra = value
@@ -53,6 +56,33 @@ class Karta:
                 self.ime_i_prezime = value
             case _:
                 raise "Invalid key"
+    
+    @staticmethod
+    def serialize(obj: 'Karta') -> str:
+        data = [
+            obj.sifra,
+            obj.sifra_termina,
+            obj.oznaka_sedista,
+            obj.rezervisano,
+            serialize_date(obj.datum_prodaje),
+            obj.korisnicko_ime,
+            obj.ime_i_prezime
+        ]
+        return SEPARATOR.join(data)
+    
+    @staticmethod
+    def deserialize(str: str) -> 'Karta':
+        data = str.split(SEPARATOR)
+        return Karta(
+            data[0],
+            data[1],
+            data[2],
+            bool(data[3]),
+            deserialize_date(data[4]),
+            eval(data[5]),
+            data[6] if data[6] != "None" else None,
+            data[7] if data[7] != "None" else None
+        )
     
     def toJsonString(self):
         return json.dumps(self.toJsonObject())
