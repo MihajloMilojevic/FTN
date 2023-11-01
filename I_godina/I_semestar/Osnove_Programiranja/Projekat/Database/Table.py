@@ -18,10 +18,7 @@ class Table:
         return None
     
     def Select(self, condition) -> Korisnik|Karta|Sala|Film|Projekcija|Termin|None:
-        for row in self.rows:
-            if condition(row):
-                return row
-        return None
+        return [row for row in self.rows if condition(row)]
     
     def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> None:
         if self.SelectById(row[self.model.primary_key]) is not None:
@@ -42,7 +39,7 @@ class Table:
                 file.write(f"{self.model.serialize(row)}\n")
             file.close()
         except Exception as e:
-            print("Unable to write to the file: ", e)
+            print(f"Unable to write to the file {self.model.name}\nError: {e}")
 
     # Ucitava vrednosti iz fajla
     def load(self):
@@ -52,7 +49,7 @@ class Table:
                 self.Insert(self.model.deserialize(row[:-1]))
             file.close()
         except Exception as e:
-            print("Unable to read from the file:", e)
+            print(f"Unable to read from the file {self.model.name}\nError: {e}")
 
     def toJsonString(self):
         return json.dumps(self.toJsonObject())

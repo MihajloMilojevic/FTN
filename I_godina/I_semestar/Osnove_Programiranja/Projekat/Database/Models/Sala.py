@@ -1,5 +1,6 @@
 import json
 from Constants import SEPARATOR
+import Utils.Serialize as Serialize
 
 
 class Sala:
@@ -42,10 +43,10 @@ class Sala:
     @staticmethod
     def serialize(obj: 'Sala') -> str:
         data = [
-            obj.sifra,
-            obj.name,
-            obj.broj_redova,
-            obj.broj_kolona
+            Serialize.serialize_string(obj.sifra),
+            Serialize.serialize_string(obj.name),
+            Serialize.serialize_int(obj.broj_redova),
+            Serialize.serialize_int(obj.broj_kolona)
         ]
         return SEPARATOR.join(data)
     
@@ -53,10 +54,10 @@ class Sala:
     def deserialize(str: str) -> 'Sala':
         data = str.split(SEPARATOR)
         return Sala(
-            data[0],
-            data[1],
-            int(data[2]),
-            int(data[3])
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_int(data[2]),
+            Serialize.deserialize_int(data[3])
         )
     
     def toJsonString(self):

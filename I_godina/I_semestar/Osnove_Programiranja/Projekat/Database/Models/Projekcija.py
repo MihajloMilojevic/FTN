@@ -1,7 +1,7 @@
 import json
 from Constants import SEPARATOR
 from datetime import datetime
-from Utils.Serialize import serialize_time, deserialize_time, serialize_list, deserialize_list
+import Utils.Serialize as Serialize
 
 
 class Projekcija:
@@ -59,13 +59,13 @@ class Projekcija:
     @staticmethod
     def serialize(obj: 'Projekcija') -> str:
         data = [
-            obj.sifra,
-            obj.sifra_sale,
-            obj.sifra_filma,
-            serialize_time(obj.vreme_pocetka),
-            serialize_time(obj.vreme_kraja),
-            serialize_list(obj.dani),
-            obj.cena
+            Serialize.serialize_string(obj.sifra),
+            Serialize.serialize_string(obj.sifra_sale),
+            Serialize.serialize_string(obj.sifra_filma),
+            Serialize.serialize_time(obj.vreme_pocetka),
+            Serialize.serialize_time(obj.vreme_kraja),
+            Serialize.serialize_list(obj.dani),
+            Serialize.serialize_float(obj.cena)
         ]
         return SEPARATOR.join(data)
     
@@ -73,13 +73,13 @@ class Projekcija:
     def deserialize(str: str) -> 'Projekcija':
         data = str.split(SEPARATOR)
         return Projekcija(
-            data[0],
-            data[1],
-            data[2],
-            deserialize_time(data[3]),
-            deserialize_time(data[4]),
-            deserialize_list(data[5]),
-            float(data[6])
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_string(data[2]),
+            Serialize.deserialize_time(data[3]),
+            Serialize.deserialize_time(data[4]),
+            Serialize.deserialize_list(data[5]),
+            Serialize.deserialize_float(data[6])
         )
 
     def toJsonString(self):

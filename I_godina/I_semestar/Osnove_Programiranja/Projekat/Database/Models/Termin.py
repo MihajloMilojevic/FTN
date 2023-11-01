@@ -1,13 +1,18 @@
 import json
 from Constants import SEPARATOR
 from datetime import datetime
-from Utils.Serialize import serialize_date, deserialize_date
+from Database.Refrence import Refrence
+from Database.Models.Projekcija import Projekcija
+import Utils.Serialize as Serialize
 
 
 class Termin:
 
     primary_key = "sifra"
     name = "Termin"
+    refrences = [
+        Refrence(Projekcija, "sifra_projekcije")
+    ]
 
     def __init__(self, sifra: str, sifra_projekcije: str, datum_odrzavanja: datetime):
         self.sifra = sifra
@@ -39,9 +44,9 @@ class Termin:
     @staticmethod
     def serialize(obj: 'Termin') -> str:
         data = [
-            obj.sifra,
-            obj.sifra_projekcije,
-            serialize_date(obj.datum_odrzavanja)
+            Serialize.serialize_string(obj.sifra),
+            Serialize.serialize_string(obj.sifra_projekcije),
+            Serialize.serialize_date(obj.datum_odrzavanja)
         ]
         return SEPARATOR.join(data)
     
@@ -49,9 +54,9 @@ class Termin:
     def deserialize(str: str) -> 'Termin':
         data = str.split(SEPARATOR)
         return Termin(
-            data[0],
-            data[1],
-            deserialize_date(data[2])
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_date(data[2])
         )
     
     def toJsonString(self):

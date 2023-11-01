@@ -1,12 +1,8 @@
 from Database.Table import Table
 import Database.Models as Models
 import json
-import os
-
 
 class Database:
-
-    SEPARATOR = "|"
 
     def __init__(self):
         self.korisnici = Table(Models.Korisnik)

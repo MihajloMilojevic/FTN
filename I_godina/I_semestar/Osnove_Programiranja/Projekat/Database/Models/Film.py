@@ -1,6 +1,6 @@
 import json
 from Constants import SEPARATOR
-from Utils.Serialize import serialize_list, deserialize_list
+import Utils.Serialize as Serialize
 
 class Film:
 
@@ -10,7 +10,7 @@ class Film:
     def __init__(self, sifra: str, naziv: str, zanrovi: list[str], trajanje: int, reziser: str, glavne_uloge: list[str],
                  zemlja_porekla: str, godina_proizvodnje: int, opis: str):
         self.sifra = sifra
-        self.naziv = naziv,
+        self.naziv = naziv
         self.zanrovi = zanrovi,
         self.trajanje = trajanje
         self.reziser = reziser
@@ -68,15 +68,15 @@ class Film:
     @staticmethod
     def serialize(obj: 'Film') -> str:
         data = [
-            obj.sifra,
-            obj.naziv,
-            serialize_list(obj.zanrovi),
-            obj.trajanje,
-            obj.reziser,
-            serialize_list(obj.glavne_uloge),
-            obj.zemlja_porekla,
-            obj.godina_proizvodnje,
-            obj.opis
+            Serialize.serialize_string(obj.sifra),
+            Serialize.serialize_string(obj.naziv),
+            Serialize.serialize_list(obj.zanrovi),
+            Serialize.serialize_int(obj.trajanje),
+            Serialize.serialize_string(obj.reziser),
+            Serialize.serialize_list(obj.glavne_uloge),
+            Serialize.serialize_string(obj.zemlja_porekla),
+            Serialize.serialize_int(obj.godina_proizvodnje),
+            Serialize.serialize_string(obj.opis)
         ]
         return SEPARATOR.join(data)
     
@@ -84,15 +84,15 @@ class Film:
     def deserialize(str: str) -> 'Film':
         data = str.split(SEPARATOR)
         return Film(
-            data[0],
-            data[1],
-            deserialize_list(data[2]),
-            int(data[3]),
-            data[4],
-            deserialize_list(data[5]),
-            data[6],
-            int(data[7]),
-            data[8]
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_list(data[2]),
+            Serialize.deserialize_int(data[3]),
+            Serialize.deserialize_string(data[4]),
+            Serialize.deserialize_list(data[5]),
+            Serialize.deserialize_string(data[6]),
+            Serialize.deserialize_int(data[7]),
+            Serialize.deserialize_string(data[8])
         )
     
     def toJsonString(self):

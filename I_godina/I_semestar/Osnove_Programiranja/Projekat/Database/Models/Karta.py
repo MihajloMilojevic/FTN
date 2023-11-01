@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from Constants import SEPARATOR
-from Utils.Serialize import serialize_date, deserialize_date
+import Utils.Serialize as Serialize
 
 
 class Karta:
@@ -60,13 +60,13 @@ class Karta:
     @staticmethod
     def serialize(obj: 'Karta') -> str:
         data = [
-            obj.sifra,
-            obj.sifra_termina,
-            obj.oznaka_sedista,
-            obj.rezervisano,
-            serialize_date(obj.datum_prodaje),
-            obj.korisnicko_ime,
-            obj.ime_i_prezime
+            Serialize.serialize_string(obj.sifra),
+            Serialize.serialize_string(obj.sifra_termina),
+            Serialize.serialize_string(obj.oznaka_sedista),
+            Serialize.serialize_bool(obj.rezervisano),
+            Serialize.serialize_date(obj.datum_prodaje),
+            Serialize.serialize_string(obj.korisnicko_ime),
+            Serialize.serialize_string(obj.ime_i_prezime)
         ]
         return SEPARATOR.join(data)
     
@@ -74,14 +74,13 @@ class Karta:
     def deserialize(str: str) -> 'Karta':
         data = str.split(SEPARATOR)
         return Karta(
-            data[0],
-            data[1],
-            data[2],
-            bool(data[3]),
-            deserialize_date(data[4]),
-            eval(data[5]),
-            data[6] if data[6] != "None" else None,
-            data[7] if data[7] != "None" else None
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_string(data[2]),
+            Serialize.deserialize_bool(data[3]),
+            Serialize.deserialize_date(data[4]),
+            Serialize.deserialize_string(data[6]),
+            Serialize.deserialize_string(data[5]),
         )
     
     def toJsonString(self):
@@ -93,7 +92,7 @@ class Karta:
             "sifra_termina": self.sifra_termina,
             "oznaka_sedista": self.oznaka_sedista,
             "rezervisano": self.rezervisano,
-            "datum_prodaje": datetime.strftime(self.datum_prodaje, "%x"),
+            "datum_prodaje": datetime.strftime(self.datum_prodaje, "%x") if self.datum_prodaje is not None else None,
             "korisnicko_ime": self.korisnicko_ime,
             "ime_i_prezime": self.ime_i_prezime
         }

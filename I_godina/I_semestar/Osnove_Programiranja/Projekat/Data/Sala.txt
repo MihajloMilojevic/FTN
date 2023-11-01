@@ -1,0 +1,4 @@
+S1|Sala|13|10
+S2|Sala|13|10
+SV|Sala|20|15
+SR|Sala|6|9

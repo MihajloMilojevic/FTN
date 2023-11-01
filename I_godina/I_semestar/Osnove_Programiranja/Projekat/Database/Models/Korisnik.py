@@ -1,4 +1,5 @@
 import json
+import Utils.Serialize as Serialize
 from Constants import SEPARATOR
 
 
@@ -47,11 +48,11 @@ class Korisnik:
     @staticmethod
     def serialize(obj: 'Korisnik') -> str:
         data = [
-            obj.korisnicko_ime,
-            obj.lozinka,
-            obj.ime,
-            obj.prezime,
-            obj.uloga
+            Serialize.serialize_string(obj.korisnicko_ime),
+            Serialize.serialize_string(obj.lozinka),
+            Serialize.serialize_string(obj.ime),
+            Serialize.serialize_string(obj.prezime),
+            Serialize.serialize_string(obj.uloga)
         ]
         return SEPARATOR.join(data)
     
@@ -59,11 +60,11 @@ class Korisnik:
     def deserialize(str: str) -> 'Korisnik':
         data = str.split(SEPARATOR)
         return Korisnik(
-            data[0],
-            data[1],
-            data[2],
-            data[3],
-            data[4]
+            Serialize.deserialize_string(data[0]),
+            Serialize.deserialize_string(data[1]),
+            Serialize.deserialize_string(data[2]),
+            Serialize.deserialize_string(data[3]),
+            Serialize.deserialize_string(data[4])
         )
 
     def toJsonString(self):

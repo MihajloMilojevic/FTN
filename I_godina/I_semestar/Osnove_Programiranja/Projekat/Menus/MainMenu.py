@@ -25,4 +25,4 @@ def main_menu():
             break
         # invalid input
         clear()
-        print("Nevažeća opcija\n\n")
+        print("Nevazeca opcija\n\n")
