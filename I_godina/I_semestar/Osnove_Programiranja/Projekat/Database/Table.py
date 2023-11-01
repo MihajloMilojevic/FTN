@@ -51,8 +51,14 @@ class Table:
         except Exception as e:
             print(f"Unable to read from the file {self.model.name}\nError: {e}")
 
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def populatedObject(self, db):
+        return {
+            "model": self.model.name,
+            "rows": [row.populatedObject(db) for row in self.rows]
+        }
+
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {

@@ -3,14 +3,14 @@ from datetime import datetime
 strNone = str(None)
 
 # string
-def serialize_string(str: str) -> str:
-    if str is None:
+def serialize_string(string: str) -> str:
+    if string is None:
         return strNone
-    return str
-def deserialize_string(str: str) -> list:
-    if str == strNone:
+    return string
+def deserialize_string(string: str) -> list:
+    if string == strNone:
         return None
-    return eval(str)
+    return str(string)
 
 # int
 def serialize_int(value: int) -> str:
@@ -59,19 +59,23 @@ def deserialize_list(str: str) -> list:
 # Datum
 def serialize_date(date: datetime) -> str:
     if date is None:
-        return str(None)
+        return strNone
     return datetime.strftime(date, "%x")
 
 def deserialize_date(str: str) -> datetime:
-    if str == str(None):
+    if str == strNone:
         return None
     return datetime.strptime(str, "%x")
 
 # Vreme
 def serialize_time(time: datetime) -> str:
+    if time is None:
+        return strNone
     return datetime.strftime(time, "%X")
 
 def deserialize_time(str: str) -> datetime:
+    if str == strNone:
+        return None
     return datetime.strptime(str, "%X")
 
 

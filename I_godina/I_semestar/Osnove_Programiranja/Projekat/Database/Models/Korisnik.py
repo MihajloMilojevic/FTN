@@ -15,6 +15,9 @@ class Korisnik:
         self.prezime = prezime
         self.uloga = uloga
 
+    def __str__(self) -> str:
+        return self.toJsonString()
+
     def __getitem__(self, key: str) -> str:
         match key:
             case "korisnicko_ime":
@@ -66,9 +69,12 @@ class Korisnik:
             Serialize.deserialize_string(data[3]),
             Serialize.deserialize_string(data[4])
         )
+    
+    def populatedObject(self, db):
+        return self.toJsonObject()
 
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {

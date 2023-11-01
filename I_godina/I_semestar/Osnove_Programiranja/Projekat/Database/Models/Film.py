@@ -19,6 +19,9 @@ class Film:
         self.godina_proizvodnje = godina_proizvodnje
         self.opis = opis
 
+    def __str__(self) -> str:
+        return self.toJsonString()
+
     def __getitem__(self, key: str) -> str|int|list[str]:
         match key:
             case "sifra":
@@ -95,8 +98,11 @@ class Film:
             Serialize.deserialize_string(data[8])
         )
     
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def populatedObject(self, db):
+        return self.toJsonObject()
+    
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {

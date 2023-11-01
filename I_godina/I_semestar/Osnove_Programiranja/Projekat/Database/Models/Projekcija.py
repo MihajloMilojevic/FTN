@@ -2,7 +2,8 @@ import json
 from Constants import SEPARATOR
 from datetime import datetime
 import Utils.Serialize as Serialize
-
+from Database.Refrence import Refrence
+import Database.Models as Models
 
 class Projekcija:
 
@@ -17,6 +18,11 @@ class Projekcija:
         self.vreme_kraja = vreme_kraja
         self.dani = dani
         self.cena = cena
+        self.sala = Refrence(self, Models.Sala, "sifra_sale")
+        self.film = Refrence(self, Models.Film, "sifra_filma")
+
+    def __str__(self) -> str:
+        return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|datetime|float|list[str]:
         match key:
@@ -82,8 +88,16 @@ class Projekcija:
             Serialize.deserialize_float(data[6])
         )
 
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def populatedObject(self, db):
+        obj = self.toJsonObject()
+        obj.update()
+        obj["sala"] = self.sala.get(db)
+        obj["film"] = self.film.get(db)
+        print("Projekcija - Sala: ", obj["sala"])
+        return obj
+    
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {

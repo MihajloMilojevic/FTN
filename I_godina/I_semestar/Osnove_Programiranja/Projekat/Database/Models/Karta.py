@@ -2,6 +2,8 @@ import json
 from datetime import datetime
 from Constants import SEPARATOR
 import Utils.Serialize as Serialize
+from Database.Refrence import Refrence
+import Database.Models as Models
 
 
 class Karta:
@@ -18,6 +20,11 @@ class Karta:
         self.datum_prodaje = datum_prodaje
         self.korisnicko_ime = korisnicko_ime
         self.ime_i_prezime = ime_i_prezime
+        self.termin = Refrence(self, Models.Termin, "sifra_termina")
+        self.korisnik = Refrence(self, Models.Korisnik, "korisnicko_ime")
+
+    def __str__(self) -> str:
+        return self.toJsonString()
 
     def __getitem__(self, key: str) -> str|bool|datetime|None:
         match key:
@@ -83,8 +90,14 @@ class Karta:
             Serialize.deserialize_string(data[5]),
         )
     
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def populatedObject(self, db):
+        obj = self.toJsonObject()
+        obj["termin"] = self.termin.get(db)
+        obj["korisnik"] = self.korisnik.get(db)
+        return obj
+
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {

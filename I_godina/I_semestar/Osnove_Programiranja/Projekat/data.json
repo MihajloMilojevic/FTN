@@ -1,233 +1,74 @@
 {
     "korisnici": {
-        "model": "Korisnik",
+        "model": "Korisnik", 
         "rows": [
-            {
-                "korisnicko_ime": "mihajlo",
-                "lozinka": "Mihajlo123",
-                "ime": "Mihajlo",
-                "prezime": "Milojevic",
-                "uloga": "menadzer"
+            {"korisnicko_ime": "mihajlo", "lozinka": "Mihajlo123", "ime": "Mihajlo", "prezime": "Milojevic", "uloga": "menadzer"
             },
-            {
-                "korisnicko_ime": "pepi",
-                "lozinka": "Petar2004",
-                "ime": "Petar",
-                "prezime": "Popovic",
-                "uloga": "prodavac"
+            {"korisnicko_ime": "pepi", "lozinka": "Petar2004", "ime": "Petar", "prezime": "Popovic", "uloga": "prodavac"
             },
-            {
-                "korisnicko_ime": "prle",
-                "lozinka": "kos2023",
-                "ime": "Luka",
-                "prezime": "Prilincevic",
-                "uloga": "prodavac"
+            {"korisnicko_ime": "prle", "lozinka": "kos2023", "ime": "Luka", "prezime": "Prilincevic", "uloga": "prodavac"
             },
-            {
-                "korisnicko_ime": "ljubogdan",
-                "lozinka": "Boki951",
-                "ime": "Bogdan",
-                "prezime": "Ljubinkovic",
-                "uloga": "prodavac"
+            {"korisnicko_ime": "ljubogdan", "lozinka": "Boki951", "ime": "Bogdan", "prezime": "Ljubinkovic", "uloga": "prodavac"
             },
-            {
-                "korisnicko_ime": "lanmi",
-                "lozinka": "hell0w0rld",
-                "ime": "Milan",
-                "prezime": "Sazdov",
-                "uloga": "kupac"
+            {"korisnicko_ime": "lanmi", "lozinka": "hell0w0rld", "ime": "Milan", "prezime": "Sazdov", "uloga": "kupac"
             },
-            {
-                "korisnicko_ime": "laki",
-                "lozinka": "hell0w0rld",
-                "ime": "Lazar",
-                "prezime": "Sazdov",
-                "uloga": "kupac"
+            {"korisnicko_ime": "laki", "lozinka": "hell0w0rld", "ime": "Lazar", "prezime": "Sazdov", "uloga": "kupac"
             },
-            {
-                "korisnicko_ime": "teo",
-                "lozinka": "pmf2ftn",
-                "ime": "Teodor",
-                "prezime": "Perucinic",
-                "uloga": "kupac"
+            {"korisnicko_ime": "teo", "lozinka": "pmf2ftn", "ime": "Teodor", "prezime": "Perucinic", "uloga": "kupac"
             },
-            {
-                "korisnicko_ime": "madmax",
-                "lozinka": "biznismen99",
-                "ime": "Maksim",
-                "prezime": "Vasic",
-                "uloga": "kupac"
+            {"korisnicko_ime": "madmax", "lozinka": "biznismen99", "ime": "Maksim", "prezime": "Vasic", "uloga": "kupac"
             },
-            {
-                "korisnicko_ime": "dance",
-                "lozinka": "dance5",
-                "ime": "Matija",
-                "prezime": "Dancetovic",
-                "uloga": "kupac"
+            {"korisnicko_ime": "dance", "lozinka": "dance5", "ime": "Matija", "prezime": "Dancetovic", "uloga": "kupac"
             },
-            {
-                "korisnicko_ime": "sneza",
-                "lozinka": "Nastja2021",
-                "ime": "Snezana",
-                "prezime": "Milojcevic",
-                "uloga": "kupac"
+            {"korisnicko_ime": "sneza", "lozinka": "Nastja2021", "ime": "Snezana", "prezime": "Milojcevic", "uloga": "kupac"
             }
         ]
-    },
+    }, 
     "sale": {
-        "model": "Sala",
+        "model": "Sala", 
         "rows": [
-            {
-                "sifra": "S1",
-                "naziv": "Sala 1",
-                "broj_redova": 13,
-                "broj_kolona": 10
-            },
-            {
-                "sifra": "S2",
-                "naziv": "Sala2",
-                "broj_redova": 13,
-                "broj_kolona": 10
-            },
-            {
-                "sifra": "SV",
-                "naziv": "Velika sala",
-                "broj_redova": 20,
-                "broj_kolona": 15
-            },
-            {
-                "sifra": "SR",
-                "naziv": "Rodjendanska",
-                "broj_redova": 6,
-                "broj_kolona": 9
-            }
+            {"sifra": "S1", "naziv": "Sala", "broj_redova": 13, "broj_kolona": 10},
+            {"sifra": "S2", "naziv": "Sala", "broj_redova": 13, "broj_kolona": 10},
+            {"sifra": "SV", "naziv": "Sala", "broj_redova": 20, "broj_kolona": 15},
+            {"sifra": "SR", "naziv": "Sala", "broj_redova": 6, "broj_kolona": 9}
         ]
-    },
+    }, 
     "filmovi": {
-        "model": "Film",
+        "model": "Film", 
         "rows": [
             {
-                "sifra": "QNFTNGQX",
-                "naziv": "Iskupljenje u Shawshanku",
-                "zanrovi": [
-                    [
-                        "drama"
-                    ]
-                ],
-                "trajanje": 142,
-                "reziser": "Frank Darabont",
-                "glavne_uloge": [
-                    "Morgan Freeman",
-                    "Bob Gunton",
-                    "Tim Robbins"
-                ],
-                "zemlja_porekla": "SAD",
-                "godina_proizvodnje": 1994,
-                "opis": "The Shawshank Redemption je prica o mladom coveku Andiju (Tim Robbins) bankaru kojem je smesteno ubistvo njegove zene i njenog ljubavnika. U zatvoru upoznaje Reda (Morgan Freeman) koji mu postaje prijatelj sa kojim provodi mnogo godina u zatvoru. Film prati njihove zivote iz oba ugla, iako naraciju u filmu radi Red, o zivotu Endija od trenutka kada je dosao u zatvor."
+                "sifra": "QNFTNGQX", 
+                "naziv": "Iskupljenje u Shawshanku", 
+                "zanrovi": ((["drama"],),), 
+                "trajanje": 142, "reziser": "Frank Darabont", "glavne_uloge": ["Morgan Freeman", "Bob Gunton", "Tim Robbins"
+                ], "zemlja_porekla": "SAD", "godina_proizvodnje": 1994, "opis": "The Shawshank Redemption 
+je prica o mladom coveku Andiju (Tim Robbins) bankaru kojem je smesteno ubistvo njegove zene i njenog ljubavnika. U zatvoru upoznaje Reda (Morgan Freeman) koji mu postaje prijatelj sa kojim provodi mnogo godina u zatvoru. Film prati njihove zivote iz oba ugla, iako naraciju u filmu radi Red, o zivotu Endija od trenutka kada je dosao u zatvor."
             },
-            {
-                "sifra": "LLC3M1AK",
-                "naziv": "Sindlerova lista",
-                "zanrovi": [
-                    [
-                        "biografski",
-                        "drama",
-                        "istorijski"
-                    ]
-                ],
-                "trajanje": 195,
-                "reziser": "Steven Spielberg",
-                "glavne_uloge": [
-                    "Liam Neeson",
-                    "Ralph Fiennes",
-                    "Ben Kingsley"
-                ],
-                "zemlja_porekla": "SAD",
-                "godina_proizvodnje": 1993,
-                "opis": "Oskar sindler, biznismen, clan nacisticke stranke i nepopravljivi zenskaros, dolazi u Poljsku, okupiranu od strane nacista, u potrazi za ekonomskim prosperitetom. Zaposljava Jevreje u svojoj fabrici, kako bi proizvodili za Treci rajh. Posto je bio svedok stradanja Jevreja u krakovskom getu, ubrzo je uvidio zlo nacizma. Njegovi radnici dolaze pod teror nacistickog sadiste Amona Geta, posto su odvedeni u logor. Uz pomoc svog racunovodje Izaka Sterna, sindler pravi listu najpotrebnijih Jevreja. On podmicuje njemacke vlasti i samog Geta i uspeva da oslobodi vise od 1.000 Jevreja. Ovaj cuveni Spilbergov film je vizuelno veoma upecatljiv jer je radjen u crno-bijeloj tehnici. sokantan, tezak, emotivan i poucan, umetnicki i veoma realno odradjen film."
+            {"sifra": "LLC3M1AK", "naziv": "Sindlerova lista", "zanrovi": ((["biografski", "drama", "istorijski"
+                ],),), "trajanje": 195, "reziser": "Steven Spielberg", "glavne_uloge": ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"
+                ], "zemlja_porekla": "SAD", "godina_proizvodnje": 1993, "opis": "Oskar sindler, biznismen, clan nacisticke stranke i nepopravljivi zenskaros, dolazi u Poljsku, okupiranu od strane nacista, u potrazi za ekonomskim prosperitetom. Zaposljava Jevreje u svojoj fabrici, kako bi proizvodili za Treci rajh. Posto je bio svedok stradanja Jevreja u krakovskom getu, ubrzo je uvidio zlo nacizma. Njegovi radnici dolaze pod teror nacistickog sadiste Amona Geta, posto su odvedeni u logor. Uz pomoc svog racunovodje Izaka Sterna, sindler pravi listu najpotrebnijih Jevreja. On podmicuje njemacke vlasti i samog Geta i uspeva da oslobodi vise od 1.000 Jevreja. Ovaj cuveni Spilbergov film je vizuelno veoma upecatljiv jer je radjen u crno-bijeloj tehnici. sokantan, tezak, emotivan i poucan, umetnicki i veoma realno odradjen film."
             }
         ]
-    },
+    }, 
     "projekcije": {
-        "model": "Projekcija",
-        "rows": [
-            {
-                "sifra": "5378",
-                "sifra_sale": "S1",
-                "sifra_filma": "LLC3M1AK",
-                "vreme_pocetka": "17:00:00",
-                "vreme_kraja": "20:15:00",
-                "dani": [
-                    "ponedeljak",
-                    "utorak",
-                    "sreda"
-                ],
-                "cena": 300.0
+        "model": "Projekcija", 
+        "rows": [null, null]
+    }, 
+    "termini": {"model": "Termin", "rows": [
+            {"sifra": "5378AA", "sifra_projekcije": "5378", "datum_odrzavanja": "11/06/23", "projekcija": <Database.Models.Projekcija.Projekcija object at 0x00000159E414BF90>
             },
-            {
-                "sifra": "7620",
-                "sifra_sale": "S1",
-                "sifra_filma": "LLC3M1AK",
-                "vreme_pocetka": "20:30:00",
-                "vreme_kraja": "23:45:00",
-                "dani": [
-                    "ponedeljak",
-                    "utorak",
-                    "sreda"
-                ],
-                "cena": 300.0
+            {"sifra": "5378BA", "sifra_projekcije": "5378", "datum_odrzavanja": "11/07/23", "projekcija": <Database.Models.Projekcija.Projekcija object at 0x00000159E414BF90>
+            },
+            {"sifra": "5378CA", "sifra_projekcije": "5378", "datum_odrzavanja": "11/08/23", "projekcija": <Database.Models.Projekcija.Projekcija object at 0x00000159E414BF90>
             }
         ]
-    },
-    "termini": {
-        "model": "Termin",
-        "rows": [
-            {
-                "sifra": "5378AA",
-                "sifra_projekcije": "5378",
-                "datum_odrzavanja": "11/06/23"
+    }, "karte": {"model": "Karta", "rows": [
+            {"sifra": "EW2BTB0D6X", "sifra_termina": "5378AA", "oznaka_sedista": "1-A", "rezervisano": true, "datum_prodaje": null, 
+"korisnicko_ime": null, "ime_i_prezime": "mihajlo", "termin": <Database.Models.Termin.Termin object at 0x00000159E4173510>, "korisnik": null
             },
-            {
-                "sifra": "5378BA",
-                "sifra_projekcije": "5378",
-                "datum_odrzavanja": "11/07/23"
+            {"sifra": "ZVCM5CI42Z", "sifra_termina": "5378AA", "oznaka_sedista": "1-B", "rezervisano": true, "datum_prodaje": null, "korisnicko_ime": null, "ime_i_prezime": "mihajlo", "termin": <Database.Models.Termin.Termin object at 0x00000159E4173510>, "korisnik": null
             },
-            {
-                "sifra": "5378CA",
-                "sifra_projekcije": "5378",
-                "datum_odrzavanja": "11/08/23"
-            }
-        ]
-    },
-    "karte": {
-        "model": "Karta",
-        "rows": [
-            {
-                "sifra": "EW2BTB0D6X",
-                "sifra_termina": "5378AA",
-                "oznaka_sedista": "1-A",
-                "rezervisano": true,
-                "datum_prodaje": null,
-                "korisnicko_ime": "mihajlo",
-                "ime_i_prezime": null
-            },
-            {
-                "sifra": "ZVCM5CI42Z",
-                "sifra_termina": "5378AA",
-                "oznaka_sedista": "1-B",
-                "rezervisano": true,
-                "datum_prodaje": null,
-                "korisnicko_ime": "mihajlo",
-                "ime_i_prezime": null
-            },
-            {
-                "sifra": "07BYLX0D5M",
-                "sifra_termina": "5378AA",
-                "oznaka_sedista": "2-C",
-                "rezervisano": false,
-                "datum_prodaje": "11/01/23",
-                "korisnicko_ime": null,
-                "ime_i_prezime": "Djordje Milojevic"
+            {"sifra": "07BYLX0D5M", "sifra_termina": "5378AA", "oznaka_sedista": "2-C", "rezervisano": true, "datum_prodaje": "11/01/23", "korisnicko_ime": "Djordje Milojevic", "ime_i_prezime": null, "termin": <Database.Models.Termin.Termin object at 0x00000159E4173510>, "korisnik": null
             }
         ]
     }

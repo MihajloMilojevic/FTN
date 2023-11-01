@@ -13,6 +13,9 @@ class Sala:
         self.naziv = naziv
         self.broj_redova = broj_redova
         self.broj_kolona = broj_kolona 
+
+    def __str__(self) -> str:
+        return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|int:
         match key:
@@ -60,8 +63,12 @@ class Sala:
             Serialize.deserialize_int(data[3])
         )
     
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject()) 
+    def populatedObject(self, db):
+        print("Sala: ", self.toJsonObject())
+        return self.toJsonObject()
+    
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent) 
     
     def toJsonObject(self):
         return {

@@ -11,13 +11,16 @@ class Termin:
     primary_key = "sifra"
     name = "Termin"
     refrences = [
-        Refrence(Projekcija, "sifra_projekcije")
     ]
 
     def __init__(self, sifra: str, sifra_projekcije: str, datum_odrzavanja: datetime):
         self.sifra = sifra
         self.sifra_projekcije = sifra_projekcije
         self.datum_odrzavanja = datum_odrzavanja
+        self.projekcija = Refrence(self, Projekcija, "sifra_projekcije")
+
+    def __str__(self) -> str:
+        return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|datetime:
         match key:
@@ -59,8 +62,13 @@ class Termin:
             Serialize.deserialize_date(data[2])
         )
     
-    def toJsonString(self):
-        return json.dumps(self.toJsonObject())
+    def populatedObject(self, db):
+        obj = self.toJsonObject()
+        obj["projekcija"] = self.projekcija.get(db)
+        return obj
+
+    def toJsonString(self, indent = 0):
+        return json.dumps(self.toJsonObject(), indent=indent)
     
     def toJsonObject(self):
         return {
