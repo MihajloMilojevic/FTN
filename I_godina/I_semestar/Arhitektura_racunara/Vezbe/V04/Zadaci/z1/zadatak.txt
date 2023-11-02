@@ -1,0 +1,17 @@
+Napisati asemblerski program koji od korisnika traži da unese svoje ime i prezime,
+nakon čega na ekranu ispisuje to isto. Interakcija sa progamom treba da izgleda:
+
+Unesite ime i prezime: Imenko Prezimic
+Vi ste: Imenko Prezimic
+
+Promenljive za ispis se nalaze u viste.S fajlu.
+
+b) Ispisati ime i prezime velikim slovima (realizovati upcase)
+
+Unesite ime i prezime: Imenko Prezimic
+Vi ste: IMENKO PREZIMIC
+
+Zadatak pod b), kada se odradi, se može testirati sa:
+    ./testiraj.sh asm_program.S
+Voditi računa o tome da izlaz programa MORA biti tačno kako je traženo u zadatku!
+

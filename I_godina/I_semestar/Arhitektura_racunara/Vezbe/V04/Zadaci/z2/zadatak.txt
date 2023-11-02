@@ -1,0 +1,12 @@
+Napisati asemblerski program koji proverava da li je uneti string palindrom.
+Program vraća operativnom sistemu 0 ako string nije palindrom, a 1 ako jeste.
+Interakcija sa korisnikom treba da izgleda:
+
+Unesite string: aca
+Uneti string je palindrom.
+
+Unesite string: milan
+Uneti string nije palindrom.
+
+Promenljive za ispis se nalaze u palindrom.S fajlu.
+

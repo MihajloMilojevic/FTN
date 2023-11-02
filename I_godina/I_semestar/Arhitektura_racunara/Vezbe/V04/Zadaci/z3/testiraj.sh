@@ -35,8 +35,8 @@ if [ $missing -ne 0 ]; then
     exit 1
 fi
 
-TESTS=(01 02 03 04)
-EXITS=(0 0 0 0)
+TESTS=(01 02)
+EXITS=(0 0)
 EMPTY="#"
 QUIET=0
 KEEP=0
@@ -44,46 +44,82 @@ SIG=""
 OUT1=/tmp/out1
 
 TEST01=$(cat <<EOL
-pera peric
+string 1
+string 2
+string 3
+string 4
+string 5
+string 6
+string 7
+string 8
+string 9
+string 10
 EOL
 )
 
 OUTP01=$(cat <<EOL
-Unesite ime i prezime: pera peric
-Vi ste: PERA PERIC
+Unesite string:string 1
+Unesite string:string 2
+Unesite string:string 3
+Unesite string:string 4
+Unesite string:string 5
+Unesite string:string 6
+Unesite string:string 7
+Unesite string:string 8
+Unesite string:string 9
+Unesite string:string 10
+
+Obrnuti redosled:
+string 10
+string 9
+string 8
+string 7
+string 6
+string 5
+string 4
+string 3
+string 2
+string 1
 EOL
 )
 
 TEST02=$(cat <<EOL
-MIKA MIKIC
+Ekser
+Kuca
+Cackalica
+Automobil
+Viljuska
+Avan
+Lepinja
+Grana
+Ameba
+Novine
 EOL
 )
 
 OUTP02=$(cat <<EOL
-Unesite ime i prezime: MIKA MIKIC
-Vi ste: MIKA MIKIC
-EOL
-)
+Unesite string:Ekser
+Unesite string:Kuca
+Unesite string:Cackalica
+Unesite string:Automobil
+Unesite string:Viljuska
+Unesite string:Avan
+Unesite string:Lepinja
+Unesite string:Grana
+Unesite string:Ameba
+Unesite string:Novine
 
-TEST03=$(cat <<EOL
-pAJA pAJIC
-EOL
-)
-
-OUTP03=$(cat <<EOL
-Unesite ime i prezime: pAJA pAJIC
-Vi ste: PAJA PAJIC
-EOL
-)
-
-TEST04=$(cat <<EOL
-Baja Bajic
-EOL
-)
-
-OUTP04=$(cat <<EOL
-Unesite ime i prezime: Baja Bajic
-Vi ste: BAJA BAJIC
+Obrnuti redosled:
+Novine
+Ameba
+Grana
+Lepinja
+Avan
+Viljuska
+Automobil
+Cackalica
+Kuca
+Ekser
 EOL
 )
 
