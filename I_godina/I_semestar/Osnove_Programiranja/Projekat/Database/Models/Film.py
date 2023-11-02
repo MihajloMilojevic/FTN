@@ -11,7 +11,7 @@ class Film:
                  zemlja_porekla: str, godina_proizvodnje: int, opis: str):
         self.sifra = sifra
         self.naziv = naziv
-        self.zanrovi = zanrovi,
+        self.zanrovi = zanrovi
         self.trajanje = trajanje
         self.reziser = reziser
         self.glavne_uloge = glavne_uloge

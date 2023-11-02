@@ -94,7 +94,7 @@ color: white;</string>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="username_input">
          <property name="styleSheet">
           <string notr="true">padding: 5px 10px;</string>
          </property>
@@ -116,7 +116,7 @@ color: white;</string>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="password_input">
          <property name="styleSheet">
           <string notr="true">padding: 5px 10px;</string>
          </property>

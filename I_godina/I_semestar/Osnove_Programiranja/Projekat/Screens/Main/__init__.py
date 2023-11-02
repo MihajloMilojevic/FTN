@@ -3,6 +3,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5 import uic
 from Utils.GetPath import GetRelativePath
 from Screens.Login import LoginScreen
+import App.State as State
 
 class MainScreen(QWidget):
     def __init__(self) -> None:
@@ -23,3 +24,7 @@ class MainScreen(QWidget):
         login_screen = LoginScreen()
         login_screen.exec_()
         self.show()
+        if State.user is None:
+            QMessageBox.information(self, "Bez usera", "Korisnik je None")
+        else:
+            QMessageBox.information(self, "User postoji", f"Prijavljen kao {State.user.ime} {State.user.prezime}")
