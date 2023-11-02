@@ -1,3 +1,3 @@
-EW2BTB0D6X|5378AA|1-A|True|None|None|mihajlo
-ZVCM5CI42Z|5378AA|1-B|True|None|None|mihajlo
-07BYLX0D5M|5378AA|2-C|True|11/01/23|Djordje Milojevic|None
+EW2BTB0D6X|5378AA|1-A|True|None|mihajlo|None
+ZVCM5CI42Z|5378AA|1-B|True|None|mihajlo|None
+07BYLX0D5M|5378AA|2-C|True|11/01/23|None|Djordje Milojevic
