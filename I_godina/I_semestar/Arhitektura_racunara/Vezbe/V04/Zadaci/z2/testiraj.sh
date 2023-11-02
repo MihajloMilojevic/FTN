@@ -35,8 +35,8 @@ if [ $missing -ne 0 ]; then
     exit 1
 fi
 
-TESTS=(01 02 03 04)
-EXITS=(0 0 0 0)
+TESTS=(01 02 03 04 05 06)
+EXITS=(0 1 0 1 0 1)
 EMPTY="#"
 QUIET=0
 KEEP=0
@@ -44,46 +44,68 @@ SIG=""
 OUT1=/tmp/out1
 
 TEST01=$(cat <<EOL
-pera peric
+anavolimilovana
 EOL
 )
 
 OUTP01=$(cat <<EOL
-Unesite ime i prezime: pera peric
-Vi ste: PERA PERIC
+Unesite string:anavolimilovana
+String je palindrom.
 EOL
 )
 
 TEST02=$(cat <<EOL
-MIKA MIKIC
+corsokak
 EOL
 )
 
 OUTP02=$(cat <<EOL
-Unesite ime i prezime: MIKA MIKIC
-Vi ste: MIKA MIKIC
+Unesite string:corsokak
+String nije palindrom.
 EOL
 )
 
 TEST03=$(cat <<EOL
-pAJA pAJIC
+avdaterajaretadva
 EOL
 )
 
 OUTP03=$(cat <<EOL
-Unesite ime i prezime: pAJA pAJIC
-Vi ste: PAJA PAJIC
+Unesite string:avdaterajaretadva
+String je palindrom.
 EOL
 )
 
 TEST04=$(cat <<EOL
-Baja Bajic
+enijepalindrom
 EOL
 )
 
 OUTP04=$(cat <<EOL
-Unesite ime i prezime: Baja Bajic
-Vi ste: BAJA BAJIC
+Unesite string:enijepalindrom
+String nije palindrom.
+EOL
+)
+
+TEST05=$(cat <<EOL
+12345654321
+EOL
+)
+
+OUTP05=$(cat <<EOL
+Unesite string:12345654321
+String je palindrom.
+EOL
+)
+
+TEST06=$(cat <<EOL
+123456754321
+EOL
+)
+
+OUTP06=$(cat <<EOL
+Unesite string:123456754321
+String nije palindrom.
 EOL
 )
 

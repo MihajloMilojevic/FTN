@@ -1,0 +1,42 @@
+Napisati program koji omogućava unos 10 stringova dužine do 20 znakova,
+nakon čega ih na ekranu ispisuje u obrnutom redosledu. 
+Interakcija sa korisnikom treba da izgleda:
+
+Unesite string:string 1
+Unesite string:string 2
+Unesite string:string 3
+Unesite string:string 4
+Unesite string:string 5
+Unesite string:string 6
+Unesite string:string 7
+Unesite string:string 8
+Unesite string:string 9
+Unesite string:string 10
+
+Obrnuti redosled:
+string 10
+string 9
+string 8
+string 7
+string 6
+string 5
+string 4
+string 3
+string 2
+string 1
+
+Promenljive za ispis se nalaze u stringlist.S fajlu.
+
+Niz stringova se može realizovati kao blok memorije:
+str_len = 21    # dužina jednog stringa (20 znakova + Enter)
+str_num = 10    # broj stringova
+strings: .fill str_len*str_num,1,42
+
+Kada se zna dužina jednog stringa, može se izračunati na kojoj adresi
+se nalazi svaki od elemenata:
+    adr_elementa = strings + indeks * str_len
+
+Korisno je, radi ispisa, imati i niz sa dužinama svih stringova:
+str_lens:   .fill str_num,4,0
+gde će se čuvati korespondentne dužine unetih stringova.
+
