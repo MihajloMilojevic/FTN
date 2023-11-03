@@ -34,20 +34,18 @@ class Table:
     # Upisuje tabelu u fajl
     def save(self) -> None:
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8")
-            for row in self.rows:
-                file.write(f"{self.model.serialize(row)}\n")
-            file.close()
+            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8") as file:
+                for row in self.rows:
+                    file.write(f"{self.model.serialize(row)}\n")
         except Exception as e:
             print(f"Unable to write to the file {self.model.name}\nError: {e}")
 
     # Ucitava vrednosti iz fajla
     def load(self):
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8")
-            for row in file.readlines():
-                self.Insert(self.model.deserialize(row[:-1]))
-            file.close()
+            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8") as file:
+                for row in file.readlines():
+                    self.Insert(self.model.deserialize(row[:-1]))
         except Exception as e:
             print(f"Unable to read from the file {self.model.name}\nError: {e}")
 
