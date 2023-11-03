@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QMessageBox
+from PyQt5.QtWidgets import QDialog, QPushButton, QLineEdit, QMessageBox
 from PyQt5.QtGui import QIcon
 from PyQt5 import uic
 
@@ -8,22 +8,14 @@ import Database.Models as Models
 
 
 
-class LoginScreen(QWidget):
-    def __init__(self, parent) -> None:
+class LoginScreen(QDialog):
+    def __init__(self) -> None:
         super().__init__()
-        self.roditelj = parent
         uic.loadUi(GetRelativePath(["Screens", "Login", "LoginScreenDesign.ui"]), self)
         self.setWindowIcon(QIcon(GetRelativePath(["LOGO.ico"])))
         self.get_components()
         self.add_functionality()
-        self.onClose = None
     
-    # Pri zatvaranju prikazi glavni
-    def closeEvent(self, event):
-        if self.onClose is not None:
-            self.onClose()
-        event.accept() 
-
     def get_components(self):
         self.prijavi_se_button: QPushButton = self.findChild(QPushButton, "prijavi_se_button")
         self.username_input: QLineEdit = self.findChild(QLineEdit, "username_input")

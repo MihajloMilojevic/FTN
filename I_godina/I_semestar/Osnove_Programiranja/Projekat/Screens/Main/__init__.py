@@ -19,12 +19,15 @@ class MainScreen(QWidget):
     def add_functionality(self):
         self.prijavi_se_button.clicked.connect(self.prijavi_se_button_click)
 
-    def prijavi_se_button_click(self):
-        self.hide()
-        login_screen = LoginScreen()
-        login_screen.exec_()
+    def handle_login_close(self):
         self.show()
         if State.user is None:
             QMessageBox.information(self, "Bez usera", "Korisnik je None")
         else:
             QMessageBox.information(self, "User postoji", f"Prijavljen kao {State.user.ime} {State.user.prezime}")
+
+    def prijavi_se_button_click(self):
+        self.hide()
+        self.login_screen = LoginScreen(self)
+        self.login_screen.onClose = self.handle_login_close
+        self.login_screen.show()
