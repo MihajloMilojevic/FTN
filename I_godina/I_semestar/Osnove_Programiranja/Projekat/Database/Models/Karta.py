@@ -86,8 +86,8 @@ class Karta:
             Serialize.deserialize_string(data[2]),
             Serialize.deserialize_bool(data[3]),
             Serialize.deserialize_date(data[4]),
-            Serialize.deserialize_string(data[6]),
             Serialize.deserialize_string(data[5]),
+            Serialize.deserialize_string(data[6]),
         )
     
     def populatedObject(self, db):
