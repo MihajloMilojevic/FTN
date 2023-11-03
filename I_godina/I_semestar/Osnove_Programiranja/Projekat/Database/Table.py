@@ -34,7 +34,7 @@ class Table:
     # Upisuje tabelu u fajl
     def save(self) -> None:
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w")
+            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8")
             for row in self.rows:
                 file.write(f"{self.model.serialize(row)}\n")
             file.close()
@@ -44,7 +44,7 @@ class Table:
     # Ucitava vrednosti iz fajla
     def load(self):
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r")
+            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8")
             for row in file.readlines():
                 self.Insert(self.model.deserialize(row[:-1]))
             file.close()

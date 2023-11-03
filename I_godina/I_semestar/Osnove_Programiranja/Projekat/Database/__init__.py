@@ -85,7 +85,7 @@ class Database:
         return db
 
     def setupJson(self):
-        file = open("data.json", "r")
+        file = open("data.json", "r", encoding="utf-8")
         str = file.read()
         db = Database.fromJsonString(str)
         self.korisnici = db.korisnici
@@ -97,7 +97,7 @@ class Database:
         file.close()
 
     def saveJson(self):
-        file = open("data.json", "w")
+        file = open("data.json", "w", encoding="utf-8")
         file.write(self.toJsonString())
         file.close()
 
