@@ -14,7 +14,7 @@ def setupUi(Form):
 
     prijavi_se_button = QtWidgets.QPushButton(Form)
     prijavi_se_button.setFont(font)
-    prijavi_se_button.setMaximumWidth(300)
+    prijavi_se_button.setFixedWidth(300)
     prijavi_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     prijavi_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
     prijavi_se_button.setStyleSheet("background: white;\n"
@@ -32,7 +32,7 @@ def setupUi(Form):
 
     registruj_se_button = QtWidgets.QPushButton(Form)
     registruj_se_button.setFont(font)
-    registruj_se_button.setMaximumWidth(300)
+    registruj_se_button.setFixedWidth(300)
     registruj_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     registruj_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
     registruj_se_button.setStyleSheet("background: white;\n"

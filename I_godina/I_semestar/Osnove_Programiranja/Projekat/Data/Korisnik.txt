@@ -1,5 +1,5 @@
 mihajlo|Mihajlo123|Mihajlo|Milojevic|menadzer
-pepi|Petar2004|Petar|Popovic|prodavac
+pepi|Petar2004|Petar|Popović|prodavac
 prle|kos2023|Luka|Prilincevic|prodavac
 ljubogdan|Boki951|Bogdan|Ljubinkovic|prodavac
 lanmi|hell0w0rld|Milan|Sazdov|kupac
