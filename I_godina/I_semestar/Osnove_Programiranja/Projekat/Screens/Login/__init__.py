@@ -6,6 +6,9 @@ from Screens.Login.UI import setupUi
 
 def LoginScreen(parent):
     frame = QtWidgets.QFrame()
+    frame.setMaximumHeight(900)
+    frame.setMaximumWidth(500)
+    # frame.setStyleSheet("border: 1px solid red")
     components = setupUi(frame)
     username_input: QtWidgets.QLineEdit  = components["username_input"]
     password_input: QtWidgets.QLineEdit  = components["password_input"]
@@ -35,6 +38,8 @@ def LoginScreen(parent):
         parent.show_screen(user.uloga)
     prijavi_se_button.clicked.connect(prijavi_se_button_click)
     def odustani_button_click():
+        username_input.setText("")
+        password_input.setText("")
         parent.show_screen("unregistered")
     odustani_button.clicked.connect(odustani_button_click)
     return frame

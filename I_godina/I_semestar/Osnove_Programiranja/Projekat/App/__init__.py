@@ -81,6 +81,7 @@ class App(QtWidgets.QWidget):
         
 
         self.content_layout = QtWidgets.QVBoxLayout()
+        self.content_layout.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.content_layout.setSizeConstraint(QtWidgets.QLayout.SetMinAndMaxSize)
         self.content_layout.setContentsMargins(0, 0, 0, 0)
         self.content_layout.setSpacing(0)
@@ -89,6 +90,7 @@ class App(QtWidgets.QWidget):
 
         self.main_layout = QtWidgets.QVBoxLayout()
         self.main_layout.setSizeConstraint(QtWidgets.QLayout.SetMinAndMaxSize)
+        self.main_layout.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.main_layout.setContentsMargins(0, 0, 0, 0)
         self.main_layout.setSpacing(0)
         self.main_layout.setObjectName("main_layout")

@@ -9,8 +9,10 @@ def setupUi(Form):
     vbox_layout.setContentsMargins(50, 50, 50, 50)
     vbox_layout.setSpacing(10)
     vbox_layout.setObjectName("vbox_layout")
+    vbox_layout.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
     prijavi_se_button = QtWidgets.QPushButton(Form)
     prijavi_se_button.setFont(font)
+    prijavi_se_button.setMaximumWidth(150)
     prijavi_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     prijavi_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
     prijavi_se_button.setStyleSheet("background: white;\n"
