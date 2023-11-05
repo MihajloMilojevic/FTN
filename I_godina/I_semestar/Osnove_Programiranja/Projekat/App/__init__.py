@@ -63,7 +63,7 @@ class App(QtWidgets.QWidget):
         self.screens[name].show()
 
     def setup(self):
-        self.setWindowIcon(QtGui.QIcon(GetRelativePath(["LOGO.ico"])))
+        self.setWindowIcon(QtGui.QIcon(GetRelativePath(["Assets", "LOGO.ico"])))
         self.setWindowTitle("Bioskop")
         self.setObjectName("Form")
         self.resize(500, 500)

@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from Utils.GetPath import GetRelativePath
 import App.State as State
 import Database.Models as Models
-from Screens.Employees.UI import setupUi
+from Screens.Menadzer.Employees.UI import setupUi
 
 def EmployeesScreen(parent):
     frame = QtWidgets.QFrame()

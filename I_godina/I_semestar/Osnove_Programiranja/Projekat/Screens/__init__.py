@@ -4,7 +4,7 @@ from Screens.Register import RegisterScreen
 from Screens.Kupac import KupacScreen
 from Screens.Prodavac import ProdavacScreen
 from Screens.Menadzer import MenadzerScreen
-from Screens.Employees import EmployeesScreen
+from Screens.Menadzer.Employees import EmployeesScreen
 from Screens.UserData import UserDataScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
