@@ -20,16 +20,23 @@ class Table:
     def Select(self, condition) -> Korisnik|Karta|Sala|Film|Projekcija|Termin|None:
         return [row for row in self.rows if condition(row)]
     
-    def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> None:
+    def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> bool:
         if self.SelectById(row[self.model.primary_key]) is not None:
-            raise "Duplicate key"
+            return False
         self.rows.append(row)
+        return True
 
-    def DeleteById(self, id: str) -> None:
+    def DeleteById(self, id: str) -> int:
+        old = len(self.rows)
         self.rows = [row for row in self.rows if row[self.model.primary_key] != id]
+        new = len(self.rows)
+        return old - new
 
-    def Delete(self, condition) -> None:
+    def Delete(self, condition) -> int:
+        old = len(self.rows)
         self.rows = [row for row in self.rows if not condition(row)]
+        new = len(self.rows)
+        return old - new
     
     # Upisuje tabelu u fajl
     def save(self) -> None:

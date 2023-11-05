@@ -1,5 +1,6 @@
 from Screens.Unregistered import UnregisteredScreen
 from Screens.Login import LoginScreen
+from Screens.Register import RegisterScreen
 from Screens.Kupac import KupacScreen
 from Screens.Prodavac import ProdavacScreen
 from Screens.Menadzer import MenadzerScreen

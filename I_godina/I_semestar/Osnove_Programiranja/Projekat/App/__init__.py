@@ -15,6 +15,7 @@ class App(QtWidgets.QWidget):
     def add_screens(self):
 
         self._screen_login = Screens.LoginScreen(self)
+        self._screen_register = Screens.RegisterScreen(self)
         self._screen_unregistered = Screens.UnregisteredScreen(self)
         self._screen_kupac = Screens.KupacScreen(self)
         self._screen_prodavac = Screens.ProdavacScreen(self)
@@ -22,12 +23,14 @@ class App(QtWidgets.QWidget):
         self.screens = {
             "unregistered": self._screen_unregistered,
             "login": self._screen_login,
+            "register": self._screen_register,
             "kupac": self._screen_kupac,
             "prodavac": self._screen_prodavac,
             "menadzer": self._screen_menadzer
         }
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
+        self.content_layout.addWidget(self._screen_register)
         self.content_layout.addWidget(self._screen_kupac)
         self.content_layout.addWidget(self._screen_prodavac)
         self.content_layout.addWidget(self._screen_menadzer)
