@@ -20,13 +20,15 @@ class App(QtWidgets.QWidget):
         self._screen_kupac = Screens.KupacScreen(self)
         self._screen_prodavac = Screens.ProdavacScreen(self)
         self._screen_menadzer = Screens.MenadzerScreen(self)
+        self._screen_employees = Screens.EmployeesScreen(self)
         self.screens = {
             "unregistered": self._screen_unregistered,
             "login": self._screen_login,
             "register": self._screen_register,
             "kupac": self._screen_kupac,
             "prodavac": self._screen_prodavac,
-            "menadzer": self._screen_menadzer
+            "menadzer": self._screen_menadzer,
+            "employees": self._screen_employees
         }
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -34,6 +36,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._screen_kupac)
         self.content_layout.addWidget(self._screen_prodavac)
         self.content_layout.addWidget(self._screen_menadzer)
+        self.content_layout.addWidget(self._screen_employees)
 
 
         ### TESTING #####

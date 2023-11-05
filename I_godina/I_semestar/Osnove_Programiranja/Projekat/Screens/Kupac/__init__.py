@@ -12,7 +12,6 @@ def KupacScreen(parent):
     def odjavi_se_button_click():
         State.user = None
         parent.show_screen("unregistered")
-    odjavi_se_button: QtWidgets.QPushButton = frame.findChild(QtWidgets.QPushButton, "odjavi_se_button")
     odjavi_se_button.clicked.connect(odjavi_se_button_click)
 
     
