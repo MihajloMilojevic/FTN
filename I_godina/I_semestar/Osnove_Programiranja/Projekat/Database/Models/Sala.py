@@ -47,7 +47,7 @@ class Sala:
     def serialize(obj: 'Sala') -> str:
         data = [
             Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.name),
+            Serialize.serialize_string(obj.naziv),
             Serialize.serialize_int(obj.broj_redova),
             Serialize.serialize_int(obj.broj_kolona)
         ]

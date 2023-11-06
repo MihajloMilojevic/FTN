@@ -10,6 +10,7 @@ def MenadzerScreen(parent):
     zaposleni_button: QtWidgets.QPushButton = components["zaposleni_button"]
     name_label: QtWidgets.QLabel = components["name_label"]
     user_data_button: QtWidgets.QPushButton = components["user_data_button"]
+    data_button: QtWidgets.QPushButton = components["data_button"]
     
     def odjavi_se_button_click():
         State.user = None
@@ -23,6 +24,12 @@ def MenadzerScreen(parent):
     def user_data_button_click():
         parent.show_screen("user_data")
     user_data_button.clicked.connect(user_data_button_click)
+
+    def data_button_click():
+        parent.show_screen("data")
+    data_button.clicked.connect(data_button_click)
+
+    
     
     def showEvent(event):
         name_label.setText(f"Zdravo, {State.user.ime} {State.user.prezime}")

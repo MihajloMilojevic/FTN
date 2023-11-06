@@ -17,7 +17,10 @@ class Table:
                 return row
         return None
     
-    def Select(self, condition) -> Korisnik|Karta|Sala|Film|Projekcija|Termin|None:
+    def SelectAll(self) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
+        return [row for row in self.rows]
+
+    def Select(self, condition) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
         return [row for row in self.rows if condition(row)]
     
     def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> bool:
@@ -37,6 +40,11 @@ class Table:
         self.rows = [row for row in self.rows if not condition(row)]
         new = len(self.rows)
         return old - new
+
+    def DeleteAll(self) -> int:
+        old = len(self.rows)
+        self.rows = []
+        return old
     
     # Upisuje tabelu u fajl
     def save(self) -> None:

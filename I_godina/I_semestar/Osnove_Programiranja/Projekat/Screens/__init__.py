@@ -6,6 +6,7 @@ from Screens.Prodavac import ProdavacScreen
 from Screens.Menadzer import MenadzerScreen
 from Screens.Menadzer.Employees import EmployeesScreen
 from Screens.UserData import UserDataScreen
+from Screens.Menadzer.Data import DataScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 

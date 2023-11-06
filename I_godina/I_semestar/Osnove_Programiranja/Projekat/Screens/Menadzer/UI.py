@@ -58,6 +58,22 @@ def setupUi(Form):
     user_data_button.setObjectName("user_data_button")
     user_data_button.setText("Promeni lične podatke")
 
+    data_button = QtWidgets.QPushButton(Form)
+    data_button.setFont(font)
+    data_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    data_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    data_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    data_button.setAutoDefault(False)
+    data_button.setDefault(False)
+    data_button.setFlat(True)
+    data_button.setObjectName("data_button")
+    data_button.setText("Promeni podatke bioskopa")
+
     name_label = QtWidgets.QLabel(Form)
     name_label.setFont(font)
     name_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -73,6 +89,7 @@ def setupUi(Form):
     vbox_layout.addWidget(odjavi_se_button)
     vbox_layout.addWidget(zaposleni_button)
     vbox_layout.addWidget(user_data_button)
+    vbox_layout.addWidget(data_button)
 
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
@@ -80,6 +97,7 @@ def setupUi(Form):
         "odjavi_se_button": odjavi_se_button,
         "name_label": name_label,
         "zaposleni_button": zaposleni_button,
-        "user_data_button": user_data_button
+        "user_data_button": user_data_button,
+        "data_button": data_button
     }
 
