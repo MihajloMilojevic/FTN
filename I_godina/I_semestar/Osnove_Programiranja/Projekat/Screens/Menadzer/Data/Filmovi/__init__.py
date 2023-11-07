@@ -1,11 +1,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Screens.Menadzer.Data.Sale.UI import setupUi
+from Screens.Menadzer.Data.Filmovi.UI import setupUi
 import App.State as State
-import Screens.Menadzer.Data.Sale.LocalState as LocalState
+import Screens.Menadzer.Data.Filmovi.LocalState as LocalState
 import Database.Models as Models
 from Utils.MessageBox import MessageBox
 
-def SaleTab():
+def FilmoviTab():
     tab = QtWidgets.QWidget()
     tab.setObjectName("tab")
 
@@ -39,20 +39,31 @@ def SaleTab():
     table = frame_table
     def refresh_table():
         table.setRowCount(0)
-        data = State.db.sale.SelectAll()
+        data = State.db.filmovi.SelectAll()
         table.setRowCount(len(data))
         for index in range(len(data)):
-            sala: Models.Sala  = data[index]
-            item = QtWidgets.QTableWidgetItem(sala.sifra)
+            film: Models.Film  = data[index]
+            item = QtWidgets.QTableWidgetItem(film.sifra)
             # item.setBackground(QtGui.QColor)
             table.setItem(index, 0, item)
-            item = QtWidgets.QTableWidgetItem(sala.naziv)
+            item = QtWidgets.QTableWidgetItem(film.naziv)
             table.setItem(index, 1, item)
-            item = QtWidgets.QTableWidgetItem(str(sala.broj_redova))
+            item = QtWidgets.QTableWidgetItem(", ".join(film.zanrovi))
             table.setItem(index, 2, item)
-            item = QtWidgets.QTableWidgetItem(str(sala.broj_sedista))
+            item = QtWidgets.QTableWidgetItem(str(film.trajanje))
             table.setItem(index, 3, item)
-        table.resizeColumnsToContents()
+            item = QtWidgets.QTableWidgetItem(film.reziser)
+            table.setItem(index, 4, item)
+            item = QtWidgets.QTableWidgetItem(", ".join(film.glavne_uloge))
+            table.setItem(index, 5, item)
+            item = QtWidgets.QTableWidgetItem(film.zemlja_porekla)
+            table.setItem(index, 6, item)
+            item = QtWidgets.QTableWidgetItem(str(film.godina_proizvodnje))
+            table.setItem(index, 7, item)
+            item = QtWidgets.QTableWidgetItem(film.opis)
+            print(film.toJsonString(2))
+            table.setItem(index, 8, item)
+        # table.resizeRowsToContents()
     def table_showEvent(event):
         refresh_table()
         return QtWidgets.QTableWidget.showEvent(table, event)

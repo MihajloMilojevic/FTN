@@ -8,6 +8,10 @@ def DataScreen(parent):
     frame = QtWidgets.QFrame()
     # frame.setMaximumHeight(1000)
     # frame.setMaximumWidth(1000)
-    setupUi(frame)
+    components = setupUi(frame)
+    back_button: QtWidgets.QPushButton = components["back_button"]
+    def back_button_click():
+        parent.show_screen(State.user.uloga)
+    back_button.clicked.connect(back_button_click)
 
     return frame

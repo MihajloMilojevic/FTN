@@ -1,5 +1,4 @@
-S1|Sala|13|10
-S2|Sala|13|10
-SV|Sala|20|15
-SR|Sala|6|9
-S3|Sala3|13|10
+S1|Sala 1|13|10
+S2|Sala 2|13|10
+SV|Velika Sala|20|15
+SR|Neka Sala|6|9

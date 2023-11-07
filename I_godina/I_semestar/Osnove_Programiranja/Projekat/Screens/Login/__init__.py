@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from Utils.GetPath import GetRelativePath
 import App.State as State
 import Database.Models as Models
+from Utils.MessageBox import MessageBox
 from Screens.Login.UI import setupUi
 
 def LoginScreen(parent):
@@ -21,20 +22,20 @@ def LoginScreen(parent):
         username_input.setText("")
         password_input.setText("")
         if username == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti korisničko ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko ime")
             return
         if password == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti lozinku")
+            MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
         user: Models.Korisnik = State.db.korisnici.SelectById(username)
         if user is None:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Korisnik sa korisničkim imenom {username} ne postoji.")
+            MessageBox().warning(frame, "Greška", f"Korisnik sa korisničkim imenom {username} ne postoji.")
             return
         if user.lozinka != password:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Pogrešna lozinka")
+            MessageBox().warning(frame, "Greška", f"Pogrešna lozinka")
             return
         State.user = user
-        # QtWidgets.QMessageBox.information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.ime} {user.prezime}")
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.ime} {user.prezime}")
         parent.show_screen(user.uloga)
     prijavi_se_button.clicked.connect(prijavi_se_button_click)
     def odustani_button_click():

@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from Utils.GetPath import GetRelativePath
+from Utils.MessageBox import MessageBox
 import App.State as State
 import Database.Models as Models
 from Screens.UserData.UI import setupUi
@@ -23,19 +24,19 @@ def UserDataScreen(parent):
         name = name_input.text()
         surname = surname_input.text()
         if password == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti lozinku")
+            MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
         if name == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti ime")
             return
         if surname == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti prezime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti prezime")
             return
         if len(password) <= 6:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Lozinka je prekratka")
+            MessageBox().warning(frame, "Greška", f"Lozinka je prekratka")
             return
         if len([c for c in password if c.isdigit()]) == 0:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Lozinka mora sadržati bar jednu cifru")
+            MessageBox().warning(frame, "Greška", f"Lozinka mora sadržati bar jednu cifru")
             return
         
         username_input.setText("")
@@ -45,7 +46,7 @@ def UserDataScreen(parent):
         State.user.ime = name
         State.user.prezime = surname
         State.user.lozinka = password
-        # QtWidgets.QMessageBox.information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
         parent.show_screen(State.user.uloga)
     potvrdi_button.clicked.connect(potvrdi_button_click)
     def odustani_button_click():

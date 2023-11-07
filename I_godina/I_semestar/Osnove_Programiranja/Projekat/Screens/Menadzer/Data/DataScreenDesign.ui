@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
-    <height>687</height>
+    <width>873</width>
+    <height>825</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -88,6 +88,9 @@
         <widget class="QTableWidget" name="sale_table">
          <property name="enabled">
           <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding: 0</string>
          </property>
          <property name="sizeAdjustPolicy">
           <enum>QAbstractScrollArea::AdjustToContents</enum>
@@ -244,7 +247,7 @@
          </item>
          <item row="3" column="1">
           <property name="text">
-           <string>Sala 4</string>
+           <string>The Shawshank Redemption je prica o mladom coveku Andiju (Tim Robbins) bankaru kojem je smesteno ubistvo njegove zene i njenog ljubavnika. U zatvoru upoznaje Reda (Morgan Freeman) koji mu postaje prijatelj sa kojim provodi mnogo godina u zatvoru. Film prati njihove zivote iz oba ugla, iako naraciju u filmu radi Red, o zivotu Endija od trenutka kada je dosao u zatvor.</string>
           </property>
          </item>
          <item row="3" column="2">
@@ -456,6 +459,19 @@
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Nazad</string>
+         </property>
         </widget>
        </item>
       </layout>

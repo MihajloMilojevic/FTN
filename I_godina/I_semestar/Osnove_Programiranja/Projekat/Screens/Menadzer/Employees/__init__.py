@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from Utils.GetPath import GetRelativePath
+from Utils.MessageBox import MessageBox
 import App.State as State
 import Database.Models as Models
 from Screens.Menadzer.Employees.UI import setupUi
@@ -25,38 +26,38 @@ def EmployeesScreen(parent):
         surname = surname_input.text()
         role = role_cb.currentText()
         if username == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti korisničko ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko ime")
             return
         if password == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti lozinku")
+            MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
         if name == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti ime")
             return
         if surname == "":
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate uneti prezime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti prezime")
             return
         if len(password) <= 6:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Lozinka je prekratka")
+            MessageBox().warning(frame, "Greška", f"Lozinka je prekratka")
             return
         if len([c for c in password if c.isdigit()]) == 0:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Lozinka mora sadržati bar jednu cifru")
+            MessageBox().warning(frame, "Greška", f"Lozinka mora sadržati bar jednu cifru")
             return
         if role != Models.Uloge.prodavac and role != Models.Uloge.menadzer:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Morate odabrati važeću ulogu")
+            MessageBox().warning(frame, "Greška", f"Morate odabrati važeću ulogu")
             return
         
         user = Models.Korisnik(username, password, name, surname, role)
         inserted = State.db.korisnici.Insert(user)
         if not inserted:
-            QtWidgets.QMessageBox.warning(frame, "Greška", f"Korisničko ime je zauzeto")
+            MessageBox().warning(frame, "Greška", f"Korisničko ime je zauzeto")
             return
         
         username_input.setText("")
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
-        # QtWidgets.QMessageBox.information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
         parent.show_screen(State.user.uloga)
     potvrdi_button.clicked.connect(potvrdi_button_click)
     def odustani_button_click():
