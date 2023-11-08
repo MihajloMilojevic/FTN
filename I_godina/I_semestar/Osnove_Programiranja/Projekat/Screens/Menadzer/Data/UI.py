@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from Utils.GetPath import GetRelativePath
 from Screens.Menadzer.Data.Sale import SaleTab
 from Screens.Menadzer.Data.Filmovi import FilmoviTab
+from Screens.Menadzer.Data.Projekcije import ProjekcijeTab
 
 def setupUi(Frame: QtWidgets.QFrame):
     frame_layout = QtWidgets.QVBoxLayout()
@@ -21,6 +22,10 @@ def setupUi(Frame: QtWidgets.QFrame):
     filmovi_tab = FilmoviTab()
     tab.addTab(filmovi_tab, "")
     tab.setTabText(tab.indexOf(filmovi_tab), "Filmovi")
+
+    projekcije_tab = ProjekcijeTab()
+    tab.addTab(projekcije_tab, "")
+    tab.setTabText(tab.indexOf(projekcije_tab), "Projekcije")
 
     frame_layout.addWidget(tab)
 
