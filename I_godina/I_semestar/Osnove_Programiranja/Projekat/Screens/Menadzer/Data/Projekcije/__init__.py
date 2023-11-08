@@ -72,9 +72,9 @@ def ProjekcijeTab():
 
     # Buttons Frame
 
-    # buttons_add: QtWidgets.QPushButton = frames["frame_buttons"]["add_button"]
-    # buttons_delete: QtWidgets.QPushButton = frames["frame_buttons"]["delete_button"]
-    # buttons_edit: QtWidgets.QPushButton = frames["frame_buttons"]["edit_button"]
+    buttons_add: QtWidgets.QPushButton = frames["frame_buttons"]["add_button"]
+    buttons_delete: QtWidgets.QPushButton = frames["frame_buttons"]["delete_button"]
+    buttons_edit: QtWidgets.QPushButton = frames["frame_buttons"]["edit_button"]
     # def buttons_delete_click():
     #     row = table.currentRow()
     #     if row < 0:
@@ -95,7 +95,7 @@ def ProjekcijeTab():
     #     id = table.item(row, 0).text()
     #     LocalState.sala_to_edit = State.db.sale.SelectById(id)
     #     show_edit()
-    # buttons_add.clicked.connect(show_add)
+    buttons_add.clicked.connect(show_add)
     # buttons_delete.clicked.connect(buttons_delete_click)
     # buttons_edit.clicked.connect(buttons_edit_click)
 
@@ -103,12 +103,26 @@ def ProjekcijeTab():
 
     # Add Form
 
-    # add_sifra_input: QtWidgets.QLineEdit = frames["frame_add"]["sifra_input"]
-    # add_naziv_input: QtWidgets.QLineEdit = frames["frame_add"]["naziv_input"]
-    # add_redovi_sb: QtWidgets.QSpinBox = frames["frame_add"]["redovi_sb"]
-    # add_sedista_sb: QtWidgets.QSpinBox = frames["frame_add"]["sedista_sb"]
-    # add_potvrdi_button: QtWidgets.QPushButton = frames["frame_add"]["potvrdi_button"]
-    # add_odustani_button: QtWidgets.QPushButton = frames["frame_add"]["odustani_button"]
+    add_sifra_input: QtWidgets.QLineEdit = frames["frame_add"]["sifra_input"]
+    add_sala_cb: QtWidgets.QComboBox = frames["frame_add"]["sala_cb"]
+    add_film_cb: QtWidgets.QComboBox = frames["frame_add"]["film_cb"]
+    add_vreme_pocetka_time: QtWidgets.QTimeEdit = frames["frame_add"]["vreme_pocetka_time"]
+    add_vreme_kraja_time: QtWidgets.QTimeEdit = frames["frame_add"]["vreme_kraja_time"]
+    add_cena_sb: QtWidgets.QSpinBox = frames["frame_add"]["cena_sb"]
+    add_potvrdi_button: QtWidgets.QPushButton = frames["frame_add"]["potvrdi_button"]
+    add_odustani_button: QtWidgets.QPushButton = frames["frame_add"]["odustani_button"]
+
+    def calculate_end_time():
+        naziv = add_film_cb.currentText()
+        if naziv == "" or naziv not in [f.naziv for f in State.db.filmovi.SelectAll()]:   
+            add_vreme_kraja_time.setTime(QtCore.QTime(0, 0, 0))
+            return
+        film: Models.Film = State.db.filmovi.Select(lambda film: film.naziv == naziv)[0]
+        time: QtCore.QTime = QtCore.QTime(add_vreme_pocetka_time.time().hour(), add_vreme_pocetka_time.time().minute())
+        time = time.addSecs(film.trajanje * 60)
+        add_vreme_kraja_time.setTime(time)
+    add_film_cb.currentTextChanged.connect(calculate_end_time)
+    add_vreme_pocetka_time.timeChanged.connect(calculate_end_time)
 
     # def add_potvrdi_button_click():
     #     sifra = add_sifra_input.text()
@@ -143,18 +157,27 @@ def ProjekcijeTab():
     #     show_table()
     # add_potvrdi_button.clicked.connect(add_potvrdi_button_click)
 
-    # def add_odustani_button_click():
-    #     add_sifra_input.setText("")
-    #     add_naziv_input.setText("")
-    #     add_redovi_sb.setValue(1)
-    #     add_sedista_sb.setValue(1)
-    #     show_table()
-    # add_odustani_button.clicked.connect(add_odustani_button_click)
+    def add_odustani_button_click():
+        add_sifra_input.setText("")
+        add_film_cb.setCurrentIndex(0)
+        add_sala_cb.setCurrentIndex(0)
+        add_cena_sb.setValue(0)
+        add_vreme_pocetka_time.setTime(QtCore.QTime(0, 0, 0))
+        add_vreme_kraja_time.setTime(QtCore.QTime(0, 0, 0))
+        show_table()
+    add_odustani_button.clicked.connect(add_odustani_button_click)
 
-    # def add_frame_showEvent(event):
-    #     add_sifra_input.setEnabled(True)
-    #     return QtWidgets.QFrame.showEvent(frame_add, event)
-    # frame_add.showEvent = add_frame_showEvent
+    def add_frame_showEvent(event):
+        add_sala_cb.clear()
+        add_sala_cb.addItem("")
+        for sala in State.db.sale.SelectAll():
+            add_sala_cb.addItem(sala.naziv)
+        add_film_cb.clear()
+        add_film_cb.addItem("")
+        for film in State.db.filmovi.SelectAll():
+            add_film_cb.addItem(film.naziv)
+        return QtWidgets.QFrame.showEvent(frame_add, event)
+    frame_add.showEvent = add_frame_showEvent
 
     # # Edit Form
     # edit_sifra_input: QtWidgets.QLineEdit = frames["frame_edit"]["sifra_input"]

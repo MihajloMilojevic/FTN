@@ -150,81 +150,99 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     frame.setMaximumHeight(900)
     frame.setMaximumWidth(500)
 
-    main_layout = QtWidgets.QVBoxLayout(frame)
-    main_layout.setObjectName("main_layout")
-    main_layout.setSpacing(10)
-
-    form_layout = QtWidgets.QFormLayout()
-    form_layout.setVerticalSpacing(15)
-    form_layout.setObjectName("form_layout")
-
+    frame_layout = QtWidgets.QVBoxLayout(frame)
+    frame_layout.setSpacing(15)
+    frame_layout.setObjectName("frame_layout")
     
     font = QtGui.QFont()
     font.setPointSize(12)
 
+    form_layout = QtWidgets.QFormLayout()
+    form_layout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
+    form_layout.setObjectName("form_layout")
+
     sifra_label = QtWidgets.QLabel(frame)
-    sifra_label.setText("Šifra:")
+    sifra_label.setText("Šifra: ")
     sifra_label.setFont(font)
     sifra_label.setStyleSheet("color: white")
     sifra_label.setObjectName("sifra_label")
     form_layout.setWidget(0, QtWidgets.QFormLayout.LabelRole, sifra_label)
 
-
     sifra_input = QtWidgets.QLineEdit(frame)
-    sifra_input.setStyleSheet("padding: 5px 10px; color: white;")
-    sifra_input.setDragEnabled(False)
-    sifra_input.setObjectName("sifra_input")
+    sifra_input.setEnabled(False)
     sifra_input.setFont(font)
-    sifra_input.setMaximumWidth(300)
+    sifra_input.setStyleSheet("padding: 5px 10px; color: white;")
+    sifra_input.setObjectName("sifra_input")
     form_layout.setWidget(0, QtWidgets.QFormLayout.FieldRole, sifra_input)
 
-    naziv_label = QtWidgets.QLabel(frame)
-    naziv_label.setText("Naziv:")
-    naziv_label.setFont(font)
-    naziv_label.setStyleSheet("color: white")
-    naziv_label.setObjectName("naziv_label")
-    form_layout.setWidget(1, QtWidgets.QFormLayout.LabelRole, naziv_label)
+    sala_label = QtWidgets.QLabel(frame)
+    sala_label.setText("Sala:")
+    sala_label.setFont(font)
+    sala_label.setStyleSheet("color: white")
+    sala_label.setObjectName("sala_label")
+    form_layout.setWidget(1, QtWidgets.QFormLayout.LabelRole, sala_label)
 
-    naziv_input = QtWidgets.QLineEdit(frame)
-    naziv_input.setStyleSheet("padding: 5px 10px; color: white;")
-    naziv_input.setDragEnabled(False)
-    naziv_input.setObjectName("naziv_input")
-    naziv_input.setFont(font)
-    naziv_input.setMaximumWidth(300)
-    form_layout.setWidget(1, QtWidgets.QFormLayout.FieldRole, naziv_input)
+    sala_cb = QtWidgets.QComboBox(frame)
+    sala_cb.setFont(font)
+    sala_cb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
+    sala_cb.setObjectName("sala_cb")
+    form_layout.setWidget(1, QtWidgets.QFormLayout.FieldRole, sala_cb)
 
-    redovi_label = QtWidgets.QLabel(frame)
-    redovi_label.setText("Broj redova: ")
-    redovi_label.setFont(font)
-    redovi_label.setStyleSheet("color: white")
-    redovi_label.setObjectName("redovi_label")
-    form_layout.setWidget(2, QtWidgets.QFormLayout.LabelRole, redovi_label)
+    film_label = QtWidgets.QLabel(frame)
+    film_label.setText("Film:")
+    film_label.setFont(font)
+    film_label.setStyleSheet("color: white")
+    film_label.setObjectName("film_label")
+    form_layout.setWidget(2, QtWidgets.QFormLayout.LabelRole, film_label)
 
-    redovi_sb = QtWidgets.QSpinBox(frame)
-    redovi_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
-    redovi_sb.setMinimum(1)
-    redovi_sb.setObjectName("redovi_sb")
-    redovi_sb.setFont(font)
-    redovi_sb.setMaximumWidth(300)
-    form_layout.setWidget(2, QtWidgets.QFormLayout.FieldRole, redovi_sb)
+    film_cb = QtWidgets.QComboBox(frame)
+    film_cb.setFont(font)
+    film_cb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
+    film_cb.setObjectName("film_cb")
+    form_layout.setWidget(2, QtWidgets.QFormLayout.FieldRole, film_cb)
 
-    sedista_label = QtWidgets.QLabel(frame)
-    sedista_label.setToolTip("Broj sedišta u svakom redu")
-    sedista_label.setText("Broj sedišta: ")
-    sedista_label.setFont(font)
-    sedista_label.setStyleSheet("color: white")
-    sedista_label.setObjectName("sedista_label")
-    form_layout.setWidget(3, QtWidgets.QFormLayout.LabelRole, sedista_label)
+    vreme_pocetka_label = QtWidgets.QLabel(frame)
+    vreme_pocetka_label.setText("Vreme početka: ")
+    vreme_pocetka_label.setFont(font)
+    vreme_pocetka_label.setStyleSheet("color: white")
+    vreme_pocetka_label.setObjectName("vreme_pocetka_label")
+    form_layout.setWidget(3, QtWidgets.QFormLayout.LabelRole, vreme_pocetka_label)
 
-    sedista_sb = QtWidgets.QSpinBox(frame)
-    sedista_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
-    sedista_sb.setMinimum(1)
-    sedista_sb.setObjectName("sedista_sb")
-    sedista_sb.setFont(font)
-    sedista_sb.setMaximumWidth(300)
-    form_layout.setWidget(3, QtWidgets.QFormLayout.FieldRole, sedista_sb)
+    vreme_pocetka_time = QtWidgets.QTimeEdit(frame)
+    vreme_pocetka_time.setFont(font)
+    vreme_pocetka_time.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
+    vreme_pocetka_time.setObjectName("vreme_pocetka_time")
+    form_layout.setWidget(3, QtWidgets.QFormLayout.FieldRole, vreme_pocetka_time)
 
-    main_layout.addLayout(form_layout)
+    vreme_kraja_label = QtWidgets.QLabel(frame)
+    vreme_kraja_label.setText("Vreme kraja:  ")
+    vreme_kraja_label.setFont(font)
+    vreme_kraja_label.setStyleSheet("color: white")
+    vreme_kraja_label.setObjectName("vreme_kraja_label")
+    form_layout.setWidget(4, QtWidgets.QFormLayout.LabelRole, vreme_kraja_label)
+
+    vreme_kraja_time = QtWidgets.QTimeEdit(frame)
+    vreme_kraja_time.setEnabled(False)
+    vreme_kraja_time.setFont(font)
+    vreme_kraja_time.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
+    vreme_kraja_time.setObjectName("vreme_kraja_time")
+    form_layout.setWidget(4, QtWidgets.QFormLayout.FieldRole, vreme_kraja_time)
+
+    cena_label = QtWidgets.QLabel(frame)
+    cena_label.setText("Cena: ")
+    cena_label.setFont(font)
+    cena_label.setStyleSheet("color: white")
+    cena_label.setObjectName("cena_label")
+    form_layout.setWidget(5, QtWidgets.QFormLayout.LabelRole, cena_label)
+
+    cena_sb = QtWidgets.QSpinBox(frame)
+    cena_sb.setFont(font)
+    cena_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
+    cena_sb.setMaximum(9999999)
+    cena_sb.setObjectName("cena_sb")
+    form_layout.setWidget(5, QtWidgets.QFormLayout.FieldRole, cena_sb)
+
+    frame_layout.addLayout(form_layout)
 
     potvrdi_button = QtWidgets.QPushButton(frame)
     potvrdi_button.setFont(font)
@@ -242,7 +260,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     potvrdi_button.setObjectName("potvrdi_button")
     potvrdi_button.setText(button_text)
 
-    main_layout.addWidget(potvrdi_button)
+    frame_layout.addWidget(potvrdi_button)
 
     odustani_button = QtWidgets.QPushButton(frame)
     odustani_button.setFont(font)
@@ -259,15 +277,18 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     odustani_button.setFlat(True)
     odustani_button.setObjectName("odustani_button")
     odustani_button.setText("Odustani")
-    main_layout.addWidget(odustani_button)
+    frame_layout.addWidget(odustani_button)
+    
     parent_layout.addWidget(frame)
 
     return {
         "frame": frame,
         "sifra_input": sifra_input,
-        "naziv_input": naziv_input,
-        "redovi_sb": redovi_sb,
-        "sedista_sb": sedista_sb,
+        "sala_cb": sala_cb,
+        "film_cb": film_cb,
+        "vreme_pocetka_time": vreme_pocetka_time,
+        "vreme_kraja_time": vreme_kraja_time,
+        "cena_sb": cena_sb,
         "potvrdi_button": potvrdi_button,
         "odustani_button": odustani_button
     }
