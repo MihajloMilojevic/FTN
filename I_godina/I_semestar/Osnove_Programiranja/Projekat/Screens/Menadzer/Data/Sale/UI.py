@@ -168,7 +168,6 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
 
     sifra_input = QtWidgets.QLineEdit(frame)
     sifra_input.setStyleSheet("padding: 5px 10px; color: white;")
-    sifra_input.setEnabled(False)
     sifra_input.setDragEnabled(False)
     sifra_input.setObjectName("sifra_input")
     sifra_input.setFont(font)

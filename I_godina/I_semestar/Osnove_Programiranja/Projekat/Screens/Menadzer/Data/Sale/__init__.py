@@ -140,6 +140,11 @@ def SaleTab():
         show_table()
     add_odustani_button.clicked.connect(add_odustani_button_click)
 
+    def add_frame_showEvent(event):
+        add_sifra_input.setEnabled(True)
+        return QtWidgets.QFrame.showEvent(frame_add, event)
+    frame_add.showEvent = add_frame_showEvent
+
     # Edit Form
     edit_sifra_input: QtWidgets.QLineEdit = frames["frame_edit"]["sifra_input"]
     edit_naziv_input: QtWidgets.QLineEdit = frames["frame_edit"]["naziv_input"]
@@ -150,6 +155,7 @@ def SaleTab():
 
     def edit_frame_showEvent(event):
         edit_sifra_input.setText(LocalState.sala_to_edit.sifra)
+        edit_sifra_input.setEnabled(False)
         edit_naziv_input.setText(LocalState.sala_to_edit.naziv)
         edit_redovi_sb.setValue(LocalState.sala_to_edit.broj_redova)
         edit_sedista_sb.setValue(LocalState.sala_to_edit.broj_sedista)
