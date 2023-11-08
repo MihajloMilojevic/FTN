@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Utils.GetPath import GetRelativePath
 from Database.Models.Enums import Zanrovi
+from datetime import datetime
 
 
 def setupUi(tab: QtWidgets.QWidget):
@@ -176,6 +177,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(0, QtWidgets.QFormLayout.LabelRole, sifra_label)
 
     sifra_input = QtWidgets.QLineEdit(frame)
+    sifra_input.setEnabled(False)
     sifra_input.setFont(font)
     sifra_input.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
     sifra_input.setObjectName("sifra_input")
@@ -229,10 +231,27 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
 
     godina_sb = QtWidgets.QSpinBox(frame)
     godina_sb.setFont(font)
-    godina_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
-    godina_sb.setMinimum(1)
+    godina_sb.setMinimum(1800)
+    godina_sb.setMaximum(datetime.now().year)
+    godina_sb.setValue(datetime.now().year)
+    godina_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
     godina_sb.setObjectName("godina_sb")
     form_layout.setWidget(4, QtWidgets.QFormLayout.FieldRole, godina_sb)
+    
+    trajanje_label = QtWidgets.QLabel(frame)
+    trajanje_label.setText("Trajanje (min):")
+    trajanje_label.setFont(font)
+    trajanje_label.setStyleSheet("color: white")
+    trajanje_label.setObjectName("trajanje_label")
+    form_layout.setWidget(5, QtWidgets.QFormLayout.LabelRole, trajanje_label)
+
+    trajanje_sb = QtWidgets.QSpinBox(frame)
+    trajanje_sb.setFont(font)
+    trajanje_sb.setMinimum(1)
+    trajanje_sb.setMaximum(999999990)
+    trajanje_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    trajanje_sb.setObjectName("trajanje_sb")
+    form_layout.setWidget(5, QtWidgets.QFormLayout.FieldRole, trajanje_sb)
 
     uloge_label = QtWidgets.QLabel(frame)
     uloge_label.setText("Glavne uloge:")
@@ -240,20 +259,20 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     uloge_label.setFont(font)
     uloge_label.setStyleSheet("color: white")
     uloge_label.setObjectName("uloge_label")
-    form_layout.setWidget(5, QtWidgets.QFormLayout.LabelRole, uloge_label)
+    form_layout.setWidget(6, QtWidgets.QFormLayout.LabelRole, uloge_label)
     
     uloge_input = QtWidgets.QTextEdit(frame)
     uloge_input.setFont(font)
     uloge_input.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
     uloge_input.setObjectName("uloge_input")
-    form_layout.setWidget(5, QtWidgets.QFormLayout.FieldRole, uloge_input)
+    form_layout.setWidget(6, QtWidgets.QFormLayout.FieldRole, uloge_input)
     
     zanrovi_label = QtWidgets.QLabel(frame)
     zanrovi_label.setText("Žanrovi: ")
     zanrovi_label.setFont(font)
     zanrovi_label.setStyleSheet("color: white")
     zanrovi_label.setObjectName("zanrovi_label")
-    form_layout.setWidget(6, QtWidgets.QFormLayout.LabelRole, zanrovi_label)
+    form_layout.setWidget(7, QtWidgets.QFormLayout.LabelRole, zanrovi_label)
 
     zanrovi_group = QtWidgets.QGroupBox(frame)
     zanrovi_group.setTitle("")
@@ -402,20 +421,20 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     checkBox_8.setObjectName("checkBox_8")
     zanrovi_layout.addWidget(checkBox_8, 1, 4, 1, 1)
 
-    form_layout.setWidget(6, QtWidgets.QFormLayout.FieldRole, zanrovi_group)
+    form_layout.setWidget(7, QtWidgets.QFormLayout.FieldRole, zanrovi_group)
 
     opis_label = QtWidgets.QLabel(frame)
     opis_label.setText("Opis:")
     opis_label.setFont(font)
     opis_label.setStyleSheet("color: white")
     opis_label.setObjectName("opis_label")
-    form_layout.setWidget(7, QtWidgets.QFormLayout.LabelRole, opis_label)
+    form_layout.setWidget(8, QtWidgets.QFormLayout.LabelRole, opis_label)
 
     opis_input = QtWidgets.QTextEdit(frame)
     opis_input.setFont(font)
     opis_input.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
     opis_input.setObjectName("opis_input")
-    form_layout.setWidget(7, QtWidgets.QFormLayout.FieldRole, opis_input)
+    form_layout.setWidget(8, QtWidgets.QFormLayout.FieldRole, opis_input)
 
     frame_layout.addLayout(form_layout)
 
@@ -486,6 +505,9 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
         "reziser_input": reziser_input,
         "zemlja_input": zemlja_input,
         "godina_sb": godina_sb,
+        "trajanje_sb": trajanje_sb,
         "uloge_input": uloge_input,
-        "opis_input": opis_input
+        "opis_input": opis_input,
+        "potvrdi_button": potvrdi_button,
+        "odustani_button": odustani_button
     }

@@ -32,6 +32,11 @@ def SaleTab():
         frame_add.hide()
         frame_edit.show()
 
+    def showEvent(event):
+        show_table()
+        return QtWidgets.QWidget.showEvent(tab, event)
+    tab.showEvent = showEvent
+
     show_table()
 
     # Table
