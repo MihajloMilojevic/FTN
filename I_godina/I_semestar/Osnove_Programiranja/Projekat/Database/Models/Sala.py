@@ -8,11 +8,11 @@ class Sala:
     primary_key = "sifra"
     name = "Sala"
 
-    def __init__(self, sifra: str, naziv: str, broj_redova: int, broj_kolona: int):
+    def __init__(self, sifra: str, naziv: str, broj_redova: int, broj_sedista: int):
         self.sifra = sifra
         self.naziv = naziv
         self.broj_redova = broj_redova
-        self.broj_kolona = broj_kolona 
+        self.broj_sedista = broj_sedista 
 
     def __str__(self) -> str:
         return self.toJsonString()
@@ -25,8 +25,8 @@ class Sala:
                 return  self.naziv
             case "broj_redova":
                 return self.broj_redova
-            case "broj_kolona":
-                return self.broj_kolona
+            case "broj_sedista":
+                return self.broj_sedista
             case _:
                 raise "Invalid key"
     
@@ -38,8 +38,8 @@ class Sala:
                 self.naziv = value
             case "broj_redova":
                 self.broj_redova = value
-            case "broj_kolona":
-                self.broj_kolona = value
+            case "broj_sedista":
+                self.broj_sedista = value
             case _:
                 raise "Invalid key"
     
@@ -47,9 +47,9 @@ class Sala:
     def serialize(obj: 'Sala') -> str:
         data = [
             Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.name),
+            Serialize.serialize_string(obj.naziv),
             Serialize.serialize_int(obj.broj_redova),
-            Serialize.serialize_int(obj.broj_kolona)
+            Serialize.serialize_int(obj.broj_sedista)
         ]
         return SEPARATOR.join(data)
     
@@ -75,7 +75,7 @@ class Sala:
             "sifra": self.sifra,
             "naziv": self.naziv,
             "broj_redova": self.broj_redova,
-            "broj_kolona": self.broj_kolona
+            "broj_sedista": self.broj_sedista
         } 
     
     @staticmethod
@@ -88,6 +88,6 @@ class Sala:
             obj["sifra"], 
             obj["naziv"], 
             obj["broj_redova"], 
-            obj["broj_kolona"]
+            obj["broj_sedista"]
         )
     

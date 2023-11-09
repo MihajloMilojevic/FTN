@@ -51,7 +51,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="broj_kolona" id="E451B0DD-03DD-429F-583A-9D1A50D43976">
+<Attribute name="broj_sedista" id="E451B0DD-03DD-429F-583A-9D1A50D43976">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:43:12 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

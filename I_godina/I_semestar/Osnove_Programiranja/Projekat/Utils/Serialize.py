@@ -43,7 +43,7 @@ def serialize_bool(value: bool) -> str:
 def deserialize_bool(str: str) -> list:
     if str == strNone:
         return None
-    return bool(str)
+    return eval(str)
 
 # Liste
 def serialize_list(list: list) -> str:

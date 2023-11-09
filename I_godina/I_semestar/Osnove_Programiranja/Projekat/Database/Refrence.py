@@ -10,9 +10,9 @@ class Refrence:
         table = db[self.model.name]
         id = self.parent[self.source_key]
         res = table.SelectById(id)
-        print("Table: ", table.toJsonString(2))
-        print("Id: ", id)
-        print("Select: ", res.toJsonString(2) if res is not None else "Null")
+        # print("Table: ", table.toJsonString(2))
+        # print("Id: ", id)
+        # print("Select: ", res.toJsonString(2) if res is not None else "Null")
         return res
 
     

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Frame</class>
+ <widget class="QFrame" name="Frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>825</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="sale_tab">
+      <attribute name="title">
+       <string>Sale</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Dodaj</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../Assets/plus.png</normaloff>../../../Assets/plus.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Izbriši</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../Assets/trash.png</normaloff>../../../Assets/trash.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Dodaj</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../../Assets/edit.png</normaloff>../../../Assets/edit.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="sale_table">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding: 0</string>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="cornerButtonEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Sifra</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Naziv</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Broj redova</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Broj sedišta</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>S1</string>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string>Sala 1</string>
+          </property>
+         </item>
+         <item row="0" column="2">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+         <item row="0" column="3">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>S2</string>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string>Sala 2</string>
+          </property>
+         </item>
+         <item row="1" column="2">
+          <property name="text">
+           <string>15</string>
+          </property>
+         </item>
+         <item row="1" column="3">
+          <property name="text">
+           <string>7</string>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>S3</string>
+          </property>
+         </item>
+         <item row="2" column="1">
+          <property name="text">
+           <string>Sala 3</string>
+          </property>
+         </item>
+         <item row="2" column="2">
+          <property name="text">
+           <string>12</string>
+          </property>
+         </item>
+         <item row="2" column="3">
+          <property name="text">
+           <string>8</string>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>S4</string>
+          </property>
+         </item>
+         <item row="3" column="1">
+          <property name="text">
+           <string>The Shawshank Redemption je prica o mladom coveku Andiju (Tim Robbins) bankaru kojem je smesteno ubistvo njegove zene i njenog ljubavnika. U zatvoru upoznaje Reda (Morgan Freeman) koji mu postaje prijatelj sa kojim provodi mnogo godina u zatvoru. Film prati njihove zivote iz oba ugla, iako naraciju u filmu radi Red, o zivotu Endija od trenutka kada je dosao u zatvor.</string>
+          </property>
+         </item>
+         <item row="3" column="2">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+         <item row="3" column="3">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+         <item row="4" column="0">
+          <property name="text">
+           <string>S5</string>
+          </property>
+         </item>
+         <item row="4" column="1">
+          <property name="text">
+           <string>Sala 5</string>
+          </property>
+         </item>
+         <item row="4" column="2">
+          <property name="text">
+           <string>7</string>
+          </property>
+         </item>
+         <item row="4" column="3">
+          <property name="text">
+           <string>15</string>
+          </property>
+         </item>
+         <item row="5" column="0">
+          <property name="text">
+           <string>S6</string>
+          </property>
+         </item>
+         <item row="5" column="1">
+          <property name="text">
+           <string>Sala 6</string>
+          </property>
+         </item>
+         <item row="5" column="2">
+          <property name="text">
+           <string>13</string>
+          </property>
+         </item>
+         <item row="5" column="3">
+          <property name="text">
+           <string>6</string>
+          </property>
+         </item>
+         <item row="6" column="0">
+          <property name="text">
+           <string>S7</string>
+          </property>
+         </item>
+         <item row="6" column="1">
+          <property name="text">
+           <string>Sala 7</string>
+          </property>
+         </item>
+         <item row="6" column="2">
+          <property name="text">
+           <string>12</string>
+          </property>
+         </item>
+         <item row="6" column="3">
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true">background-color: gray</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QFormLayout" name="formLayout">
+            <property name="verticalSpacing">
+             <number>15</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="text">
+               <string>Šifra:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="text">
+               <string>Naziv:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="text">
+               <string>Broj redova:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="spinBox">
+              <property name="styleSheet">
+               <string notr="true">color: white; border: 1px solid white;</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Broj sedišta u svakom redu</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="text">
+               <string>Broj sedišta:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="spinBox_2">
+              <property name="styleSheet">
+               <string notr="true">color: white; border: 1px solid white;</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: white;</string>
+            </property>
+            <property name="text">
+             <string>Dodaj</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="styleSheet">
+             <string notr="true">background-color: white;</string>
+            </property>
+            <property name="text">
+             <string>Odustani</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Nazad</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="filmovi_tab">
+      <attribute name="title">
+       <string>Filmovi</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Page</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

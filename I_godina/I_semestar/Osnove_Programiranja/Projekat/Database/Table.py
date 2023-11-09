@@ -17,37 +17,50 @@ class Table:
                 return row
         return None
     
-    def Select(self, condition) -> Korisnik|Karta|Sala|Film|Projekcija|Termin|None:
+    def SelectAll(self) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
+        return [row for row in self.rows]
+
+    def Select(self, condition) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
         return [row for row in self.rows if condition(row)]
     
-    def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> None:
+    def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> bool:
         if self.SelectById(row[self.model.primary_key]) is not None:
-            raise "Duplicate key"
+            return False
         self.rows.append(row)
+        return True
 
-    def DeleteById(self, id: str) -> None:
+    def DeleteById(self, id: str) -> int:
+        old = len(self.rows)
         self.rows = [row for row in self.rows if row[self.model.primary_key] != id]
+        new = len(self.rows)
+        return old - new
 
-    def Delete(self, condition) -> None:
+    def Delete(self, condition) -> int:
+        old = len(self.rows)
         self.rows = [row for row in self.rows if not condition(row)]
+        new = len(self.rows)
+        return old - new
+
+    def DeleteAll(self) -> int:
+        old = len(self.rows)
+        self.rows = []
+        return old
     
     # Upisuje tabelu u fajl
     def save(self) -> None:
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w")
-            for row in self.rows:
-                file.write(f"{self.model.serialize(row)}\n")
-            file.close()
+            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8") as file:
+                for row in self.rows:
+                    file.write(f"{self.model.serialize(row)}\n")
         except Exception as e:
             print(f"Unable to write to the file {self.model.name}\nError: {e}")
 
     # Ucitava vrednosti iz fajla
     def load(self):
         try:
-            file = open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r")
-            for row in file.readlines():
-                self.Insert(self.model.deserialize(row[:-1]))
-            file.close()
+            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8") as file:
+                for row in file.readlines():
+                    self.Insert(self.model.deserialize(row[:-1]))
         except Exception as e:
             print(f"Unable to read from the file {self.model.name}\nError: {e}")
 

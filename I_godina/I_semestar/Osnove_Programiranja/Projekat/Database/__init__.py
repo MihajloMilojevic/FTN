@@ -85,19 +85,17 @@ class Database:
         return db
 
     def setupJson(self):
-        file = open("data.json", "r")
-        str = file.read()
-        db = Database.fromJsonString(str)
-        self.korisnici = db.korisnici
-        self.sale = db.sale
-        self.filmovi = db.filmovi
-        self.projekcije = db.projekcije
-        self.termini = db.termini
-        self.karte = db.karte
-        file.close()
+        with open("data.json", "r", encoding="utf-8") as file:
+            str = file.read()
+            db = Database.fromJsonString(str)
+            self.korisnici = db.korisnici
+            self.sale = db.sale
+            self.filmovi = db.filmovi
+            self.projekcije = db.projekcije
+            self.termini = db.termini
+            self.karte = db.karte
 
     def saveJson(self):
-        file = open("data.json", "w")
-        file.write(self.toJsonString())
-        file.close()
+        with open("data.json", "w", encoding="utf-8") as file:
+            file.write(self.toJsonString())
 
