@@ -1,3 +1,3 @@
 import Database.Models as Models
 
-sala_to_edit: Models.Sala = None
+projekcija_to_edit: Models.Projekcija = None

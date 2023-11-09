@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Utils.GetPath import GetRelativePath
+from Database.Models.Enums import Dani
 
 def setupUi(tab: QtWidgets.QWidget):
 
@@ -10,7 +11,7 @@ def setupUi(tab: QtWidgets.QWidget):
 
     frame_buttons = buttons_frame(layout)
     frame_table = table_frame(layout)
-    frame_add = form(layout, "Dodaj salu")
+    frame_add = form(layout, "Dodaj projekciju")
     frame_edit = form(layout, "Sačuvaj izemene")
 
     tab.setLayout(layout)
@@ -123,7 +124,7 @@ def table_frame(parent_layout: QtWidgets.QVBoxLayout):
     table.horizontalHeader().setSortIndicatorShown(False)
     table.horizontalHeader().setStretchLastSection(True)
     table.verticalHeader().setVisible(False)
-    table.setColumnCount(6)
+    table.setColumnCount(7)
     item = QtWidgets.QTableWidgetItem("Šifra")
     table.setHorizontalHeaderItem(0, item)
     item = QtWidgets.QTableWidgetItem("Sala")
@@ -136,6 +137,8 @@ def table_frame(parent_layout: QtWidgets.QVBoxLayout):
     table.setHorizontalHeaderItem(4, item)
     item = QtWidgets.QTableWidgetItem("Cena")
     table.setHorizontalHeaderItem(5, item)
+    item = QtWidgets.QTableWidgetItem("Dani")
+    table.setHorizontalHeaderItem(6, item)
     parent_layout.addWidget(table)
     return {
         "table": table
@@ -235,12 +238,77 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     cena_label.setObjectName("cena_label")
     form_layout.setWidget(5, QtWidgets.QFormLayout.LabelRole, cena_label)
 
-    cena_sb = QtWidgets.QSpinBox(frame)
+    cena_sb = QtWidgets.QDoubleSpinBox(frame)
     cena_sb.setFont(font)
     cena_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")
     cena_sb.setMaximum(9999999)
     cena_sb.setObjectName("cena_sb")
     form_layout.setWidget(5, QtWidgets.QFormLayout.FieldRole, cena_sb)
+
+    dani_label = QtWidgets.QLabel(frame)
+    dani_label.setText("Dani: ")
+    dani_label.setFont(font)
+    dani_label.setStyleSheet("color: white")
+    dani_label.setObjectName("dani_label")
+    form_layout.setWidget(6, QtWidgets.QFormLayout.LabelRole, dani_label)
+
+    dani_group = QtWidgets.QGroupBox(frame)
+    dani_group.setTitle("")
+    dani_group.setObjectName("dani_group")
+
+    dani_layout = QtWidgets.QGridLayout(dani_group)
+    dani_layout.setObjectName("dani_layout")
+
+    checkbox_pondeljak = QtWidgets.QCheckBox(dani_group)
+    checkbox_pondeljak.setText(Dani.ponedeljak)
+    checkbox_pondeljak.setFont(font)
+    checkbox_pondeljak.setStyleSheet("color: white")
+    checkbox_pondeljak.setObjectName("checkbox_pondeljak")
+    dani_layout.addWidget(checkbox_pondeljak, 0, 0, 1, 1)
+
+    checkbox_utorak = QtWidgets.QCheckBox(dani_group)
+    checkbox_utorak.setText(Dani.utorak)
+    checkbox_utorak.setFont(font)
+    checkbox_utorak.setStyleSheet("color: white")
+    checkbox_utorak.setObjectName("checkbox_utorak")
+    dani_layout.addWidget(checkbox_utorak, 0, 1, 1, 1)
+
+    checkbox_sreda = QtWidgets.QCheckBox(dani_group)
+    checkbox_sreda.setText(Dani.sreda)
+    checkbox_sreda.setFont(font)
+    checkbox_sreda.setStyleSheet("color: white")
+    checkbox_sreda.setObjectName("checkbox_sreda")
+    dani_layout.addWidget(checkbox_sreda, 1, 0, 1, 1)
+
+    checkbox_cetvrtak = QtWidgets.QCheckBox(dani_group)
+    checkbox_cetvrtak.setText(Dani.cetvrtak)
+    checkbox_cetvrtak.setFont(font)
+    checkbox_cetvrtak.setStyleSheet("color: white")
+    checkbox_cetvrtak.setObjectName("checkbox_cetvrtak")
+    dani_layout.addWidget(checkbox_cetvrtak, 1, 1, 1, 1)
+
+    checkbox_petak = QtWidgets.QCheckBox(dani_group)
+    checkbox_petak.setText(Dani.petak)
+    checkbox_petak.setFont(font)
+    checkbox_petak.setStyleSheet("color: white")
+    checkbox_petak.setObjectName("checkbox_petak")
+    dani_layout.addWidget(checkbox_petak, 2, 0, 1, 1)
+
+    checkbox_subota = QtWidgets.QCheckBox(dani_group)
+    checkbox_subota.setText(Dani.subota)
+    checkbox_subota.setFont(font)
+    checkbox_subota.setStyleSheet("color: white")
+    checkbox_subota.setObjectName("checkbox_subota")
+    dani_layout.addWidget(checkbox_subota, 2, 1, 1, 1)
+
+    checkbox_nedelja = QtWidgets.QCheckBox(dani_group)
+    checkbox_nedelja.setText(Dani.nedelja)
+    checkbox_nedelja.setFont(font)
+    checkbox_nedelja.setStyleSheet("color: white")
+    checkbox_nedelja.setObjectName("checkbox_nedelja")
+    dani_layout.addWidget(checkbox_nedelja, 3, 0, 1, 1)
+
+    form_layout.setWidget(6, QtWidgets.QFormLayout.FieldRole, dani_group)
 
     frame_layout.addLayout(form_layout)
 
@@ -281,6 +349,16 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     
     parent_layout.addWidget(frame)
 
+    dani_checkboxes = [
+        checkbox_pondeljak,
+        checkbox_utorak,
+        checkbox_sreda,
+        checkbox_cetvrtak,
+        checkbox_petak,
+        checkbox_subota,
+        checkbox_nedelja
+    ]
+
     return {
         "frame": frame,
         "sifra_input": sifra_input,
@@ -289,6 +367,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
         "vreme_pocetka_time": vreme_pocetka_time,
         "vreme_kraja_time": vreme_kraja_time,
         "cena_sb": cena_sb,
+        "dani_checkboxes": dani_checkboxes,
         "potvrdi_button": potvrdi_button,
         "odustani_button": odustani_button
     }
