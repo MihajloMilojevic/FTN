@@ -60,22 +60,22 @@ def deserialize_list(str: str) -> list:
 def serialize_date(date: datetime) -> str:
     if date is None:
         return strNone
-    return datetime.strftime(date, "%x")
+    return datetime.strftime(date, "%d.%m.%Y")
 
 def deserialize_date(str: str) -> datetime:
     if str == strNone:
         return None
-    return datetime.strptime(str, "%x")
+    return datetime.strptime(str, "%d.%m.%Y")
 
 # Vreme
 def serialize_time(time: datetime) -> str:
     if time is None:
         return strNone
-    return datetime.strftime(time, "%X")
+    return datetime.strftime(time, "%H:%M:%S")
 
 def deserialize_time(str: str) -> datetime:
     if str == strNone:
         return None
-    return datetime.strptime(str, "%X")
+    return datetime.strptime(str, "%H:%M:%S")
 
 

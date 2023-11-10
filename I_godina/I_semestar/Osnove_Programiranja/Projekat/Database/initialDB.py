@@ -131,12 +131,12 @@ def populateDatabase():
     db.termini.Insert(Models.Termin("5378CA", "5378", datetime.strptime("8.11.2023", "%d.%m.%Y")))
 
     # Karte
-    db.karte.Insert(Models.Karta("EW2BTB0D6X", "5378AA", "1-A", True, None, "mihajlo", None))
-    db.karte.Insert(Models.Karta("ZVCM5CI42Z", "5378AA", "1-B", True, None, "mihajlo", None))
-    db.karte.Insert(Models.Karta("07BYLX0D5M", "5378AA", "2-C", False, datetime.strptime("1.11.2023", "%d.%m.%Y"), None, "Djordje Milojevic"))
+    db.karte.Insert(Models.Karta("EW2BTB0D6X", "5378AA", "1-A", True, None, "mihajlo", None, 0))
+    db.karte.Insert(Models.Karta("ZVCM5CI42Z", "5378AA", "1-B", True, None, "mihajlo", None, 0))
+    db.karte.Insert(Models.Karta("07BYLX0D5M", "5378AA", "2-C", False, datetime.strptime("1.11.2023", "%d.%m.%Y"), None, "Djordje Milojevic", 300))
 
     # SAVE
     db.save()
-    db.saveJson()
+    # db.saveJson()
 
     print("Database population completed")

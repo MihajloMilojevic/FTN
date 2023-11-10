@@ -1,6 +1,10 @@
 import json
 import Utils.Serialize as Serialize
-from Constants import SEPARATOR
+from Constants import SEPARATOR, LOYALTY_SUM
+from Database.Models import Karta
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
 
 
 class Korisnik:
@@ -98,3 +102,20 @@ class Korisnik:
             obj["prezime"],
             obj["uloga"],
         )
+    
+    def check_loyalty(self, db) -> bool:
+        def check(karta: Karta) -> bool:
+            if karta.datum_prodaje is None:
+                return False
+            if karta.korisnicko_ime is None:
+                return False
+            if karta.korisnicko_ime != self.korisnicko_ime:
+                return False
+            today = datetime.now()
+            last_year = today.replace(year=today.year-1)
+            if karta.datum_prodaje < last_year:
+                return False
+            return True
+        karte = db.karte.Select(check)
+        total_value = sum([karta.prodajna_cena for karta in karte])
+        return total_value >= LOYALTY_SUM

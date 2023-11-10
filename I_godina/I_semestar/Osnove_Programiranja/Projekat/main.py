@@ -1,14 +1,17 @@
 from App.State import db
+from Database.initialDB import populateDatabase
 from PyQt5.QtWidgets import QApplication
 from App import App
 import sys
 
-if __name__ == '__main__':
+def main():
     db.load()
-    # print("Učitano: \n", db.toJsonString(2))
     q_app = QApplication(sys.argv)
     app = App()
     code = q_app.exec_()
-    # print("Upisano: \n", db.toJsonString(2))
     db.save()
     sys.exit(code)
+
+if __name__ == '__main__':
+    # populateDatabase()
+    main()

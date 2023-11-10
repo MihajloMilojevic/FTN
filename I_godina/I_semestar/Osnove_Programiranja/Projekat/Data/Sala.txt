@@ -1,4 +1,4 @@
 S1|Sala 1|13|10
-S2|Sala 2|13|10
-SV|Velika Sala|20|15
-SR|Neka Sala|6|9
+S2|Sala2|13|10
+SV|Velika sala|20|15
+SR|Rodjendanska|6|9

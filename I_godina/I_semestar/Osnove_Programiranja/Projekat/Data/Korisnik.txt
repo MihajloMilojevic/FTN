@@ -1,5 +1,5 @@
 mihajlo|Mihajlo123|Mihajlo|Milojevic|menadzer
-pepi|Petar2004|Petar|Popović|prodavac
+pepi|Petar2004|Petar|Popovic|prodavac
 prle|kos2023|Luka|Prilincevic|prodavac
 ljubogdan|Boki951|Bogdan|Ljubinkovic|prodavac
 lanmi|hell0w0rld|Milan|Sazdov|kupac
@@ -8,5 +8,3 @@ teo|pmf2ftn|Teodor|Perucinic|kupac
 madmax|biznismen99|Maksim|Vasic|kupac
 dance|dance5|Matija|Dancetovic|kupac
 sneza|Nastja2021|Snezana|Milojcevic|kupac
-sladja|Sladjana1973|Sladjana|Milojević|kupac
-jodux|asxcdfvb123|Miomir1|Dujanovic|kupac

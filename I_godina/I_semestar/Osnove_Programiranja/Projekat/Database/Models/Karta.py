@@ -12,7 +12,7 @@ class Karta:
     name = "Karta"
 
     def __init__(self, sifra: str, sifra_termina: str, oznaka_sedista: str, rezervisano: bool, 
-                 datum_prodaje: datetime, korisnicko_ime: str|None, ime_i_prezime: str|None):
+                 datum_prodaje: datetime, korisnicko_ime: str|None, ime_i_prezime: str|None, prodajna_cena: float):
         self.sifra = sifra
         self.sifra_termina = sifra_termina
         self.oznaka_sedista = oznaka_sedista
@@ -20,13 +20,14 @@ class Karta:
         self.datum_prodaje = datum_prodaje
         self.korisnicko_ime = korisnicko_ime
         self.ime_i_prezime = ime_i_prezime
+        self.prodajna_cena = prodajna_cena
         self.termin = Refrence(self, Models.Termin, "sifra_termina")
         self.korisnik = Refrence(self, Models.Korisnik, "korisnicko_ime")
 
     def __str__(self) -> str:
         return self.toJsonString()
 
-    def __getitem__(self, key: str) -> str|bool|datetime|None:
+    def __getitem__(self, key: str) -> str|bool|float|datetime|None:
         match key:
             case "sifra":
                 return self.sifra
@@ -42,10 +43,12 @@ class Karta:
                 return self.korisnicko_ime
             case "ime_i_prezime":
                 return self.ime_i_prezime
+            case "prodajna_cena":
+                return self.prodajna_cena
             case _:
                 raise "Invalid key"
         
-    def __setitem__(self, key: str, value: str|bool|datetime|None) -> None:
+    def __setitem__(self, key: str, value: str|bool|float|datetime|None) -> None:
         match key:
             case "sifra":
                 self.sifra = value
@@ -61,6 +64,8 @@ class Karta:
                 self.korisnicko_ime = value
             case "ime_i_prezime":
                 self.ime_i_prezime = value
+            case "prodajna_cena":
+                self.prodajna_cena = value
             case _:
                 raise "Invalid key"
     
@@ -73,7 +78,8 @@ class Karta:
             Serialize.serialize_bool(obj.rezervisano),
             Serialize.serialize_date(obj.datum_prodaje),
             Serialize.serialize_string(obj.korisnicko_ime),
-            Serialize.serialize_string(obj.ime_i_prezime)
+            Serialize.serialize_string(obj.ime_i_prezime),
+            Serialize.serialize_float(obj.prodajna_cena)
         ]
         return SEPARATOR.join(data)
     
@@ -88,6 +94,7 @@ class Karta:
             Serialize.deserialize_date(data[4]),
             Serialize.deserialize_string(data[5]),
             Serialize.deserialize_string(data[6]),
+            Serialize.deserialize_float(data[7])
         )
     
     def populatedObject(self, db):
