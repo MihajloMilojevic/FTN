@@ -3,7 +3,6 @@ import Utils.Serialize as Serialize
 from Constants import SEPARATOR, LOYALTY_SUM
 from Database.Models import Karta
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
 
 
 
