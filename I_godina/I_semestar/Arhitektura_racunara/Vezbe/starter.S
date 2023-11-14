@@ -1,6 +1,6 @@
-#Opis: 
-#Autor: Mihajlo Milojevic SV57/2023
-#Datum: 
+# Opis: 
+# Autor: Mihajlo Milojevic SV57/2023
+# Datum: 
 
 .section .data
 .section .text

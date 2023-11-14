@@ -21,10 +21,11 @@ str_lens: .fill str_num,4,0
 .globl main
 main:
     
-    movl $0, %esi
+    movl $strings, %esi
+    movl $0, %edi
 
 petlja_unos:
-    cmpl $str_num, %esi
+    cmpl $str_num, %edi
     je ispis
 
     # ispisi poruku
@@ -37,21 +38,17 @@ petlja_unos:
     # unesi str
     movl $3, %eax
     movl $0, %ebx
-    leal strings(, %esi * $str_len, 1), %ecx
+    movl %esi, %ecx
     movl $str_len, %edx
     int $0x80
 
-    movl %eax, str_lens(, %esi, 4)
+    movl %eax, str_lens(, %edi, 4)
 
-    incl %esi
+    addl $str_len, %esi
+    incl %edi
     jmp petlja_unos
 
 ispis:
-        movl $9, %esi
-
-petlja_ispis:
-    cmpl $0, %esi
-    je kraj
 
     # ispisi poruku
     movl $4, %eax
@@ -59,15 +56,26 @@ petlja_ispis:
     leal str_ispis, %ecx
     movl $n_ip, %edx
     int $0x80
+    
+    movl $strings, %esi
+    addl $str_len*9, %esi
+    movl $9, %edi
+
+petlja_ispis:
+    cmpl $0, %edi
+    jl kraj
+
+    
 
     # ispis str
-    movl $3, %eax
+    movl $4, %eax
     movl $0, %ebx
-    leal strings(, %esi * $str_len, 1), %ecx
-    movl str_lens(, %esi, 4), %edx
+    movl %esi, %ecx
+    movl str_lens(, %edi, 4), %edx
     int $0x80
 
-    incl %esi
+    subl $str_len, %esi
+    decl %edi
     jmp petlja_ispis
 
 kraj:
