@@ -1,7 +1,8 @@
 import random
 import string
- 
-def generateString(len: int, lower=True, upper=True, digits=True):
+
+
+def generate_string(len: int, lower=True, upper=True, digits=True):
     chars = ""
     if lower:
         chars += string.ascii_lowercase
@@ -13,5 +14,6 @@ def generateString(len: int, lower=True, upper=True, digits=True):
         return ""
     return ''.join([random.choice(chars) for _ in range(len)])
 
-def generateNumber(min, max):
+
+def generate_number(min, max):
     return random.randint(min, max)

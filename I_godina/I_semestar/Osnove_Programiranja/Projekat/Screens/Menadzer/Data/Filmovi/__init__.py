@@ -201,9 +201,9 @@ def FilmoviTab():
     add_odustani_button.clicked.connect(add_odustani_button_click)
 
     def add_frame_showEvent(event):
-        id = Utils.GenerateID.generateString(8, lower=False, digits=False)
+        id = Utils.GenerateID.generate_string(8, lower=False, digits=False)
         while State.db.filmovi.SelectById(id) is not None:
-            id = Utils.GenerateID.generateString(8, lower=False, digits=False)
+            id = Utils.GenerateID.generate_string(8, lower=False, digits=False)
         add_sifra_input.setText(id)
         return QtWidgets.QFrame.showEvent(frame_add, event)
     frame_add.showEvent = add_frame_showEvent

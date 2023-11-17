@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Utils.GetPath import GetRelativePath
+from Utils.GetPath import get_relative_path
 
 def setupUi(tab: QtWidgets.QWidget):
 
@@ -52,7 +52,7 @@ def buttons_frame(parent_layout: QtWidgets.QVBoxLayout):
     add_button.setFlat(True)
     add_button.setObjectName("add_button")
     add_button.setText("Dodaj salu")
-    icon = QtGui.QIcon(GetRelativePath(["Assets", "plus.png"]))
+    icon = QtGui.QIcon(get_relative_path(["Assets", "plus.png"]))
     add_button.setIcon(icon)
     layout.addWidget(add_button)
 
@@ -72,7 +72,7 @@ def buttons_frame(parent_layout: QtWidgets.QVBoxLayout):
     delete_button.setFlat(True)
     delete_button.setObjectName("delete_button")
     delete_button.setText("Izbriši salu")
-    icon = QtGui.QIcon(GetRelativePath(["Assets", "trash.png"]))
+    icon = QtGui.QIcon(get_relative_path(["Assets", "trash.png"]))
     delete_button.setIcon(icon)
     delete_button.setIconSize(QtCore.QSize(15, 15))
     layout.addWidget(delete_button)
@@ -93,7 +93,7 @@ def buttons_frame(parent_layout: QtWidgets.QVBoxLayout):
     edit_button.setFlat(True)
     edit_button.setObjectName("edit_button")
     edit_button.setText("Izmeni salu")
-    icon = QtGui.QIcon(GetRelativePath(["Assets", "edit.png"]))
+    icon = QtGui.QIcon(get_relative_path(["Assets", "edit.png"]))
     edit_button.setIcon(icon)
     layout.addWidget(edit_button)
 

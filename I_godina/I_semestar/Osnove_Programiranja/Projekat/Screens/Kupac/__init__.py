@@ -1,7 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import GetRelativePath
+from Utils.GetPath import get_relative_path
 from Screens.Kupac.UI import setupUi
 import App.State as State
+
 
 def KupacScreen(parent):
     frame = QtWidgets.QFrame()
@@ -18,7 +19,7 @@ def KupacScreen(parent):
     def user_data_button_click():
         parent.show_screen("user_data")
     user_data_button.clicked.connect(user_data_button_click)
-    
+
     def showEvent(event):
         name_label.setText(f"Zdravo, {State.user.ime} {State.user.prezime}")
         return QtWidgets.QFrame.showEvent(frame, event)

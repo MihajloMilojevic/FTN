@@ -4,7 +4,7 @@ import App.State as State
 import Screens.Menadzer.Data.Projekcije.LocalState as LocalState
 import Database.Models as Models
 from Utils.MessageBox import MessageBox
-from Utils.GenerateID import generateNumber
+from Utils.GenerateID import generate_number
 from datetime import datetime
 
 def ProjekcijeTab():
@@ -195,9 +195,9 @@ def ProjekcijeTab():
         add_film_cb.addItem("")
         for film in State.db.filmovi.SelectAll():
             add_film_cb.addItem(film.naziv)
-        sifra = generateNumber(1000, 9999)
+        sifra = generate_number(1000, 9999)
         while sifra in [pr.sifra for pr in State.db.projekcije.SelectAll()]:
-            sifra = generateNumber(1000, 9999)
+            sifra = generate_number(1000, 9999)
         add_sifra_input.setText(str(sifra))
         return QtWidgets.QFrame.showEvent(frame_add, event)
     frame_add.showEvent = add_frame_showEvent

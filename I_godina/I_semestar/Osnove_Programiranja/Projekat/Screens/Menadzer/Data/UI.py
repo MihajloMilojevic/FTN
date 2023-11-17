@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Utils.GetPath import GetRelativePath
+from Utils.GetPath import get_relative_path
 from Screens.Menadzer.Data.Sale import SaleTab
 from Screens.Menadzer.Data.Filmovi import FilmoviTab
 from Screens.Menadzer.Data.Projekcije import ProjekcijeTab

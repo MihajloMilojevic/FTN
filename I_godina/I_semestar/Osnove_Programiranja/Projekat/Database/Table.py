@@ -1,6 +1,6 @@
 import json
 from Database.Models import models_by_name, Korisnik, Karta, Sala, Film, Projekcija, Termin
-from Utils.GetPath import GetRelativePath
+from Utils.GetPath import get_relative_path
 
 # Tip modela: Korisnik|Karta|Sala|Film|Projekcija|Termin 
 
@@ -49,7 +49,7 @@ class Table:
     # Upisuje tabelu u fajl
     def save(self) -> None:
         try:
-            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8") as file:
+            with open(get_relative_path(["Data", f"{self.model.name}.txt"]), "w", encoding="utf-8") as file:
                 for row in self.rows:
                     file.write(f"{self.model.serialize(row)}\n")
         except Exception as e:
@@ -58,7 +58,7 @@ class Table:
     # Ucitava vrednosti iz fajla
     def load(self):
         try:
-            with open(GetRelativePath(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8") as file:
+            with open(get_relative_path(["Data", f"{self.model.name}.txt"]), "r", encoding="utf-8") as file:
                 for row in file.readlines():
                     self.Insert(self.model.deserialize(row[:-1]))
         except Exception as e:

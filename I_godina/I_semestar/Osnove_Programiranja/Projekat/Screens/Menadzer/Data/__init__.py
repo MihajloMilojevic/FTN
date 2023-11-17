@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import GetRelativePath
+from Utils.GetPath import get_relative_path
 import App.State as State
 import Database.Models as Models
 from Screens.Menadzer.Data.UI import setupUi
