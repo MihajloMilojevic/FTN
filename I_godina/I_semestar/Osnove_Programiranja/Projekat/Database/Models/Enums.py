@@ -1,11 +1,11 @@
 
-class Uloge:
+class Roles:
     kupac = "kupac"
     prodavac = "prodavac"
     menadzer = "menadzer"
-    sve_uloge = ["kupac", "prodavac", "menadzer"]
+    all_roles = ["kupac", "prodavac", "menadzer"]
 
-class Zanrovi:
+class Genres:
     avantura = "avantura"
     animacija = "animacija"
     akcija = "akcija"
@@ -26,7 +26,7 @@ class Zanrovi:
     triler = "triler"
     fantastika = "fantastika"
     horor = "horor"
-    svi_zanrovi = [
+    all_genres = [
         "avantura"
         "animacija"
         "akcija"
@@ -49,7 +49,7 @@ class Zanrovi:
         "horor"
     ]
 
-class Dani:
+class Days:
     ponedeljak = "ponedeljak"
     utorak = "utorak"
     sreda = "sreda"
@@ -57,4 +57,4 @@ class Dani:
     petak = "petak"
     subota = "subota"
     nedelja = "nedelja"
-    svi_dani = ["ponedeljak", "utorak", "sreda", "cetvrtak", "petak", "subota", "nedelja"]
+    all_days = ["ponedeljak", "utorak", "sreda", "cetvrtak", "petak", "subota", "nedelja"]

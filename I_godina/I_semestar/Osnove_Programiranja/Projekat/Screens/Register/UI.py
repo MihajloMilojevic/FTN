@@ -79,41 +79,41 @@ def setupUi(Form):
     surname_input.setMaximumWidth(300)
     formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, surname_input)
 
-    registruj_se_button = QtWidgets.QPushButton(Form)
-    registruj_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    registruj_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    registruj_se_button.setText("Registruj se")
-    registruj_se_button.setFont(font)
-    # registruj_se_button.setMaximumWidth(300)
-    registruj_se_button.setStyleSheet("background: white;\n"
+    register_button = QtWidgets.QPushButton(Form)
+    register_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    register_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    register_button.setText("Registruj se")
+    register_button.setFont(font)
+    # register_button.setMaximumWidth(300)
+    register_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    registruj_se_button.setAutoDefault(False)
-    registruj_se_button.setDefault(False)
-    registruj_se_button.setFlat(True)
-    registruj_se_button.setObjectName("registruj_se_button")
-    buttonLayout.addWidget(registruj_se_button)
+    register_button.setAutoDefault(False)
+    register_button.setDefault(False)
+    register_button.setFlat(True)
+    register_button.setObjectName("register_button")
+    buttonLayout.addWidget(register_button)
 
-    odustani_button = QtWidgets.QPushButton(Form)
-    odustani_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    odustani_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    odustani_button.setText("Odustani")
-    odustani_button.setFont(font)
-    # odustani_button.setMaximumWidth(300)
-    odustani_button.setStyleSheet("background: white;\n"
+    cancel_button = QtWidgets.QPushButton(Form)
+    cancel_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    cancel_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    cancel_button.setText("Odustani")
+    cancel_button.setFont(font)
+    # cancel_button.setMaximumWidth(300)
+    cancel_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    odustani_button.setAutoDefault(False)
-    odustani_button.setDefault(False)
-    odustani_button.setFlat(True)
-    odustani_button.setObjectName("odustani_button")
-    buttonLayout.addWidget(odustani_button)
+    cancel_button.setAutoDefault(False)
+    cancel_button.setDefault(False)
+    cancel_button.setFlat(True)
+    cancel_button.setObjectName("cancel_button")
+    buttonLayout.addWidget(cancel_button)
 
     verticalLayout.addLayout(formLayout)
     verticalLayout.addLayout(buttonLayout)
@@ -123,6 +123,6 @@ def setupUi(Form):
         "password_input": password_input,
         "name_input": name_input,
         "surname_input": surname_input,
-        "registruj_se_button": registruj_se_button,
-        "odustani_button": odustani_button
+        "register_button": register_button,
+        "cancel_button": cancel_button
     }

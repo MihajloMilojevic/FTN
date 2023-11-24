@@ -50,40 +50,40 @@ def setupUi(Form):
     password_input.setObjectName("password_input")
     password_input.setFont(font)
     formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, password_input)
-    prijavi_se_button = QtWidgets.QPushButton(Form)
-    prijavi_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    prijavi_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    prijavi_se_button.setText("Prijavi se")
-    prijavi_se_button.setFont(font)
-    # prijavi_se_button.setMaximumWidth(300)
-    prijavi_se_button.setStyleSheet("background: white;\n"
+    login_button = QtWidgets.QPushButton(Form)
+    login_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    login_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    login_button.setText("Prijavi se")
+    login_button.setFont(font)
+    # login_button.setMaximumWidth(300)
+    login_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    prijavi_se_button.setAutoDefault(False)
-    prijavi_se_button.setDefault(False)
-    prijavi_se_button.setFlat(True)
-    prijavi_se_button.setObjectName("prijavi_se_button")
-    buttonLayout.addWidget(prijavi_se_button)
-    odustani_button = QtWidgets.QPushButton(Form)
-    odustani_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    odustani_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    odustani_button.setText("Odustani")
-    odustani_button.setFont(font)
-    # odustani_button.setMaximumWidth(300)
-    odustani_button.setStyleSheet("background: white;\n"
+    login_button.setAutoDefault(False)
+    login_button.setDefault(False)
+    login_button.setFlat(True)
+    login_button.setObjectName("login_button")
+    buttonLayout.addWidget(login_button)
+    cancel_button = QtWidgets.QPushButton(Form)
+    cancel_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    cancel_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    cancel_button.setText("Odustani")
+    cancel_button.setFont(font)
+    # cancel_button.setMaximumWidth(300)
+    cancel_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    odustani_button.setAutoDefault(False)
-    odustani_button.setDefault(False)
-    odustani_button.setFlat(True)
-    odustani_button.setObjectName("odustani_button")
-    buttonLayout.addWidget(odustani_button)
+    cancel_button.setAutoDefault(False)
+    cancel_button.setDefault(False)
+    cancel_button.setFlat(True)
+    cancel_button.setObjectName("cancel_button")
+    buttonLayout.addWidget(cancel_button)
 
     verticalLayout.addLayout(formLayout)
     verticalLayout.addLayout(buttonLayout)
@@ -91,6 +91,6 @@ def setupUi(Form):
     return {
         "username_input": username_input,
         "password_input": password_input,
-        "prijavi_se_button": prijavi_se_button,
-        "odustani_button": odustani_button
+        "login_button": login_button,
+        "cancel_button": cancel_button
     }

@@ -15,10 +15,10 @@ def RegisterScreen(parent):
     password_input: QtWidgets.QLineEdit  = components["password_input"]
     name_input: QtWidgets.QLineEdit  = components["name_input"]
     surname_input: QtWidgets.QLineEdit  = components["surname_input"]
-    registruj_se_button: QtWidgets.QPushButton  = components["registruj_se_button"]
-    odustani_button: QtWidgets.QPushButton  = components["odustani_button"]
+    register_button: QtWidgets.QPushButton  = components["register_button"]
+    cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
-    def registruj_se_button_click():
+    def register_button_click():
         username = username_input.text()
         password = password_input.text()
         name = name_input.text()
@@ -42,7 +42,7 @@ def RegisterScreen(parent):
             MessageBox().warning(frame, "Greška", f"Lozinka mora sadržati bar jednu cifru")
             return
         
-        user = Models.Korisnik(username, password, name, surname, Models.Uloge.kupac)
+        user = Models.User(username, password, name, surname, Models.Roles.kupac)
         inserted = State.db.korisnici.Insert(user)
         if not inserted:
             MessageBox().warning(frame, "Greška", f"Korisničko ime je zauzeto")
@@ -55,12 +55,12 @@ def RegisterScreen(parent):
         surname_input.setText("")
         # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
         parent.show_screen(State.user.uloga)
-    registruj_se_button.clicked.connect(registruj_se_button_click)
-    def odustani_button_click():
+    register_button.clicked.connect(register_button_click)
+    def cancel_button_click():
         username_input.setText("")
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
         parent.show_screen("unregistered")
-    odustani_button.clicked.connect(odustani_button_click)
+    cancel_button.clicked.connect(cancel_button_click)
     return frame

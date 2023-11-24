@@ -63,7 +63,7 @@ color: white;</string>
     <number>10</number>
    </property>
    <item row="0" column="0">
-    <widget class="QPushButton" name="prijavi_se_button">
+    <widget class="QPushButton" name="login_button">
      <property name="font">
       <font>
        <pointsize>12</pointsize>

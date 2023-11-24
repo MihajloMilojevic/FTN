@@ -6,26 +6,26 @@ import json
 class Database:
 
     def __init__(self):
-        self.korisnici = Table(Models.Korisnik)
-        self.sale = Table(Models.Sala)
+        self.korisnici = Table(Models.User)
+        self.sale = Table(Models.Hall)
         self.filmovi = Table(Models.Film)
-        self.projekcije = Table(Models.Projekcija)
-        self.termini = Table(Models.Termin)
-        self.karte = Table(Models.Karta)
+        self.projekcije = Table(Models.Projection)
+        self.termini = Table(Models.Showtime)
+        self.karte = Table(Models.Ticket)
 
     def __getitem__(self, key: str) -> Table:
         match key:
-            case Models.Korisnik.name:
+            case Models.User.name:
                 return self.korisnici
-            case Models.Karta.name:
+            case Models.Ticket.name:
                 return self.karte
-            case Models.Sala.name:
+            case Models.Hall.name:
                 return self.sale
             case Models.Film.name:
                 return self.filmovi
-            case Models.Projekcija.name:
+            case Models.Projection.name:
                 return self.projekcije
-            case Models.Termin.name:
+            case Models.Showtime.name:
                 return self.termini
             case _:
                 raise "Invalid key"

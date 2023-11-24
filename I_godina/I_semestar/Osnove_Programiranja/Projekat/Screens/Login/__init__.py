@@ -13,10 +13,10 @@ def LoginScreen(parent):
     components = setupUi(frame)
     username_input: QtWidgets.QLineEdit  = components["username_input"]
     password_input: QtWidgets.QLineEdit  = components["password_input"]
-    prijavi_se_button: QtWidgets.QPushButton  = components["prijavi_se_button"]
-    odustani_button: QtWidgets.QPushButton  = components["odustani_button"]
+    login_button: QtWidgets.QPushButton  = components["login_button"]
+    cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
-    def prijavi_se_button_click():
+    def login_button_click():
         username = username_input.text()
         password = password_input.text()
         username_input.setText("")
@@ -27,9 +27,9 @@ def LoginScreen(parent):
         if password == "":
             MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
-        user: Models.Korisnik = State.db.korisnici.SelectById(username)
+        user: Models.User = State.db.korisnici.SelectById(username)
         if user is None:
-            MessageBox().warning(frame, "Greška", f"Korisnik sa korisničkim imenom {username} ne postoji.")
+            MessageBox().warning(frame, "Greška", f"User sa korisničkim imenom {username} ne postoji.")
             return
         if user.lozinka != password:
             MessageBox().warning(frame, "Greška", f"Pogrešna lozinka")
@@ -37,10 +37,10 @@ def LoginScreen(parent):
         State.user = user
         # MessageBox().information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.ime} {user.prezime}")
         parent.show_screen(user.uloga)
-    prijavi_se_button.clicked.connect(prijavi_se_button_click)
-    def odustani_button_click():
+    login_button.clicked.connect(login_button_click)
+    def cancel_button_click():
         username_input.setText("")
         password_input.setText("")
         parent.show_screen("unregistered")
-    odustani_button.clicked.connect(odustani_button_click)
+    cancel_button.clicked.connect(cancel_button_click)
     return frame

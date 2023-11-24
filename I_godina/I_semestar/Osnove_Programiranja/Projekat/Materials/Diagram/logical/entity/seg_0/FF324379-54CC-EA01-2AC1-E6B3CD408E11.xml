@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="sifraTermina" id="B5EA74FA-76CC-EDA2-6EE5-B3BC8DDE58B3">
+<Attribute name="sifraShowtimea" id="B5EA74FA-76CC-EDA2-6EE5-B3BC8DDE58B3">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:07:19 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

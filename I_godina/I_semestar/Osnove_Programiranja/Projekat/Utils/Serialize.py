@@ -16,7 +16,7 @@ def deserialize_string(string: str) -> list:
     return str(string)
 
 
-# int
+# int"%x"
 def serialize_int(value: int) -> str:
     if value is None:
         return strNone

@@ -1,5 +1,5 @@
 from Database import Database
-from Database.Models.Korisnik import Korisnik
+from Database.Models.User import User
 
 db = Database()
-user: Korisnik = None
+user: User = None

@@ -12,45 +12,45 @@ def setupUi(Form):
     vbox_layout.setObjectName("vbox_layout")
     vbox_layout.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
-    prijavi_se_button = QtWidgets.QPushButton(Form)
-    prijavi_se_button.setFont(font)
-    prijavi_se_button.setFixedWidth(300)
-    prijavi_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    prijavi_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    prijavi_se_button.setStyleSheet("background: white;\n"
+    login_button = QtWidgets.QPushButton(Form)
+    login_button.setFont(font)
+    login_button.setFixedWidth(300)
+    login_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    login_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    login_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    prijavi_se_button.setAutoDefault(False)
-    prijavi_se_button.setDefault(False)
-    prijavi_se_button.setFlat(True)
-    prijavi_se_button.setObjectName("prijavi_se_button")
-    prijavi_se_button.setText("Prijavi se")
-    vbox_layout.addWidget(prijavi_se_button)
+    login_button.setAutoDefault(False)
+    login_button.setDefault(False)
+    login_button.setFlat(True)
+    login_button.setObjectName("login_button")
+    login_button.setText("Prijavi se")
+    vbox_layout.addWidget(login_button)
 
-    registruj_se_button = QtWidgets.QPushButton(Form)
-    registruj_se_button.setFont(font)
-    registruj_se_button.setFixedWidth(300)
-    registruj_se_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    registruj_se_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    registruj_se_button.setStyleSheet("background: white;\n"
+    register_button = QtWidgets.QPushButton(Form)
+    register_button.setFont(font)
+    register_button.setFixedWidth(300)
+    register_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    register_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    register_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    registruj_se_button.setAutoDefault(False)
-    registruj_se_button.setDefault(False)
-    registruj_se_button.setFlat(True)
-    registruj_se_button.setObjectName("registruj_se_button")
-    registruj_se_button.setText("Registuj se")
-    vbox_layout.addWidget(registruj_se_button)
+    register_button.setAutoDefault(False)
+    register_button.setDefault(False)
+    register_button.setFlat(True)
+    register_button.setObjectName("register_button")
+    register_button.setText("Registuj se")
+    vbox_layout.addWidget(register_button)
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
     return {
-        "prijavi_se_button": prijavi_se_button,
-        "registruj_se_button": registruj_se_button
+        "login_button": login_button,
+        "register_button": register_button
     }
 

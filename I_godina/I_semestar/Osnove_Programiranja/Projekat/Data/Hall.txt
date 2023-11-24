@@ -1,0 +1,4 @@
+S1|Hall 1|13|10
+S2|Hall2|13|10
+SV|Velika sala|20|15
+SR|Rodjendanska Hall|6|9

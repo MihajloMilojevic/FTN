@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Database.Models import Uloge
+from Database.Models import Roles
 
 def setupUi(Form):
     
@@ -94,41 +94,41 @@ def setupUi(Form):
     role_input.setMaximumWidth(300)
     formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, role_input)
 
-    potvrdi_button = QtWidgets.QPushButton(Form)
-    potvrdi_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    potvrdi_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    potvrdi_button.setText("Sačuvaj izmene")
-    potvrdi_button.setFont(font)
-    # potvrdi_button.setMaximumWidth(300)
-    potvrdi_button.setStyleSheet("background: white;\n"
+    confirm_button = QtWidgets.QPushButton(Form)
+    confirm_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    confirm_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    confirm_button.setText("Sačuvaj izmene")
+    confirm_button.setFont(font)
+    # confirm_button.setMaximumWidth(300)
+    confirm_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    potvrdi_button.setAutoDefault(False)
-    potvrdi_button.setDefault(False)
-    potvrdi_button.setFlat(True)
-    potvrdi_button.setObjectName("potvrdi_button")
-    buttonLayout.addWidget(potvrdi_button)
+    confirm_button.setAutoDefault(False)
+    confirm_button.setDefault(False)
+    confirm_button.setFlat(True)
+    confirm_button.setObjectName("confirm_button")
+    buttonLayout.addWidget(confirm_button)
 
-    odustani_button = QtWidgets.QPushButton(Form)
-    odustani_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    odustani_button.setFocusPolicy(QtCore.Qt.ClickFocus)
-    odustani_button.setText("Odustani")
-    odustani_button.setFont(font)
-    # odustani_button.setMaximumWidth(300)
-    odustani_button.setStyleSheet("background: white;\n"
+    cancel_button = QtWidgets.QPushButton(Form)
+    cancel_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    cancel_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    cancel_button.setText("Odustani")
+    cancel_button.setFont(font)
+    # cancel_button.setMaximumWidth(300)
+    cancel_button.setStyleSheet("background: white;\n"
 "color: black;\n"
 "border: 1px solid black;\n"
 "border-radius: 5px;\n"
 "outline: none;\n"
 "padding: 10px 30px;")
-    odustani_button.setAutoDefault(False)
-    odustani_button.setDefault(False)
-    odustani_button.setFlat(True)
-    odustani_button.setObjectName("odustani_button")
-    buttonLayout.addWidget(odustani_button)
+    cancel_button.setAutoDefault(False)
+    cancel_button.setDefault(False)
+    cancel_button.setFlat(True)
+    cancel_button.setObjectName("cancel_button")
+    buttonLayout.addWidget(cancel_button)
 
     verticalLayout.addLayout(formLayout)
     verticalLayout.addLayout(buttonLayout)
@@ -139,6 +139,6 @@ def setupUi(Form):
         "name_input": name_input,
         "surname_input": surname_input,
         "role_input": role_input,
-        "potvrdi_button": potvrdi_button,
-        "odustani_button": odustani_button
+        "confirm_button": confirm_button,
+        "cancel_button": cancel_button
     }

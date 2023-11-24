@@ -16,10 +16,10 @@ def UserDataScreen(parent):
     name_input: QtWidgets.QLineEdit  = components["name_input"]
     surname_input: QtWidgets.QLineEdit  = components["surname_input"]
     role_input: QtWidgets.QLineEdit  = components["role_input"]
-    potvrdi_button: QtWidgets.QPushButton  = components["potvrdi_button"]
-    odustani_button: QtWidgets.QPushButton  = components["odustani_button"]
+    confirm_button: QtWidgets.QPushButton  = components["confirm_button"]
+    cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
-    def potvrdi_button_click():
+    def confirm_button_click():
         password = password_input.text()
         name = name_input.text()
         surname = surname_input.text()
@@ -48,14 +48,14 @@ def UserDataScreen(parent):
         State.user.lozinka = password
         # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
         parent.show_screen(State.user.uloga)
-    potvrdi_button.clicked.connect(potvrdi_button_click)
-    def odustani_button_click():
+    confirm_button.clicked.connect(confirm_button_click)
+    def cancel_button_click():
         username_input.setText("")
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
         parent.show_screen("menadzer")
-    odustani_button.clicked.connect(odustani_button_click)
+    cancel_button.clicked.connect(cancel_button_click)
 
     def showEvent(event):
         username_input.setText(State.user.korisnicko_ime)

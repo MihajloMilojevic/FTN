@@ -137,7 +137,7 @@ color: white;</string>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="prijavi_se_button">
+      <widget class="QPushButton" name="login_button">
        <property name="font">
         <font>
          <pointsize>12</pointsize>

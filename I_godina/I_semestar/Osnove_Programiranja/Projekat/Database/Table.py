@@ -1,29 +1,29 @@
 import json
-from Database.Models import models_by_name, Korisnik, Karta, Sala, Film, Projekcija, Termin
+from Database.Models import models_by_name, User, Ticket, Hall, Film, Projection, Showtime
 from Utils.GetPath import get_relative_path
 
-# Tip modela: Korisnik|Karta|Sala|Film|Projekcija|Termin 
+# Tip modela: User|Ticket|Hall|Film|Projection|Showtime 
 
 
 class Table:
 
-    def __init__(self, model: Korisnik|Karta|Sala|Film|Projekcija|Termin ):
+    def __init__(self, model: User|Ticket|Hall|Film|Projection|Showtime ):
         self.model = model
         self.rows = []
 
-    def SelectById(self, id: str) -> Korisnik|Karta|Sala|Film|Projekcija|Termin|None:
+    def SelectById(self, id: str) -> User|Ticket|Hall|Film|Projection|Showtime|None:
         for row in self.rows:
             if row[self.model.primary_key] == id:
                 return row
         return None
     
-    def SelectAll(self) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
+    def SelectAll(self) -> list[User|Ticket|Hall|Film|Projection|Showtime]:
         return [row for row in self.rows]
 
-    def Select(self, condition) -> list[Korisnik|Karta|Sala|Film|Projekcija|Termin]:
+    def Select(self, condition) -> list[User|Ticket|Hall|Film|Projection|Showtime]:
         return [row for row in self.rows if condition(row)]
     
-    def Insert(self, row: Korisnik|Karta|Sala|Film|Projekcija|Termin) -> bool:
+    def Insert(self, row: User|Ticket|Hall|Film|Projection|Showtime) -> bool:
         if self.SelectById(row[self.model.primary_key]) is not None:
             return False
         self.rows.append(row)

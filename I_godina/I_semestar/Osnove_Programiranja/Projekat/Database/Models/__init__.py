@@ -1,19 +1,19 @@
-from Database.Models.Enums import Uloge, Zanrovi, Dani
+from Database.Models.Enums import Roles, Genres, Days
 from Database.Models.Film import Film
-from Database.Models.Karta import Karta
-from Database.Models.Korisnik import Korisnik
-from Database.Models.Projekcija import Projekcija
-from Database.Models.Sala import Sala
-from Database.Models.Termin import Termin
+from Database.Models.Ticket import Ticket
+from Database.Models.User import User
+from Database.Models.Projection import Projection
+from Database.Models.Hall import Hall
+from Database.Models.Showtime import Showtime
 
 models_by_name = {
-    "Uloge": Uloge,
-    "Zanrovi": Zanrovi,
-    "Dani": Dani,
+    "Roles": Roles,
+    "Genres": Genres,
+    "Days": Days,
     "Film": Film,
-    "Karta": Karta,
-    "Korisnik": Korisnik,
-    "Projekcija": Projekcija,
-    "Sala": Sala,
-    "Termin": Termin
+    "Ticket": Ticket,
+    "User": User,
+    "Projection": Projection,
+    "Hall": Hall,
+    "Showtime": Showtime
 }

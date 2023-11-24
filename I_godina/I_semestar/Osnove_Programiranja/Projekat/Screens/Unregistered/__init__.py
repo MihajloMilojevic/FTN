@@ -6,15 +6,15 @@ def UnregisteredScreen(parent):
     frame = QtWidgets.QFrame()
 
     components = setupUi(frame)
-    prijavi_se_button = components["prijavi_se_button"]
-    registruj_se_button = components["registruj_se_button"]
+    login_button = components["login_button"]
+    register_button = components["register_button"]
 
-    def prijavi_se_button_click():
+    def login_button_click():
         parent.show_screen("login")
-    def registruj_se_button_click():
+    def register_button_click():
         parent.show_screen("register")
 
-    prijavi_se_button.clicked.connect(prijavi_se_button_click)
-    registruj_se_button.clicked.connect(registruj_se_button_click)
+    login_button.clicked.connect(login_button_click)
+    register_button.clicked.connect(register_button_click)
 
     return frame
