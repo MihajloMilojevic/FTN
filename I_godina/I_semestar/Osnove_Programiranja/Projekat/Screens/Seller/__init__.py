@@ -20,7 +20,7 @@ def SellerScreen(parent):
     user_data_button.clicked.connect(user_data_button_click)
     
     def showEvent(event):
-        name_label.setText(f"Zdravo, {State.user.ime} {State.user.prezime}")
+        name_label.setText(f"Zdravo, {State.user.name} {State.user.surname}")
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
     return frame

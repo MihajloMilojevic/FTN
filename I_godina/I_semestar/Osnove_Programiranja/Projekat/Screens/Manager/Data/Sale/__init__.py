@@ -44,18 +44,18 @@ def SaleTab():
     table = frame_table
     def refresh_table():
         table.setRowCount(0)
-        data = State.db.sale.SelectAll()
+        data = State.db.halls.SelectAll()
         table.setRowCount(len(data))
         for index in range(len(data)):
             sala: Models.Hall  = data[index]
-            item = QtWidgets.QTableWidgetItem(sala.sifra)
+            item = QtWidgets.QTableWidgetItem(sala.id)
             # item.setBackground(QtGui.QColor)
             table.setItem(index, 0, item)
-            item = QtWidgets.QTableWidgetItem(sala.naziv)
+            item = QtWidgets.QTableWidgetItem(sala.name)
             table.setItem(index, 1, item)
-            item = QtWidgets.QTableWidgetItem(str(sala.broj_redova))
+            item = QtWidgets.QTableWidgetItem(str(sala.row_count))
             table.setItem(index, 2, item)
-            item = QtWidgets.QTableWidgetItem(str(sala.broj_sedista))
+            item = QtWidgets.QTableWidgetItem(str(sala.seats_per_row))
             table.setItem(index, 3, item)
         table.resizeColumnsToContents()
     def table_showEvent(event):
@@ -76,10 +76,10 @@ def SaleTab():
             return
         id = table.item(row, 0).text()
         name = table.item(row, 1).text()
-        res = MessageBox().question(tab, "Brisanje sale", f"Da li ste sigurni da želite da obrišete salu '{name}'?")
+        res = MessageBox().question(tab, "Brisanje halls", f"Da li ste sigurni da želite da obrišete salu '{name}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
-        State.db.sale.DeleteById(id)
+        State.db.halls.DeleteById(id)
         refresh_table()
     def buttons_edit_click():
         row = table.currentRow()
@@ -87,7 +87,7 @@ def SaleTab():
             MessageBox().warning(tab, "Greška", f"Morate odabrati salu za izmenu")
             return
         id = table.item(row, 0).text()
-        LocalState.sala_to_edit = State.db.sale.SelectById(id)
+        LocalState.sala_to_edit = State.db.halls.SelectById(id)
         show_edit()
     buttons_add.clicked.connect(show_add)
     buttons_delete.clicked.connect(buttons_delete_click)
@@ -105,26 +105,26 @@ def SaleTab():
     add_cancel_button: QtWidgets.QPushButton = frames["frame_add"]["cancel_button"]
 
     def add_confirm_button_click():
-        sifra = add_sifra_input.text()
-        naziv = add_naziv_input.text()
-        broj_redova = add_redovi_sb.value()
-        broj_sedista = add_sedista_sb.value()
+        id = add_sifra_input.text()
+        name = add_naziv_input.text()
+        row_count = add_redovi_sb.value()
+        seats_per_row = add_sedista_sb.value()
 
-        if sifra == "":
+        if id == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti šifru")
             return
-        if naziv == "":
-            MessageBox().warning(tab, "Greška", f"Morate uneti naziv")
+        if name == "":
+            MessageBox().warning(tab, "Greška", f"Morate uneti name")
             return
-        if broj_redova < 1:
+        if row_count < 1:
             MessageBox().warning(tab, "Greška", f"Hall mora ima prirodan broj redova")
             return
-        if broj_sedista < 1:
+        if seats_per_row < 1:
             MessageBox().warning(tab, "Greška", f"Hall mora ima prirodan broj sedišta")
             return
 
-        sala = Models.Hall(sifra, naziv, broj_redova, broj_sedista)
-        inserted = State.db.sale.Insert(sala)
+        sala = Models.Hall(id, name, row_count, seats_per_row)
+        inserted = State.db.halls.Insert(sala)
 
         if not inserted:
             MessageBox().warning(tab, "Greška", f"Hall sa unetom šifrom već postoji")
@@ -159,29 +159,29 @@ def SaleTab():
     edit_cancel_button: QtWidgets.QPushButton = frames["frame_edit"]["cancel_button"]
 
     def edit_frame_showEvent(event):
-        edit_sifra_input.setText(LocalState.sala_to_edit.sifra)
+        edit_sifra_input.setText(LocalState.sala_to_edit.id)
         edit_sifra_input.setEnabled(False)
-        edit_naziv_input.setText(LocalState.sala_to_edit.naziv)
-        edit_redovi_sb.setValue(LocalState.sala_to_edit.broj_redova)
-        edit_sedista_sb.setValue(LocalState.sala_to_edit.broj_sedista)
+        edit_naziv_input.setText(LocalState.sala_to_edit.name)
+        edit_redovi_sb.setValue(LocalState.sala_to_edit.row_count)
+        edit_sedista_sb.setValue(LocalState.sala_to_edit.seats_per_row)
         return QtWidgets.QFrame.showEvent(frame_edit, event)
     frame_edit.showEvent = edit_frame_showEvent
 
     def edit_confirm_button_click():
-        naziv = edit_naziv_input.text()
-        broj_redova = edit_redovi_sb.value()
-        broj_sedista = edit_sedista_sb.value()
-        if broj_redova < 1:
+        name = edit_naziv_input.text()
+        row_count = edit_redovi_sb.value()
+        seats_per_row = edit_sedista_sb.value()
+        if row_count < 1:
             MessageBox().warning(tab, "Greška", "Broj redova mora biti prirodan broj")
             show_table()
             return
-        if broj_sedista < 1:
+        if seats_per_row < 1:
             MessageBox().warning(tab, "Greška", "Broj sedišta mora biti prirodan broj")
             show_table()
             return
-        LocalState.sala_to_edit.naziv = naziv
-        LocalState.sala_to_edit.broj_redova = broj_redova
-        LocalState.sala_to_edit.broj_sedista = broj_sedista
+        LocalState.sala_to_edit.name = name
+        LocalState.sala_to_edit.row_count = row_count
+        LocalState.sala_to_edit.seats_per_row = seats_per_row
         show_table()
     edit_confirm_button.clicked.connect(edit_confirm_button_click)
 

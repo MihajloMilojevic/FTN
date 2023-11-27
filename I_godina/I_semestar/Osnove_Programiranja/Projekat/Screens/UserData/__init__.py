@@ -20,17 +20,17 @@ def UserDataScreen(parent):
     cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
     def confirm_button_click():
-        password = password_input.text()
-        name = name_input.text()
-        surname = surname_input.text()
+        password = password_input.text().strip()
+        name = name_input.text().strip()
+        surname = surname_input.text().strip()
         if password == "":
             MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
         if name == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti name")
             return
         if surname == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti prezime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti surname")
             return
         if len(password) <= 6:
             MessageBox().warning(frame, "Greška", f"Lozinka je prekratka")
@@ -43,11 +43,11 @@ def UserDataScreen(parent):
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
-        State.user.ime = name
-        State.user.prezime = surname
-        State.user.lozinka = password
-        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
-        parent.show_screen(State.user.uloga)
+        State.user.name = name
+        State.user.surname = surname
+        State.user.password = password
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.name} {user.surname}")
+        parent.show_screen(State.user.role)
     confirm_button.clicked.connect(confirm_button_click)
     def cancel_button_click():
         username_input.setText("")
@@ -58,11 +58,11 @@ def UserDataScreen(parent):
     cancel_button.clicked.connect(cancel_button_click)
 
     def showEvent(event):
-        username_input.setText(State.user.korisnicko_ime)
-        password_input.setText(State.user.lozinka)
-        name_input.setText(State.user.ime)
-        surname_input.setText(State.user.prezime)
-        role_input.setText(State.user.uloga)
+        username_input.setText(State.user.username)
+        password_input.setText(State.user.password)
+        name_input.setText(State.user.name)
+        surname_input.setText(State.user.surname)
+        role_input.setText(State.user.role)
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
     return frame

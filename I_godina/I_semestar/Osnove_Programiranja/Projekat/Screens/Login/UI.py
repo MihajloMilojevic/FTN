@@ -23,7 +23,7 @@ def setupUi(Form):
     formLayout.setObjectName("formLayout")
     label = QtWidgets.QLabel(Form)
     label.setFont(font)
-    label.setText("Korisničko ime:")
+    label.setText("Korisničko name:")
     label.setObjectName("label")
     formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, label)
     username_input = QtWidgets.QLineEdit(Form)

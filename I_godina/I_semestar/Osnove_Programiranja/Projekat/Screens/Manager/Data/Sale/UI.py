@@ -126,7 +126,7 @@ def table_frame(parent_layout: QtWidgets.QVBoxLayout):
     table.setColumnCount(4)
     item = QtWidgets.QTableWidgetItem("Šifra")
     table.setHorizontalHeaderItem(0, item)
-    item = QtWidgets.QTableWidgetItem("Naziv")
+    item = QtWidgets.QTableWidgetItem("name")
     table.setHorizontalHeaderItem(1, item)
     item = QtWidgets.QTableWidgetItem("Broj redova")
     table.setHorizontalHeaderItem(2, item)
@@ -175,7 +175,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(0, QtWidgets.QFormLayout.FieldRole, sifra_input)
 
     naziv_label = QtWidgets.QLabel(frame)
-    naziv_label.setText("Naziv:")
+    naziv_label.setText("name:")
     naziv_label.setFont(font)
     naziv_label.setStyleSheet("color: white")
     naziv_label.setObjectName("naziv_label")

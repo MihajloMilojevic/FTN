@@ -7,71 +7,71 @@ import Database.Models as Models
 
 class Projection:
 
-    primary_key = "sifra"
+    primary_key = "id"
     name = "Projection"
 
-    def __init__(self, sifra: str, sifra_sale: str, sifra_filma: str, vreme_pocetka: datetime, vreme_kraja: datetime, dani: list[str], cena: float):
-        self.sifra = sifra
-        self.sifra_sale = sifra_sale
-        self.sifra_filma = sifra_filma
-        self.vreme_pocetka = vreme_pocetka
-        self.vreme_kraja = vreme_kraja
-        self.dani = dani
-        self.cena = cena
-        self.sala = Refrence(self, Models.Hall, "sifra_sale")
-        self.film = Refrence(self, Models.Film, "sifra_filma")
+    def __init__(self, id: str, hall_id: str, film_id: str, starting_time: datetime, ending_time: datetime, days: list[str], price: float):
+        self.id = id
+        self.hall_id = hall_id
+        self.film_id = film_id
+        self.starting_time = starting_time
+        self.ending_time = ending_time
+        self.days = days
+        self.price = price
+        self.hall = Refrence(self, Models.Hall, "hall_id")
+        self.film = Refrence(self, Models.Film, "film_id")
 
     def __str__(self) -> str:
         return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|datetime|float|list[str]:
         match key:
-            case "sifra":
-                return self.sifra
-            case "sifra_filma":
-                return self.sifra_filma
-            case "sifra_sale":
-                return self.sifra_sale
-            case "vreme_pocetka":
-                return self.vreme_pocetka
-            case "vreme_kraja":
-                return self.vreme_kraja
-            case "dani":
-                return self.dani
-            case "cena":
-                return self.cena
+            case "id":
+                return self.id
+            case "film_id":
+                return self.film_id
+            case "hall_id":
+                return self.hall_id
+            case "starting_time":
+                return self.starting_time
+            case "ending_time":
+                return self.ending_time
+            case "days":
+                return self.days
+            case "price":
+                return self.price
             case _:
                 raise "Invalid key"
         
     def __setitem__(self, key: str, value: str|datetime|float|list[str]) -> None:
         match key:
-            case "sifra":
-                self.sifra = value
-            case "sifra_filma":
-                self.sifra_filma = value
-            case "sifra_sale":
-                self.sifra_sale = value
-            case "vreme_pocetka":
-                self.vreme_pocetka = value
-            case "vreme_kraja":
-                self.vreme_kraja = value
-            case "dani":
-                self.dani = value
-            case "cena":
-                self.cena = value
+            case "id":
+                self.id = value
+            case "film_id":
+                self.film_id = value
+            case "hall_id":
+                self.hall_id = value
+            case "starting_time":
+                self.starting_time = value
+            case "ending_time":
+                self.ending_time = value
+            case "days":
+                self.days = value
+            case "price":
+                self.price = value
             case _:
                 raise "Invalid key"
 
     @staticmethod
     def serialize(obj: 'Projection') -> str:
         data = [
-            Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.sifra_sale),
-            Serialize.serialize_string(obj.sifra_filma),
-            Serialize.serialize_time(obj.vreme_pocetka),
-            Serialize.serialize_time(obj.vreme_kraja),
-            Serialize.serialize_list(obj.dani),
-            Serialize.serialize_float(obj.cena)
+            Serialize.serialize_string(obj.id),
+            Serialize.serialize_string(obj.hall_id),
+            Serialize.serialize_string(obj.film_id),
+            Serialize.serialize_time(obj.starting_time),
+            Serialize.serialize_time(obj.ending_time),
+            Serialize.serialize_list(obj.days),
+            Serialize.serialize_float(obj.price)
         ]
         return SEPARATOR.join(data)
     
@@ -91,7 +91,7 @@ class Projection:
     def populatedObject(self, db):
         obj = self.toJsonObject()
         obj.update()
-        obj["sala"] = self.sala.get(db)
+        obj["sala"] = self.hall.get(db)
         obj["film"] = self.film.get(db)
         print("Projection - Hall: ", obj["sala"])
         return obj
@@ -101,13 +101,13 @@ class Projection:
     
     def toJsonObject(self):
         return {
-            "sifra": self.sifra,
-            "sifra_sale": self.sifra_sale,
-            "sifra_filma": self.sifra_filma,
-            "vreme_pocetka": datetime.strftime(self.vreme_pocetka, "%X"),
-            "vreme_kraja": datetime.strftime(self.vreme_kraja, "%X"),
-            "dani": self.dani,
-            "cena": self.cena
+            "id": self.id,
+            "hall_id": self.hall_id,
+            "film_id": self.film_id,
+            "starting_time": datetime.strftime(self.starting_time, "%X"),
+            "ending_time": datetime.strftime(self.ending_time, "%X"),
+            "days": self.days,
+            "price": self.price
         }
 
     @staticmethod
@@ -117,11 +117,11 @@ class Projection:
     @staticmethod
     def fromJsonObject(obj):
         return Projection(
-            obj["sifra"],
-            obj["sifra_sale"],
-            obj["sifra_filma"],
-            datetime.strptime(obj["vreme_pocetka"], "%X"),
-            datetime.strptime(obj["vreme_kraja"], "%X"),
-            obj["dani"],
-            obj["cena"],
+            obj["id"],
+            obj["hall_id"],
+            obj["film_id"],
+            datetime.strptime(obj["starting_time"], "%X"),
+            datetime.strptime(obj["ending_time"], "%X"),
+            obj["days"],
+            obj["price"],
         )

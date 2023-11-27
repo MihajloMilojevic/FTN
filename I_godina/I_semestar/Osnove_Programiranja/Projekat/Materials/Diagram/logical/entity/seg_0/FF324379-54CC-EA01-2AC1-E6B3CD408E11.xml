@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ime_i_prezime" id="41ABFEDC-9201-27C7-CF2E-60427FC2CE93">
+<Attribute name="full_name" id="41ABFEDC-9201-27C7-CF2E-60427FC2CE93">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:05:01 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -28,7 +28,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="korisnicko_ime" id="7557921E-0AA7-F851-396C-5A3BEFA69F31">
+<Attribute name="username" id="7557921E-0AA7-F851-396C-5A3BEFA69F31">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:05:40 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -65,7 +65,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="datum_prodaje" id="F0064A1E-81D2-A81B-144B-51AEF5959FA9">
+<Attribute name="sale_date" id="F0064A1E-81D2-A81B-144B-51AEF5959FA9">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:08:19 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -78,7 +78,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rezervisano" id="7E925142-0143-0F76-4B33-8195A891732A">
+<Attribute name="reserved" id="7E925142-0143-0F76-4B33-8195A891732A">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:08:37 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -91,7 +91,7 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="sifra" id="1944DA64-E373-EF74-9B6B-6E1411B805F3">
+<Attribute name="id" id="1944DA64-E373-EF74-9B6B-6E1411B805F3">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:10:50 UTC</createdTime>
 <generatorID>145BE416-F50E-3EF4-8733-345F355678BD</generatorID>
@@ -105,7 +105,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="korisnicko_ime1" id="CF003A81-DD2E-CCE6-9468-4FAE6F4F1245">
+<Attribute name="username1" id="CF003A81-DD2E-CCE6-9468-4FAE6F4F1245">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:11:15 UTC</createdTime>
 <generatorID>3D95FCFC-4396-5505-6EC1-B8E13240211E</generatorID>

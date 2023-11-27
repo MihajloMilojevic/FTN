@@ -39,7 +39,7 @@ class App(QtWidgets.QWidget):
             "login": self._screen_login,
             "register": self._screen_register,
             
-            # ostaje na srpskom jer se koristi uloga kao key da se predje na ove ekrane
+            # ostaje na srpskom jer se koristi role kao key da se predje na ove ekrane
             "kupac": self._screen_shopper,          
             "prodavac": self._screen_seller,
             "menadzer": self._screen_manager,

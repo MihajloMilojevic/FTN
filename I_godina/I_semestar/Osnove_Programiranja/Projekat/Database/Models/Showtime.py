@@ -8,48 +8,48 @@ import Utils.Serialize as Serialize
 
 class Showtime:
 
-    primary_key = "sifra"
+    primary_key = "id"
     name = "Showtime"
     refrences = [
     ]
 
-    def __init__(self, sifra: str, sifra_projekcije: str, datum_odrzavanja: datetime):
-        self.sifra = sifra
-        self.sifra_projekcije = sifra_projekcije
-        self.datum_odrzavanja = datum_odrzavanja
-        self.projekcija = Refrence(self, Projection, "sifra_projekcije")
+    def __init__(self, id: str, projection_id: str, date: datetime):
+        self.id = id
+        self.projection_id = projection_id
+        self.date = date
+        self.projection = Refrence(self, Projection, "projection_id")
 
     def __str__(self) -> str:
         return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|datetime:
         match key:
-            case "sifra":
-                return self.sifra
-            case "sifra_projekcije":
-                return self.sifra_projekcije
-            case "datum_odrzavanja":
-                return self.datum_odrzavanja
+            case "id":
+                return self.id
+            case "projection_id":
+                return self.projection_id
+            case "date":
+                return self.date
             case _:
                 raise "Invalid key"   
     
     def __setitem__(self, key: str, value: str|datetime) -> None:
         match key:
-            case "sifra":
-                self.sifra = value
-            case "sifra_projekcije":
-                self.sifra_projekcije = value
-            case "datum_odrzavanja":
-                self.datum_odrzavanja = value
+            case "id":
+                self.id = value
+            case "projection_id":
+                self.projection_id = value
+            case "date":
+                self.date = value
             case _:
                 raise "Invalid key"
     
     @staticmethod
     def serialize(obj: 'Showtime') -> str:
         data = [
-            Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.sifra_projekcije),
-            Serialize.serialize_date(obj.datum_odrzavanja)
+            Serialize.serialize_string(obj.id),
+            Serialize.serialize_string(obj.projection_id),
+            Serialize.serialize_date(obj.date)
         ]
         return SEPARATOR.join(data)
     
@@ -64,7 +64,7 @@ class Showtime:
     
     def populatedObject(self, db):
         obj = self.toJsonObject()
-        obj["projekcija"] = self.projekcija.get(db)
+        obj["projection"] = self.projection.get(db)
         return obj
 
     def toJsonString(self, indent = 0):
@@ -72,9 +72,9 @@ class Showtime:
     
     def toJsonObject(self):
         return {
-            "sifra": self.sifra,
-            "sifra_projekcije": self.sifra_projekcije,
-            "datum_odrzavanja": datetime.strftime(self.datum_odrzavanja, "%x")
+            "id": self.id,
+            "projection_id": self.projection_id,
+            "date": datetime.strftime(self.date, "%x")
         } 
     
     @staticmethod
@@ -84,7 +84,7 @@ class Showtime:
     @staticmethod
     def fromJsonObject(obj):
         return Showtime(
-            obj["sifra"], 
-            obj["sifra_projekcije"], 
-            datetime.strptime(obj["datum_odrzavanja"], "%x")
+            obj["id"], 
+            obj["projection_id"], 
+            datetime.strptime(obj["date"], "%x")
         )

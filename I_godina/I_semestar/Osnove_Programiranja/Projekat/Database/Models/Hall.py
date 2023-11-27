@@ -5,51 +5,51 @@ import Utils.Serialize as Serialize
 
 class Hall:
 
-    primary_key = "sifra"
+    primary_key = "id"
     name = "Hall"
 
-    def __init__(self, sifra: str, naziv: str, broj_redova: int, broj_sedista: int):
-        self.sifra = sifra
-        self.naziv = naziv
-        self.broj_redova = broj_redova
-        self.broj_sedista = broj_sedista 
+    def __init__(self, id: str, name: str, row_count: int, seats_per_row: int):
+        self.id = id
+        self.name = name
+        self.row_count = row_count
+        self.seats_per_row = seats_per_row 
 
     def __str__(self) -> str:
         return self.toJsonString()
     
     def __getitem__(self, key: str) -> str|int:
         match key:
-            case "sifra":
-                return self.sifra
-            case "naziv":
-                return  self.naziv
-            case "broj_redova":
-                return self.broj_redova
-            case "broj_sedista":
-                return self.broj_sedista
+            case "id":
+                return self.id
+            case "name":
+                return  self.name
+            case "row_count":
+                return self.row_count
+            case "seats_per_row":
+                return self.seats_per_row
             case _:
                 raise "Invalid key"
     
     def __setitem__(self, key: str, value: str|int) -> None:
         match key:
-            case "sifra":
-                self.sifra = value
-            case "naziv":
-                self.naziv = value
-            case "broj_redova":
-                self.broj_redova = value
-            case "broj_sedista":
-                self.broj_sedista = value
+            case "id":
+                self.id = value
+            case "name":
+                self.name = value
+            case "row_count":
+                self.row_count = value
+            case "seats_per_row":
+                self.seats_per_row = value
             case _:
                 raise "Invalid key"
     
     @staticmethod
     def serialize(obj: 'Hall') -> str:
         data = [
-            Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.naziv),
-            Serialize.serialize_int(obj.broj_redova),
-            Serialize.serialize_int(obj.broj_sedista)
+            Serialize.serialize_string(obj.id),
+            Serialize.serialize_string(obj.name),
+            Serialize.serialize_int(obj.row_count),
+            Serialize.serialize_int(obj.seats_per_row)
         ]
         return SEPARATOR.join(data)
     
@@ -72,10 +72,10 @@ class Hall:
     
     def toJsonObject(self):
         return {
-            "sifra": self.sifra,
-            "naziv": self.naziv,
-            "broj_redova": self.broj_redova,
-            "broj_sedista": self.broj_sedista
+            "id": self.id,
+            "name": self.name,
+            "row_count": self.row_count,
+            "seats_per_row": self.seats_per_row
         } 
     
     @staticmethod
@@ -85,9 +85,9 @@ class Hall:
     @staticmethod
     def fromJsonObject(obj):
         return Hall(
-            obj["sifra"], 
-            obj["naziv"], 
-            obj["broj_redova"], 
-            obj["broj_sedista"]
+            obj["id"], 
+            obj["name"], 
+            obj["row_count"], 
+            obj["seats_per_row"]
         )
     

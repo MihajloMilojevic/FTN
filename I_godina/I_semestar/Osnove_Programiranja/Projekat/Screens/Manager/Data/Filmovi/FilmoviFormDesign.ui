@@ -64,7 +64,7 @@
            <string notr="true">color: white</string>
           </property>
           <property name="text">
-           <string>Naziv:</string>
+           <string>name:</string>
           </property>
          </widget>
         </item>
@@ -506,7 +506,7 @@
            <string notr="true">color: white</string>
           </property>
           <property name="text">
-           <string>Opis:</string>
+           <string>description:</string>
           </property>
          </widget>
         </item>

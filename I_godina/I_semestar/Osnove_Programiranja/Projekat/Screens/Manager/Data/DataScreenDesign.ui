@@ -162,12 +162,12 @@
          </row>
          <column>
           <property name="text">
-           <string>Sifra</string>
+           <string>id</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Naziv</string>
+           <string>name</string>
           </property>
          </column>
          <column>
@@ -372,7 +372,7 @@
                <string notr="true">color: white</string>
               </property>
               <property name="text">
-               <string>Naziv:</string>
+               <string>name:</string>
               </property>
              </widget>
             </item>

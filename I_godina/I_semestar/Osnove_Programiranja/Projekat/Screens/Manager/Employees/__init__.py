@@ -20,22 +20,22 @@ def EmployeesScreen(parent):
     cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
     def confirm_button_click():
-        username = username_input.text()
-        password = password_input.text()
-        name = name_input.text()
-        surname = surname_input.text()
-        role = role_cb.currentText()
+        username = username_input.text().strip()
+        password = password_input.text().strip()
+        name = name_input.text().strip()
+        surname = surname_input.text().strip()
+        role = role_cb.currentText().strip()
         if username == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko name")
             return
         if password == "":
             MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
         if name == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti name")
             return
         if surname == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti prezime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti surname")
             return
         if len(password) <= 6:
             MessageBox().warning(frame, "Greška", f"Lozinka je prekratka")
@@ -48,17 +48,17 @@ def EmployeesScreen(parent):
             return
         
         user = Models.User(username, password, name, surname, role)
-        inserted = State.db.korisnici.Insert(user)
+        inserted = State.db.users.Insert(user)
         if not inserted:
-            MessageBox().warning(frame, "Greška", f"Korisničko ime je zauzeto")
+            MessageBox().warning(frame, "Greška", f"Korisničko name je zauzeto")
             return
         
         username_input.setText("")
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
-        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.ime} {user.prezime}")
-        parent.show_screen(State.user.uloga)
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se registrovali kao {user.name} {user.surname}")
+        parent.show_screen(State.user.role)
     confirm_button.clicked.connect(confirm_button_click)
     def cancel_button_click():
         username_input.setText("")

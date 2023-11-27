@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="sifra" id="D2D962CF-925E-F432-0855-6C9042B99750">
+<Attribute name="id" id="D2D962CF-925E-F432-0855-6C9042B99750">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:53:17 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -51,7 +51,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vreme_pocetka" id="3263F684-6E2D-CF16-0A04-7FBE920018FD">
+<Attribute name="starting_time" id="3263F684-6E2D-CF16-0A04-7FBE920018FD">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:53:56 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -63,7 +63,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vreme_kraja" id="0EB15BFB-26F1-80B5-2122-DD90FB6268A4">
+<Attribute name="ending_time" id="0EB15BFB-26F1-80B5-2122-DD90FB6268A4">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:54:16 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -75,7 +75,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dani" id="DCD2A314-194D-B936-0F52-39F7CB93608A">
+<Attribute name="days" id="DCD2A314-194D-B936-0F52-39F7CB93608A">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:54:38 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -87,7 +87,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cena" id="9C7E8182-A6FB-2F10-194A-6CFEB111621B">
+<Attribute name="price" id="9C7E8182-A6FB-2F10-194A-6CFEB111621B">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:56:58 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

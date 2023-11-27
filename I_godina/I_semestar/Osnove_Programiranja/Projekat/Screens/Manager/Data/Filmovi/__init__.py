@@ -46,28 +46,28 @@ def FilmoviTab():
     table = frame_table
     def refresh_table():
         table.setRowCount(0)
-        data = State.db.filmovi.SelectAll()
+        data = State.db.films.SelectAll()
         table.setRowCount(len(data))
         for index in range(len(data)):
             film: Models.Film  = data[index]
-            item = QtWidgets.QTableWidgetItem(film.sifra)
+            item = QtWidgets.QTableWidgetItem(film.id)
             # item.setBackground(QtGui.QColor)
             table.setItem(index, 0, item)
-            item = QtWidgets.QTableWidgetItem(film.naziv)
+            item = QtWidgets.QTableWidgetItem(film.name)
             table.setItem(index, 1, item)
-            item = QtWidgets.QTableWidgetItem(", ".join(film.zanrovi))
+            item = QtWidgets.QTableWidgetItem(", ".join(film.genres))
             table.setItem(index, 2, item)
-            item = QtWidgets.QTableWidgetItem(str(film.trajanje))
+            item = QtWidgets.QTableWidgetItem(str(film.duration))
             table.setItem(index, 3, item)
-            item = QtWidgets.QTableWidgetItem(film.reziser)
+            item = QtWidgets.QTableWidgetItem(film.director)
             table.setItem(index, 4, item)
-            item = QtWidgets.QTableWidgetItem(", ".join(film.glavne_uloge))
+            item = QtWidgets.QTableWidgetItem(", ".join(film.main_roles))
             table.setItem(index, 5, item)
-            item = QtWidgets.QTableWidgetItem(film.zemlja_porekla)
+            item = QtWidgets.QTableWidgetItem(film.country)
             table.setItem(index, 6, item)
-            item = QtWidgets.QTableWidgetItem(str(film.godina_proizvodnje))
+            item = QtWidgets.QTableWidgetItem(str(film.year))
             table.setItem(index, 7, item)
-            item = QtWidgets.QTableWidgetItem(film.opis)
+            item = QtWidgets.QTableWidgetItem(film.description)
             table.setItem(index, 8, item)
         # table.resizeRowsToContents()
     def table_showEvent(event):
@@ -91,7 +91,7 @@ def FilmoviTab():
         res = MessageBox().question(tab, "Brisanje filma", f"Da li ste sigurni da želite da obrišete film '{name}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
-        State.db.filmovi.DeleteById(id)
+        State.db.films.DeleteById(id)
         refresh_table()
     def buttons_edit_click():
         row = table.currentRow()
@@ -99,7 +99,7 @@ def FilmoviTab():
             MessageBox().warning(tab, "Greška", f"Morate odabrati film za izmenu")
             return
         id = table.item(row, 0).text()
-        LocalState.film_to_edit = State.db.filmovi.SelectById(id)
+        LocalState.film_to_edit = State.db.films.SelectById(id)
         show_edit()
     buttons_add.clicked.connect(show_add)
     buttons_delete.clicked.connect(buttons_delete_click)
@@ -122,51 +122,51 @@ def FilmoviTab():
     add_cancel_button: QtWidgets.QPushButton = frames["frame_add"]["cancel_button"]
 
     def add_confirm_button_click():
-        sifra = add_sifra_input.text()
-        naziv = add_naziv_input.text()
-        reziser = add_reziser_input.text()
-        zemlja = add_zemlja_input.text()
+        id = add_sifra_input.text().strip()
+        name = add_naziv_input.text().strip()
+        director = add_reziser_input.text().strip()
+        zemlja = add_zemlja_input.text().strip()
         godina = add_godina_sb.value()
-        trajanje = add_trajanje_sb.value()
-        opis = add_opis_input.toPlainText().replace("\n", " ")
-        uloge = [ime.strip() for ime in add_uloge_input.toPlainText().replace("\n", "").split(",") if ime.strip() != ""]
-        zanrovi = [checkbox.text() for checkbox in add_checkbox_list if checkbox.isChecked()]
+        duration = add_trajanje_sb.value()
+        description = add_opis_input.toPlainText().replace("\n", " ").strip()
+        uloge = [name.strip() for name in add_uloge_input.toPlainText().replace("\n", "").split(",") if name.strip() != ""]
+        genres = [checkbox.text() for checkbox in add_checkbox_list if checkbox.isChecked()]
 
-        if sifra == "":
+        if id == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti šifru")
             return
-        if naziv == "":
-            MessageBox().warning(tab, "Greška", f"Morate uneti naziv filma")
+        if name == "":
+            MessageBox().warning(tab, "Greška", f"Morate uneti name filma")
             return
-        if reziser == "":
-            MessageBox().warning(tab, "Greška", f"Morate uneti ime režisera")
+        if director == "":
+            MessageBox().warning(tab, "Greška", f"Morate uneti name režisera")
             return
         if zemlja == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti zemlju porekla filma")
             return
-        if opis == "":
+        if description == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti zemlju porekla filma")
             return
         if len(uloge) == 0:
             MessageBox().warning(tab, "Greška", f"Morate uneti bar jednu glavnu ulogu")
             return
-        if len(zanrovi) == 0:
+        if len(genres) == 0:
             MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan zanr")
             return
         
 
         film = Models.Film(
-            sifra,
-            naziv,
-            zanrovi,
-            trajanje,
-            reziser,
+            id,
+            name,
+            genres,
+            duration,
+            director,
             uloge,
             zemlja,
             godina,
-            opis   
+            description   
         )
-        inserted = State.db.filmovi.Insert(film)
+        inserted = State.db.films.Insert(film)
 
         if not inserted:
             MessageBox().warning(tab, "Greška", f"Film sa ovom šifrom već postoji")
@@ -202,7 +202,7 @@ def FilmoviTab():
 
     def add_frame_showEvent(event):
         id = Utils.GenerateID.generate_string(8, lower=False, digits=False)
-        while State.db.filmovi.SelectById(id) is not None:
+        while State.db.films.SelectById(id) is not None:
             id = Utils.GenerateID.generate_string(8, lower=False, digits=False)
         add_sifra_input.setText(id)
         return QtWidgets.QFrame.showEvent(frame_add, event)
@@ -225,60 +225,60 @@ def FilmoviTab():
         if LocalState.film_to_edit is None:
             show_table()
             return
-        edit_sifra_input.setText(LocalState.film_to_edit.sifra)
-        edit_naziv_input.setText(LocalState.film_to_edit.naziv)
-        edit_reziser_input.setText(LocalState.film_to_edit.reziser)
-        edit_godina_sb.setValue(LocalState.film_to_edit.godina_proizvodnje)
-        edit_trajanje_sb.setValue(LocalState.film_to_edit.trajanje)
-        edit_zemlja_input.setText(LocalState.film_to_edit.zemlja_porekla)
-        edit_uloge_input.setText(", ".join(LocalState.film_to_edit.glavne_uloge))
-        edit_opis_input.setText(LocalState.film_to_edit.opis)
+        edit_sifra_input.setText(LocalState.film_to_edit.id)
+        edit_naziv_input.setText(LocalState.film_to_edit.name)
+        edit_reziser_input.setText(LocalState.film_to_edit.director)
+        edit_godina_sb.setValue(LocalState.film_to_edit.year)
+        edit_trajanje_sb.setValue(LocalState.film_to_edit.duration)
+        edit_zemlja_input.setText(LocalState.film_to_edit.country)
+        edit_uloge_input.setText(", ".join(LocalState.film_to_edit.main_roles))
+        edit_opis_input.setText(LocalState.film_to_edit.description)
         for checkbox in edit_checkbox_list:
-            checkbox.setChecked(checkbox.text() in LocalState.film_to_edit.zanrovi)
+            checkbox.setChecked(checkbox.text() in LocalState.film_to_edit.genres)
         return QtWidgets.QFrame.showEvent(frame_edit, event)
     frame_edit.showEvent = edit_frame_showEvent
 
     def edit_confirm_button_click():
-        sifra = edit_sifra_input.text()
-        naziv = edit_naziv_input.text()
-        reziser = edit_reziser_input.text()
-        zemlja = edit_zemlja_input.text()
+        id = edit_sifra_input.text().strip()
+        name = edit_naziv_input.text().strip()
+        director = edit_reziser_input.text().strip()
+        zemlja = edit_zemlja_input.text().strip()
         godina = edit_godina_sb.value()
-        trajanje = edit_trajanje_sb.value()
-        opis = edit_opis_input.toPlainText().replace("\n", " ")
-        uloge = [ime.strip() for ime in edit_uloge_input.toPlainText().replace("\n", "").split(",") if ime.strip() != ""]
-        zanrovi = [checkbox.text() for checkbox in edit_checkbox_list if checkbox.isChecked()]
+        duration = edit_trajanje_sb.value()
+        description = edit_opis_input.toPlainText().replace("\n", " ")
+        uloge = [name.strip() for name in edit_uloge_input.toPlainText().replace("\n", "").split(",") if name.strip() != ""]
+        genres = [checkbox.text() for checkbox in edit_checkbox_list if checkbox.isChecked()]
 
-        if sifra == "":
+        if id == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti šifru")
             return
-        if naziv == "":
-            MessageBox().warning(tab, "Greška", f"Morate uneti naziv filma")
+        if name == "":
+            MessageBox().warning(tab, "Greška", f"Morate uneti name filma")
             return
-        if reziser == "":
-            MessageBox().warning(tab, "Greška", f"Morate uneti ime režisera")
+        if director == "":
+            MessageBox().warning(tab, "Greška", f"Morate uneti name režisera")
             return
         if zemlja == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti zemlju porekla filma")
             return
-        if opis == "":
+        if description == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti zemlju porekla filma")
             return
         if len(uloge) == 0:
             MessageBox().warning(tab, "Greška", f"Morate uneti bar jednu glavnu ulogu")
             return
-        if len(zanrovi) == 0:
+        if len(genres) == 0:
             MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan zanr")
             return
         
-        LocalState.film_to_edit.naziv = naziv
-        LocalState.film_to_edit.reziser = reziser
-        LocalState.film_to_edit.glavne_uloge = uloge
-        LocalState.film_to_edit.godina_proizvodnje = godina
-        LocalState.film_to_edit.opis = opis
-        LocalState.film_to_edit.zanrovi = zanrovi
-        LocalState.film_to_edit.trajanje = trajanje
-        LocalState.film_to_edit.zemlja_porekla = zemlja
+        LocalState.film_to_edit.name = name
+        LocalState.film_to_edit.director = director
+        LocalState.film_to_edit.main_roles = uloge
+        LocalState.film_to_edit.year = godina
+        LocalState.film_to_edit.description = description
+        LocalState.film_to_edit.genres = genres
+        LocalState.film_to_edit.duration = duration
+        LocalState.film_to_edit.country = zemlja
 
         edit_sifra_input.setText("")
         edit_naziv_input.setText("")

@@ -17,26 +17,26 @@ def LoginScreen(parent):
     cancel_button: QtWidgets.QPushButton  = components["cancel_button"]
     frame.setMinimumSize(400, 150)
     def login_button_click():
-        username = username_input.text()
-        password = password_input.text()
+        username = username_input.text().strip()
+        password = password_input.text().strip()
         username_input.setText("")
         password_input.setText("")
         if username == "":
-            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko ime")
+            MessageBox().warning(frame, "Greška", f"Morate uneti korisničko name")
             return
         if password == "":
             MessageBox().warning(frame, "Greška", f"Morate uneti lozinku")
             return
-        user: Models.User = State.db.korisnici.SelectById(username)
+        user: Models.User = State.db.users.SelectById(username)
         if user is None:
             MessageBox().warning(frame, "Greška", f"User sa korisničkim imenom {username} ne postoji.")
             return
-        if user.lozinka != password:
-            MessageBox().warning(frame, "Greška", f"Pogrešna lozinka")
+        if user.password != password:
+            MessageBox().warning(frame, "Greška", f"Pogrešna password")
             return
         State.user = user
-        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.ime} {user.prezime}")
-        parent.show_screen(user.uloga)
+        # MessageBox().information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.name} {user.surname}")
+        parent.show_screen(user.role)
     login_button.clicked.connect(login_button_click)
     def cancel_button_click():
         username_input.setText("")

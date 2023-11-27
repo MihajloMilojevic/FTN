@@ -135,7 +135,7 @@ def table_frame(parent_layout: QtWidgets.QVBoxLayout):
     table.setHorizontalHeaderItem(3, item)
     item = QtWidgets.QTableWidgetItem("Vreme kraja")
     table.setHorizontalHeaderItem(4, item)
-    item = QtWidgets.QTableWidgetItem("Cena")
+    item = QtWidgets.QTableWidgetItem("price")
     table.setHorizontalHeaderItem(5, item)
     item = QtWidgets.QTableWidgetItem("Days")
     table.setHorizontalHeaderItem(6, item)
@@ -232,7 +232,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(4, QtWidgets.QFormLayout.FieldRole, vreme_kraja_time)
 
     cena_label = QtWidgets.QLabel(frame)
-    cena_label.setText("Cena: ")
+    cena_label.setText("price: ")
     cena_label.setFont(font)
     cena_label.setStyleSheet("color: white")
     cena_label.setObjectName("cena_label")

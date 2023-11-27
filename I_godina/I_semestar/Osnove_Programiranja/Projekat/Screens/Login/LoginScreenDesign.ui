@@ -83,7 +83,7 @@ color: white;</string>
           </font>
          </property>
          <property name="text">
-          <string>Korisničko ime: </string>
+          <string>Korisničko name: </string>
          </property>
         </widget>
        </item>

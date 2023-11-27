@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="sifra" id="134B900F-8F93-D5DE-2AC1-AA7197AC4E60">
+<Attribute name="id" id="134B900F-8F93-D5DE-2AC1-AA7197AC4E60">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:48:43 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="naziv" id="4700DFB7-B825-9841-7411-EFC1EE0A379E">
+<Attribute name="name" id="4700DFB7-B825-9841-7411-EFC1EE0A379E">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:49:02 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -51,7 +51,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="trajanje" id="9E52E885-A2B7-018A-2B53-D7EE32B27846">
+<Attribute name="duration" id="9E52E885-A2B7-018A-2B53-D7EE32B27846">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:49:40 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -63,7 +63,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="reziser" id="9F41D290-7235-221F-74B7-469AD9D1C3F8">
+<Attribute name="director" id="9F41D290-7235-221F-74B7-469AD9D1C3F8">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:50:14 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -75,7 +75,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="glavne_uloge" id="D9327AF7-BE2B-8B11-6152-3792E262D9E9">
+<Attribute name="main_roles" id="D9327AF7-BE2B-8B11-6152-3792E262D9E9">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:50:36 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -87,7 +87,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="zemlja_porekla" id="0B702C37-C180-9765-2A16-61D02F421C4F">
+<Attribute name="country" id="0B702C37-C180-9765-2A16-61D02F421C4F">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:50:49 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -99,7 +99,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="godina_proizvodnje" id="38819AB5-0F37-5E03-8428-1E0D738F3267">
+<Attribute name="year" id="38819AB5-0F37-5E03-8428-1E0D738F3267">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:52:10 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -111,7 +111,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="opis" id="0A95046B-FB84-B9EA-5776-9B5B11448B17">
+<Attribute name="description" id="0A95046B-FB84-B9EA-5776-9B5B11448B17">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:52:26 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

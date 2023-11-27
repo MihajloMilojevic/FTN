@@ -6,54 +6,54 @@ import json
 class Database:
 
     def __init__(self):
-        self.korisnici = Table(Models.User)
-        self.sale = Table(Models.Hall)
-        self.filmovi = Table(Models.Film)
-        self.projekcije = Table(Models.Projection)
-        self.termini = Table(Models.Showtime)
-        self.karte = Table(Models.Ticket)
+        self.users = Table(Models.User)
+        self.halls = Table(Models.Hall)
+        self.films = Table(Models.Film)
+        self.projections = Table(Models.Projection)
+        self.showtimes = Table(Models.Showtime)
+        self.tickets = Table(Models.Ticket)
 
     def __getitem__(self, key: str) -> Table:
         match key:
             case Models.User.name:
-                return self.korisnici
+                return self.users
             case Models.Ticket.name:
-                return self.karte
+                return self.tickets
             case Models.Hall.name:
-                return self.sale
+                return self.halls
             case Models.Film.name:
-                return self.filmovi
+                return self.films
             case Models.Projection.name:
-                return self.projekcije
+                return self.projections
             case Models.Showtime.name:
-                return self.termini
+                return self.showtimes
             case _:
                 raise "Invalid key"
 
     def load(self):
-        self.korisnici.load()
-        self.sale.load()
-        self.filmovi.load()
-        self.projekcije.load()
-        self.termini.load()
-        self.karte.load()
+        self.users.load()
+        self.halls.load()
+        self.films.load()
+        self.projections.load()
+        self.showtimes.load()
+        self.tickets.load()
 
     def save(self):
-        self.korisnici.save()
-        self.sale.save()
-        self.filmovi.save()
-        self.projekcije.save()
-        self.termini.save()
-        self.karte.save()
+        self.users.save()
+        self.halls.save()
+        self.films.save()
+        self.projections.save()
+        self.showtimes.save()
+        self.tickets.save()
 
     def populatedObject(self):
         return {
-            "korisnici": self.korisnici.populatedObject(self),
-            "sale": self.sale.populatedObject(self),
-            "filmovi": self.filmovi.populatedObject(self),
-            "projekcije": self.projekcije.populatedObject(self),
-            "termini": self.termini.populatedObject(self),
-            "karte": self.karte.populatedObject(self)
+            "users": self.users.populatedObject(self),
+            "halls": self.halls.populatedObject(self),
+            "films": self.films.populatedObject(self),
+            "projections": self.projections.populatedObject(self),
+            "showtimes": self.showtimes.populatedObject(self),
+            "tickets": self.tickets.populatedObject(self)
         }
 
     def toJsonString(self, indent = 0):
@@ -61,12 +61,12 @@ class Database:
     
     def toJsonObject(self):
         return {
-            "korisnici": self.korisnici.toJsonObject(),
-            "sale": self.sale.toJsonObject(),
-            "filmovi": self.filmovi.toJsonObject(),
-            "projekcije": self.projekcije.toJsonObject(),
-            "termini": self.termini.toJsonObject(),
-            "karte": self.karte.toJsonObject()
+            "users": self.users.toJsonObject(),
+            "halls": self.halls.toJsonObject(),
+            "films": self.films.toJsonObject(),
+            "projections": self.projections.toJsonObject(),
+            "showtimes": self.showtimes.toJsonObject(),
+            "tickets": self.tickets.toJsonObject()
         }
     
     @staticmethod
@@ -76,24 +76,24 @@ class Database:
     @staticmethod
     def fromJsonObject(obj):
         db = Database()
-        db.korisnici = Table.fromJsonObject(obj["korisnici"])
-        db.sale = Table.fromJsonObject(obj["sale"])
-        db.filmovi = Table.fromJsonObject(obj["filmovi"])
-        db.projekcije = Table.fromJsonObject(obj["projekcije"])
-        db.termini = Table.fromJsonObject(obj["termini"])
-        db.karte = Table.fromJsonObject(obj["karte"])
+        db.users = Table.fromJsonObject(obj["users"])
+        db.halls = Table.fromJsonObject(obj["halls"])
+        db.films = Table.fromJsonObject(obj["films"])
+        db.projections = Table.fromJsonObject(obj["projections"])
+        db.showtimes = Table.fromJsonObject(obj["showtimes"])
+        db.tickets = Table.fromJsonObject(obj["tickets"])
         return db
 
     def setupJson(self):
         with open("data.json", "r", encoding="utf-8") as file:
             str = file.read()
             db = Database.fromJsonString(str)
-            self.korisnici = db.korisnici
-            self.sale = db.sale
-            self.filmovi = db.filmovi
-            self.projekcije = db.projekcije
-            self.termini = db.termini
-            self.karte = db.karte
+            self.users = db.users
+            self.halls = db.halls
+            self.films = db.films
+            self.projections = db.projections
+            self.showtimes = db.showtimes
+            self.tickets = db.tickets
 
     def saveJson(self):
         with open("data.json", "w", encoding="utf-8") as file:

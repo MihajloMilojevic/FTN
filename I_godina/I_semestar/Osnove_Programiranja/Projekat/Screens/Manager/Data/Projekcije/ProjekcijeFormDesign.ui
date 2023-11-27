@@ -63,7 +63,7 @@
         <string notr="true">color: white; lbl</string>
        </property>
        <property name="text">
-        <string>Šifra sale:</string>
+        <string>Šifra halls:</string>
        </property>
       </widget>
      </item>
@@ -90,7 +90,7 @@
         <string notr="true">color: white; lbl</string>
        </property>
        <property name="text">
-        <string>Naziv sale:</string>
+        <string>name halls:</string>
        </property>
       </widget>
      </item>
@@ -147,7 +147,7 @@
         <string notr="true">color: white; lbl</string>
        </property>
        <property name="text">
-        <string>Naziv filma: </string>
+        <string>name filma: </string>
        </property>
       </widget>
      </item>
@@ -237,7 +237,7 @@
         <string notr="true">color: white; lbl</string>
        </property>
        <property name="text">
-        <string>Cena: </string>
+        <string>price: </string>
        </property>
       </widget>
      </item>

@@ -8,78 +8,78 @@ import Database.Models as Models
 
 class Ticket:
     
-    primary_key = "sifra"
+    primary_key = "id"
     name = "Ticket"
 
-    def __init__(self, sifra: str, sifra_termina: str, oznaka_sedista: str, rezervisano: bool, 
-                 datum_prodaje: datetime, korisnicko_ime: str|None, ime_i_prezime: str|None, prodajna_cena: float):
-        self.sifra = sifra
-        self.sifra_termina = sifra_termina
+    def __init__(self, id: str, showtime_id: str, oznaka_sedista: str, reserved: bool, 
+                 sale_date: datetime, username: str|None, full_name: str|None, sold_price: float):
+        self.id = id
+        self.showtime_id = showtime_id
         self.oznaka_sedista = oznaka_sedista
-        self.rezervisano = rezervisano
-        self.datum_prodaje = datum_prodaje
-        self.korisnicko_ime = korisnicko_ime
-        self.ime_i_prezime = ime_i_prezime
-        self.prodajna_cena = prodajna_cena
-        self.termin = Refrence(self, Models.Showtime, "sifra_termina")
-        self.korisnik = Refrence(self, Models.User, "korisnicko_ime")
+        self.reserved = reserved
+        self.sale_date = sale_date
+        self.username = username
+        self.full_name = full_name
+        self.sold_price = sold_price
+        self.showtime = Refrence(self, Models.Showtime, "showtime_id")
+        self.user = Refrence(self, Models.User, "username")
 
     def __str__(self) -> str:
         return self.toJsonString()
 
     def __getitem__(self, key: str) -> str|bool|float|datetime|None:
         match key:
-            case "sifra":
-                return self.sifra
-            case "sifra_termina":
-                return self.sifra_termina
+            case "id":
+                return self.id
+            case "showtime_id":
+                return self.showtime_id
             case "oznaka_sedista":
                 return self.oznaka_sedista
-            case "rezervisano":
-                return self.rezervisano
-            case "datum_prodaje":
-                return self.datum_prodaje
-            case "korisnicko_ime":
-                return self.korisnicko_ime
-            case "ime_i_prezime":
-                return self.ime_i_prezime
-            case "prodajna_cena":
-                return self.prodajna_cena
+            case "reserved":
+                return self.reserved
+            case "sale_date":
+                return self.sale_date
+            case "username":
+                return self.username
+            case "full_name":
+                return self.full_name
+            case "sold_price":
+                return self.sold_price
             case _:
                 raise "Invalid key"
         
     def __setitem__(self, key: str, value: str|bool|float|datetime|None) -> None:
         match key:
-            case "sifra":
-                self.sifra = value
-            case "sifra_termina":
-                self.sifra_termina = value
+            case "id":
+                self.id = value
+            case "showtime_id":
+                self.showtime_id = value
             case "oznaka_sedista":
                 self.oznaka_sedista = value
-            case "rezervisano":
-                self.rezervisano = value
-            case "datum_prodaje":
-                self.datum_prodaje = value
-            case "korisnicko_ime":
-                self.korisnicko_ime = value
-            case "ime_i_prezime":
-                self.ime_i_prezime = value
-            case "prodajna_cena":
-                self.prodajna_cena = value
+            case "reserved":
+                self.reserved = value
+            case "sale_date":
+                self.sale_date = value
+            case "username":
+                self.username = value
+            case "full_name":
+                self.full_name = value
+            case "sold_price":
+                self.sold_price = value
             case _:
                 raise "Invalid key"
     
     @staticmethod
     def serialize(obj: 'Ticket') -> str:
         data = [
-            Serialize.serialize_string(obj.sifra),
-            Serialize.serialize_string(obj.sifra_termina),
+            Serialize.serialize_string(obj.id),
+            Serialize.serialize_string(obj.showtime_id),
             Serialize.serialize_string(obj.oznaka_sedista),
-            Serialize.serialize_bool(obj.rezervisano),
-            Serialize.serialize_date(obj.datum_prodaje),
-            Serialize.serialize_string(obj.korisnicko_ime),
-            Serialize.serialize_string(obj.ime_i_prezime),
-            Serialize.serialize_float(obj.prodajna_cena)
+            Serialize.serialize_bool(obj.reserved),
+            Serialize.serialize_date(obj.sale_date),
+            Serialize.serialize_string(obj.username),
+            Serialize.serialize_string(obj.full_name),
+            Serialize.serialize_float(obj.sold_price)
         ]
         return SEPARATOR.join(data)
     
@@ -99,8 +99,8 @@ class Ticket:
     
     def populatedObject(self, db):
         obj = self.toJsonObject()
-        obj["termin"] = self.termin.get(db)
-        obj["korisnik"] = self.korisnik.get(db)
+        obj["showtime"] = self.showtime.get(db)
+        obj["user"] = self.user.get(db)
         return obj
 
     def toJsonString(self, indent = 0):
@@ -108,13 +108,13 @@ class Ticket:
     
     def toJsonObject(self):
         return {
-            "sifra": self.sifra,
-            "sifra_termina": self.sifra_termina,
+            "id": self.id,
+            "showtime_id": self.showtime_id,
             "oznaka_sedista": self.oznaka_sedista,
-            "rezervisano": self.rezervisano,
-            "datum_prodaje": datetime.strftime(self.datum_prodaje, "%x") if self.datum_prodaje is not None else None,
-            "korisnicko_ime": self.korisnicko_ime,
-            "ime_i_prezime": self.ime_i_prezime
+            "reserved": self.reserved,
+            "sale_date": datetime.strftime(self.sale_date, "%x") if self.sale_date is not None else None,
+            "username": self.username,
+            "full_name": self.full_name
         }
     
     @staticmethod
@@ -124,11 +124,11 @@ class Ticket:
     @staticmethod
     def fromJsonObject(obj):
         return Ticket(
-            obj["sifra"],
-            obj["sifra_termina"],
+            obj["id"],
+            obj["showtime_id"],
             obj["oznaka_sedista"],
-            obj["rezervisano"],
-            datetime.strptime(obj["datum_prodaje"], "%x"),
-            obj["korisnicko_ime"],
-            obj["ime_i_prezime"],
+            obj["reserved"],
+            datetime.strptime(obj["sale_date"], "%x"),
+            obj["username"],
+            obj["full_name"],
         )

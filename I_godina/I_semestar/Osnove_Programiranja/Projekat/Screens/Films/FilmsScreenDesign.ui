@@ -61,7 +61,7 @@
               </font>
              </property>
              <property name="placeholderText">
-              <string>Unesi naziv filma...</string>
+              <string>Unesi name filma...</string>
              </property>
             </widget>
            </item>

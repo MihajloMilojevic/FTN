@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="sifra" id="621EA9CE-CE82-2078-85B9-2F5130D4AA14">
+<Attribute name="id" id="621EA9CE-CE82-2078-85B9-2F5130D4AA14">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:02:39 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -39,7 +39,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="datum_odrzavanja" id="153EF2D9-9632-E4BA-1C2C-678413E0AC37">
+<Attribute name="date" id="153EF2D9-9632-E4BA-1C2C-678413E0AC37">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 20:03:38 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

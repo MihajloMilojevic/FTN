@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="sifra" id="B5415C01-310D-60BA-E5A6-8F7FF35411A7">
+<Attribute name="id" id="B5415C01-310D-60BA-E5A6-8F7FF35411A7">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:40:23 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="naziv" id="228DCF74-0C7F-90C1-9982-23D6B99B2B09">
+<Attribute name="name" id="228DCF74-0C7F-90C1-9982-23D6B99B2B09">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:40:35 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -39,7 +39,7 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="broj_redova" id="3AE15787-2198-0F61-996F-3B9DE2DABF46">
+<Attribute name="row_count" id="3AE15787-2198-0F61-996F-3B9DE2DABF46">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:43:01 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>
@@ -51,7 +51,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="broj_sedista" id="E451B0DD-03DD-429F-583A-9D1A50D43976">
+<Attribute name="seats_per_row" id="E451B0DD-03DD-429F-583A-9D1A50D43976">
 <createdBy>Mihajlo</createdBy>
 <createdTime>2023-10-30 19:43:12 UTC</createdTime>
 <ownerDesignName>Diagram</ownerDesignName>

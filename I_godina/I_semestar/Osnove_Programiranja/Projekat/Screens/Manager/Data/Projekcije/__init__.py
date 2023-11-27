@@ -46,25 +46,25 @@ def ProjekcijeTab():
     table = frame_table
     def refresh_table():
         table.setRowCount(0)
-        data = State.db.projekcije.SelectAll()
+        data = State.db.projections.SelectAll()
         table.setRowCount(len(data))
         for index in range(len(data)):
-            projekcija: Models.Projection  = data[index]
-            sala: Models.Hall = projekcija.sala.get(State.db)
-            film: Models.Film = projekcija.film.get(State.db)
-            item = QtWidgets.QTableWidgetItem(projekcija.sifra)
+            projection: Models.Projection  = data[index]
+            sala: Models.Hall = projection.hall.get(State.db)
+            film: Models.Film = projection.film.get(State.db)
+            item = QtWidgets.QTableWidgetItem(projection.id)
             table.setItem(index, 0, item)
-            item = QtWidgets.QTableWidgetItem(sala.naziv)
+            item = QtWidgets.QTableWidgetItem(sala.name)
             table.setItem(index, 1, item)
-            item = QtWidgets.QTableWidgetItem(film.naziv)
+            item = QtWidgets.QTableWidgetItem(film.name)
             table.setItem(index, 2, item)
-            item = QtWidgets.QTableWidgetItem(datetime.strftime(projekcija.vreme_pocetka, "%H:%M"))
+            item = QtWidgets.QTableWidgetItem(datetime.strftime(projection.starting_time, "%H:%M"))
             table.setItem(index, 3, item)
-            item = QtWidgets.QTableWidgetItem(datetime.strftime(projekcija.vreme_kraja, "%H:%M"))
+            item = QtWidgets.QTableWidgetItem(datetime.strftime(projection.ending_time, "%H:%M"))
             table.setItem(index, 4, item)
-            item = QtWidgets.QTableWidgetItem(str(projekcija.cena))
+            item = QtWidgets.QTableWidgetItem(str(projection.price))
             table.setItem(index, 5, item)
-            item = QtWidgets.QTableWidgetItem(", ".join(projekcija.dani))
+            item = QtWidgets.QTableWidgetItem(", ".join(projection.days))
             table.setItem(index, 6, item)
         table.resizeColumnsToContents()
     def table_showEvent(event):
@@ -85,10 +85,10 @@ def ProjekcijeTab():
             return
         id = table.item(row, 0).text()
         film = table.item(row, 2).text()
-        res = MessageBox().question(tab, "Brisanje projekcije", f"Da li ste sigurni da želite da obrišete projekciju za film '{film}'?")
+        res = MessageBox().question(tab, "Brisanje projections", f"Da li ste sigurni da želite da obrišete projekciju za film '{film}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
-        State.db.projekcije.DeleteById(id)
+        State.db.projections.DeleteById(id)
         refresh_table()
     def buttons_edit_click():
         row = table.currentRow()
@@ -96,7 +96,7 @@ def ProjekcijeTab():
             MessageBox().warning(tab, "Greška", f"Morate odabrati projekciju za izmenu")
             return
         id = table.item(row, 0).text()
-        LocalState.projekcija_to_edit = State.db.projekcije.SelectById(id)
+        LocalState.projection_to_edit = State.db.projections.SelectById(id)
         show_edit()
     buttons_add.clicked.connect(show_add)
     buttons_delete.clicked.connect(buttons_delete_click)
@@ -117,47 +117,47 @@ def ProjekcijeTab():
     add_cancel_button: QtWidgets.QPushButton = frames["frame_add"]["cancel_button"]
 
     def add_calculate_end_time():
-        naziv = add_film_cb.currentText()
-        if naziv == "" or naziv not in [f.naziv for f in State.db.filmovi.SelectAll()]:   
+        name = add_film_cb.currentText()
+        if name == "" or name not in [f.name for f in State.db.films.SelectAll()]:   
             add_vreme_kraja_time.setTime(QtCore.QTime(0, 0, 0))
             return
-        film: Models.Film = State.db.filmovi.Select(lambda film: film.naziv == naziv)[0]
+        film: Models.Film = State.db.films.Select(lambda film: film.name == name)[0]
         time: QtCore.QTime = QtCore.QTime(add_vreme_pocetka_time.time().hour(), add_vreme_pocetka_time.time().minute())
-        time = time.addSecs(film.trajanje * 60)
+        time = time.addSecs(film.duration * 60)
         add_vreme_kraja_time.setTime(time)
     add_film_cb.currentTextChanged.connect(add_calculate_end_time)
     add_vreme_pocetka_time.timeChanged.connect(add_calculate_end_time)
 
     def add_confirm_button_click():
-        sifra = add_sifra_input.text()
-        ime_filma = add_film_cb.currentText()
-        ime_sale = add_sala_cb.currentText()
-        cena = add_cena_sb.value()
-        vreme_pocetka = add_vreme_pocetka_time.dateTime().toPyDateTime()
-        vreme_kraja = add_vreme_kraja_time.dateTime().toPyDateTime()
-        dani = [checkbox.text() for checkbox in add_dani_checkboxes if checkbox.isChecked()]
+        id = add_sifra_input.text().strip()
+        ime_filma = add_film_cb.currentText().strip()
+        ime_sale = add_sala_cb.currentText().strip()
+        price = add_cena_sb.value()
+        starting_time = add_vreme_pocetka_time.dateTime().toPyDateTime()
+        ending_time = add_vreme_kraja_time.dateTime().toPyDateTime()
+        days = [checkbox.text() for checkbox in add_dani_checkboxes if checkbox.isChecked()]
 
-        if sifra == "":
+        if id == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti šifru")
             return
-        if ime_filma == "" or ime_filma not in [film.naziv for film in State.db.filmovi.SelectAll()]:
+        if ime_filma == "" or ime_filma not in [film.name for film in State.db.films.SelectAll()]:
             MessageBox().warning(tab, "Greška", f"Morate odabrati neki film")
             return
-        if ime_sale == "" or ime_sale not in [sala.naziv for sala in State.db.sale.SelectAll()]:
+        if ime_sale == "" or ime_sale not in [sala.name for sala in State.db.halls.SelectAll()]:
             MessageBox().warning(tab, "Greška", f"Morate odabrati neku salu")
             return
-        if cena == 0.00:
-            MessageBox().warning(tab, "Greška", f"Morate uneti cenu karte")
+        if price == 0.00:
+            MessageBox().warning(tab, "Greška", f"Morate uneti cenu tickets")
             return
-        if len(dani) == 0:
-            MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan dan projekcije")
+        if len(days) == 0:
+            MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan dan projections")
             return
         
-        film = State.db.filmovi.Select(lambda film: film.naziv == ime_filma)[0]
-        sala = State.db.sale.Select(lambda sala: sala.naziv == ime_sale)[0]
+        film = State.db.films.Select(lambda film: film.name == ime_filma)[0]
+        sala = State.db.halls.Select(lambda sala: sala.name == ime_sale)[0]
 
-        projekcija = Models.Projection(sifra, sala.sifra, film.sifra, vreme_pocetka, vreme_kraja, dani, cena)
-        inserted = State.db.projekcije.Insert(projekcija)
+        projection = Models.Projection(id, sala.id, film.id, starting_time, ending_time, days, price)
+        inserted = State.db.projections.Insert(projection)
 
         if not inserted:
             MessageBox().warning(tab, "Greška", f"Projection sa unetom šifrom već postoji")
@@ -189,16 +189,16 @@ def ProjekcijeTab():
     def add_frame_showEvent(event):
         add_sala_cb.clear()
         add_sala_cb.addItem("")
-        for sala in State.db.sale.SelectAll():
-            add_sala_cb.addItem(sala.naziv)
+        for sala in State.db.halls.SelectAll():
+            add_sala_cb.addItem(sala.name)
         add_film_cb.clear()
         add_film_cb.addItem("")
-        for film in State.db.filmovi.SelectAll():
-            add_film_cb.addItem(film.naziv)
-        sifra = generate_number(1000, 9999)
-        while sifra in [pr.sifra for pr in State.db.projekcije.SelectAll()]:
-            sifra = generate_number(1000, 9999)
-        add_sifra_input.setText(str(sifra))
+        for film in State.db.films.SelectAll():
+            add_film_cb.addItem(film.name)
+        id = generate_number(1000, 9999)
+        while id in [pr.id for pr in State.db.projections.SelectAll()]:
+            id = generate_number(1000, 9999)
+        add_sifra_input.setText(str(id))
         return QtWidgets.QFrame.showEvent(frame_add, event)
     frame_add.showEvent = add_frame_showEvent
 
@@ -214,51 +214,51 @@ def ProjekcijeTab():
     edit_cancel_button: QtWidgets.QPushButton = frames["frame_edit"]["cancel_button"]
 
     def edit_calculate_end_time():
-        naziv = edit_film_cb.currentText()
-        if naziv == "" or naziv not in [f.naziv for f in State.db.filmovi.SelectAll()]:   
+        name = edit_film_cb.currentText()
+        if name == "" or name not in [f.name for f in State.db.films.SelectAll()]:   
             edit_vreme_kraja_time.setTime(QtCore.QTime(0, 0, 0))
             return
-        film: Models.Film = State.db.filmovi.Select(lambda film: film.naziv == naziv)[0]
+        film: Models.Film = State.db.films.Select(lambda film: film.name == name)[0]
         time: QtCore.QTime = QtCore.QTime(edit_vreme_pocetka_time.time().hour(), edit_vreme_pocetka_time.time().minute())
-        time = time.addSecs(film.trajanje * 60)
+        time = time.addSecs(film.duration * 60)
         edit_vreme_kraja_time.setTime(time)
     edit_film_cb.currentTextChanged.connect(edit_calculate_end_time)
     edit_vreme_pocetka_time.timeChanged.connect(edit_calculate_end_time)
 
     def edit_confirm_button_click():
-        sifra = edit_sifra_input.text()
-        ime_filma = edit_film_cb.currentText()
-        ime_sale = edit_sala_cb.currentText()
-        cena = edit_cena_sb.value()
-        vreme_pocetka = edit_vreme_pocetka_time.dateTime().toPyDateTime()
-        vreme_kraja = edit_vreme_kraja_time.dateTime().toPyDateTime()
-        dani = [checkbox.text() for checkbox in edit_dani_checkboxes if checkbox.isChecked()]
+        id = edit_sifra_input.text().strip()
+        ime_filma = edit_film_cb.currentText().strip()
+        ime_sale = edit_sala_cb.currentText().strip()
+        price = edit_cena_sb.value()
+        starting_time = edit_vreme_pocetka_time.dateTime().toPyDateTime()
+        ending_time = edit_vreme_kraja_time.dateTime().toPyDateTime()
+        days = [checkbox.text() for checkbox in edit_dani_checkboxes if checkbox.isChecked()]
 
-        if sifra == "":
+        if id == "":
             MessageBox().warning(tab, "Greška", f"Morate uneti šifru")
             return
-        if ime_filma == "" or ime_filma not in [film.naziv for film in State.db.filmovi.SelectAll()]:
+        if ime_filma == "" or ime_filma not in [film.name for film in State.db.films.SelectAll()]:
             MessageBox().warning(tab, "Greška", f"Morate odabrati neki film")
             return
-        if ime_sale == "" or ime_sale not in [sala.naziv for sala in State.db.sale.SelectAll()]:
+        if ime_sale == "" or ime_sale not in [sala.name for sala in State.db.halls.SelectAll()]:
             MessageBox().warning(tab, "Greška", f"Morate odabrati neku salu")
             return
-        if cena == 0.00:
-            MessageBox().warning(tab, "Greška", f"Morate uneti cenu karte")
+        if price == 0.00:
+            MessageBox().warning(tab, "Greška", f"Morate uneti cenu tickets")
             return
-        if len(dani) == 0:
-            MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan dan projekcije")
+        if len(days) == 0:
+            MessageBox().warning(tab, "Greška", f"Morate odabrati bar jedan dan projections")
             return
         
-        film = State.db.filmovi.Select(lambda film: film.naziv == ime_filma)[0]
-        sala = State.db.sale.Select(lambda sala: sala.naziv == ime_sale)[0]
+        film = State.db.films.Select(lambda film: film.name == ime_filma)[0]
+        sala = State.db.halls.Select(lambda sala: sala.name == ime_sale)[0]
 
-        LocalState.projekcija_to_edit.sifra_filma = film.sifra
-        LocalState.projekcija_to_edit.sifra_sale = sala.sifra
-        LocalState.projekcija_to_edit.cena = cena
-        LocalState.projekcija_to_edit.dani = dani
-        LocalState.projekcija_to_edit.vreme_pocetka = vreme_pocetka
-        LocalState.projekcija_to_edit.vreme_kraja = vreme_kraja
+        LocalState.projection_to_edit.film_id = film.id
+        LocalState.projection_to_edit.hall_id = sala.id
+        LocalState.projection_to_edit.price = price
+        LocalState.projection_to_edit.days = days
+        LocalState.projection_to_edit.starting_time = starting_time
+        LocalState.projection_to_edit.ending_time = ending_time
 
         edit_sifra_input.setText("")
         edit_film_cb.setCurrentIndex(0)
@@ -286,20 +286,20 @@ def ProjekcijeTab():
     def edit_frame_showEvent(event):
         edit_sala_cb.clear()
         edit_sala_cb.addItem("")
-        for sala in State.db.sale.SelectAll():
-            edit_sala_cb.addItem(sala.naziv)
+        for sala in State.db.halls.SelectAll():
+            edit_sala_cb.addItem(sala.name)
         edit_film_cb.clear()
         edit_film_cb.addItem("")
-        for film in State.db.filmovi.SelectAll():
-            edit_film_cb.addItem(film.naziv)
-        edit_sifra_input.setText(LocalState.projekcija_to_edit.sifra)
-        edit_film_cb.setCurrentText(LocalState.projekcija_to_edit.film.get(State.db).naziv)
-        edit_sala_cb.setCurrentText(LocalState.projekcija_to_edit.sala.get(State.db).naziv)
-        edit_cena_sb.setValue(LocalState.projekcija_to_edit.cena)
-        edit_vreme_pocetka_time.setTime(QtCore.QTime(LocalState.projekcija_to_edit.vreme_pocetka.hour, LocalState.projekcija_to_edit.vreme_pocetka.minute))
-        edit_vreme_kraja_time.setTime(QtCore.QTime(LocalState.projekcija_to_edit.vreme_kraja.hour, LocalState.projekcija_to_edit.vreme_kraja.minute))
+        for film in State.db.films.SelectAll():
+            edit_film_cb.addItem(film.name)
+        edit_sifra_input.setText(LocalState.projection_to_edit.id)
+        edit_film_cb.setCurrentText(LocalState.projection_to_edit.film.get(State.db).name)
+        edit_sala_cb.setCurrentText(LocalState.projection_to_edit.hall.get(State.db).name)
+        edit_cena_sb.setValue(LocalState.projection_to_edit.price)
+        edit_vreme_pocetka_time.setTime(QtCore.QTime(LocalState.projection_to_edit.starting_time.hour, LocalState.projection_to_edit.starting_time.minute))
+        edit_vreme_kraja_time.setTime(QtCore.QTime(LocalState.projection_to_edit.ending_time.hour, LocalState.projection_to_edit.ending_time.minute))
         for checkbox in edit_dani_checkboxes:
-            checkbox.setChecked(checkbox.text() in LocalState.projekcija_to_edit.dani)
+            checkbox.setChecked(checkbox.text() in LocalState.projection_to_edit.days)
         return QtWidgets.QFrame.showEvent(frame_add, event)
     frame_edit.showEvent = edit_frame_showEvent
 

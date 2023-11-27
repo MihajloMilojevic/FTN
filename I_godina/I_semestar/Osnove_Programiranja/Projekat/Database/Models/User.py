@@ -8,57 +8,57 @@ from datetime import datetime
 
 class User:
 
-    primary_key = "korisnicko_ime"
+    primary_key = "username"
     name = "User"
 
-    def __init__(self, korisnicko_ime: str, lozinka: str, ime: str, prezime: str, uloga: str):
-        self.korisnicko_ime = korisnicko_ime
-        self.lozinka = lozinka
-        self.ime = ime
-        self.prezime = prezime
-        self.uloga = uloga
+    def __init__(self, username: str, password: str, name: str, surname: str, role: str):
+        self.username = username
+        self.password = password
+        self.name = name
+        self.surname = surname
+        self.role = role
 
     def __str__(self) -> str:
         return self.toJsonString()
 
     def __getitem__(self, key: str) -> str:
         match key:
-            case "korisnicko_ime":
-                return self.korisnicko_ime
-            case "lozinka":
-                return self.lozinka
-            case "ime":
-                return self.ime
-            case "prezime":
-                return self.prezime
-            case "uloga":
-                return self.uloga
+            case "username":
+                return self.username
+            case "password":
+                return self.password
+            case "name":
+                return self.name
+            case "surname":
+                return self.surname
+            case "role":
+                return self.role
             case _:
                 raise "Invalid key"
         
     def __setitem__(self, key: str, value: str) -> None:
         match key:
-            case "korisnicko_ime":
-                self.korisnicko_ime = value
-            case "lozinka":
-                self.lozinka = value
-            case "ime":
-                self.ime = value
-            case "prezime":
-                self.prezime = value
-            case "uloga":
-                self.uloga = value
+            case "username":
+                self.username = value
+            case "password":
+                self.password = value
+            case "name":
+                self.name = value
+            case "surname":
+                self.surname = value
+            case "role":
+                self.role = value
             case _:
                 raise "Invalid key"
 
     @staticmethod
     def serialize(obj: 'User') -> str:
         data = [
-            Serialize.serialize_string(obj.korisnicko_ime),
-            Serialize.serialize_string(obj.lozinka),
-            Serialize.serialize_string(obj.ime),
-            Serialize.serialize_string(obj.prezime),
-            Serialize.serialize_string(obj.uloga)
+            Serialize.serialize_string(obj.username),
+            Serialize.serialize_string(obj.password),
+            Serialize.serialize_string(obj.name),
+            Serialize.serialize_string(obj.surname),
+            Serialize.serialize_string(obj.role)
         ]
         return SEPARATOR.join(data)
     
@@ -81,11 +81,11 @@ class User:
     
     def toJsonObject(self):
         return {
-            "korisnicko_ime": self.korisnicko_ime,
-            "lozinka": self.lozinka,
-            "ime": self.ime,
-            "prezime": self.prezime,
-            "uloga": self.uloga
+            "username": self.username,
+            "password": self.password,
+            "name": self.name,
+            "surname": self.surname,
+            "role": self.role
         }
     
     @staticmethod
@@ -95,26 +95,26 @@ class User:
     @staticmethod
     def fromJsonObject(obj):
         return User(
-            obj["korisnicko_ime"],
-            obj["lozinka"],
-            obj["ime"],
-            obj["prezime"],
-            obj["uloga"],
+            obj["username"],
+            obj["password"],
+            obj["name"],
+            obj["surname"],
+            obj["role"],
         )
     
     def check_loyalty(self, db) -> bool:
         def check(karta: Ticket) -> bool:
-            if karta.datum_prodaje is None:
+            if karta.sale_date is None:
                 return False
-            if karta.korisnicko_ime is None:
+            if karta.username is None:
                 return False
-            if karta.korisnicko_ime != self.korisnicko_ime:
+            if karta.username != self.username:
                 return False
             today = datetime.now()
             last_year = today.replace(year=today.year-1)
-            if karta.datum_prodaje < last_year:
+            if karta.sale_date < last_year:
                 return False
             return True
-        karte = db.karte.Select(check)
-        total_value = sum([karta.prodajna_cena for karta in karte])
+        tickets = db.tickets.Select(check)
+        total_value = sum([karta.sold_price for karta in tickets])
         return total_value >= LOYALTY_SUM
