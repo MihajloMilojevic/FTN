@@ -1,9 +1,8 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import get_relative_path
-from Utils.MessageBox import MessageBox
-import App.State as State
-import Database.Models as Models
-from Screens.Manager.Employees.UI import setupUi
+from PyQt5 import QtWidgets
+from utils.message_box import MessageBox
+import app.state as State
+import database.models as Models
+from screens.manager.employees.UI import setupUi
 
 def EmployeesScreen(parent):
     frame = QtWidgets.QFrame()

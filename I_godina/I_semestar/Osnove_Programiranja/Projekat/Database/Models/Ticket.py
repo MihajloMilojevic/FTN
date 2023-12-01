@@ -1,9 +1,9 @@
 import json
 from datetime import datetime
-from Constants import SEPARATOR
-import Utils.Serialize as Serialize
-from Database.Refrence import Refrence
-import Database.Models as Models
+from constants import SEPARATOR
+import utils.serialize as Serialize
+from database.refrence import Refrence
+import database.models as Models
 
 
 class Ticket:

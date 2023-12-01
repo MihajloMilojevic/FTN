@@ -1,7 +1,6 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import get_relative_path
-from Screens.Manager.UI import setupUi
-import App.State as State
+from PyQt5 import QtWidgets
+from screens.manager.UI import setupUi
+import app.state as State
 
 def ManagerScreen(parent):
     frame = QtWidgets.QFrame()

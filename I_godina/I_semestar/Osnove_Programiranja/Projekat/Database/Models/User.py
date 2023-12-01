@@ -1,7 +1,7 @@
 import json
-import Utils.Serialize as Serialize
-from Constants import SEPARATOR, LOYALTY_SUM
-from Database.Models import Ticket
+from constants import SEPARATOR, LOYALTY_SUM
+import utils.serialize as Serialize
+from database.models import Ticket
 from datetime import datetime
 
 
@@ -89,8 +89,8 @@ class User:
         }
     
     @staticmethod
-    def fromJsonString(str):
-        return User.fromJsonObject(json.loads(str))
+    def fromJsonString(json_string):
+        return User.fromJsonObject(json.loads(json_string))
         
     @staticmethod
     def fromJsonObject(obj):

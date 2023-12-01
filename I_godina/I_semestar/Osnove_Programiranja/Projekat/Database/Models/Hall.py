@@ -1,6 +1,6 @@
 import json
-from Constants import SEPARATOR
-import Utils.Serialize as Serialize
+from constants import SEPARATOR
+import utils.serialize as Serialize
 
 
 class Hall:
@@ -79,8 +79,8 @@ class Hall:
         } 
     
     @staticmethod
-    def fromJsonString(str):
-        return Hall.fromJsonObject(json.loads(str))      
+    def fromJsonString(json_string):
+        return Hall.fromJsonObject(json.loads(json_string))      
     
     @staticmethod
     def fromJsonObject(obj):

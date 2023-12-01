@@ -1,10 +1,10 @@
-from Database.Models.Enums import Roles, Genres, Days
-from Database.Models.Film import Film
-from Database.Models.Ticket import Ticket
-from Database.Models.User import User
-from Database.Models.Projection import Projection
-from Database.Models.Hall import Hall
-from Database.Models.Showtime import Showtime
+from database.models.enums import Roles, Genres, Days
+from database.models.film import Film
+from database.models.ticket import Ticket
+from database.models.user import User
+from database.models.projection import Projection
+from database.models.hall import Hall
+from database.models.showtime import Showtime
 
 models_by_name = {
     "Roles": Roles,

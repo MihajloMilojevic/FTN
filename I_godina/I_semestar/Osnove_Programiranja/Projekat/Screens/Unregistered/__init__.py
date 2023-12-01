@@ -1,6 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import get_relative_path
-from Screens.Unregistered.UI import setupUi
+from PyQt5 import QtWidgets
+from screens.unregistered.UI import setupUi
 
 def UnregisteredScreen(parent):
     frame = QtWidgets.QFrame()

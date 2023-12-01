@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Database.Models import Roles
+from database.models import Roles
 
 def setupUi(Form):
     

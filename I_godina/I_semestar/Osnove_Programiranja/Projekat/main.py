@@ -1,6 +1,6 @@
-from App.State import db
+from app.state import db
 from PyQt5.QtWidgets import QApplication
-from App import App
+from app import App
 import sys
 
 

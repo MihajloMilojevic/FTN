@@ -1,17 +1,15 @@
 import json
-from Constants import SEPARATOR
+from constants import SEPARATOR
+import utils.serialize as Serialize
 from datetime import datetime
-from Database.Refrence import Refrence
-from Database.Models.Projection import Projection
-import Utils.Serialize as Serialize
+from database.refrence import Refrence
+from database.models.projection import Projection
 
 
 class Showtime:
 
     primary_key = "id"
     name = "Showtime"
-    refrences = [
-    ]
 
     def __init__(self, id: str, projection_id: str, date: datetime):
         self.id = id
@@ -78,8 +76,8 @@ class Showtime:
         } 
     
     @staticmethod
-    def fromJsonString(str):
-        return Showtime.fromJsonObject(json.loads(str))
+    def fromJsonString(json_string):
+        return Showtime.fromJsonObject(json.loads(json_string))
     
     @staticmethod
     def fromJsonObject(obj):

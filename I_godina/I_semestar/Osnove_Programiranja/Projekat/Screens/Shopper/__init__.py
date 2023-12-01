@@ -1,7 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import get_relative_path
-from Screens.Shopper.UI import setupUi
-import App.State as State
+from screens.shopper.UI import setupUi
+import app.state as State
 
 
 def ShopperScreen(parent):

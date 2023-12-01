@@ -4,16 +4,16 @@ strNone = str(None)
 
 
 # string
-def serialize_string(string: str) -> str:
-    if string is None:
+def serialize_string(deserialized_string: str) -> str:
+    if deserialized_string is None:
         return strNone
-    return string
+    return deserialized_string
 
 
-def deserialize_string(string: str) -> list:
-    if string == strNone:
+def deserialize_string(serialized_string: str) -> list:
+    if serialized_string == strNone:
         return None
-    return str(string)
+    return str(serialized_string)
 
 
 # int"%x"
@@ -23,10 +23,10 @@ def serialize_int(value: int) -> str:
     return str(value)
 
 
-def deserialize_int(str: str) -> list:
-    if str == strNone:
+def deserialize_int(serialized_string: str) -> list:
+    if serialized_string == strNone:
         return None
-    return int(str)
+    return int(serialized_string)
 
 
 # float
@@ -36,10 +36,10 @@ def serialize_float(value: float) -> str:
     return str(value)
 
 
-def deserialize_float(str: str) -> list:
-    if str == strNone:
+def deserialize_float(serialized_string: str) -> list:
+    if serialized_string == strNone:
         return None
-    return float(str)
+    return float(serialized_string)
 
 
 # bool
@@ -49,46 +49,46 @@ def serialize_bool(value: bool) -> str:
     return str(value)
 
 
-def deserialize_bool(str: str) -> list:
-    if str == strNone:
+def deserialize_bool(serialized_string: str) -> list:
+    if serialized_string == strNone:
         return None
-    return eval(str)
+    return eval(serialized_string)
 
 
 # Liste
-def serialize_list(list: list) -> str:
-    if list is None:
+def serialize_list(deserialized_list: list) -> str:
+    if deserialized_list is None:
         return strNone
-    return str(list)
+    return str(deserialized_list)
 
 
-def deserialize_list(str: str) -> list:
-    if str == strNone:
+def deserialize_list(serialized_string: str) -> list:
+    if serialized_string == strNone:
         return None
-    return eval(str)
+    return eval(serialized_string)
 
 
 # Datum
-def serialize_date(date: datetime) -> str:
-    if date is None:
+def serialize_date(deserialized_date: datetime) -> str:
+    if deserialized_date is None:
         return strNone
-    return datetime.strftime(date, "%d.%m.%Y")
+    return datetime.strftime(deserialized_date, "%d.%m.%Y")
 
 
-def deserialize_date(str: str) -> datetime:
-    if str == strNone:
+def deserialize_date(serialized_string: str) -> datetime:
+    if serialized_string == strNone:
         return None
-    return datetime.strptime(str, "%d.%m.%Y")
+    return datetime.strptime(serialized_string, "%d.%m.%Y")
 
 
 # Vreme
-def serialize_time(time: datetime) -> str:
-    if time is None:
+def serialize_time(deserialized_time: datetime) -> str:
+    if deserialized_time is None:
         return strNone
-    return datetime.strftime(time, "%H:%M:%S")
+    return datetime.strftime(deserialized_time, "%H:%M:%S")
 
 
-def deserialize_time(str: str) -> datetime:
-    if str == strNone:
+def deserialize_time(serialized_string: str) -> datetime:
+    if serialized_string == strNone:
         return None
-    return datetime.strptime(str, "%H:%M:%S")
+    return datetime.strptime(serialized_string, "%H:%M:%S")

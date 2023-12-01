@@ -1,6 +1,6 @@
 import json
-from Database.Models import models_by_name, User, Ticket, Hall, Film, Projection, Showtime
-from Utils.GetPath import get_relative_path
+from database.models import models_by_name, User, Ticket, Hall, Film, Projection, Showtime
+from utils.get_path import get_relative_path
 
 # Tip modela: User|Ticket|Hall|Film|Projection|Showtime 
 
@@ -80,8 +80,8 @@ class Table:
         }
     
     @staticmethod
-    def fromJsonString(str):
-        return Table.fromJsonObject(json.loads(str))
+    def fromJsonString(json_string):
+        return Table.fromJsonObject(json.loads(json_string))
         
     @staticmethod
     def fromJsonObject(obj):

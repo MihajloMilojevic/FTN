@@ -1,4 +1,4 @@
-mihajlo|Mihajlo12345|Mihajlo2|Milojevic3|menadzer
+mihajlo|Mihajlo123|Mihajlo|Milojevic|menadzer
 pepi|Petar2004|Petar|Popovic|prodavac
 prle|kos2023|Luka|Prilincevic|prodavac
 ljubogdan|Boki951|Bogdan|Ljubinkovic|prodavac

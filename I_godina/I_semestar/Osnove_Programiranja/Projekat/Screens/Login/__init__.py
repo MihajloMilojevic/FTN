@@ -1,9 +1,8 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from Utils.GetPath import get_relative_path
-import App.State as State
-import Database.Models as Models
-from Utils.MessageBox import MessageBox
-from Screens.Login.UI import setupUi
+from PyQt5 import QtWidgets
+import app.state as State
+import database.models as Models
+from utils.message_box import MessageBox
+from screens.login.UI import setupUi
 
 def LoginScreen(parent):
     frame = QtWidgets.QFrame()
@@ -32,7 +31,7 @@ def LoginScreen(parent):
             MessageBox().warning(frame, "Greška", f"User sa korisničkim imenom {username} ne postoji.")
             return
         if user.password != password:
-            MessageBox().warning(frame, "Greška", f"Pogrešna password")
+            MessageBox().warning(frame, "Greška", f"Pogrešna lozinka")
             return
         State.user = user
         # MessageBox().information(frame, "Uspeh", f"Uspešno ste se ulogovali kao {user.name} {user.surname}")

@@ -1,6 +1,6 @@
 import json
-from Constants import SEPARATOR
-import Utils.Serialize as Serialize
+from constants import SEPARATOR
+import utils.serialize as Serialize
 
 class Film:
 
@@ -118,8 +118,8 @@ class Film:
         }
     
     @staticmethod
-    def fromJsonString(str):
-        return Film.fromJsonObject(json.loads(str))
+    def fromJsonString(json_string):
+        return Film.fromJsonObject(json.loads(json_string))
 
     @staticmethod
     def fromJsonObject(obj):

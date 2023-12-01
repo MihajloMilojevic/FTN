@@ -1,6 +1,6 @@
-import Screens
+import screens as Screens
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Utils.GetPath import get_relative_path
+from utils.get_path import get_relative_path
 
 class App(QtWidgets.QWidget):
     def __init__(self) -> None:
@@ -72,7 +72,7 @@ class App(QtWidgets.QWidget):
         self.screens[name].show()
 
     def setup(self):
-        self.setWindowIcon(QtGui.QIcon(get_relative_path(["Assets", "LOGO.ico"])))
+        self.setWindowIcon(QtGui.QIcon(get_relative_path(["assets", "LOGO.ico"])))
         self.setWindowTitle("Bioskop")
         self.setObjectName("Form")
         self.resize(500, 500)

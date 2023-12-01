@@ -1,12 +1,12 @@
-from Screens.Unregistered import UnregisteredScreen
-from Screens.Login import LoginScreen
-from Screens.Register import RegisterScreen
-from Screens.Shopper import ShopperScreen
-from Screens.Seller import SellerScreen
-from Screens.Manager import ManagerScreen
-from Screens.Manager.Employees import EmployeesScreen
-from Screens.UserData import UserDataScreen
-from Screens.Manager.Data import DataScreen
+from screens.unregistered import UnregisteredScreen
+from screens.login import LoginScreen
+from screens.register import RegisterScreen
+from screens.shopper import ShopperScreen
+from screens.seller import SellerScreen
+from screens.manager import ManagerScreen
+from screens.manager.employees import EmployeesScreen
+from screens.user_data import UserDataScreen
+from screens.manager.cinema_data import DataScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 

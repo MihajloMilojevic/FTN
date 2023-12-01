@@ -1,9 +1,9 @@
 import json
-from Constants import SEPARATOR
+from constants import SEPARATOR
+import utils.serialize as Serialize
 from datetime import datetime
-import Utils.Serialize as Serialize
-from Database.Refrence import Refrence
-import Database.Models as Models
+from database.refrence import Refrence
+import database.models as Models
 
 class Projection:
 
@@ -111,8 +111,8 @@ class Projection:
         }
 
     @staticmethod
-    def fromJsonString(str):
-        return Projection.toJsonObject(json.loads(str))
+    def fromJsonString(json_string):
+        return Projection.toJsonObject(json.loads(json_string))
         
     @staticmethod
     def fromJsonObject(obj):

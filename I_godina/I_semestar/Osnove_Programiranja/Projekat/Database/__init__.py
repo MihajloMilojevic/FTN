@@ -1,6 +1,5 @@
-from typing import Any
-from Database.Table import Table
-import Database.Models as Models
+from database.table import Table
+import database.models as Models
 import json
 
 class Database:
@@ -86,8 +85,8 @@ class Database:
 
     def setupJson(self):
         with open("data.json", "r", encoding="utf-8") as file:
-            str = file.read()
-            db = Database.fromJsonString(str)
+            contents = file.read()
+            db = Database.fromJsonString(contents)
             self.users = db.users
             self.halls = db.halls
             self.films = db.films
