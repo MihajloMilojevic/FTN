@@ -7,6 +7,7 @@ from screens.manager import ManagerScreen
 from screens.manager.employees import EmployeesScreen
 from screens.user_data import UserDataScreen
 from screens.manager.cinema_data import DataScreen
+from screens.films import FilmsScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 

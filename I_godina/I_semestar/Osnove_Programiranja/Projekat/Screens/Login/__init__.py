@@ -40,6 +40,6 @@ def LoginScreen(parent):
     def cancel_button_click():
         username_input.setText("")
         password_input.setText("")
-        parent.show_screen("unregistered")
+        parent.back()
     cancel_button.clicked.connect(cancel_button_click)
     return frame

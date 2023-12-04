@@ -83,6 +83,23 @@ def setupUi(Form):
     uloga_label.setFont(font)
     uloga_label.setText("Menadžer")
     uloga_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+
+    search_films_button = QtWidgets.QPushButton(Form)
+    search_films_button.setFont(font)
+    search_films_button.setFixedWidth(300)
+    search_films_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    search_films_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    search_films_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    search_films_button.setAutoDefault(False)
+    search_films_button.setDefault(False)
+    search_films_button.setFlat(True)
+    search_films_button.setObjectName("search_films_button")
+    search_films_button.setText("Pretraži filmove")
     
     vbox_layout.addWidget(name_label)
     vbox_layout.addWidget(uloga_label)
@@ -90,6 +107,7 @@ def setupUi(Form):
     vbox_layout.addWidget(zaposleni_button)
     vbox_layout.addWidget(user_data_button)
     vbox_layout.addWidget(data_button)
+    vbox_layout.addWidget(search_films_button)
 
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
@@ -98,6 +116,7 @@ def setupUi(Form):
         "name_label": name_label,
         "zaposleni_button": zaposleni_button,
         "user_data_button": user_data_button,
-        "data_button": data_button
+        "data_button": data_button,
+        "search_films_button": search_films_button
     }
 

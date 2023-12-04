@@ -10,6 +10,7 @@ def ManagerScreen(parent):
     name_label: QtWidgets.QLabel = components["name_label"]
     user_data_button: QtWidgets.QPushButton = components["user_data_button"]
     data_button: QtWidgets.QPushButton = components["data_button"]
+    search_films_button: QtWidgets.QPushButton = components["search_films_button"]
     
     def odjavi_se_button_click():
         State.user = None
@@ -28,7 +29,9 @@ def ManagerScreen(parent):
         parent.show_screen("data")
     data_button.clicked.connect(data_button_click)
 
-    
+    def search_films_button_click():
+        parent.show_screen("films")
+    search_films_button.clicked.connect(search_films_button_click)
     
     def showEvent(event):
         name_label.setText(f"Zdravo, {State.user.name} {State.user.surname}")

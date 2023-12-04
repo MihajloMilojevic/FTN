@@ -52,7 +52,7 @@ def UserDataScreen(parent):
         password_input.setText("")
         name_input.setText("")
         surname_input.setText("")
-        parent.show_screen("menadzer")
+        parent.back()
     cancel_button.clicked.connect(cancel_button_click)
 
     def showEvent(event):

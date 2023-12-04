@@ -7,6 +7,7 @@ class App(QtWidgets.QWidget):
         super().__init__()
         
         self.setup()
+        self.history = []
         self.add_screens()
         self.show_screen("unregistered")
 
@@ -23,6 +24,7 @@ class App(QtWidgets.QWidget):
         self._screen_employees = Screens.EmployeesScreen(self)
         self._screen_user_data = Screens.UserDataScreen(self)
         self._screen_data = Screens.DataScreen(self)
+        self._screen_films = Screens.FilmsScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -33,6 +35,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._screen_employees)
         self.content_layout.addWidget(self._screen_user_data)
         self.content_layout.addWidget(self._screen_data)
+        self.content_layout.addWidget(self._screen_films)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -47,6 +50,7 @@ class App(QtWidgets.QWidget):
             "employees": self._screen_employees,
             "user_data": self._screen_user_data,
             "data": self._screen_data,
+            "films": self._screen_films
         }
         
 
@@ -66,11 +70,24 @@ class App(QtWidgets.QWidget):
         # self.content_layout.addWidget(self.screen3)
         # self.content_layout.addWidget(self.screen1)
 
-    def show_screen(self, name):
+    def show_screen(self, name, add_to_history = True):
+        if add_to_history:
+            print(f"'{name}' added to history")
+            self.history.append(name)
         for screen in self.screens.values():
             screen.hide()
         self.screens[name].show()
-
+    
+    def back(self):
+        if(len(self.history) == 0):
+            print("End of history reached")
+            return
+        current = self.history.pop()
+        print(f"'{current}' removed from history")
+        redirect_to = self.history[-1]
+        print(f"Redirecting to '{redirect_to}'")
+        self.show_screen(redirect_to, add_to_history=False)
+    
     def setup(self):
         self.setWindowIcon(QtGui.QIcon(get_relative_path(["assets", "LOGO.ico"])))
         self.setWindowTitle("Bioskop")

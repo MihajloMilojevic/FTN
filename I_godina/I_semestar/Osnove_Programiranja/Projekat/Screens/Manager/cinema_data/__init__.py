@@ -14,7 +14,7 @@ def DataScreen(parent):
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
     def back_button_click():
-        parent.show_screen(State.user.role)
+        parent.back()
     back_button.clicked.connect(back_button_click)
 
     return frame

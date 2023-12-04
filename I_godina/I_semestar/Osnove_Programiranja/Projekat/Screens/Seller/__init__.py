@@ -8,6 +8,7 @@ def SellerScreen(parent):
     odjavi_se_button: QtWidgets.QPushButton = components["odjavi_se_button"]
     name_label: QtWidgets.QLabel = components["name_label"]
     user_data_button: QtWidgets.QPushButton = components["user_data_button"]
+    search_films_button:  QtWidgets.QPushButton = components["search_films_button"]
     
     def odjavi_se_button_click():
         State.user = None
@@ -17,6 +18,10 @@ def SellerScreen(parent):
     def user_data_button_click():
         parent.show_screen("user_data")
     user_data_button.clicked.connect(user_data_button_click)
+
+    def search_films_button_click():
+        parent.show_screen("films")
+    search_films_button.clicked.connect(search_films_button_click)
     
     def showEvent(event):
         name_label.setText(f"Zdravo, {State.user.name} {State.user.surname}")
