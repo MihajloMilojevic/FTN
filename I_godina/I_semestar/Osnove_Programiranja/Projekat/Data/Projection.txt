@@ -1,2 +1,0 @@
-5378|S1|LLC3M1AK|17:00:00|20:15:00|['ponedeljak', 'utorak', 'sreda']|300.0
-7620|S1|LLC3M1AK|20:30:00|23:45:00|['ponedeljak', 'utorak', 'sreda']|300.0

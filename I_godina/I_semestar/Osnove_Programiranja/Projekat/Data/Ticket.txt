@@ -1,4 +1,0 @@
-EW2BTB0D6X|5378AA|1-A|True|None|mihajlo|None|0.0
-ZVCM5CI42Z|5378AA|1-B|True|None|mihajlo|None|0.0
-07BYLX0D5M|5378AA|2-C|False|01.11.2023|None|Djordje Milojevic|300.0
-YWMR7LCN06|5378AA|2-C|False|01.11.2023|mihajlo|None|300.0
