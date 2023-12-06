@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A9365C22-9535-0042-200E-0FFCE603893B" name="TERMIN">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:02:33 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="621EA9CE-CE82-2078-85B9-2F5130D4AA14">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:02:39 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sifraProjekcije" id="7D62C7AC-A1DC-1C47-998F-3D45B16769C2">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:02:57 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="153EF2D9-9632-E4BA-1C2C-678413E0AC37">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:03:38 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sifra1" id="E91E0AAA-FA68-8F06-D9FB-DBC69EDA3BC1">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:10:15 UTC</createdTime>
+<generatorID>28080527-E2EE-68B5-8997-862F9E0BE0EA</generatorID>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<referedAttribute>D2D962CF-925E-F432-0855-6C9042B99750</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="70975B9E-F2C9-EBEA-AEA9-48DFEBC13A42" name="TERMIN PK">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 20:02:55 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>621EA9CE-CE82-2078-85B9-2F5130D4AA14</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

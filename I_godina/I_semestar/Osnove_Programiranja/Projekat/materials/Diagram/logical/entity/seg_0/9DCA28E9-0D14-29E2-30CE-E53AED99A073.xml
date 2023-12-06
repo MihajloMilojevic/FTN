@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9DCA28E9-0D14-29E2-30CE-E53AED99A073" name="KORISNIK">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:12 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="username" id="8596CE9B-7A70-B3EE-96E3-101740317A2B">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:20 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="C8123BE0-B5A6-F06E-B3A4-E6D8055E7F0A">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:36 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="44B95D9C-4F6A-3435-8A6F-38F6DF9056AE">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:49 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="surname" id="8A8C78E7-4842-2C6F-8CBE-015A570EC002">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:57 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="role" id="59DDE75C-B163-24D0-BC77-0429AFDFFAD9">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:39:36 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DD0D0824-FBD0-357F-EF32-B430F6B811BD" name="KORISNIK PK">
+<createdBy>Mihajlo</createdBy>
+<createdTime>2023-10-30 19:38:34 UTC</createdTime>
+<ownerDesignName>Diagram</ownerDesignName>
+<engineerTo>
+<item key="9B279E23-5399-AFBF-FCDF-245ED91966E9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8596CE9B-7A70-B3EE-96E3-101740317A2B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
