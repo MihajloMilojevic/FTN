@@ -40,6 +40,7 @@ def setupUi( frame):
 "padding: 10px 30px;")
     search_button.setObjectName("search_button")
     search_button.setText("Pretraži")
+    search_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     header_layout.addWidget(search_button)
 
     filters_button = QtWidgets.QPushButton()
@@ -52,6 +53,7 @@ def setupUi( frame):
 "padding: 10px 30px;")
     filters_button.setObjectName("filters_button")
     filters_button.setText("Filteri")
+    filters_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     header_layout.addWidget(filters_button)
     main_layout.addLayout(header_layout)
 

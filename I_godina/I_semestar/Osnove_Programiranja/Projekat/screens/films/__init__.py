@@ -3,6 +3,7 @@ import app.state as State
 import database.models as Models
 from utils.message_box import MessageBox
 from screens.films.UI import setupUi
+import screens.films.local_state as LocalState
 
 def FilmsScreen(parent):
     frame = QtWidgets.QFrame()
@@ -21,8 +22,9 @@ def FilmsScreen(parent):
         parent.back()
     back_button.clicked.connect(back_button_click)
     def refresh_table():
+        print("refresh")
         table.setRowCount(0)
-        data = State.db.films.SelectAll()
+        data = LocalState.get_film_list()
         table.setRowCount(len(data))
         for index in range(len(data)):
             film: Models.Film  = data[index]
@@ -44,6 +46,11 @@ def FilmsScreen(parent):
             item = QtWidgets.QTableWidgetItem(str(film.year))
             table.setItem(index, 7, item)
         table.resizeRowsToContents()
+    search_button.clicked.connect(refresh_table)
+    def name_input_change():
+        LocalState.criteria["name"] = name_input.text()
+        print(f"Name set to {LocalState.criteria['name']}")
+    name_input.textChanged.connect(name_input_change)
     def showEvent(event):
         refresh_table()
         return QtWidgets.QFrame.showEvent(frame, event)
