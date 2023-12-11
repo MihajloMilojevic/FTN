@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from database.models.enums import Genres
 
 
 def setupUi( frame):
@@ -16,8 +17,14 @@ def setupUi( frame):
     font = QtGui.QFont()
     font.setPointSize(12)
 
-    main_layout = QtWidgets.QVBoxLayout()
-    main_layout.setObjectName("main_layout")
+    frame_layout = QtWidgets.QHBoxLayout()
+    frame_layout.setObjectName("frame_layout")
+    frame_layout.setContentsMargins(0, 0, 0, 0)
+
+
+    center_layout = QtWidgets.QVBoxLayout()
+    center_layout.setContentsMargins(10, 10, 10, 10)
+    center_layout.setObjectName("center_layout")
 
     header_layout = QtWidgets.QHBoxLayout()
     header_layout.setContentsMargins(0, 0, 0, 0)
@@ -30,18 +37,18 @@ def setupUi( frame):
     name_input.setObjectName("name_input")
     header_layout.addWidget(name_input)
 
-    search_button = QtWidgets.QPushButton()
-    search_button.setFont(font)
-    search_button.setStyleSheet("background: white;\n"
-"color: black;\n"
-"border: 1px solid black;\n"
-"border-radius: 5px;\n"
-"outline: none;\n"
-"padding: 10px 30px;")
-    search_button.setObjectName("search_button")
-    search_button.setText("Pretraži")
-    search_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    header_layout.addWidget(search_button)
+#     search_button = QtWidgets.QPushButton()
+#     search_button.setFont(font)
+#     search_button.setStyleSheet("background: white;\n"
+# "color: black;\n"
+# "border: 1px solid black;\n"
+# "border-radius: 5px;\n"
+# "outline: none;\n"
+# "padding: 10px 30px;")
+#     search_button.setObjectName("search_button")
+#     search_button.setText("Pretraži")
+#     search_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+#     header_layout.addWidget(search_button)
 
     filters_button = QtWidgets.QPushButton()
     filters_button.setFont(font)
@@ -55,7 +62,7 @@ def setupUi( frame):
     filters_button.setText("Filteri")
     filters_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     header_layout.addWidget(filters_button)
-    main_layout.addLayout(header_layout)
+    center_layout.addLayout(header_layout)
 
     table = QtWidgets.QTableWidget()
     table.setEnabled(True)
@@ -93,7 +100,7 @@ def setupUi( frame):
     table.setColumnWidth(2, 400)
     table.setColumnWidth(5, 450)
 
-    main_layout.addWidget(table)
+    center_layout.addWidget(table)
 
     back_button = QtWidgets.QPushButton()
     back_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -112,14 +119,174 @@ def setupUi( frame):
     back_button.setFlat(True)
     back_button.setObjectName("back_button")
     
-    main_layout.addWidget(back_button)
+    center_layout.addWidget(back_button)
 
-    frame.setLayout(main_layout)
+    filters_scroll_area = QtWidgets.QScrollArea()
 
-    return {
+    filters_scroll_area.setWidgetResizable(True)
+    filters_scroll_area.setObjectName("scrollArea")
+    filters_scroll_area.setMinimumWidth(350)
+    filters_scroll_area_layout = QtWidgets.QVBoxLayout()
+    filters_scroll_area.setLayout(filters_scroll_area_layout)
+
+    filters_content_widget = QtWidgets.QWidget()
+    filters_content_widget.setObjectName("content")
+    # filters_content_widget.setMinimumWidth(300)
+    filters_scroll_area.setWidget(filters_content_widget)
+
+    filters_content_layout = QtWidgets.QVBoxLayout()
+    filters_content_layout.setObjectName("filters_content_layout")
+
+    filters_content_widget.setLayout(filters_content_layout)
+    
+
+    genres_group = QtWidgets.QGroupBox(frame)
+    genres_group.setTitle("Žanrovi")
+    genres_group.setObjectName("genres_group")
+    genres_group.setFont(font)
+
+    genres_layout = QtWidgets.QVBoxLayout(genres_group)
+    genres_layout.setObjectName("genres_layout")
+
+    def add_genre(text):
+        genre = QtWidgets.QCheckBox(genres_group)
+        genre.setText(text)
+        genre.setFont(font)
+        genre.setStyleSheet("color: white")
+        genres_layout.addWidget(genre)
+        return genre
+    
+    filters_content_layout.addWidget(genres_group)
+    
+    duration_group = QtWidgets.QGroupBox(frame)
+    duration_group.setTitle("Trajanje")
+    duration_group.setObjectName("duration_group")
+    duration_group.setFont(font)
+
+    min_duration_label = QtWidgets.QLabel(frame)
+    min_duration_label.setText("Minimalno:")
+    min_duration_label.setFont(font)
+    min_duration_label.setStyleSheet("color: white")
+    min_duration_label.setObjectName("min_duration_label")
+
+    min_duration_sb = QtWidgets.QSpinBox(frame)
+    min_duration_sb.setFont(font)
+    min_duration_sb.setMinimum(0)
+    min_duration_sb.setMaximum(999999990)
+    min_duration_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    min_duration_sb.setObjectName("min_duration_sb")
+
+    max_duration_label = QtWidgets.QLabel(frame)
+    max_duration_label.setText("Maksimalno:")
+    max_duration_label.setFont(font)
+    max_duration_label.setStyleSheet("color: white")
+    max_duration_label.setObjectName("max_duration_label")
+
+    max_duration_sb = QtWidgets.QSpinBox(frame)
+    max_duration_sb.setFont(font)
+    max_duration_sb.setMinimum(0)
+    max_duration_sb.setMaximum(999999990)
+    max_duration_sb.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    max_duration_sb.setObjectName("max_duration_sb")
+    
+    duration_layout = QtWidgets.QVBoxLayout()
+    duration_layout.addWidget(min_duration_label)
+    duration_layout.addWidget(min_duration_sb)
+    duration_layout.addWidget(max_duration_label)
+    duration_layout.addWidget(max_duration_sb)
+
+    duration_group.setLayout(duration_layout)
+    filters_content_layout.addWidget(duration_group)
+
+    roles_group = QtWidgets.QGroupBox(frame)
+    roles_group.setTitle("Uloge")
+    roles_group.setObjectName("roles_group")
+    roles_group.setFont(font)
+
+    roles_layout = QtWidgets.QVBoxLayout(roles_group)
+    roles_layout.setObjectName("roles_layout")
+
+    def add_role(text):
+        role = QtWidgets.QCheckBox(roles_group)
+        role.setText(text)
+        role.setFont(font)
+        role.setStyleSheet("color: white")
+        roles_layout.addWidget(role)
+        return role
+    
+    filters_content_layout.addWidget(roles_group)
+
+    directors_group = QtWidgets.QGroupBox(frame)
+    directors_group.setTitle("Režiseri")
+    directors_group.setObjectName("directors_group")
+    directors_group.setFont(font)
+
+    directors_layout = QtWidgets.QVBoxLayout(directors_group)
+    directors_layout.setObjectName("directors_layout")
+
+    def add_director(text):
+        director = QtWidgets.QCheckBox(directors_group)
+        director.setText(text)
+        director.setFont(font)
+        director.setStyleSheet("color: white")
+        directors_layout.addWidget(director)
+        return director
+    
+    filters_content_layout.addWidget(directors_group)
+
+    countries_group = QtWidgets.QGroupBox(frame)
+    countries_group.setTitle("Zemlje")
+    countries_group.setObjectName("countries_group")
+    countries_group.setFont(font)
+
+    countries_layout = QtWidgets.QVBoxLayout(countries_group)
+    countries_layout.setObjectName("countries_layout")
+
+    def add_country(text):
+        country = QtWidgets.QCheckBox(countries_group)
+        country.setText(text)
+        country.setFont(font)
+        country.setStyleSheet("color: white")
+        countries_layout.addWidget(country)
+        return country
+    
+    filters_content_layout.addWidget(countries_group)
+
+    years_group = QtWidgets.QGroupBox(frame)
+    years_group.setTitle("Godine")
+    years_group.setObjectName("years_group")
+    years_group.setFont(font)
+
+    years_layout = QtWidgets.QVBoxLayout(years_group)
+    years_layout.setObjectName("years_layout")
+
+    def add_year(text):
+        year = QtWidgets.QCheckBox(years_group)
+        year.setText(text)
+        year.setFont(font)
+        year.setStyleSheet("color: white")
+        years_layout.addWidget(year)
+        return year
+    
+    filters_content_layout.addWidget(years_group)
+
+    frame_layout.addLayout(center_layout)
+    frame_layout.addWidget(filters_scroll_area)
+    frame.setLayout(frame_layout)
+
+    return ({
         "table": table,
         "name_input": name_input,
-        "search_button": search_button,
+        # "search_button": search_button,
         "filters_button": filters_button,
-        "back_button": back_button
-    }
+        "back_button": back_button,
+        "min_duration_sb": min_duration_sb,
+        "max_duration_sb": max_duration_sb,
+        "filters_scroll_area": filters_scroll_area
+    }, {
+        "add_genre": add_genre,
+        "add_role": add_role,
+        "add_director": add_director,
+        "add_country": add_country,
+        "add_year": add_year
+    })

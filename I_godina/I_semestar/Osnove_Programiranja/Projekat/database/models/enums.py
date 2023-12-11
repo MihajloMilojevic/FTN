@@ -27,25 +27,25 @@ class Genres:
     fantastika = "fantastika"
     horor = "horor"
     all_genres = [
-        "avantura"
-        "animacija"
-        "akcija"
-        "biografski"
-        "vestern"
-        "decji"
-        "dokumentarni"
-        "drama"
-        "istorijski"
-        "komedija"
-        "kriminalisticki"
-        "ljubavni"
-        "misterija"
-        "mjuzikl"
-        "naucnofantasticni"
-        "porodicni"
-        "ratni"
-        "triler"
-        "fantastika"
+        "avantura",
+        "animacija",
+        "akcija",
+        "biografski",
+        "vestern",
+        "decji",
+        "dokumentarni",
+        "drama",
+        "istorijski",
+        "komedija",
+        "kriminalisticki",
+        "ljubavni",
+        "misterija",
+        "mjuzikl",
+        "naucnofantasticni",
+        "porodicni",
+        "ratni",
+        "triler",
+        "fantastika",
         "horor"
     ]
 

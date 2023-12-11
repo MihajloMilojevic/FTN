@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>805</width>
+    <width>1010</width>
     <height>661</height>
    </rect>
   </property>
@@ -1794,6 +1794,11 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>Page</string>
+      </attribute>
      </widget>
     </widget>
    </item>
