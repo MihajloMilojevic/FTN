@@ -25,6 +25,7 @@ class App(QtWidgets.QWidget):
         self._screen_user_data = Screens.UserDataScreen(self)
         self._screen_data = Screens.DataScreen(self)
         self._screen_films = Screens.FilmsScreen(self)
+        self._screen_film_details = Screens.FilmDetailsScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -36,6 +37,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._screen_user_data)
         self.content_layout.addWidget(self._screen_data)
         self.content_layout.addWidget(self._screen_films)
+        self.content_layout.addWidget(self._screen_film_details)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -50,7 +52,8 @@ class App(QtWidgets.QWidget):
             "employees": self._screen_employees,
             "user_data": self._screen_user_data,
             "data": self._screen_data,
-            "films": self._screen_films
+            "films": self._screen_films,
+            "film_details": self._screen_film_details
         }
         
 
@@ -98,7 +101,7 @@ class App(QtWidgets.QWidget):
         self.setFont(font)
         self.setStyleSheet("background-color: rgb(76, 76, 76);\n"
         "color: white;"
-        # "border: 1px solid red"
+        # "border: 1px solid blue"
         )
         self.setLocale(QtCore.QLocale(QtCore.QLocale.Serbian, QtCore.QLocale.Serbia))
 
@@ -106,8 +109,9 @@ class App(QtWidgets.QWidget):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollArea.setLayout(QtWidgets.QVBoxLayout())
+        self.scrollArea.layout().setContentsMargins(0, 0, 0, 0)
         self.content_widget = QtWidgets.QWidget()
-        self.content_widget.setGeometry(QtCore.QRect(0, 0, 837, 1450))
+        self.content_widget.setContentsMargins(0, 0, 0, 0)
         self.content_widget.setObjectName("content")
         # self.scrollArea.setStyleSheet("border: 1px solid red")
         # self.content_widget.setStyleSheet("border: 1px solid green")

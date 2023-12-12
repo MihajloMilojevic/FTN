@@ -1,9 +1,10 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui, QtCore
 import app.state as State
 import database.models as Models
 from utils.message_box import MessageBox
 from screens.films.UI import setupUi
 import screens.films.local_state as LocalState
+import screens.film_details.local_state as FilmDetailsState
 
 def FilmsScreen(parent):
     frame = QtWidgets.QFrame()
@@ -36,25 +37,38 @@ def FilmsScreen(parent):
         table.setRowCount(0)
         data = LocalState.get_film_list()
         table.setRowCount(len(data))
+        def get_handle_click(film_id):
+            def handler():
+                FilmDetailsState.current_film = State.db.films.SelectById(film_id)
+                parent.show_screen("film_details")
+            return handler
         for index in range(len(data)):
             film: Models.Film  = data[index]
+            widget = QtWidgets.QWidget()
+            widget.setLayout(QtWidgets.QVBoxLayout())
+            details_button = QtWidgets.QPushButton("Detalji")
+            details_button.setStyleSheet("border: 1px solid black; padding: 5px 10px")
+            details_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+            details_button.clicked.connect(get_handle_click(film.id))
+            widget.layout().addWidget(details_button)
+            widget.layout().setContentsMargins(5, 5, 5, 5)
+            table.setCellWidget(index, 0, widget)
             item = QtWidgets.QTableWidgetItem(film.id)
-            # item.setBackground(QtGui.QColor)
-            table.setItem(index, 0, item)
-            item = QtWidgets.QTableWidgetItem(film.name)
             table.setItem(index, 1, item)
-            item = QtWidgets.QTableWidgetItem(", ".join(film.genres))
+            item = QtWidgets.QTableWidgetItem(film.name)
             table.setItem(index, 2, item)
-            item = QtWidgets.QTableWidgetItem(str(film.duration))
+            item = QtWidgets.QTableWidgetItem(", ".join(film.genres))
             table.setItem(index, 3, item)
-            item = QtWidgets.QTableWidgetItem(film.director)
+            item = QtWidgets.QTableWidgetItem(str(film.duration))
             table.setItem(index, 4, item)
-            item = QtWidgets.QTableWidgetItem(", ".join(film.main_roles))
+            item = QtWidgets.QTableWidgetItem(film.director)
             table.setItem(index, 5, item)
-            item = QtWidgets.QTableWidgetItem(film.country)
+            item = QtWidgets.QTableWidgetItem(", ".join(film.main_roles))
             table.setItem(index, 6, item)
-            item = QtWidgets.QTableWidgetItem(str(film.year))
+            item = QtWidgets.QTableWidgetItem(film.country)
             table.setItem(index, 7, item)
+            item = QtWidgets.QTableWidgetItem(str(film.year))
+            table.setItem(index, 8, item)
         table.resizeRowsToContents()
     # search_button.clicked.connect(refresh_table)
     def filters_button_click():
