@@ -10,7 +10,7 @@ int main() {
     char s[30]={0};
     unsigned int g;
     unsigned int baza;
-    printf("Unesite broj u oktalnoj osnovi:");
+    printf("Unesite broj: ");
     scanf("%30[^\n]s",s);
     printf("Unesite bazu (2-32):");
     scanf("%d",&baza);
