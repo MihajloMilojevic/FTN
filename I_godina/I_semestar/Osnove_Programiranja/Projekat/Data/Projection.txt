@@ -1,2 +1,3 @@
 5378|S1|QNFTNGQX|17:00:00|19:22:00|['ponedeljak', 'utorak', 'sreda']|300.0
 7620|S1|LLC3M1AK|20:30:00|23:45:00|['ponedeljak', 'utorak', 'sreda']|300.0
+7020|SV|DDMNZCUB|00:00:00|01:49:00|['nedelja']|250.0
