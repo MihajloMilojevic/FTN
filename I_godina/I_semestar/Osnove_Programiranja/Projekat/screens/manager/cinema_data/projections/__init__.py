@@ -5,6 +5,8 @@ import screens.manager.cinema_data.projections.local_state as LocalState
 import database.models as Models
 from utils.message_box import MessageBox
 from utils.generate_id import generate_number
+from utils.validate_projection import validate_projection
+from utils.serialize import serialize_time
 from datetime import datetime
 
 def ProjekcijeTab():
@@ -157,10 +159,18 @@ def ProjekcijeTab():
         sala = State.db.halls.Select(lambda sala: sala.name == ime_sale)[0]
 
         projection = Models.Projection(id, sala.id, film.id, starting_time, ending_time, days, price)
+        validated = validate_projection(projection, State.db.projections.SelectAll())
+        if validated is not None:   
+            error_projection: Models.Projection = State.db.projections.SelectById(validated[1])
+            error_film = error_projection.film.get(State.db).name or "?"
+            MessageBox().warning(tab, 
+                "Greška", 
+                f"Preklapanje sa projekcijom filma '{error_film}' ({validated[0]})")
+            return
         inserted = State.db.projections.Insert(projection)
 
         if not inserted:
-            MessageBox().warning(tab, "Greška", f"Projection sa unetom šifrom već postoji")
+            MessageBox().warning(tab, "Greška", f"Projekcija sa unetom šifrom već postoji")
             return
 
         add_sifra_input.setText("")
@@ -252,6 +262,15 @@ def ProjekcijeTab():
         
         film = State.db.films.Select(lambda film: film.name == ime_filma)[0]
         sala = State.db.halls.Select(lambda sala: sala.name == ime_sale)[0]
+        projection = Models.Projection(id, sala.id, film.id, starting_time, ending_time, days, price)
+        validated = validate_projection(projection, State.db.projections.SelectAll())
+        if validated is not None:   
+            error_projection: Models.Projection = State.db.projections.SelectById(validated[1])
+            error_film = error_projection.film.get(State.db).name or "?"
+            MessageBox().warning(tab, 
+                "Greška", 
+                f"Preklapanje sa projekcijom filma '{error_film}' ({validated[0]})")
+            return
 
         LocalState.projection_to_edit.film_id = film.id
         LocalState.projection_to_edit.hall_id = sala.id
