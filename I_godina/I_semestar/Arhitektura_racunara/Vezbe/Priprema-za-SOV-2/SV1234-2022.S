@@ -1,7 +1,0 @@
-#autor: Imenko Prezimić INDEX SV1234-2022
-
-prompt1: .ascii "Unseite logicki izraz: \0"
-prompt2: .ascii "Rezultat: \0"
-err1: .ascii "Greska kod operanda.\n\0"
-err2: .ascii "Greska kod operacije.\n\0"
-newline: .ascii "\n\0"
