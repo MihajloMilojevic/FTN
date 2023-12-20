@@ -27,6 +27,8 @@ greska1:    .ascii "Greska: pogresan znak!\0"
 greska1_duz = . - greska1
 greska2:    .ascii "Greska: prekoracenje!\0"
 greska2_duz = . - greska2
+newline:    .ascii "\n\0"
+newline_duz = . - newline
 
 greska: .long 0
 buffer_max_duz = 50
@@ -112,11 +114,6 @@ main:
     je pogresan_unos
     ja prekoracenje
 
-    movl broj1, %eax
-    addl broj2, %eax
-    jc prekoracenje
-    movl %eax, rezultat
-
     ISPIS $ulaz1, $ulaz1_duz
     UNOS $buffer, $buffer_max_duz, buffer_duz
     # int str_to_int(char* str, unsigned int* greska, unsigned int baza)
@@ -129,6 +126,11 @@ main:
     cmpl $1, greska
     je pogresan_unos
     ja prekoracenje
+
+    movl broj1, %eax
+    addl broj2, %eax
+    jc prekoracenje
+    movl %eax, rezultat
 
     # unsigned int int_to_str(unsigned int broj, char* str, unsigned int duzina, unsigned int baza, unsigned int* greska);
     pushl $greska
@@ -154,6 +156,7 @@ prekoracenje:
     ISPIS $greska2, $greska2_duz
     jmp kraj
 kraj:
+    ISPIS $newline, $newline_duz
     movl $1, %eax
     movl $0, %ebx
     int $0x80
