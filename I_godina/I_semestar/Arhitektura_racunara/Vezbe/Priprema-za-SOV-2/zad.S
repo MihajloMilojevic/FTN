@@ -36,6 +36,7 @@ greska: .long 0
     movl $0, %ebx
     movl \adresa, %ecx
     movl \duzina, %edx
+    incl %edx
     int $0x80
     decl %eax
     movl %eax, \uneseno
@@ -58,5 +59,14 @@ kraj:
     movl greska, %ebx
     int $0x80
 
-%
-str_to_int:
+
+extract:
+    pushl %ebp
+    movl %esp, %ebp
+    pushl %esi
+
+extract_kraj:
+    popl %esi
+    movl %ebp, %esp
+    popl %ebp
+    ret

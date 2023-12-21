@@ -3,15 +3,15 @@ import database.models as Models
 from datetime import datetime, timedelta
 from utils.serialize import serialize_date
 
-def generate(days: int):
+def generate_all(start: datetime, length: int):
     projections: list[Models.Projection] = State.db.projections.SelectAll()
     for projection in projections:
-        generate_single(projection, days)
+        generate_single(projection, start, length)
 
-def generate_single(projection: Models.Projection, number_of_days: int):
+def generate_single(projection: Models.Projection, start: datetime, number_of_days: int):
     days = [day_index(d) for d in projection.days]
     for delta in range(number_of_days+1):
-        date = datetime.today() + timedelta(days=delta)
+        date = start + timedelta(days=delta)
         # projekcija se ne prikazuje tog dana
         if date.weekday() not in days:
             continue
