@@ -113,62 +113,11 @@ petlja:
     je op_xor
     jmp operacija_err
 op_rot_levo:
-    pushl $buffer
-    pushl ind
-    call extract
-    addl $8, %esp
-    addl %eax, ind
-    incl ind
-    pushl %eax
-    pushl $greska
-    pushl $buffer
-    call convert
-    addl $12, %esp
-    movb %al, operand
-    cmpl $0, greska
-    ja operand_err
-    movb operand, %cl
-    rolb %cl, rezultat
-    jmp petlja
-#    OPERACIJA rolb
+    OPERACIJA rolb
 op_rot_desno:
-    pushl $buffer
-    pushl ind
-    call extract
-    addl $8, %esp
-    addl %eax, ind
-    incl ind
-    pushl %eax
-    pushl $greska
-    pushl $buffer
-    call convert
-    addl $12, %esp
-    movb %al, operand
-    cmpl $0, greska
-    ja operand_err
-    movb operand, %cl
-    rorb %cl, rezultat
-    jmp petlja
-#    OPERACIJA rorb
+    OPERACIJA rorb
 op_xor:
-    pushl $buffer
-    pushl ind
-    call extract
-    addl $8, %esp
-    addl %eax, ind
-    incl ind
-    pushl %eax
-    pushl $greska
-    pushl $buffer
-    call convert
-    addl $12, %esp
-    movb %al, operand
-    cmpl $0, greska
-    ja operand_err
-    movb operand, %cl
-    xorb %cl, rezultat
-    jmp petlja
-#    OPERACIJA xorb
+   OPERACIJA xorb
     
 print:
     movl $0, %eax
