@@ -18,59 +18,80 @@ str_to_int:
     movl $0, %eax
     movl 8(%ebp), %esi
     cmpb $0, (%esi)
-    je greska
+    je str_to_int_greska
 
-petlja:
+str_to_int_petlja:
     movb (%esi), %bl
     cmpb $0, %bl
-    je kraj
-    call vrednost_znaka
-    js greska
+    je str_to_int_kraj
+str_to_int_vrednost_znaka:
+    cmpl $0, %ebx
+    je str_to_int_vrednost_znaka_kraj
+    cmpl $'0', %ebx
+    jb str_to_int_vrednost_znaka_malo
+    cmpl $'9', %ebx
+    ja str_to_int_vrednost_znaka_malo
+    subl $'0', %ebx
+    jmp str_to_int_vrednost_znaka_kraj
+str_to_int_vrednost_znaka_malo:
+    orl $0b100000, %ebx
+    cmpl $'a', %ebx
+    jb str_to_int_vrednost_znaka_str_to_int_greska
+    cmpl $'z', %ebx
+    ja str_to_int_vrednost_znaka_str_to_int_greska
+    subl $'a', %ebx
+    addl $10, %ebx
+    jmp str_to_int_vrednost_znaka_kraj
+str_to_int_vrednost_znaka_str_to_int_greska:
+    movl $-1, %ebx
+str_to_int_vrednost_znaka_kraj:
+    cmpl $0, %ebx
+    jl str_to_int_greska
     cmpl %ecx, %ebx
-    jae greska
+    jae str_to_int_greska
     mull %ecx
-    jc prekoracenje
+    jc str_to_int_prekoracenje
     addl %ebx, %eax
-    jc prekoracenje
+    jc str_to_int_prekoracenje
     incl %esi
-    jmp petlja
+    jmp str_to_int_petlja
 
-greska:
+str_to_int_greska:
     movl 12(%ebp), %eax
     movl $1, (%eax)
-    jmp kraj
-prekoracenje:
+    jmp str_to_int_kraj
+str_to_int_prekoracenje:
     movl 12(%ebp), %eax
     movl $2, (%eax)
     jmp kraj
 
-kraj:
+str_to_int_kraj:
     popl %ebx
     popl %esi
     movl %ebp, %esp
     popl %ebp
     ret
 
-# int vrednost_znaka(uzima vrednost iz %ebx); return vrednost ili -1
-vrednost_znaka:
+# int str_to_int_vrednost_znaka(uzima vrednost iz %ebx); return vrednost ili -1
+str_to_int_vrednost_znaka:
     cmpl $0, %ebx
-    je vrednost_znaka_kraj
+    je str_to_int_vrednost_znaka_kraj
     cmpl $'0', %ebx
-    jb vrednost_znaka_malo
+    jb str_to_int_vrednost_znaka_malo
     cmpl $'9', %ebx
-    ja vrednost_znaka_malo
+    ja str_to_int_vrednost_znaka_malo
     subl $'0', %ebx
-    jmp vrednost_znaka_kraj
-vrednost_znaka_malo:
+    jmp str_to_int_vrednost_znaka_kraj
+str_to_int_vrednost_znaka_malo:
     orl $0b100000, %ebx
     cmpl $'a', %ebx
-    jb vrednost_znaka_greska
+    jb str_to_int_vrednost_znaka_str_to_int_greska
     cmpl $'z', %ebx
-    ja vrednost_znaka_greska
+    ja str_to_int_vrednost_znaka_str_to_int_greska
     subl $'a', %ebx
     addl $10, %ebx
-    jmp vrednost_znaka_kraj
-vrednost_znaka_greska:
+    jmp str_to_int_vrednost_znaka_kraj
+str_to_int_vrednost_znaka_str_to_int_greska:
     movl $-1, %ebx
-vrednost_znaka_kraj:
+str_to_int_vrednost_znaka_kraj:
     ret
