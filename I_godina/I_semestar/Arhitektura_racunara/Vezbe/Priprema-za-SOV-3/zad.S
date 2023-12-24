@@ -242,26 +242,7 @@ str_to_int_end:
     popl %edx
     popl %ecx
     popl %ebx
-    popl %esishl $0
-    pushl %esi
-    pushl %ebx
-    pushl %ecx
-    pushl %edx
-    movl $10, %ebx          # baza
-    movl 8(%ebp), %esi      # adresa trenutnog karaktera
-    movl $0, %eax           # rezultat
-
-str_to_int_loop:
-    xorl %ecx, %ecx
-    movb (%esi), %cl
-    cmpb $0, %cl
-    je str_to_int_end
-    subb $'0', %cl
-    js str_to_int_err
-    cmpb $9, %cl
-    ja str_to_int_err
-    mull %ebx
-    addl %ecx, %eax
+    popl %esi
     movl %ebp, %esp
     popl %ebp
     ret

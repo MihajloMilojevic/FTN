@@ -36,7 +36,7 @@ if [ $missing -ne 0 ]; then
 fi
 
 TESTS=(01 02 03 04 05 06)
-EXITS=(0 0 0 0 1 0)
+EXITS=(0 0 0 0 2 1)
 EMPTY="#"
 QUIET=0
 KEEP=0
@@ -44,68 +44,68 @@ SIG=""
 OUT1=/tmp/out1
 
 TEST01=$(cat <<EOL
-332/224
+1 + x = 3
 EOL
 )
 
 OUTP01=$(cat <<EOL
-Unesite zirafin pritisak: 332/224
-Potrebna korekcija: -52/-24
+Unesite jednacinu: 1 + x = 3
+Resenje: x = 2
 EOL
 )
 
 TEST02=$(cat <<EOL
-212/111
+15 - x = 6
 EOL
 )
 
 OUTP02=$(cat <<EOL
-Unesite zirafin pritisak: 212/111
-Potrebna korekcija: +28/+49
+Unesite jednacinu: 15 - x = 6
+Resenje: x = 9
 EOL
 )
 
 TEST03=$(cat <<EOL
-260/190
+123 + x = 55556
 EOL
 )
 
 OUTP03=$(cat <<EOL
-Unesite zirafin pritisak: 260/190
-Potrebna korekcija: 0/0
+Unesite jednacinu: 123 + x = 55556
+Resenje: x = 55433
 EOL
 )
 
 TEST04=$(cat <<EOL
-324/110
+555556 - x = 498
 EOL
 )
 
 OUTP04=$(cat <<EOL
-Unesite zirafin pritisak: 324/110
-Potrebna korekcija: -44/+50
+Unesite jednacinu: 555556 - x = 498
+Resenje: x = 555058
 EOL
 )
 
 TEST05=$(cat <<EOL
-1a3/192
+1 ! x = 5
 EOL
 )
 
 OUTP05=$(cat <<EOL
-Unesite zirafin pritisak: 1a3/192
-Doslo je do greske pri konverziji!
+Unesite jednacinu: 1 ! x = 5
+Greska! Neispravna operacija!
 EOL
 )
 
 TEST06=$(cat <<EOL
-200/190
+12a - x = 15
 EOL
 )
 
 OUTP06=$(cat <<EOL
-Unesite zirafin pritisak: 200/190
-Potrebna korekcija: +40/0
+Unesite jednacinu: 12a - x = 15
+Greska pri konverziji!
 EOL
 )
 
