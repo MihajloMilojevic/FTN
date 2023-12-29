@@ -9,6 +9,7 @@ from screens.user_data import UserDataScreen
 from screens.manager.cinema_data import DataScreen
 from screens.films import FilmsScreen
 from screens.film_details import FilmDetailsScreen
+from screens.repertoire import RepertoireScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 

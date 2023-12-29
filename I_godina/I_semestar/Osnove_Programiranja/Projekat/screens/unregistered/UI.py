@@ -66,11 +66,30 @@ def setupUi(Form):
     search_films_button.setText("Pretraži filmove")
     vbox_layout.addWidget(search_films_button)
 
+    see_reperoire_button = QtWidgets.QPushButton(Form)
+    see_reperoire_button.setFont(font)
+    see_reperoire_button.setFixedWidth(300)
+    see_reperoire_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    see_reperoire_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    see_reperoire_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    see_reperoire_button.setAutoDefault(False)
+    see_reperoire_button.setDefault(False)
+    see_reperoire_button.setFlat(True)
+    see_reperoire_button.setObjectName("see_reperoire_button")
+    see_reperoire_button.setText("Pogledaj Repertoar")
+    vbox_layout.addWidget(see_reperoire_button)
+
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
     return {
         "login_button": login_button,
         "register_button": register_button,
-        "search_films_button": search_films_button
+        "search_films_button": search_films_button,
+        "see_reperoire_button": see_reperoire_button
     }
 

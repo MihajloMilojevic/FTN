@@ -26,6 +26,7 @@ class App(QtWidgets.QWidget):
         self._screen_data = Screens.DataScreen(self)
         self._screen_films = Screens.FilmsScreen(self)
         self._screen_film_details = Screens.FilmDetailsScreen(self)
+        self._repertoire_screen = Screens.RepertoireScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -38,6 +39,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._screen_data)
         self.content_layout.addWidget(self._screen_films)
         self.content_layout.addWidget(self._screen_film_details)
+        self.content_layout.addWidget(self._repertoire_screen)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -53,7 +55,8 @@ class App(QtWidgets.QWidget):
             "user_data": self._screen_user_data,
             "data": self._screen_data,
             "films": self._screen_films,
-            "film_details": self._screen_film_details
+            "film_details": self._screen_film_details,
+            "repertoire_screen": self._repertoire_screen
         }
         
 
