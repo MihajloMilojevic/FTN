@@ -10,9 +10,6 @@ JKOUHRHRIN|9290AD|7-E|True|None|teo|None|None
 UGOSACXLZZ|9290AD|7-F|True|None|teo|None|None
 UALEVEYUNJ|9290AD|13-N|True|None|dance|None|None
 IAQTUJQYQK|9290AD|13-O|True|None|dance|None|None
-LCWSMCLNPK|5378AH|4-D|True|None|teo|None|None
-YPGOUXLLEV|5378AH|4-E|True|None|teo|None|None
-MDVZZLFAMW|5378AH|4-F|True|None|teo|None|None
 IMJBKVOYQM|4933AF|10-C|True|None|teo|None|None
 VCHKXOAIKR|4933AF|10-D|True|None|teo|None|None
 BKFZERGWPC|4933AF|10-E|True|None|teo|None|None

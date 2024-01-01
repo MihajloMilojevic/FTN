@@ -26,15 +26,17 @@ def ShopperTicketListScreen(parent):
         table.setRowCount(len(data))
         def get_handle_click(ticket_id):
             def handler():
-                pass
-                # FilmDetailsState.current_film = State.db.films.SelectById(film_id)
-                # parent.show_screen("film_details")
+                res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
+                if res != QtWidgets.QMessageBox.StandardButton.Yes:
+                    return
+                State.db.tickets.DeleteById(ticket_id)
+                refresh_table()
             return handler
         for index in range(len(data)):
             current = data[index]
             button = QtWidgets.QWidget()
             button.setLayout(QtWidgets.QVBoxLayout())
-            details_button = QtWidgets.QPushButton("Detalji")
+            details_button = QtWidgets.QPushButton("Poništi")
             details_button.setStyleSheet("border: 1px solid black; padding: 5px 10px")
             details_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
             details_button.clicked.connect(get_handle_click(current["id"]))
