@@ -11,11 +11,11 @@ class Ticket:
     primary_key = "id"
     name = "Ticket"
 
-    def __init__(self, id: str, showtime_id: str, oznaka_sedista: str, reserved: bool, 
+    def __init__(self, id: str, showtime_id: str, seat_tag: str, reserved: bool, 
                  sale_date: datetime, username: str|None, full_name: str|None, sold_price: float):
         self.id = id
         self.showtime_id = showtime_id
-        self.oznaka_sedista = oznaka_sedista
+        self.seat_tag = seat_tag
         self.reserved = reserved
         self.sale_date = sale_date
         self.username = username
@@ -33,8 +33,8 @@ class Ticket:
                 return self.id
             case "showtime_id":
                 return self.showtime_id
-            case "oznaka_sedista":
-                return self.oznaka_sedista
+            case "seat_tag":
+                return self.seat_tag
             case "reserved":
                 return self.reserved
             case "sale_date":
@@ -54,8 +54,8 @@ class Ticket:
                 self.id = value
             case "showtime_id":
                 self.showtime_id = value
-            case "oznaka_sedista":
-                self.oznaka_sedista = value
+            case "seat_tag":
+                self.seat_tag = value
             case "reserved":
                 self.reserved = value
             case "sale_date":
@@ -74,7 +74,7 @@ class Ticket:
         data = [
             Serialize.serialize_string(obj.id),
             Serialize.serialize_string(obj.showtime_id),
-            Serialize.serialize_string(obj.oznaka_sedista),
+            Serialize.serialize_string(obj.seat_tag),
             Serialize.serialize_bool(obj.reserved),
             Serialize.serialize_date(obj.sale_date),
             Serialize.serialize_string(obj.username),
@@ -110,7 +110,7 @@ class Ticket:
         return {
             "id": self.id,
             "showtime_id": self.showtime_id,
-            "oznaka_sedista": self.oznaka_sedista,
+            "seat_tag": self.seat_tag,
             "reserved": self.reserved,
             "sale_date": datetime.strftime(self.sale_date, "%x") if self.sale_date is not None else None,
             "username": self.username,
@@ -126,7 +126,7 @@ class Ticket:
         return Ticket(
             obj["id"],
             obj["showtime_id"],
-            obj["oznaka_sedista"],
+            obj["seat_tag"],
             obj["reserved"],
             datetime.strptime(obj["sale_date"], "%x"),
             obj["username"],

@@ -20,8 +20,6 @@ def FilmDetailsScreen(parent):
     roles_label: QtWidgets.QLabel = components["roles_label"]
     genres_label: QtWidgets.QLabel = components["genres_label"]
     description_label: QtWidgets.QLabel = components["description_label"]
-    reserve_button: QtWidgets.QLabel = components["reserve_button"]
-    sell_button: QtWidgets.QLabel = components["sell_button"]
     back_button: QtWidgets.QLabel = components["back_button"]
 
 
@@ -39,15 +37,6 @@ def FilmDetailsScreen(parent):
             roles_label.setText(", ".join(LocalState.current_film.main_roles))
             genres_label.setText(", ".join(LocalState.current_film.genres))
             description_label.setText(LocalState.current_film.description)
-            if State.user is None:
-                reserve_button.hide()
-                sell_button.hide()
-            elif State.user.role == Models.Roles.kupac:
-                reserve_button.show()
-                sell_button.hide()
-            else:
-                reserve_button.show()
-                sell_button.show()
         else:
             parent.back()
 

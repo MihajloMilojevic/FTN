@@ -1,4 +1,4 @@
-from database.models.enums import Roles, Genres, Days
+from database.models.enums import Roles, Genres, Days, SeatStatus
 from database.models.film import Film
 from database.models.ticket import Ticket
 from database.models.user import User

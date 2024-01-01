@@ -27,6 +27,7 @@ class App(QtWidgets.QWidget):
         self._screen_films = Screens.FilmsScreen(self)
         self._screen_film_details = Screens.FilmDetailsScreen(self)
         self._repertoire_screen = Screens.RepertoireScreen(self)
+        self._shopper_booking_screen = Screens.ShopperBookingScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -40,6 +41,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._screen_films)
         self.content_layout.addWidget(self._screen_film_details)
         self.content_layout.addWidget(self._repertoire_screen)
+        self.content_layout.addWidget(self._shopper_booking_screen)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -56,7 +58,8 @@ class App(QtWidgets.QWidget):
             "data": self._screen_data,
             "films": self._screen_films,
             "film_details": self._screen_film_details,
-            "repertoire_screen": self._repertoire_screen
+            "repertoire": self._repertoire_screen,
+            "shopper_booking": self._shopper_booking_screen
         }
         
 

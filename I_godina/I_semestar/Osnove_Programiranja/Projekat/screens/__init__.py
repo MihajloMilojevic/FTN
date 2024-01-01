@@ -10,6 +10,7 @@ from screens.manager.cinema_data import DataScreen
 from screens.films import FilmsScreen
 from screens.film_details import FilmDetailsScreen
 from screens.showtimes import RepertoireScreen
+from screens.booking_shopper import ShopperBookingScreen
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 

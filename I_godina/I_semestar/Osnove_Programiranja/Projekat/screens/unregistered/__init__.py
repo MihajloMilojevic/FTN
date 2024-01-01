@@ -17,7 +17,7 @@ def UnregisteredScreen(parent):
     def search_films_button_click():
         parent.show_screen("films")
     def show_repertoire_button_clicked():
-        parent.show_screen("repertoire_screen")
+        parent.show_screen("repertoire")
     login_button.clicked.connect(login_button_click)
     register_button.clicked.connect(register_button_click)
     search_films_button.clicked.connect(search_films_button_click)

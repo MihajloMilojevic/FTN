@@ -2,3 +2,11 @@ EW2BTB0D6X|5378AA|1-A|True|None|mihajlo|None|0.0
 ZVCM5CI42Z|5378AA|1-B|True|None|mihajlo|None|0.0
 07BYLX0D5M|5378AA|2-C|False|01.11.2023|None|Djordje Milojevic|300.0
 YWMR7LCN06|5378AA|2-C|False|01.11.2023|mihajlo|None|300.0
+LJCKQTSTML|9290AD|6-D|True|None|teo|None|None
+GOPAIQMIDI|9290AD|6-E|True|None|teo|None|None
+KWLKVLSUNX|9290AD|6-F|True|None|teo|None|None
+FIHIKSJNRW|9290AD|7-D|True|None|teo|None|None
+JKOUHRHRIN|9290AD|7-E|True|None|teo|None|None
+UGOSACXLZZ|9290AD|7-F|True|None|teo|None|None
+UALEVEYUNJ|9290AD|13-N|True|None|dance|None|None
+IAQTUJQYQK|9290AD|13-O|True|None|dance|None|None

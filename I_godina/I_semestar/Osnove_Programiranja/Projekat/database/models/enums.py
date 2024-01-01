@@ -58,3 +58,8 @@ class Days:
     subota = "subota"
     nedelja = "nedelja"
     all_days = ["ponedeljak", "utorak", "sreda", "cetvrtak", "petak", "subota", "nedelja"]
+
+class SeatStatus: 
+    free = "free"
+    occupied = "occupied"
+    selected = "selected"

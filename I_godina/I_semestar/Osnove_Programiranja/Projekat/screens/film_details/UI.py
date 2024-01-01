@@ -175,32 +175,6 @@ def setupUi(frame):
 
     frame_layout.addLayout(formLayout)
     
-    reserve_button = QtWidgets.QPushButton()
-    reserve_button.setFont(font)
-    reserve_button.setStyleSheet("background: white;\n"
-"color: black;\n"
-"border: 1px solid black;\n"
-"border-radius: 5px;\n"
-"outline: none;\n"
-"padding: 10px 30px;")
-    reserve_button.setObjectName("reserve_button")
-    reserve_button.setText("Rezerviši kartu")
-    reserve_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    frame_layout.addWidget(reserve_button)
-    
-    sell_button = QtWidgets.QPushButton()
-    sell_button.setFont(font)
-    sell_button.setStyleSheet("background: white;\n"
-"color: black;\n"
-"border: 1px solid black;\n"
-"border-radius: 5px;\n"
-"outline: none;\n"
-"padding: 10px 30px;")
-    sell_button.setObjectName("sell_button")
-    sell_button.setText("Prodaj kartu")
-    sell_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-    frame_layout.addWidget(sell_button)
-    
     back_button = QtWidgets.QPushButton()
     back_button.setFont(font)
     back_button.setStyleSheet("background: white;\n"
@@ -224,7 +198,5 @@ def setupUi(frame):
         "roles_label": roles_label,
         "genres_label": genres_label,
         "description_label": description_label,
-        "reserve_button": reserve_button,
-        "sell_button": sell_button,
         "back_button": back_button,
     }
