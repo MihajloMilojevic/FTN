@@ -11,6 +11,7 @@ def ShopperScreen(parent):
     user_data_button: QtWidgets.QPushButton = components["user_data_button"]
     search_films_button:  QtWidgets.QPushButton = components["search_films_button"]
     book_ticket_button:  QtWidgets.QPushButton = components["book_ticket_button"]
+    ticketlist_button:  QtWidgets.QPushButton = components["ticketlist_button"]
     
     def odjavi_se_button_click():
         State.user = None
@@ -28,6 +29,10 @@ def ShopperScreen(parent):
     def book_ticket_button_click():
         parent.show_screen("shopper_booking")
     book_ticket_button.clicked.connect(book_ticket_button_click)
+
+    def ticketlist_button_click():
+        parent.show_screen("shopper_ticketlist")
+    ticketlist_button.clicked.connect(ticketlist_button_click)
 
     def showEvent(event):
         name_label.setText(f"Zdravo, {State.user.name} {State.user.surname}")
