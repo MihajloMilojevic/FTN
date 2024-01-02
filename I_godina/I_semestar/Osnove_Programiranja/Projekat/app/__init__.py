@@ -29,6 +29,7 @@ class App(QtWidgets.QWidget):
         self._repertoire_screen = Screens.RepertoireScreen(self)
         self._shopper_booking_screen = Screens.ShopperBookingScreen(self)
         self._shopper_ticketlist_screen = Screens.ShopperTicketListScreen(self)
+        self._seller_booking_screen = Screens.SellerBookingScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -44,6 +45,7 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._repertoire_screen)
         self.content_layout.addWidget(self._shopper_booking_screen)
         self.content_layout.addWidget(self._shopper_ticketlist_screen)
+        self.content_layout.addWidget(self._seller_booking_screen)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -63,6 +65,7 @@ class App(QtWidgets.QWidget):
             "repertoire": self._repertoire_screen,
             "shopper_booking": self._shopper_booking_screen,
             "shopper_ticketlist": self._shopper_ticketlist_screen,
+            "seller_booking": self._seller_booking_screen,
         }
         
 

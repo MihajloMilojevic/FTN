@@ -66,12 +66,30 @@ def setupUi(Form):
     search_films_button.setFlat(True)
     search_films_button.setObjectName("search_films_button")
     search_films_button.setText("Pretraži filmove")
+
+    booking_button = QtWidgets.QPushButton(Form)
+    booking_button.setFont(font)
+    booking_button.setFixedWidth(300)
+    booking_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    booking_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    booking_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    booking_button.setAutoDefault(False)
+    booking_button.setDefault(False)
+    booking_button.setFlat(True)
+    booking_button.setObjectName("booking_button")
+    booking_button.setText("Rezerviši kartu")
     
     vbox_layout.addWidget(name_label)
     vbox_layout.addWidget(uloga_label)
     vbox_layout.addWidget(odjavi_se_button)
     vbox_layout.addWidget(user_data_button)
     vbox_layout.addWidget(search_films_button)
+    vbox_layout.addWidget(booking_button)
 
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
@@ -79,6 +97,7 @@ def setupUi(Form):
         "odjavi_se_button": odjavi_se_button,
         "name_label": name_label,
         "user_data_button": user_data_button,
-        "search_films_button": search_films_button
+        "search_films_button": search_films_button,
+        "booking_button": booking_button,
     }
 

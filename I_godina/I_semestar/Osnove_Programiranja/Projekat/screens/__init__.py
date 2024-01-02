@@ -12,6 +12,7 @@ from screens.film_details import FilmDetailsScreen
 from screens.showtimes import RepertoireScreen
 from screens.booking_shopper import ShopperBookingScreen
 from screens.ticketlist_shopper import ShopperTicketListScreen
+from screens.booking_seller import SellerBookingScreen
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
