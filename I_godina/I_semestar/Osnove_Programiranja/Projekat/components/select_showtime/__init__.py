@@ -8,7 +8,6 @@ from datetime import datetime
 from utils.generate_showtimes import generate_all
 
 def SelectShowtimeComponent(parent):
-    onSelect = None
     frame = QtWidgets.QFrame()
     frame.setMinimumSize(400, 150)
     components, functions = setupUi(frame)
@@ -50,6 +49,8 @@ def SelectShowtimeComponent(parent):
             def handler():
                 if LocalState.onSelect is not None:
                     LocalState.onSelect(id)
+                else:
+                    print("onSelect is None")
             return handler
         for index in range(len(data)):
             current = data[index]

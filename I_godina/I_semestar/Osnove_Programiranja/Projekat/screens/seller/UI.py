@@ -84,6 +84,23 @@ def setupUi(Form):
     booking_button.setObjectName("booking_button")
     booking_button.setText("Rezerviši kartu")
 
+    selling_button = QtWidgets.QPushButton(Form)
+    selling_button.setFont(font)
+    selling_button.setFixedWidth(300)
+    selling_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    selling_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    selling_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    selling_button.setAutoDefault(False)
+    selling_button.setDefault(False)
+    selling_button.setFlat(True)
+    selling_button.setObjectName("selling_button")
+    selling_button.setText("Prodaj kartu")
+
     ticketlist_button = QtWidgets.QPushButton(Form)
     ticketlist_button.setFont(font)
     ticketlist_button.setFixedWidth(300)
@@ -100,6 +117,23 @@ def setupUi(Form):
     ticketlist_button.setFlat(True)
     ticketlist_button.setObjectName("ticketlist_button")
     ticketlist_button.setText("Pogledaj karte")
+
+    cancel_upcoming_button = QtWidgets.QPushButton(Form)
+    cancel_upcoming_button.setFont(font)
+    cancel_upcoming_button.setFixedWidth(300)
+    cancel_upcoming_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    cancel_upcoming_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    cancel_upcoming_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    cancel_upcoming_button.setAutoDefault(False)
+    cancel_upcoming_button.setDefault(False)
+    cancel_upcoming_button.setFlat(True)
+    cancel_upcoming_button.setObjectName("cancel_upcoming_button")
+    cancel_upcoming_button.setText("Poništi predstojeće")
     
     vbox_layout.addWidget(name_label)
     vbox_layout.addWidget(uloga_label)
@@ -107,7 +141,9 @@ def setupUi(Form):
     vbox_layout.addWidget(user_data_button)
     vbox_layout.addWidget(search_films_button)
     vbox_layout.addWidget(booking_button)
+    vbox_layout.addWidget(selling_button)
     vbox_layout.addWidget(ticketlist_button)
+    vbox_layout.addWidget(cancel_upcoming_button)
 
     Form.setLayout(vbox_layout)
     QtCore.QMetaObject.connectSlotsByName(Form)
@@ -117,6 +153,8 @@ def setupUi(Form):
         "user_data_button": user_data_button,
         "search_films_button": search_films_button,
         "booking_button": booking_button,
+        "selling_button": selling_button,
         "ticketlist_button": ticketlist_button,
+        "cancel_upcoming_button": cancel_upcoming_button
     }
 

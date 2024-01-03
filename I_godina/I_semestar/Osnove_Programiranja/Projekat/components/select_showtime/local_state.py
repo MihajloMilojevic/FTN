@@ -19,7 +19,8 @@ def reset():
         "min": None,
         "max": None
     }
-
+    
+onSelect = None
     
 def get_data(date: datetime):
     showtimes = [showtime for showtime in GlobalState.db.showtimes.SelectAll() if serialize_date(date) == serialize_date(showtime.date)]
@@ -63,6 +64,3 @@ def check_time(item):
     is_above_min = criteria["time"]["min"] is None or item_starting_time >= criteria["time"]["min"]
     is_below_max = criteria["time"]["max"] is None or item_ending_time <= criteria["time"]["max"]
     return is_above_min and is_below_max
-
-
-onSelect = None

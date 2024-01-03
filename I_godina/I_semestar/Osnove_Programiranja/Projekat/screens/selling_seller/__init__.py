@@ -3,11 +3,12 @@ import app.state as State
 import database.models as Models
 from utils.message_box import MessageBox
 from utils.generate_seating_plan import generate_seating_plan
-from screens.booking_shopper.UI import setupUi
-import screens.booking_shopper.local_state as LocalState
+from utils.sell_ticket import sell_ticket
+from screens.selling_seller.UI import setupUi
+import screens.selling_seller.local_state as LocalState
 from utils.generate_id import generate_string
 
-def ShopperBookingScreen(parent):
+def SellerSellingScreen(parent):
     frame = QtWidgets.QFrame()
     frame.setMinimumSize(400, 150)
     # frame.setMaximumHeight(900)
@@ -20,8 +21,26 @@ def ShopperBookingScreen(parent):
     select_widget: QtWidgets.QFrame = components["select_widget"]
     confirm_button: QtWidgets.QPushButton = components["confirm_button"]
     change_showtime_button: QtWidgets.QPushButton = components["change_showtime_button"]
+    user_data_gb: QtWidgets.QGroupBox = components["user_data_gb"]
+    registered_rb: QtWidgets.QRadioButton = components["registered_rb"]
+    unregistered_rb: QtWidgets.QRadioButton = components["unregistered_rb"]
+    username_cb: QtWidgets.QComboBox = components["username_cb"]
+    name_input: QtWidgets.QLineEdit = components["name_input"]
 
     setSelectHandler = functions["setSelectHandler"]
+    def populate_usernames():
+        usernames = [user.username for user in State.db.users.SelectAll()]
+        username_cb.addItems(usernames)
+
+    def radio_change():
+        username_cb.setEnabled(registered_rb.isChecked())
+        name_input.setEnabled(unregistered_rb.isChecked())
+        username_cb.clear()
+        if registered_rb.isChecked():
+            populate_usernames()
+    registered_rb.clicked.connect(radio_change)
+    unregistered_rb.clicked.connect(radio_change)
+    radio_change()
 
     def selectShowtime(id):
         LocalState.showtime_id = id
@@ -32,8 +51,8 @@ def ShopperBookingScreen(parent):
         table.show()
         confirm_button.show()
         change_showtime_button.show()
+        user_data_gb.show()
         refresh_table()
-    
 
     def back_button_click():
         LocalState.showtime_id = None
@@ -43,6 +62,10 @@ def ShopperBookingScreen(parent):
         table.hide()
         confirm_button.hide()
         change_showtime_button.hide()
+        user_data_gb.hide()
+        username_cb.clear()
+        name_input.setText("")
+        parent.show_screen(State.user.role)
         parent.back()
     back_button.clicked.connect(back_button_click)
     def cell_click(row, column):
@@ -97,6 +120,18 @@ def ShopperBookingScreen(parent):
                     tags.append(generate_seat_tag(row, column))
         if len(tags) == 0:
             return MessageBox().warning(frame, "Greška", "Morate odabrati bar jedno sedište da biste rezervisali kartu")
+        usernames = [user.username for user in State.db.users.SelectAll()]
+        username = username_cb.currentText().strip()
+        name = name_input.text().strip()
+        if registered_rb.isChecked():
+            name = None
+            if username not in usernames:
+                return MessageBox().warning(frame, "Greška", "Morate odabrati validno korisničko ime")
+        else:
+            username = None
+            if name == "":
+                return MessageBox().warning(frame, "Greška", "Morate uneti ime i prezime")
+
         for tag in tags:
             ticket = Models.Ticket(
                 generate_string(10, lower=False, upper=True, digits=False),
@@ -104,16 +139,20 @@ def ShopperBookingScreen(parent):
                 tag,
                 True,
                 None,
-                State.user.username,
-                None,
+                username,
+                name,
                 None
             )
+            sell_ticket(ticket)
             State.db.tickets.Insert(ticket)
         LocalState.showtime_id = None
         LocalState.showtime = None
         select_widget.show()
         label.hide()
         table.hide()
+        user_data_gb.hide()
+        username_cb.clear()
+        name_input.setText("")
         confirm_button.hide()
         change_showtime_button.hide()
         parent.show_screen(State.user.role)
@@ -125,12 +164,12 @@ def ShopperBookingScreen(parent):
         select_widget.show()
         label.hide()
         table.hide()
+        user_data_gb.hide()
+        username_cb.clear()
+        name_input.setText("")
         confirm_button.hide()
         change_showtime_button.hide()
     change_showtime_button.clicked.connect(change_showtime_button_click)
-
-    
-
 
     def showEvent(event):
         refresh_table()
@@ -141,6 +180,9 @@ def ShopperBookingScreen(parent):
     select_widget.show()
     label.hide()
     table.hide()
+    user_data_gb.hide()
+    username_cb.clear()
+    name_input.setText("")
     confirm_button.hide()
     change_showtime_button.hide()
     

@@ -52,7 +52,6 @@ def SellerBookingScreen(parent):
         change_showtime_button.show()
         user_data_gb.show()
         refresh_table()
-    setSelectHandler(selectShowtime)
 
     def back_button_click():
         LocalState.showtime_id = None
@@ -172,6 +171,7 @@ def SellerBookingScreen(parent):
 
     def showEvent(event):
         refresh_table()
+        setSelectHandler(selectShowtime)
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
 
