@@ -1,5 +1,3 @@
-EW2BTB0D6X|5378AA|1-A|True|None|mihajlo|None|0.0
-ZVCM5CI42Z|5378AA|1-B|True|None|mihajlo|None|0.0
 07BYLX0D5M|5378AA|2-C|False|01.11.2023|None|Djordje Milojevic|300.0
 YWMR7LCN06|5378AA|2-C|False|01.11.2023|mihajlo|None|300.0
 LJCKQTSTML|9290AD|6-D|True|None|teo|None|None
@@ -18,5 +16,3 @@ OXVZZJUPEK|5378AH|4-D|True|None|pepi|teo|None
 GIFLLNZIFY|5378AH|4-E|True|None|pepi|teo|None
 PEMFZBNFIN|7620AH|13-G|True|None|teo|None|None
 NUTFALKDIC|7620AH|13-H|True|None|teo|None|None
-XOKDZAATYK|7620AH|13-I|True|None|teo|None|None
-JFVMIYUOMM|7620AH|13-J|True|None|teo|None|None
