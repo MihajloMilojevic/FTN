@@ -64,7 +64,7 @@ def setupUi( frame):
     table.horizontalHeader().setSortIndicatorShown(False)
     table.horizontalHeader().setStretchLastSection(True)
     table.verticalHeader().setVisible(False)
-    table.setColumnCount(11)
+    table.setColumnCount(12)
     item = QtWidgets.QTableWidgetItem("")
     table.setHorizontalHeaderItem(0, item)
     item = QtWidgets.QTableWidgetItem("")
@@ -87,6 +87,8 @@ def setupUi( frame):
     table.setHorizontalHeaderItem(9, item)
     item = QtWidgets.QTableWidgetItem("Sedište")
     table.setHorizontalHeaderItem(10, item)
+    item = QtWidgets.QTableWidgetItem("Ime i prezime")
+    table.setHorizontalHeaderItem(11, item)
     table.setColumnWidth(4, 450)
 
     center_layout.addWidget(table)
@@ -128,93 +130,171 @@ def setupUi( frame):
 
     filters_content_widget.setLayout(filters_content_layout)
 
-    # films_group = QtWidgets.QGroupBox(frame)
-    # films_group.setTitle("Filmovi")
-    # films_group.setObjectName("films_group")
-    # films_group.setFont(font)
-    # films_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+    projections_group = QtWidgets.QGroupBox(frame)
+    projections_group.setTitle("Projekcije")
+    projections_group.setObjectName("projections_group")
+    projections_group.setFont(font)
+    projections_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
 
-    # films_layout = QtWidgets.QVBoxLayout(films_group)
-    # films_layout.setObjectName("films_layout")
+    projections_layout = QtWidgets.QVBoxLayout(projections_group)
+    projections_layout.setObjectName("projections_layout")
 
-    # def add_film(text):
-    #     film = QtWidgets.QCheckBox(films_group)
-    #     film.setText(text)
-    #     film.setFont(font)
-    #     film.setStyleSheet("color: white")
-    #     films_layout.addWidget(film)
-    #     return film
+    def add_projection(text):
+        projection = QtWidgets.QCheckBox(projections_group)
+        projection.setText(text)
+        projection.setFont(font)
+        projection.setStyleSheet("color: white")
+        projections_layout.addWidget(projection)
+        return projection
     
-    # def clear_films():
-    #     for i in reversed(range(films_layout.count())): 
-    #         films_layout.itemAt(i).widget().setParent(None)
+    def clear_projections():
+        for i in reversed(range(projections_layout.count())): 
+            projections_layout.itemAt(i).widget().setParent(None)
     
-    # filters_content_layout.addWidget(films_group)
+    filters_content_layout.addWidget(projections_group)
 
-    # halls_group = QtWidgets.QGroupBox(frame)
-    # halls_group.setTitle("Sale")
-    # halls_group.setObjectName("halls_group")
-    # halls_group.setFont(font)
-    # halls_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+    films_group = QtWidgets.QGroupBox(frame)
+    films_group.setTitle("Filmovi")
+    films_group.setObjectName("films_group")
+    films_group.setFont(font)
+    films_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
 
-    # halls_layout = QtWidgets.QVBoxLayout(halls_group)
-    # halls_layout.setObjectName("halls_layout")
+    films_layout = QtWidgets.QVBoxLayout(films_group)
+    films_layout.setObjectName("films_layout")
 
-    # def add_hall(text):
-    #     hall = QtWidgets.QCheckBox(halls_group)
-    #     hall.setText(text)
-    #     hall.setFont(font)
-    #     hall.setStyleSheet("color: white")
-    #     halls_layout.addWidget(hall)
-    #     return hall
+    def add_film(text):
+        film = QtWidgets.QCheckBox(films_group)
+        film.setText(text)
+        film.setFont(font)
+        film.setStyleSheet("color: white")
+        films_layout.addWidget(film)
+        return film
     
-    # def clear_halls():
-    #     for i in reversed(range(halls_layout.count())): 
-    #         halls_layout.itemAt(i).widget().setParent(None)
+    def clear_films():
+        for i in reversed(range(films_layout.count())): 
+            films_layout.itemAt(i).widget().setParent(None)
     
-    # filters_content_layout.addWidget(halls_group)
+    filters_content_layout.addWidget(films_group)
 
-    # date_group = QtWidgets.QGroupBox(frame)
-    # date_group.setTitle("Vreme")
-    # date_group.setObjectName("date_group")
-    # date_group.setFont(font)
-    # date_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+    status_group = QtWidgets.QGroupBox(frame)
+    status_group.setTitle("Status")
+    status_group.setObjectName("status_group")
+    status_group.setFont(font)
+    status_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
 
-    # min_date_label = QtWidgets.QLabel(frame)
-    # min_date_label.setText("Od:")
-    # min_date_label.setFont(font)
-    # min_date_label.setStyleSheet("color: white")
-    # min_date_label.setObjectName("min_date_label")
+    status_layout = QtWidgets.QVBoxLayout(status_group)
+    status_layout.setObjectName("status_layout")
 
-    # min_date_de = QtWidgets.QDateEdit(frame)
-    # min_date_de.setFont(font)
-    # min_date_de.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
-    # min_date_de.setObjectName("min_date_de")
-
-    # max_date_label = QtWidgets.QLabel(frame)
-    # max_date_label.setText("Do:")
-    # max_date_label.setFont(font)
-    # max_date_label.setStyleSheet("color: white")
-    # max_date_label.setObjectName("max_date_label")
-
-    # max_date_de = QtWidgets.QDateEdit(frame)
-    # max_date_de.setFont(font)
-    # max_date_de.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
-    # max_date_de.setObjectName("max_date_de")
-
-    # date_layout = QtWidgets.QVBoxLayout()
-    # date_layout.addWidget(min_date_label)
-    # date_layout.addWidget(min_date_de)
-    # date_layout.addWidget(max_date_label)
-    # date_layout.addWidget(max_date_de)
-
-    # date_group.setLayout(date_layout)
-    # filters_content_layout.addWidget(date_group)
-
+    def add_status(text):
+        film = QtWidgets.QCheckBox(status_group)
+        film.setText(text)
+        film.setFont(font)
+        film.setStyleSheet("color: white")
+        status_layout.addWidget(film)
+        return film
     
-    # filters_content_layout.addStretch()
+    def clear_status():
+        for i in reversed(range(status_layout.count())): 
+            status_layout.itemAt(i).widget().setParent(None)
     
+    filters_content_layout.addWidget(status_group)
 
+
+    name_group = QtWidgets.QGroupBox(frame)
+    name_group.setTitle("Ime i prezime")
+    name_group.setObjectName("name_group")
+    name_group.setFont(font)
+    name_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+
+    name_layout = QtWidgets.QVBoxLayout(name_group)
+    name_layout.setObjectName("name_layout")
+
+    name_input = QtWidgets.QLineEdit(name_group)
+    name_input.setStyleSheet("padding: 5px 10px;")
+    name_input.setDragEnabled(False)
+    name_input.setObjectName("name_input")
+    name_input.setFont(font)
+    
+    name_layout.addWidget(name_input)
+
+    filters_content_layout.addWidget(name_group)
+
+    date_group = QtWidgets.QGroupBox(frame)
+    date_group.setTitle("Datum")
+    date_group.setObjectName("date_group")
+    date_group.setFont(font)
+    date_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+
+    min_date_label = QtWidgets.QLabel(frame)
+    min_date_label.setText("Od:")
+    min_date_label.setFont(font)
+    min_date_label.setStyleSheet("color: white")
+    min_date_label.setObjectName("min_date_label")
+
+    min_date_de = QtWidgets.QDateEdit(frame)
+    min_date_de.setFont(font)
+    min_date_de.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    min_date_de.setObjectName("min_date_de")
+
+    max_date_label = QtWidgets.QLabel(frame)
+    max_date_label.setText("Do:")
+    max_date_label.setFont(font)
+    max_date_label.setStyleSheet("color: white")
+    max_date_label.setObjectName("max_date_label")
+
+    max_date_de = QtWidgets.QDateEdit(frame)
+    max_date_de.setFont(font)
+    max_date_de.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    max_date_de.setObjectName("max_date_de")
+
+    date_layout = QtWidgets.QVBoxLayout()
+    date_layout.addWidget(min_date_label)
+    date_layout.addWidget(min_date_de)
+    date_layout.addWidget(max_date_label)
+    date_layout.addWidget(max_date_de)
+
+    date_group.setLayout(date_layout)
+    filters_content_layout.addWidget(date_group)
+
+    time_group = QtWidgets.QGroupBox(frame)
+    time_group.setTitle("Vreme")
+    time_group.setObjectName("time_group")
+    time_group.setFont(font)
+    time_group.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum))
+
+    min_time_label = QtWidgets.QLabel(frame)
+    min_time_label.setText("Od:")
+    min_time_label.setFont(font)
+    min_time_label.setStyleSheet("color: white")
+    min_time_label.setObjectName("min_time_label")
+
+    min_time_te = QtWidgets.QTimeEdit(frame)
+    min_time_te.setFont(font)
+    min_time_te.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    min_time_te.setObjectName("min_time_te")
+
+    max_time_label = QtWidgets.QLabel(frame)
+    max_time_label.setText("Do:")
+    max_time_label.setFont(font)
+    max_time_label.setStyleSheet("color: white")
+    max_time_label.setObjectName("max_time_label")
+
+    max_time_te = QtWidgets.QTimeEdit(frame)
+    max_time_te.setFont(font)
+    max_time_te.setStyleSheet("padding: 5px 10px; color: white; border: 1px solid white;")    
+    max_time_te.setObjectName("max_time_te")
+
+    time_layout = QtWidgets.QVBoxLayout()
+    time_layout.addWidget(min_time_label)
+    time_layout.addWidget(min_time_te)
+    time_layout.addWidget(max_time_label)
+    time_layout.addWidget(max_time_te)
+
+    time_group.setLayout(time_layout)
+    filters_content_layout.addWidget(time_group)
+
+    filters_content_layout.addStretch()
+    
     frame_layout.addLayout(center_layout)
     frame_layout.addWidget(filters_scroll_area)
     frame.setLayout(frame_layout)
@@ -223,12 +303,19 @@ def setupUi( frame):
         "table": table,
         "back_button": back_button,
         "filters_button": filters_button,
-        # "min_time_de": min_time_de,
-        # "max_time_de": max_time_de,
-        "filters_scroll_area": filters_scroll_area
+        "min_time_te": min_time_te,
+        "max_time_te": max_time_te,
+        "min_date_de": min_date_de,
+        "max_date_de": max_date_de,
+        "filters_scroll_area": filters_scroll_area,
+        "name_input": name_input
     }, {
-        # "add_film": add_film,
+        "add_status": add_status,
+        "clear_status": clear_status,
+        "add_film": add_film,
+        "clear_films": clear_films,
+        "add_projection": add_projection,
+        "clear_projections": clear_projections,
         # "add_hall": add_hall,
-        # "clear_films": clear_films,
         # "clear_halls": clear_halls
     }

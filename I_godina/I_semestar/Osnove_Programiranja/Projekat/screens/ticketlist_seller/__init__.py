@@ -4,6 +4,7 @@ import database.models as Models
 from utils.message_box import MessageBox
 from screens.ticketlist_seller.UI import setupUi
 import screens.ticketlist_seller.local_state as LocalState
+from datetime import datetime, date, time
 
 def SellerTicketListScreen(parent):
     frame = QtWidgets.QFrame()
@@ -18,6 +19,18 @@ def SellerTicketListScreen(parent):
     # min_date_de: QtWidgets.QDateEdit = components["min_date_de"]
     # max_date_de: QtWidgets.QDateEdit = components["max_date_de"]
     filters_scroll_area: QtWidgets.QScrollArea = components["filters_scroll_area"]
+    name_input: QtWidgets.QLineEdit = components["name_input"]
+    min_time_te: QtWidgets.QTimeEdit = components["min_time_te"]
+    max_time_te: QtWidgets.QTimeEdit = components["max_time_te"]
+    min_date_de: QtWidgets.QDateEdit = components["min_date_de"]
+    max_date_de: QtWidgets.QDateEdit = components["max_date_de"]
+
+    add_status = functions["add_status"]
+    clear_status = functions["clear_status"]
+    add_film = functions["add_film"]
+    clear_films = functions["clear_films"]
+    add_projection = functions["add_projection"]
+    clear_projections = functions["clear_projections"]
 
     def back_button_click():
         parent.back()
@@ -101,6 +114,8 @@ def SellerTicketListScreen(parent):
             table.setItem(index, 9, item)
             item = QtWidgets.QTableWidgetItem(current["seat_tag"])
             table.setItem(index, 10, item)
+            item = QtWidgets.QTableWidgetItem(current["name"])
+            table.setItem(index, 11, item)
         table.resizeRowsToContents()
 
     def filters_button_click():
@@ -109,10 +124,85 @@ def SellerTicketListScreen(parent):
         else:
             filters_scroll_area.show()
     filters_button.clicked.connect(filters_button_click)
-    
+    def get_check_box_change(box: QtWidgets.QCheckBox, field: str):
+            def ret_func():
+                if box.isChecked():
+                    LocalState.criteria[field].append(box.text())
+                else:
+                    LocalState.criteria[field].remove(box.text())
+                refresh_table()
+            return ret_func
+    def populate_projections():
+        clear_projections()
+        LocalState.criteria["projections"].clear()
+        for projection_id in set([ticket.showtime.get(State.db).projection_id for ticket in State.db.tickets.SelectAll()]):
+            check_box = add_projection(projection_id)
+            check_box.stateChanged.connect(get_check_box_change(check_box, "projections"))   
+    def populate_films():
+        clear_films()
+        LocalState.criteria["films"].clear()
+        for film_name in set([
+                ticket.showtime.get(State.db).projection.get(State.db).film.get(State.db).name 
+                for ticket in State.db.tickets.SelectAll()]):
+            check_box = add_film(film_name)
+            check_box.stateChanged.connect(get_check_box_change(check_box, "films"))   
+    def populate_status():
+        clear_status()
+        LocalState.criteria["status"].clear()
+        for status in ["Rezervisano", "Prodato"]:
+            check_box = add_status(status)
+            check_box.stateChanged.connect(get_check_box_change(check_box, "status"))
+
+    def populate_datetimes():
+        LocalState.criteria["date"] = {"min": None, "max": None}
+        LocalState.criteria["time"] = {"min": None, "max": None}
+
+        dates = [ticket.showtime.get(State.db).date.date() for ticket in State.db.tickets.SelectAll()]
+        
+        max_date: date  = max(dates)
+        min_date: date = min(dates)
+        
+        d = QtCore.QDate()
+        d.setDate(max_date.year, max_date.month, max_date.day)
+        max_date_de.setDate(d)
+        d.setDate(min_date.year, min_date.month, min_date.day)
+        min_date_de.setDate(d)
+
+        t = QtCore.QTime()
+        t.setHMS(0, 0, 0)
+        max_time_te.setTime(t)
+        t.setHMS(23, 59, 59)
+        min_time_te.setTime(t)
+
+    def name_input_change():
+        LocalState.criteria["name"] = name_input.text()
+        refresh_table()
+    name_input.textChanged.connect(name_input_change)
+
+    def min_date_change():
+        LocalState.criteria["date"]["min"] = min_date_de.date().toPyDate()
+        refresh_table()
+    min_date_de.dateChanged.connect(min_date_change)
+    def max_date_change():
+        LocalState.criteria["date"]["max"] = max_date_de.date().toPyDate()
+        refresh_table()
+    max_date_de.dateChanged.connect(max_date_change)
+    def min_time_change():
+        LocalState.criteria["time"]["min"] = min_time_te.time().toPyTime()
+        refresh_table()
+    min_time_te.timeChanged.connect(min_time_change)
+    def max_time_change():
+        LocalState.criteria["time"]["max"] = max_time_te.time().toPyTime()
+        refresh_table()
+    max_time_te.timeChanged.connect(max_time_change)
+
     def showEvent(event):
         refresh_table()
         filters_scroll_area.hide()
+        populate_projections()
+        populate_films()
+        populate_status()
+        populate_datetimes()
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
 

@@ -12,7 +12,5 @@ IMJBKVOYQM|4933AF|10-C|True|None|teo|None|None
 VCHKXOAIKR|4933AF|10-D|True|None|teo|None|None
 BKFZERGWPC|4933AF|10-E|True|None|teo|None|None
 BUDJGBCVWE|4933AF|10-F|True|None|teo|None|None
-OXVZZJUPEK|5378AH|4-D|True|None|pepi|teo|None
-GIFLLNZIFY|5378AH|4-E|True|None|pepi|teo|None
 PEMFZBNFIN|7620AH|13-G|True|None|teo|None|None
 NUTFALKDIC|7620AH|13-H|True|None|teo|None|None
