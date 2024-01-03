@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 import app.state as State
 import database.models as Models
 from utils.message_box import MessageBox
+from utils.sell_ticket import sell_ticket
 from screens.ticketlist_seller.UI import setupUi
 import screens.ticketlist_seller.local_state as LocalState
 from datetime import datetime, date, time
@@ -35,35 +36,39 @@ def SellerTicketListScreen(parent):
     def back_button_click():
         parent.back()
     back_button.clicked.connect(back_button_click)
+
+    def get_handle_sell_click(ticket_id):
+        def handler():
+            res = MessageBox().question(frame, "Prodaja karte", f"Da li ste sigurni da želite da prodate rezervisanu kartu sa id-jem '{ticket_id}'?")
+            if res != QtWidgets.QMessageBox.StandardButton.Yes:
+                return
+            ticket: Models.Ticket = State.db.tickets.SelectById(ticket_id)
+            sell_ticket(ticket)
+            refresh_table()
+        return handler
+    def get_handle_cancel_click(ticket_id):
+        def handler():
+            res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
+            if res != QtWidgets.QMessageBox.StandardButton.Yes:
+                return
+            State.db.tickets.DeleteById(ticket_id)
+            refresh_table()
+        return handler
+    def get_handle_edit_click(ticket_id):
+        def handler():
+            # res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
+            # if res != QtWidgets.QMessageBox.StandardButton.Yes:
+            #     return
+            # State.db.tickets.DeleteById(ticket_id)
+            refresh_table()
+        return handler
+
     def refresh_table():
         print("refresh")
         table.setRowCount(0)
         data = LocalState.get_data()
         table.setRowCount(len(data))
-        def get_handle_sell_click(ticket_id):
-            def handler():
-                # res = MessageBox().question(frame, "Prodaja karte", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
-                # if res != QtWidgets.QMessageBox.StandardButton.Yes:
-                #     return
-                # State.db.tickets.DeleteById(ticket_id)
-                refresh_table()
-            return handler
-        def get_handle_cancel_click(ticket_id):
-            def handler():
-                res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
-                if res != QtWidgets.QMessageBox.StandardButton.Yes:
-                    return
-                State.db.tickets.DeleteById(ticket_id)
-                refresh_table()
-            return handler
-        def get_handle_edit_click(ticket_id):
-            def handler():
-                # res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
-                # if res != QtWidgets.QMessageBox.StandardButton.Yes:
-                #     return
-                # State.db.tickets.DeleteById(ticket_id)
-                refresh_table()
-            return handler
+    
         for index in range(len(data)):
             current = data[index]
 
@@ -169,9 +174,9 @@ def SellerTicketListScreen(parent):
         min_date_de.setDate(d)
 
         t = QtCore.QTime()
-        t.setHMS(0, 0, 0)
-        max_time_te.setTime(t)
         t.setHMS(23, 59, 59)
+        max_time_te.setTime(t)
+        t.setHMS(0, 0, 0)
         min_time_te.setTime(t)
 
     def name_input_change():

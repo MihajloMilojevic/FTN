@@ -102,19 +102,3 @@ class User:
             obj["role"],
         )
     
-    def check_loyalty(self, db) -> bool:
-        def check(karta: Ticket) -> bool:
-            if karta.sale_date is None:
-                return False
-            if karta.username is None:
-                return False
-            if karta.username != self.username:
-                return False
-            today = datetime.now()
-            last_year = today.replace(year=today.year-1)
-            if karta.sale_date < last_year:
-                return False
-            return True
-        tickets = db.tickets.Select(check)
-        total_value = sum([karta.sold_price for karta in tickets])
-        return total_value >= LOYALTY_SUM
