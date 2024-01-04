@@ -15,6 +15,7 @@ from screens.ticketlist_shopper import ShopperTicketListScreen
 from screens.booking_seller import SellerBookingScreen
 from screens.ticketlist_seller import SellerTicketListScreen
 from screens.selling_seller import SellerSellingScreen
+from screens.ticket_edit import TicketEditScreen
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets

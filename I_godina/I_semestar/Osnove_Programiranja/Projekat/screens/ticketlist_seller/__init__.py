@@ -6,6 +6,7 @@ from utils.sell_ticket import sell_ticket
 from screens.ticketlist_seller.UI import setupUi
 import screens.ticketlist_seller.local_state as LocalState
 from datetime import datetime, date, time
+import screens.ticket_edit.local_state as TicketEditLocalState
 
 def SellerTicketListScreen(parent):
     frame = QtWidgets.QFrame()
@@ -56,11 +57,8 @@ def SellerTicketListScreen(parent):
         return handler
     def get_handle_edit_click(ticket_id):
         def handler():
-            # res = MessageBox().question(frame, "Poništavanje rezervacije", f"Da li ste sigurni da želite da poništite rezervaciju sa id-jem '{ticket_id}'?")
-            # if res != QtWidgets.QMessageBox.StandardButton.Yes:
-            #     return
-            # State.db.tickets.DeleteById(ticket_id)
-            refresh_table()
+            TicketEditLocalState.ticket = State.db.tickets.SelectById(ticket_id)
+            parent.show_screen("ticket_edit")
         return handler
 
     def refresh_table():

@@ -10,12 +10,15 @@ def generate_seating_plan(showtime_id):
     for _ in range(hall.row_count):
         seating_plan.append([Models.SeatStatus.free] * hall.row_count)
     for ticket in tickets:
-        row, column = map_seat(ticket.seat_tag)
+        row, column = locate_seat(ticket.seat_tag)
         seating_plan[row][column] = Models.SeatStatus.occupied
     return seating_plan
 
-def map_seat(seat_tag):
+def locate_seat(seat_tag):
     row_part, column_part = seat_tag.split("-")
     row_number = int(row_part) - 1
     column_number = ord(column_part) - ord("A")
     return row_number, column_number
+
+def generate_seat_tag(row, column):
+    return f"{row+1}-{chr(ord('A') + column)}"

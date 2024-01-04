@@ -2,12 +2,12 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 import app.state as State
 import database.models as Models
 from utils.message_box import MessageBox
-from utils.generate_seating_plan import generate_seating_plan
-from screens.booking_seller.UI import setupUi
-import screens.booking_seller.local_state as LocalState
+from utils.generate_seating_plan import generate_seating_plan, locate_seat, generate_seat_tag
+from screens.ticket_edit.UI import setupUi
+import screens.ticket_edit.local_state as LocalState
 from utils.generate_id import generate_string
 
-def SellerBookingScreen(parent):
+def TicketEditScreen(parent):
     frame = QtWidgets.QFrame()
     frame.setMinimumSize(400, 150)
     # frame.setMaximumHeight(900)
@@ -54,16 +54,7 @@ def SellerBookingScreen(parent):
         refresh_table()
 
     def back_button_click():
-        LocalState.showtime_id = None
-        LocalState.showtime = None
-        select_widget.show()
-        label.hide()
-        table.hide()
-        confirm_button.hide()
-        change_showtime_button.hide()
-        user_data_gb.hide()
-        username_cb.clear()
-        name_input.setText("")
+        
         parent.back()
     back_button.clicked.connect(back_button_click)
     def cell_click(row, column):
@@ -116,8 +107,8 @@ def SellerBookingScreen(parent):
             for column in range(len(LocalState.seating_plan[0])):
                 if LocalState.seating_plan[row][column] == Models.SeatStatus.selected:
                     tags.append(generate_seat_tag(row, column))
-        if len(tags) == 0:
-            return MessageBox().warning(frame, "Greška", "Morate odabrati bar jedno sedište da biste rezervisali kartu")
+        if len(tags) != 1:
+            return MessageBox().warning(frame, "Greška", "Morate odabrati jedno sedište da biste izmenili kartu")
         usernames = [user.username for user in State.db.users.SelectAll()]
         username = username_cb.currentText().strip()
         name = name_input.text().strip()
@@ -129,21 +120,15 @@ def SellerBookingScreen(parent):
             username = None
             if name == "":
                 return MessageBox().warning(frame, "Greška", "Morate uneti ime i prezime")
-
-        for tag in tags:
-            ticket = Models.Ticket(
-                generate_string(10, lower=False, upper=True, digits=False),
-                LocalState.showtime_id,
-                tag,
-                True,
-                None,
-                username,
-                name,
-                None
-            )
-            State.db.tickets.Insert(ticket)
+        print(username, name)
+        LocalState.ticket.showtime_id = LocalState.showtime_id
+        LocalState.ticket.seat_tag = tags[0]
+        LocalState.ticket.username = username
+        LocalState.ticket.full_name = name
+        print(LocalState.ticket.toJsonString(2))
         LocalState.showtime_id = None
         LocalState.showtime = None
+        LocalState.ticket = None
         select_widget.show()
         label.hide()
         table.hide()
@@ -152,7 +137,7 @@ def SellerBookingScreen(parent):
         name_input.setText("")
         confirm_button.hide()
         change_showtime_button.hide()
-        parent.show_screen(State.user.role)
+        parent.back()
     confirm_button.clicked.connect(confirm_button_click)
 
     def change_showtime_button_click():
@@ -168,22 +153,41 @@ def SellerBookingScreen(parent):
         change_showtime_button.hide()
     change_showtime_button.clicked.connect(change_showtime_button_click)
 
+    def populate_data():
+        ticket: Models.Ticket = LocalState.ticket
+        showtime: Models.Showtime = ticket.showtime.get(State.db)
+        LocalState.showtime = showtime
+        LocalState.showtime_id = showtime.id
+        LocalState.seating_plan = generate_seating_plan(showtime.id)
+        row, column = locate_seat(ticket.seat_tag)
+        LocalState.seating_plan[row][column] = Models.SeatStatus.selected
+        if ticket.full_name is not None:
+            name_input.setText(ticket.full_name)
+            registered_rb.setChecked(False)
+            unregistered_rb.setChecked(True)
+        else:
+            populate_usernames()
+            unregistered_rb.setChecked(False)
+            registered_rb.setChecked(True)
+            username_cb.setCurrentText(ticket.username)
+        refresh_table()
+
     def showEvent(event):
         refresh_table()
         setSelectHandler(selectShowtime)
+        select_widget.hide()
+        label.show()
+        table.show()
+        user_data_gb.show()
+        username_cb.clear()
+        name_input.setText("")
+        confirm_button.show()
+        change_showtime_button.show()
+        populate_data()
         return QtWidgets.QFrame.showEvent(frame, event)
     frame.showEvent = showEvent
 
-    select_widget.show()
-    label.hide()
-    table.hide()
-    user_data_gb.hide()
-    username_cb.clear()
-    name_input.setText("")
-    confirm_button.hide()
-    change_showtime_button.hide()
+    
     
     return frame
 
-def generate_seat_tag(row, column):
-    return f"{row+1}-{chr(ord('A') + column)}"
