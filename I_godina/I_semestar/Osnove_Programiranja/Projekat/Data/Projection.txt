@@ -1,6 +1,4 @@
-5378|S1|QNFTNGQX|23:59:00|02:21:00|['ponedeljak', 'utorak', 'sreda']|300.0
 7620|S1|LLC3M1AK|20:30:00|23:45:00|['ponedeljak', 'utorak', 'sreda']|300.0
 7020|SV|DDMNZCUB|00:00:00|01:49:00|['nedelja']|250.0
 7430|S1|QAKKGGVE|17:00:00|18:51:00|['petak', 'subota', 'nedelja']|250.0
 4933|S2|YLZAEMOT|17:00:00|18:49:00|['petak', 'subota', 'nedelja']|300.0
-9290|SV|ALZGARCN|21:00:00|22:35:00|['ponedeljak', 'sreda', 'petak']|500.0

@@ -12,7 +12,7 @@ class Ticket:
     name = "Ticket"
 
     def __init__(self, id: str, showtime_id: str, seat_tag: str, reserved: bool, 
-                 sale_date: datetime, username: str|None, full_name: str|None, sold_price: float):
+                 sale_date: datetime, username: str|None, full_name: str|None, sold_price: float, seller_username: str):
         self.id = id
         self.showtime_id = showtime_id
         self.seat_tag = seat_tag
@@ -21,8 +21,10 @@ class Ticket:
         self.username = username
         self.full_name = full_name
         self.sold_price = sold_price
+        self.seller_username = seller_username
         self.showtime = Refrence(self, Models.Showtime, "showtime_id")
         self.user = Refrence(self, Models.User, "username")
+        self.seller = Refrence(self, Models.User, "seller_username")
 
     def __str__(self) -> str:
         return self.toJsonString()
@@ -45,6 +47,8 @@ class Ticket:
                 return self.full_name
             case "sold_price":
                 return self.sold_price
+            case "seller_username":
+                return self.seller_username
             case _:
                 raise "Invalid key"
         
@@ -66,6 +70,8 @@ class Ticket:
                 self.full_name = value
             case "sold_price":
                 self.sold_price = value
+            case "seller_username":
+                self.seller_username = value
             case _:
                 raise "Invalid key"
     
@@ -79,7 +85,8 @@ class Ticket:
             Serialize.serialize_date(obj.sale_date),
             Serialize.serialize_string(obj.username),
             Serialize.serialize_string(obj.full_name),
-            Serialize.serialize_float(obj.sold_price)
+            Serialize.serialize_float(obj.sold_price),
+            Serialize.serialize_string(obj.seller_username)
         ]
         return SEPARATOR.join(data)
     
@@ -94,7 +101,8 @@ class Ticket:
             Serialize.deserialize_date(data[4]),
             Serialize.deserialize_string(data[5]),
             Serialize.deserialize_string(data[6]),
-            Serialize.deserialize_float(data[7])
+            Serialize.deserialize_float(data[7]),
+            Serialize.deserialize_string(data[8])
         )
     
     def populatedObject(self, db):

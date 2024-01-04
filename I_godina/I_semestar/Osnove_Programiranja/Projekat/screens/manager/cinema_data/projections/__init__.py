@@ -8,6 +8,7 @@ from utils.generate_id import generate_number
 from utils.validate_projection import validate_projection
 from utils.serialize import serialize_time
 from datetime import datetime
+from utils.unlink import unlink_projection
 
 def ProjekcijeTab():
     tab = QtWidgets.QWidget()
@@ -90,6 +91,7 @@ def ProjekcijeTab():
         res = MessageBox().question(tab, "Brisanje projections", f"Da li ste sigurni da želite da obrišete projekciju za film '{film}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
+        unlink_projection(id)
         State.db.projections.DeleteById(id)
         refresh_table()
     def buttons_edit_click():

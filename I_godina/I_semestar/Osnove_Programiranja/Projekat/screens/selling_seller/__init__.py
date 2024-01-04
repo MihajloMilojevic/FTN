@@ -65,7 +65,6 @@ def SellerSellingScreen(parent):
         user_data_gb.hide()
         username_cb.clear()
         name_input.setText("")
-        parent.show_screen(State.user.role)
         parent.back()
     back_button.clicked.connect(back_button_click)
     def cell_click(row, column):

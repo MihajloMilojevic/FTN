@@ -33,6 +33,15 @@ class App(QtWidgets.QWidget):
         self._seller_ticketlist_screen = Screens.SellerTicketListScreen(self)
         self._seller_selling_screen = Screens.SellerSellingScreen(self)
         self._ticket_edit_screen = Screens.TicketEditScreen(self)
+        self._reports_screen = Screens.ReportsScreen(self)
+        self._report_a_screen = Screens.ReportAScreen(self)
+        self._report_b_screen = Screens.ReportBScreen(self)
+        self._report_c_screen = Screens.ReportCScreen(self)
+        self._report_d_screen = Screens.ReportDScreen(self)
+        self._report_e_screen = Screens.ReportEScreen(self)
+        self._report_f_screen = Screens.ReportFScreen(self)
+        self._report_g_screen = Screens.ReportGScreen(self)
+        self._report_h_screen = Screens.ReportHScreen(self)
 
         self.content_layout.addWidget(self._screen_unregistered)
         self.content_layout.addWidget(self._screen_login)
@@ -52,6 +61,15 @@ class App(QtWidgets.QWidget):
         self.content_layout.addWidget(self._seller_ticketlist_screen)
         self.content_layout.addWidget(self._seller_selling_screen)
         self.content_layout.addWidget(self._ticket_edit_screen)
+        self.content_layout.addWidget(self._reports_screen)
+        self.content_layout.addWidget(self._report_a_screen)
+        self.content_layout.addWidget(self._report_b_screen)
+        self.content_layout.addWidget(self._report_c_screen)
+        self.content_layout.addWidget(self._report_d_screen)
+        self.content_layout.addWidget(self._report_e_screen)
+        self.content_layout.addWidget(self._report_f_screen)
+        self.content_layout.addWidget(self._report_g_screen)
+        self.content_layout.addWidget(self._report_h_screen)
         
         self.screens = {
             "unregistered": self._screen_unregistered,
@@ -75,6 +93,16 @@ class App(QtWidgets.QWidget):
             "seller_ticketlist": self._seller_ticketlist_screen,
             "seller_selling": self._seller_selling_screen,
             "ticket_edit": self._ticket_edit_screen,
+            "reports": self._reports_screen,
+
+            "report_a": self._report_a_screen,
+            "report_b": self._report_b_screen,
+            "report_c": self._report_c_screen,
+            "report_d": self._report_d_screen,
+            "report_e": self._report_e_screen,
+            "report_f": self._report_f_screen,
+            "report_g": self._report_g_screen,
+            "report_h": self._report_h_screen,
         }
         
 

@@ -6,6 +6,7 @@ import database.models as Models
 from utils.message_box import MessageBox
 from datetime import datetime
 from utils.generate_id import generate_number, generate_string
+from utils.unlink import unlink_film
 
 def FilmoviTab():
     tab = QtWidgets.QWidget()
@@ -91,6 +92,7 @@ def FilmoviTab():
         res = MessageBox().question(tab, "Brisanje filma", f"Da li ste sigurni da želite da obrišete film '{name}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
+        unlink_film(id)
         State.db.films.DeleteById(id)
         refresh_table()
     def buttons_edit_click():

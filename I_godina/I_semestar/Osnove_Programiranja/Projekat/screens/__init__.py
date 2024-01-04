@@ -16,6 +16,15 @@ from screens.booking_seller import SellerBookingScreen
 from screens.ticketlist_seller import SellerTicketListScreen
 from screens.selling_seller import SellerSellingScreen
 from screens.ticket_edit import TicketEditScreen
+from screens.reports import ReportsScreen
+from screens.reports.report_a import ReportAScreen
+from screens.reports.report_b import ReportBScreen
+from screens.reports.report_c import ReportCScreen
+from screens.reports.report_d import ReportDScreen
+from screens.reports.report_e import ReportEScreen
+from screens.reports.report_f import ReportFScreen
+from screens.reports.report_g import ReportGScreen
+from screens.reports.report_h import ReportHScreen
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets

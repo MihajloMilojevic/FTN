@@ -4,6 +4,7 @@ import app.state as State
 import screens.manager.cinema_data.halls.local_state as LocalState
 import database.models as Models
 from utils.message_box import MessageBox
+from utils.unlink import unlink_hall
 
 def SaleTab():
     tab = QtWidgets.QWidget()
@@ -79,6 +80,7 @@ def SaleTab():
         res = MessageBox().question(tab, "Brisanje halls", f"Da li ste sigurni da želite da obrišete salu '{name}'?")
         if res != QtWidgets.QMessageBox.StandardButton.Yes:
             return
+        unlink_hall(id)
         State.db.halls.DeleteById(id)
         refresh_table()
     def buttons_edit_click():
