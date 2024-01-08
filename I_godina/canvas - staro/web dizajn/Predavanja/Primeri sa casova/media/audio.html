@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Audio</title>
+    </head>
+
+    <body>
+        <h1>Primer audio playera</h1>
+        <!-- 
+            audio HTML 5 element 
+            atribut controls - mogućava da se kontrole učine vidljivim ili nevidljivim
+            atribut autoplay - omogućava da se reprodukcija zvuka automatski pokrene
+            POGLEDATI SLAJDOVE
+        -->
+        <audio id="audioplayer" controls preload="auto"  style="width:50%;">
+            <!--
+                source element - specificira audio fajl koji treba reprodukovati
+                       atribut src - putanja do audio fajla
+                       atribut type - MIME type sadržaja - specificira format audio zapisa koji taj fajl predstavlja
+
+                Moguće je (i poželjno) specificirati više source elemenata sa različitim audio zapisima za slučaj da neki format nije podržan   
+            -->
+            <source src="sounds/waves.mp3" type="audio/mp3"> 
+            <!-- 
+                Ukoliko browser ne razume nijedan format prikazaće ono što se nalazi ispod source elemenata
+            -->
+            Your browser doesn't support the HTML audio tag. You can still download the show, though! </audio>
+        <p id="audioplayer_1"></p>
+    </body>
+
+</html>

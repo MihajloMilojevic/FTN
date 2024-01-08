@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Video</title>
+    </head>
+
+    <body>
+        <h1>Primer video playera</h1>
+        <!-- 
+            video HTML 5 element 
+            atribut controls - mogućava da se kontrole učine vidljivim ili nevidljivim
+            atribut autoplay - omogućava da se reprodukcija video zapisa automatski pokrene
+            kod video playera poželjno je zadati visinu i širinu playera
+            POGLEDATI SLAJDOVE
+        -->
+        <video controls width="640" height="480">
+            <!--
+                source element - specificira video fajl koji treba reprodukovati
+                       atribut src - putanja do video fajla
+                       atribut type - MIME type sadržaja - specificira format audio zapisa koji taj fajl predstavlja
+
+                Moguće je (i poželjno) specificirati više source elemenata sa različitim video zapisima za slučaj da neki format nije podržan   
+            -->
+            <source src="videos/sample.mp4" type="video/mp4" />
+            <source src="video.webm" type="video/webm">
+            Vas browser ne podrzava jos video tag 
+        </video>
+        <br/>
+        <!-- 
+            video sa youtuba i sličnih servisa se u vašu stranicu ugrađuje 
+            kopiranjem embed koda koji ti servisi nude. Direktno linkovanje u source element vidseo playera kod ovakvih servisa nije dozvoljeno/moguće.
+        -->
+        <iframe width="854" height="480" 
+                src="https://www.youtube.com/embed/45b3DaXp2lY" 
+                frameborder="0" allowfullscreen>
+        </iframe>
+    </body>
+
+</html>

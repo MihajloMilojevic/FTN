@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+    var counter = 1
+    function draw() {
+      counter++;
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+        
+        ctx.fillStyle = "rgb(200,0,0)";
+        var rect=ctx.fillRect (10, 10, 55, 50);
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect (30*counter, 30*counter, 55*counter, 50*counter);
+       
+      }
+    }
+  </script>
+ </head>
+ <body>
+   <h1>Primer iscrtavanja na canvas elementu</h1>
+   <canvas id="canvas" width="800" height="600" style="border: 1px solid black"></canvas>
+   <div>
+   <button onclick="draw()">Click me</button>
+   </div>
+ </body>
+</html>

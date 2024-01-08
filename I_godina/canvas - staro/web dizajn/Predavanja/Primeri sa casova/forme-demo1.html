@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forme</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Forme</h1>
+        <form method="POST" enctype="multipart/form-data"> <!-- ako forma sadrzi fajl polje, neophodno je postaviti enctype -->
+            <label for="unamefld">Kor. ime:</label>
+            <input id="unamefld" type="text" name="username"
+              value="Miki"
+              placeholder="Unesite zeljeno kor.ime"
+              size="40"
+              maxlength="25"
+            />
+            <br/><br/>
+            <label for="passfld">Lozinka:</label>
+            <input id="passfld" type="password" name="pass" />
+            <br/><br/>
+            <label for="emailfld">el. posta:</label>
+            <input id="emailfld" type="email" name="email" />
+            <br/><br/>
+            <label for="datefld">Rodjendan:</label>
+            <input id="datefld" type="date" name="birthdate" />
+            <br/><br/>
+            <label for="chk1">Opcija 1:</label>
+            <input id="chk1" type="checkbox" name="chk[]" value="standard"/>
+            <br/><br/>
+            <label for="chk2">Opcija 2:</label>
+            <input id="chk2" type="checkbox" name="chk[]" value="premium" />
+            <br/><br/>
+            <label for="chk3">Opcija 3:</label>
+            <input id="chk3" type="checkbox" name="chk[]" value="max"/>
+            <br/><br/>
+            <label for="radio1">Opcija 1:</label>
+            <input id="radio1" type="radio" name="rb" value="standard"/>
+            <br/><br/>
+            <label for="radio2">Opcija 2:</label>
+            <input id="radio2" type="radio" name="rb" value="premium" checked />
+            <br/><br/>
+            <label for="radio3">Opcija 3:</label>
+            <input id="radio3" type="radio" name="rb" value="max"/>
+            <br/><br/>
+            <select name="selectbox" required >
+              <option value="" > -- Izaberite zeljenu stavku -- </option>
+              <optgroup >
+                <option value="id_1">vrednost 1</option>
+                <option value="id_2">vrednost 2</option>
+              </optgroup>
+              <option value="id_3">vrednost 3</option>
+              <option value="id_4">vrednost 4</option>
+              <option value="id_5">vrednost 5</option>
+            </select>
+            <br/><br/>
+            <textarea name="message" cols="80" rows="6">
+
+            </textarea>
+            <br/><br/>
+            <input type="file" name="upload" accept="image/png, image/jpeg"/> <!-- accept atribute govori koji tipovi fajlova se mogu uploadovati -->
+            <br/><br/>
+            <input type="reset" />
+            <input type="submit" />
+        </form>
+    </body>
+</html>

@@ -1,4 +1,42 @@
-7620|S1|LLC3M1AK|20:30:00|23:45:00|['ponedeljak', 'utorak', 'sreda']|300.0
-7020|SV|DDMNZCUB|00:00:00|01:49:00|['nedelja']|250.0
-7430|S1|QAKKGGVE|17:00:00|18:51:00|['petak', 'subota', 'nedelja']|250.0
-4933|S2|YLZAEMOT|17:00:00|18:49:00|['petak', 'subota', 'nedelja']|300.0
+2024|S1|QNFTNGQX|07:00:00|09:22:00|['ponedeljak', 'utorak', 'sreda']|480.0
+9067|S1|LLC3M1AK|07:00:00|10:15:00|['cetvrtak', 'petak']|500.0
+1909|S1|QAKKGGVE|07:00:00|08:51:00|['subota', 'nedelja']|400.0
+8222|S1|NVCJLSPF|10:30:00|12:06:00|['ponedeljak', 'sreda', 'petak']|360.0
+3690|S1|LWOQLHGQ|10:30:00|12:39:00|['utorak', 'cetvrtak']|470.0
+7050|S1|DDMNZCUB|09:00:00|10:49:00|['subota', 'nedelja']|500.0
+7289|S1|YLZAEMOT|11:00:00|12:49:00|['subota', 'nedelja']|480.0
+5051|S1|OANCLOUS|13:00:00|15:51:00|['ponedeljak', 'utorak', 'sreda']|510.0
+2423|S1|IECXXGYE|13:00:00|15:12:00|['subota', 'nedelja']|300.0
+2212|S1|TDLSQUAD|15:30:00|17:28:00|['subota', 'nedelja']|350.0
+2428|S1|ALZGARCN|13:00:00|14:35:00|['cetvrtak', 'petak']|460.0
+4964|S1|DWTGVKKS|14:45:00|15:48:00|['cetvrtak', 'petak']|390.0
+7510|S1|YDLVCRAO|16:00:00|17:30:00|['ponedeljak', 'utorak', 'sreda', 'cetvrtak', 'petak']|490.0
+6469|S1|KIVCCRPL|17:45:00|20:06:00|['ponedeljak', 'sreda', 'petak']|410.0
+8930|S1|FIWZRJIP|17:45:00|19:21:00|['utorak', 'cetvrtak']|400.0
+7345|S1|OWAQPFBB|17:30:00|20:45:00|['subota', 'nedelja']|600.0
+9896|S1|QWSYHKSE|19:30:00|21:51:00|['utorak', 'cetvrtak']|450.0
+1149|S1|DBNKKPMP|20:15:00|22:28:00|['ponedeljak', 'sreda', 'petak']|480.0
+3689|S1|GDTIPNMU|22:00:00|23:40:00|['utorak', 'cetvrtak']|510.0
+8857|S1|TMDMRNOV|21:00:00|22:56:00|['subota', 'nedelja']|490.0
+8138|S1|DWTGVKKS|22:30:00|23:33:00|['ponedeljak', 'sreda', 'petak']|300.0
+6509|S2|GDTIPNMU|07:00:00|08:40:00|['ponedeljak', 'utorak', 'sreda']|500.0
+5256|S2|DBNKKPMP|07:00:00|09:13:00|['cetvrtak', 'petak']|490.0
+4951|S2|QWSYHKSE|07:00:00|09:21:00|['subota', 'nedelja']|480.0
+4645|S2|OWAQPFBB|09:00:00|12:15:00|['ponedeljak', 'utorak', 'sreda']|650.0
+5696|S2|FIWZRJIP|09:15:00|10:51:00|['cetvrtak', 'petak']|450.0
+3090|S2|YDLVCRAO|11:00:00|12:30:00|['cetvrtak', 'petak']|430.0
+1619|S2|KIVCCRPL|09:30:00|11:51:00|['subota', 'nedelja']|500.0
+6479|S2|ALZGARCN|12:45:00|14:20:00|['ponedeljak', 'sreda', 'petak']|360.0
+2108|S2|TDLSQUAD|12:45:00|14:43:00|['utorak', 'cetvrtak']|350.0
+8498|S2|YLZAEMOT|12:00:00|13:49:00|['subota', 'nedelja']|490.0
+4814|S2|IECXXGYE|14:45:00|16:57:00|['ponedeljak', 'utorak', 'sreda', 'cetvrtak', 'petak']|390.0
+8963|S2|OANCLOUS|14:00:00|16:51:00|['subota', 'nedelja']|360.0
+9783|S2|DDMNZCUB|17:00:00|18:49:00|['utorak', 'sreda', 'petak']|425.0
+6228|S2|LWOQLHGQ|17:00:00|19:09:00|['ponedeljak', 'cetvrtak']|399.0
+4742|S2|NVCJLSPF|17:00:00|18:36:00|['subota', 'nedelja']|499.0
+6159|S2|QAKKGGVE|18:45:00|20:36:00|['subota', 'nedelja']|449.0
+2433|S2|LLC3M1AK|19:15:00|22:30:00|['ponedeljak', 'sreda', 'petak']|520.0
+7254|S2|QNFTNGQX|19:15:00|21:37:00|['utorak', 'cetvrtak']|460.0
+1139|S2|TMDMRNOV|20:45:00|22:41:00|['subota', 'nedelja']|360.0
+8063|S2|TMDMRNOV|21:45:00|23:41:00|['utorak', 'cetvrtak']|350.0
+8416|S2|DWTGVKKS|22:45:00|23:48:00|['ponedeljak', 'sreda', 'petak', 'subota', 'nedelja']|250.0

@@ -1,7 +1,0 @@
-07BYLX0D5M|4933AF|6-I|False|01.11.2023|ljubogdan|None|300.0|Pepi
-IMJBKVOYQM|4933AF|10-C|True|None|teo|None|None|None
-VCHKXOAIKR|4933AF|10-D|True|None|teo|None|None|None
-BKFZERGWPC|4933AF|10-E|True|None|teo|None|None|None
-BUDJGBCVWE|4933AF|10-F|True|None|teo|None|None|None
-PEMFZBNFIN|7620AH|13-G|False|03.01.2024|teo|None|250.0|prle
-NUTFALKDIC|7620AH|13-H|False|03.01.2024|teo|None|250.0|prle
