@@ -81,15 +81,15 @@ def SellerTicketListScreen(parent):
                 sell_widget.layout().setContentsMargins(5, 5, 5, 5)
                 table.setCellWidget(index, 0, sell_widget)
 
-            cancel_widget = QtWidgets.QWidget()
-            cancel_widget.setLayout(QtWidgets.QVBoxLayout())
-            cancel_button = QtWidgets.QPushButton("Poništi")
-            cancel_button.setStyleSheet("border: 1px solid black; padding: 5px 10px")
-            cancel_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-            cancel_button.clicked.connect(get_handle_cancel_click(current["id"]))
-            cancel_widget.layout().addWidget(cancel_button)
-            cancel_widget.layout().setContentsMargins(5, 5, 5, 5)
-            table.setCellWidget(index, 1, cancel_widget)
+                cancel_widget = QtWidgets.QWidget()
+                cancel_widget.setLayout(QtWidgets.QVBoxLayout())
+                cancel_button = QtWidgets.QPushButton("Poništi")
+                cancel_button.setStyleSheet("border: 1px solid black; padding: 5px 10px")
+                cancel_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                cancel_button.clicked.connect(get_handle_cancel_click(current["id"]))
+                cancel_widget.layout().addWidget(cancel_button)
+                cancel_widget.layout().setContentsMargins(5, 5, 5, 5)
+                table.setCellWidget(index, 1, cancel_widget)
 
             edit_widget = QtWidgets.QWidget()
             edit_widget.setLayout(QtWidgets.QVBoxLayout())
@@ -161,9 +161,12 @@ def SellerTicketListScreen(parent):
         LocalState.criteria["time"] = {"min": None, "max": None}
 
         dates = [ticket.showtime.get(State.db).date.date() for ticket in State.db.tickets.SelectAll()]
-        
-        max_date: date  = max(dates)
-        min_date: date = min(dates)
+        if len(dates) > 0:
+            max_date: date  = max(dates)
+            min_date: date = min(dates)
+        else:
+            max_date = date.today()
+            min_date = date.today()
         
         d = QtCore.QDate()
         d.setDate(max_date.year, max_date.month, max_date.day)

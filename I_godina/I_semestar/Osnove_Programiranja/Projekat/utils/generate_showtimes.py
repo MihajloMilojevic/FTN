@@ -10,7 +10,7 @@ def generate_all(start: datetime, length: int):
 
 def generate_single(projection: Models.Projection, start: datetime, number_of_days: int):
     days = [day_index(d) for d in projection.days]
-    for delta in range(number_of_days+1):
+    for delta in range(number_of_days):
         date = start + timedelta(days=delta)
         # projekcija se ne prikazuje tog dana
         if date.weekday() not in days:

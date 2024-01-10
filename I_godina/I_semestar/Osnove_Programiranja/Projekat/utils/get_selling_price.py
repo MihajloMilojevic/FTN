@@ -8,6 +8,6 @@ def get_selling_price(ticket: Models.Ticket) -> float:
     projection: Models.Projection = showtime.projection.get(State.db)
     selling_price: float = projection.price
     if check_loyalty(ticket.username):
-        selling_price -= selling_price * LOYALTY_DISCOUNT_PERCENT
+        selling_price -= selling_price * (LOYALTY_DISCOUNT_PERCENT / 100)
     selling_price += PRICE_ADJUSTMENTS_PER_DAY[showtime.date.weekday()]
-    return selling_price
+    return round(selling_price, 2)

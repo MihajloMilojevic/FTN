@@ -106,6 +106,7 @@ def ShopperBookingScreen(parent):
                 None,
                 State.user.username,
                 None,
+                None,
                 None
             )
             State.db.tickets.Insert(ticket)

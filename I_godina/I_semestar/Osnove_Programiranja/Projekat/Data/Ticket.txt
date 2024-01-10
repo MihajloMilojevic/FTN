@@ -1,0 +1,273 @@
+GRVZTDTBUP|4721AA|6-D|False|10.01.2024|sara|None|480.0|prle
+KOOMWZNTZM|4721AA|6-E|False|10.01.2024|sara|None|480.0|prle
+KPZTKJKTOO|4721AA|6-F|False|10.01.2024|sara|None|480.0|prle
+LGMAELHZVS|6685AB|9-C|True|None|lanmi|None|None|None
+GHBGUJWMXJ|6685AB|9-D|True|None|lanmi|None|None|None
+YXXROIPIDH|6685AB|9-E|False|10.01.2024|lanmi|None|489.98|pepi
+WRHKRNYSJU|6685AB|10-C|True|None|lanmi|None|None|None
+XUGYSUHYLF|6685AB|10-D|False|10.01.2024|lanmi|None|489.98|pepi
+UCAJONQCXE|6685AB|10-E|True|None|lanmi|None|None|None
+GBEQXOFOYL|8026AB|8-F|False|10.01.2024|lanmi|None|539.0|pepi
+PCDJMMMJOJ|8026AB|9-E|False|10.01.2024|lanmi|None|539.0|pepi
+ACPFYJFPQZ|8026AB|9-F|False|10.01.2024|lanmi|None|539.0|pepi
+BNOQARGWXV|8026AB|9-G|False|10.01.2024|lanmi|None|539.0|pepi
+PBXJRKFRZT|8026AB|9-H|True|None|lanmi|None|None|None
+BBDOKJXWNB|8026AB|10-F|True|None|lanmi|None|None|None
+ODRXLMFANS|7173AB|10-A|True|None|lanmi|None|None|None
+NLLGDHWXZZ|7173AB|10-B|False|10.01.2024|lanmi|None|430.0|pepi
+CYQGSMFNJB|7173AB|10-C|False|10.01.2024|lanmi|None|430.0|pepi
+BUOXXMZDVS|7173AB|10-D|False|10.01.2024|lanmi|None|430.0|pepi
+REWNQVVDKU|7173AB|10-E|True|None|lanmi|None|None|None
+OSKDDFXWIM|7173AB|10-F|False|10.01.2024|lanmi|None|430.0|pepi
+EYOEVNNPTH|7173AB|10-G|True|None|lanmi|None|None|None
+LVQCFWGFJO|7173AB|10-H|True|None|lanmi|None|None|None
+NXGTBZJUWJ|7173AB|10-I|True|None|lanmi|None|None|None
+NAKXZLBNXQ|7173AB|10-J|True|None|lanmi|None|None|None
+BTZQGGDBDR|9186AC|7-G|False|11.01.2024|lanmi|None|350.0|pepi
+ELFIMTOHEX|6664AC|5-C|True|None|laki|None|None|None
+JIFRMEDRBE|6664AC|5-D|True|None|laki|None|None|None
+GIUKNDYPOB|6664AC|5-E|False|11.01.2024|laki|None|510.0|pepi
+KUXAKOARQU|7768AC|2-G|False|11.01.2024|laki|None|540.0|pepi
+WWOXPYDYLB|7768AC|3-F|False|11.01.2024|laki|None|540.0|pepi
+LXLUZNOIMB|7768AC|3-G|False|11.01.2024|laki|None|540.0|pepi
+GZLLCDDBFH|7768AC|3-H|True|None|laki|None|None|None
+EMCMPYRDEE|7768AC|4-E|True|None|laki|None|None|None
+SMWIVFAFWZ|7768AC|4-F|True|None|laki|None|None|None
+PMDUSFCYJY|7768AC|4-G|True|None|laki|None|None|None
+YLKMILAWRX|7768AC|4-H|True|None|laki|None|None|None
+MGTITTUGTO|7768AC|4-I|True|None|laki|None|None|None
+MOAAUHAVZP|7768AC|5-F|True|None|laki|None|None|None
+EVNGDSUXQP|7768AC|5-G|True|None|laki|None|None|None
+QQAHEXPBGF|7768AC|5-H|True|None|laki|None|None|None
+TDSOKUDHIF|7768AC|6-G|True|None|laki|None|None|None
+DOFDPRYGRY|2433AI|13-J|True|None|laki|None|None|None
+SYURHHMEYC|2433AI|13-K|True|None|laki|None|None|None
+TCQJFMCHVX|2433AI|13-L|False|11.01.2024|laki|None|520.0|pepi
+NXPEIAIMUG|2433AI|13-M|False|11.01.2024|laki|None|520.0|pepi
+SGDKWGMZZS|3090AB|8-E|True|None|teo|None|None|None
+ZSABZCZLBY|3090AB|8-F|True|None|teo|None|None|None
+UGDAMUVRCJ|3090AB|8-G|True|None|teo|None|None|None
+XDGONNRNFV|2212AA|10-H|True|None|teo|None|None|None
+SFIGTSJGTG|2212AA|10-I|True|None|teo|None|None|None
+NOCGRMDRGY|2212AA|10-J|True|None|teo|None|None|None
+ZXPLIQSOSB|1139AB|7-E|False|11.01.2024|teo|None|410.0|pepi
+IUQUAIOTVR|1139AB|7-F|True|None|teo|None|None|None
+RCWELVJBIE|1139AB|7-G|True|None|teo|None|None|None
+AVQWQCQRXG|1139AB|8-E|True|None|teo|None|None|None
+NZSJTAEYVT|1139AB|8-F|True|None|teo|None|None|None
+LPGYVCRDBZ|1139AB|8-G|False|11.01.2024|teo|None|410.0|pepi
+MUTBAQJRGJ|7322AA|2-E|True|None|teo|None|None|None
+LQRBSWFCVW|7322AA|3-D|True|None|teo|None|None|None
+MNGMCEDCWH|7322AA|3-E|True|None|teo|None|None|None
+WLCIVRERYY|7322AA|3-F|True|None|teo|None|None|None
+EOSGTPJXEE|7322AA|4-E|True|None|teo|None|None|None
+HTTOBMRNKJ|7322AA|5-D|True|None|teo|None|None|None
+FZKQREKFYH|7322AA|5-E|True|None|teo|None|None|None
+NRXPDHXJRV|7322AA|5-F|True|None|teo|None|None|None
+BOAKOZGNRM|7322AA|6-E|True|None|teo|None|None|None
+FLCWDTZIIE|1119AA|5-D|True|None|madmax|None|None|None
+XFGZHXECGK|1119AA|5-E|True|None|madmax|None|None|None
+XYONKEEJUY|1119AA|5-F|True|None|madmax|None|None|None
+JTQIFVKAEQ|1119AA|6-D|True|None|madmax|None|None|None
+IAPYUFHMPC|1119AA|6-E|True|None|madmax|None|None|None
+UZGAVXBFOU|1119AA|6-F|True|None|madmax|None|None|None
+RKDUFVOQPN|4814AE|5-D|True|None|madmax|None|None|None
+UVIQSNVYMK|4814AE|5-E|True|None|madmax|None|None|None
+KAENKRHROK|4814AE|5-F|True|None|madmax|None|None|None
+GTZFJKTWPT|4814AE|6-D|True|None|madmax|None|None|None
+XIDXBBRVBL|4814AE|6-E|True|None|madmax|None|None|None
+VVMEXTXSJU|4814AE|6-F|True|None|madmax|None|None|None
+OWKCBFQJRE|4814AE|7-D|True|None|madmax|None|None|None
+ISJDFCWIRR|4814AE|7-E|True|None|madmax|None|None|None
+MFHWPNWODX|4814AE|7-F|True|None|madmax|None|None|None
+YLNHWVDKEG|4814AE|8-D|True|None|madmax|None|None|None
+EMCGPZAGHT|4814AE|8-E|True|None|madmax|None|None|None
+ZWAPVMEPVD|4814AE|8-F|True|None|madmax|None|None|None
+XZRHDCKLVK|1149AD|6-E|True|None|madmax|None|None|None
+KNZONJCIFK|1149AD|6-F|False|12.01.2024|madmax|None|480.0|pepi
+QJDQNVMSSS|1149AD|6-G|False|12.01.2024|madmax|None|480.0|pepi
+FHXVJHHXJT|1149AD|7-E|False|12.01.2024|madmax|None|480.0|pepi
+PHAZNSRKDU|1149AD|7-F|False|12.01.2024|madmax|None|480.0|pepi
+XACJUYZBNL|1149AD|7-G|False|12.01.2024|madmax|None|480.0|pepi
+HMJPAXEHTO|1149AD|8-E|True|None|madmax|None|None|None
+YDWWLGFNQI|1149AD|8-F|True|None|madmax|None|None|None
+FDVNQTRXZM|1149AD|8-G|True|None|madmax|None|None|None
+MAXSJBDDPZ|4721AA|3-D|False|12.01.2024|dance|None|480.0|pepi
+YGDJOZMARD|4721AA|3-E|False|12.01.2024|dance|None|480.0|pepi
+GDAOBRVANN|4721AA|3-F|True|None|dance|None|None|None
+CBJBMCVPCI|4721AA|4-D|True|None|dance|None|None|None
+IJKGEEJPPM|4721AA|4-E|True|None|dance|None|None|None
+HFNIPSYIOS|4721AA|4-F|True|None|dance|None|None|None
+XYFVEARUPR|2433AB|3-E|True|None|dance|None|None|None
+HFAMSQGYQX|2433AB|3-F|True|None|dance|None|None|None
+MQXPXJTOXE|2433AB|3-G|True|None|dance|None|None|None
+EMJXYLVZRE|2433AB|4-D|True|None|dance|None|None|None
+SGDAILIEXZ|2433AB|4-E|True|None|dance|None|None|None
+NSSJZGMUNV|2433AB|4-F|True|None|dance|None|None|None
+RNYPPHDFMT|7345AA|9-G|True|None|dance|None|None|None
+DLZRNCFZDK|7345AA|10-F|True|None|dance|None|None|None
+RLEBIRERQD|7345AA|10-G|True|None|dance|None|None|None
+QEUWOYBFTD|7345AA|10-H|True|None|dance|None|None|None
+UVJIMCBWUA|7345AA|11-G|True|None|dance|None|None|None
+TYPXERNLOD|8262AA|11-D|True|None|dance|None|None|None
+DOAFVXAVOT|8262AA|11-E|True|None|dance|None|None|None
+WDXAPETELK|8262AA|11-F|True|None|dance|None|None|None
+JSQLJOXKML|8811AA|8-A|True|None|dance|None|None|None
+JAUVCRLNSP|8811AA|8-B|True|None|dance|None|None|None
+GVCFWVIPCY|8811AA|8-C|True|None|dance|None|None|None
+MSVGVNZJXC|8811AA|8-D|True|None|dance|None|None|None
+YAFUVWRIAH|8811AA|8-E|True|None|dance|None|None|None
+HEBJKNRQPC|8811AA|8-F|True|None|dance|None|None|None
+TWPTNJOOJP|8811AA|8-G|True|None|dance|None|None|None
+SJOEHPBWQK|8811AA|8-H|True|None|dance|None|None|None
+FSAIRTFNMT|8811AA|8-I|True|None|dance|None|None|None
+SEOKCTUYSV|8811AA|8-J|True|None|dance|None|None|None
+DRKISNYKNR|8811AA|8-K|True|None|dance|None|None|None
+OHAVWYJGTR|8811AA|8-L|False|13.01.2024|dance|None|500.0|pepi
+GPPZQQCLOM|8811AA|8-M|True|None|dance|None|None|None
+PBBRGTNKVK|8811AA|8-N|True|None|dance|None|None|None
+JGRBYUAJRR|8811AA|8-O|True|None|dance|None|None|None
+UXRBCZRDRD|6287AK|10-D|True|None|sneza|None|None|None
+HUOIQKYQAD|6287AK|10-E|True|None|sneza|None|None|None
+UZVFGNJMUK|6287AK|10-F|True|None|sneza|None|None|None
+TYNMEPZXWN|1112AD|9-K|True|None|sneza|None|None|None
+XKUNFLCVPN|1112AD|9-L|True|None|sneza|None|None|None
+RICLDQRODI|1112AD|9-M|True|None|sneza|None|None|None
+HVIAHECTBX|1112AD|10-K|True|None|sneza|None|None|None
+RIEGCDPMAG|1112AD|10-L|True|None|sneza|None|None|None
+BCEAAFTFKR|1112AD|10-M|True|None|sneza|None|None|None
+ACXDPQRTFR|1112AD|11-K|True|None|sneza|None|None|None
+YQGQNXCPCR|1112AD|11-L|True|None|sneza|None|None|None
+TMIPBMZCQX|1112AD|11-M|True|None|sneza|None|None|None
+TKZTZADZNF|8416AS|10-F|True|None|sneza|None|None|None
+JSHKYCIIIX|8416AS|10-G|True|None|sneza|None|None|None
+UAPMRIXDBN|4814AS|9-D|False|13.01.2024|sneza|None|390.0|pepi
+DJIYPJHSWL|4814AS|9-E|False|13.01.2024|sneza|None|390.0|pepi
+WNTYGLKTOU|4814AS|9-F|False|13.01.2024|sneza|None|390.0|pepi
+FCVWKMFNDZ|8977AC|8-E|False|13.01.2024|sneza|None|449.99|pepi
+HYCGIXROSD|8977AC|8-F|False|13.01.2024|sneza|None|449.99|pepi
+HHYTGPPSCG|8977AC|8-G|True|None|sneza|None|None|None
+SABPPWCFQV|8222AH|7-H|True|None|sara|None|None|None
+JDHSCQECWL|8222AH|7-I|True|None|sara|None|None|None
+XLOOPQMDTZ|8222AH|7-J|False|13.01.2024|sara|None|360.0|pepi
+BNXEAHQAVI|8222AH|8-H|False|13.01.2024|sara|None|360.0|pepi
+CXGDOXHPDC|8222AH|8-I|True|None|sara|None|None|None
+KPUZHYROWV|8222AH|8-J|False|13.01.2024|sara|None|360.0|pepi
+FEAAPMQEWU|2212AE|9-E|False|13.01.2024|sara|None|400.0|pepi
+TNGXHKNLZA|2212AE|9-F|False|14.01.2024|sara|None|400.0|pepi
+KFLBOVYRSS|2212AE|9-G|False|14.01.2024|sara|None|400.0|pepi
+MGUWXUHJFH|2212AE|10-E|True|None|sara|None|None|None
+BJDPOMFDVB|2212AE|10-F|False|14.01.2024|sara|None|365.0|prle
+GGWXACXVZP|2212AE|10-G|True|None|sara|None|None|None
+EJPNMTBTSW|9898AC|12-L|False|14.01.2024|sara|None|550.0|pepi
+FKOGQLGFAU|9898AC|12-M|False|14.01.2024|sara|None|550.0|pepi
+UTWZQCMVYR|9898AC|12-N|False|14.01.2024|sara|None|550.0|pepi
+DZMSUJJLON|9898AC|13-M|False|14.01.2024|sara|None|500.0|prle
+OKULBWEWWU|9898AC|13-N|False|14.01.2024|sara|None|500.0|prle
+YUOHMIPMQT|6228AF|8-F|False|15.01.2024|sara|None|399.0|pepi
+CQSYYZBKKH|6228AF|8-G|False|15.01.2024|sara|None|399.0|pepi
+UMVAUPBTYW|6228AF|8-H|False|15.01.2024|sara|None|399.0|pepi
+MYCMXXEWQL|3427AA|6-D|True|None|None|Meris Bilalovic|None|None
+UUWTSDEOXJ|3427AA|6-E|True|None|None|Meris Bilalovic|None|None
+JLFELYIHAE|3427AA|6-F|True|None|None|Meris Bilalovic|None|None
+EMXHUYYQQF|3427AA|7-D|True|None|None|Meris Bilalovic|None|None
+YWQNGGJYHA|3427AA|7-E|True|None|None|Meris Bilalovic|None|None
+VBCBHDMHPG|3427AA|7-F|True|None|None|Meris Bilalovic|None|None
+IJRAAXRNTA|5256AA|6-F|True|None|None|Dejan Ostojic|None|None
+XVVUBWJTAG|5256AA|6-G|True|None|None|Dejan Ostojic|None|None
+HWDAJJFWJB|5256AA|6-H|True|None|None|Dejan Ostojic|None|None
+NURARJLORH|9067AB|5-F|True|None|None|Djordje Vujanovic|None|None
+ETHJLSVPUI|9067AB|5-G|True|None|None|Djordje Vujanovic|None|None
+FAPDWHUPPF|9067AB|5-H|True|None|None|Djordje Vujanovic|None|None
+WKXBRHIRUW|9067AB|6-F|True|None|None|Djordje Vujanovic|None|None
+NDZCTHRSAZ|9067AB|6-G|True|None|None|Djordje Vujanovic|None|None
+WZJAJOBBKA|9067AB|6-H|True|None|None|Djordje Vujanovic|None|None
+ELKZYQDFYL|3348AA|6-C|True|None|None|Vukasin Vujovic|None|None
+JHKZEHFGLT|3348AA|6-D|True|None|None|Vukasin Vujovic|None|None
+DDNSJIHQZB|3348AA|6-E|True|None|None|Vukasin Vujovic|None|None
+ZQDURRTQHK|3348AA|6-F|True|None|None|Vukasin Vujovic|None|None
+ZVUSMVVSOH|3348AA|6-G|True|None|None|Vukasin Vujovic|None|None
+FZEEENXQDT|3348AA|7-C|True|None|None|Vukasin Vujovic|None|None
+QJBZITPTNX|3348AA|7-D|True|None|None|Vukasin Vujovic|None|None
+GKZUSDYAUO|3348AA|7-E|True|None|None|Vukasin Vujovic|None|None
+DCHVNMMRYV|3348AA|7-F|True|None|None|Vukasin Vujovic|None|None
+VWPAJHPQDL|3348AA|7-G|True|None|None|Vukasin Vujovic|None|None
+AKAPNVHOEA|3348AA|8-C|True|None|None|Vukasin Vujovic|None|None
+XUDITWRROG|3348AA|8-D|True|None|None|Vukasin Vujovic|None|None
+RBOHUSRPMQ|3348AA|8-E|True|None|None|Vukasin Vujovic|None|None
+OWSDVFZNEA|3348AA|8-F|True|None|None|Vukasin Vujovic|None|None
+YEONRXAKOU|3348AA|8-G|True|None|None|Vukasin Vujovic|None|None
+ALBQYXFDQS|8963AB|6-F|True|None|None|Stefan Ilic|None|None
+ZHTFJVSHFL|8963AB|6-G|True|None|None|Stefan Ilic|None|None
+TEUHPTYDHR|8963AB|6-H|True|None|None|Stefan Ilic|None|None
+BDDRIKCDLK|8963AB|7-F|True|None|None|Stefan Ilic|None|None
+AZRZXFPQOG|8963AB|7-G|True|None|None|Stefan Ilic|None|None
+YHJEZYKGOW|8963AB|7-H|True|None|None|Stefan Ilic|None|None
+YLTFYHWYYN|4814AD|6-D|True|None|None|Niksa Cvorovic|None|None
+XXGKSTVZRF|4814AD|6-E|True|None|None|Niksa Cvorovic|None|None
+HOTWIFPJTC|4814AD|6-F|True|None|None|Niksa Cvorovic|None|None
+DKZEUTETTN|4814AD|7-D|True|None|None|Niksa Cvorovic|None|None
+NYJIZHIRXX|4814AD|7-E|True|None|None|Niksa Cvorovic|None|None
+EYPERAAUWF|4814AD|7-F|True|None|None|Niksa Cvorovic|None|None
+UOKITAJFEU|2108AB|9-D|True|None|None|Niksa Cvorovic|None|None
+SPUCAGXFIP|2108AB|9-E|True|None|None|Niksa Cvorovic|None|None
+IWLWTISORC|2108AB|9-F|True|None|None|Niksa Cvorovic|None|None
+PZOYHUUXQA|2108AB|10-D|True|None|None|Niksa Cvorovic|None|None
+GVSZCDAZKF|2108AB|10-E|True|None|None|Niksa Cvorovic|None|None
+IIFSENDIWF|2108AB|10-F|True|None|None|Niksa Cvorovic|None|None
+ZWIALMQJGL|8930AB|7-H|True|None|None|Bojana Paunovic|None|None
+QRSXBPOYPB|8930AB|7-I|True|None|None|Bojana Paunovic|None|None
+TEYJNGVKSV|8930AB|7-J|True|None|None|Bojana Paunovic|None|None
+BRVPUNHEZI|8930AB|7-K|True|None|None|Bojana Paunovic|None|None
+YZRRJLHGWB|8063AB|9-K|True|None|None|Lenka Nikolic|None|None
+VBZBZXOMQF|8063AB|9-L|True|None|None|Lenka Nikolic|None|None
+ODIEJMYAUJ|8063AB|9-M|True|None|None|Lenka Nikolic|None|None
+CYNOTSKMRL|8063AB|10-K|True|None|None|Lenka Nikolic|None|None
+NXJAQFPCSV|8063AB|10-L|True|None|None|Lenka Nikolic|None|None
+UMZYCJDARK|8063AB|10-M|True|None|None|Lenka Nikolic|None|None
+UCGVZAMMKW|4180AB|9-E|False|15.01.2024|dance|None|410.0|ljubogdan
+QUMTTOQEKP|4180AB|9-F|False|15.01.2024|dance|None|410.0|ljubogdan
+EJWRKHAXGA|4180AB|9-G|False|15.01.2024|dance|None|410.0|ljubogdan
+WTTDQLEETK|4180AB|10-E|False|15.01.2024|dance|None|410.0|ljubogdan
+LLYYCTAMMN|4180AB|10-F|False|15.01.2024|dance|None|410.0|ljubogdan
+RFBPKNWXAW|4180AB|10-G|False|15.01.2024|dance|None|410.0|ljubogdan
+FTAYTKTMPQ|4180AB|11-E|False|15.01.2024|dance|None|410.0|ljubogdan
+QWXBPWXJQE|4180AB|11-F|False|15.01.2024|dance|None|410.0|ljubogdan
+KZJDCHYZNQ|4180AB|11-G|False|15.01.2024|dance|None|410.0|ljubogdan
+HYAWLSSASM|5000AB|4-H|False|15.01.2024|laki|None|350.0|ljubogdan
+GNVQNQLJPY|5000AB|4-I|False|16.01.2024|laki|None|350.0|ljubogdan
+NXGULTOKKD|5000AB|5-H|False|16.01.2024|laki|None|350.0|ljubogdan
+AUACODWSMO|5000AB|5-I|False|16.01.2024|laki|None|350.0|ljubogdan
+WOLISJNNUJ|9186AB|3-D|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+VXOHPNMXXV|9186AB|3-E|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+LIWSHZRCMS|9186AB|3-F|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+CFWJTYPUIN|9186AB|4-D|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+YHCMXEJJDW|9186AB|4-E|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+TMOPWOLYPX|9186AB|4-F|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+YGJBSWHSGS|9186AB|5-D|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+KELLYAAZOB|9186AB|5-E|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+IDFQZAMIGI|9186AB|5-F|False|16.01.2024|None|Aleksa Dejanovic|350.0|ljubogdan
+FVJHJIRKVC|9783AD|6-E|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+VKWTLUJEGX|9783AD|6-F|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+TOWGFRIXPE|9783AD|6-G|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+YDVRLYXEHP|9783AD|7-E|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+AYZIWYJOEC|9783AD|7-F|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+RDFECQLLDA|9783AD|7-G|False|16.01.2024|None|Danica Komatovic|425.0|ljubogdan
+ARFAFDNEPM|9783AD|8-E|False|10.01.2024|None|Danica Komatovic|425.0|ljubogdan
+UVPSHRGFMZ|9783AD|8-F|False|09.01.2024|None|Danica Komatovic|425.0|ljubogdan
+RCSEAHYGKE|9783AD|8-G|False|09.01.2024|None|Danica Komatovic|425.0|ljubogdan
+VXBNJSHVLI|6509AD|5-E|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+RSIZBHOWEE|6509AD|5-F|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+KCPQZMBVAM|6509AD|5-G|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+JLRLQGPLXY|6509AD|6-E|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+LYSQDLMKLU|6509AD|6-F|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+DYJXOLGGXD|6509AD|6-G|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+XIQLPDWGAI|6509AD|7-E|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+TGNWQTAWQG|6509AD|7-F|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+WOWDWWSYJD|6509AD|7-G|False|09.01.2024|None|Andjela Bulatovic|500.0|ljubogdan
+RSSMCPTFLF|4779AB|6-D|False|09.01.2024|sara|None|450.0|prle
+UKAFQQSXKW|4779AB|6-E|False|09.01.2024|sara|None|450.0|prle
+RNTIQBETDA|4779AB|6-F|False|09.01.2024|sara|None|450.0|prle
+ZPMOARLZYZ|4779AB|7-D|False|09.01.2024|sara|None|450.0|prle
+GRXSZLQEGR|4779AB|7-E|True|None|sara|None|None|None
+IAGRBZHYPY|4779AB|7-F|True|None|sara|None|None|None

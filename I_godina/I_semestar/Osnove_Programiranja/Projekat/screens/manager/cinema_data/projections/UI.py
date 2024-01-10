@@ -179,7 +179,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(0, QtWidgets.QFormLayout.FieldRole, sifra_input)
 
     sala_label = QtWidgets.QLabel(frame)
-    sala_label.setText("Hall:")
+    sala_label.setText("Sala:")
     sala_label.setFont(font)
     sala_label.setStyleSheet("color: white")
     sala_label.setObjectName("sala_label")
@@ -232,7 +232,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(4, QtWidgets.QFormLayout.FieldRole, vreme_kraja_time)
 
     cena_label = QtWidgets.QLabel(frame)
-    cena_label.setText("price: ")
+    cena_label.setText("Cena: ")
     cena_label.setFont(font)
     cena_label.setStyleSheet("color: white")
     cena_label.setObjectName("cena_label")
@@ -246,7 +246,7 @@ def form(parent_layout: QtWidgets.QVBoxLayout, button_text):
     form_layout.setWidget(5, QtWidgets.QFormLayout.FieldRole, cena_sb)
 
     dani_label = QtWidgets.QLabel(frame)
-    dani_label.setText("Days: ")
+    dani_label.setText("Dani: ")
     dani_label.setFont(font)
     dani_label.setStyleSheet("color: white")
     dani_label.setObjectName("dani_label")

@@ -140,6 +140,7 @@ def SellerSellingScreen(parent):
                 None,
                 username,
                 name,
+                None,
                 None
             )
             sell_ticket(ticket)

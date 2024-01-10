@@ -139,6 +139,7 @@ def SellerBookingScreen(parent):
                 None,
                 username,
                 name,
+                None,
                 None
             )
             State.db.tickets.Insert(ticket)
