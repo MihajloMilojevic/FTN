@@ -2,6 +2,7 @@ import database.models as Models
 import app.state as State
 import utils.serialize as Serialize
 from datetime import datetime, timedelta
+from tabulate import tabulate
 
 def report_a(date: datetime):
     def check(ticket: Models.Ticket):
@@ -63,7 +64,6 @@ def report_f(film_name: str):
     prices: list[float] =  [ticket.sold_price for ticket in State.db.tickets.Select(check)]
     total_price = sum(prices)
     return (len(prices), total_price)
-
 
 def report_g(day: Models.Days, seller_name: str):
     if seller_name.strip() == "":
@@ -130,3 +130,141 @@ def map_ticket(ticket: Models.Ticket):
         "name": name,
         "seller": seller
     }
+
+ticket_data_map_keys = {
+    "Šifra": "id",
+    "Film": "film",
+    "Sala": "hall",
+    "Status": "status",
+    "Datum": "date",
+    "Vreme početka": "starting_time",
+    "Vreme kraja": "ending_time",
+    "Sedište": "seat_tag",
+    "Ime i prezime": "name",
+    "Prodavac": "seller",
+    "Broj karata": "number",
+    "Ukupna cena": "total"
+}
+
+def print_report(file_location: str, header_text: str, table_header: list[str], table_data: list[list[str]]):
+    with open(file_location, "w", encoding="utf-8") as file:
+        file.write(header_text)
+        file.write(tabulate(table_data, headers=table_header, tablefmt="rounded_outline"))
+
+def save_report_a(file_location: str, date: datetime):
+    report_data = report_a(date)
+    table_header = [
+        "Šifra", 
+        "Film", 
+        "Sala", 
+        "Status", 
+        "Datum",
+        "Vreme početka",
+        "Vreme kraja",
+        "Sedište",
+        "Ime i prezime",
+        "Prodavac"
+    ]
+    table_data = [
+        [ticket_data[ticket_data_map_keys[column_name]] for column_name in table_header]
+        for ticket_data in report_data
+    ]
+    header_text = f"Izveštaj A: \nLista prodatih karata za odabran datum prodaje.\n\nOdabrani datum: {Serialize.serialize_date(date)}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_b(file_location: str, date: datetime):
+    report_data = report_b(date)
+    table_header = [
+        "Šifra", 
+        "Film", 
+        "Sala", 
+        "Status", 
+        "Datum",
+        "Vreme početka",
+        "Vreme kraja",
+        "Sedište",
+        "Ime i prezime",
+        "Prodavac"
+    ]
+    table_data = [
+        [ticket_data[ticket_data_map_keys[column_name]] for column_name in table_header]
+        for ticket_data in report_data
+    ]
+    header_text = f"Izveštaj B: \nLista prodatih karata za odabran datum termina bioskopske projekcije.\n\nOdabrani datum: {Serialize.serialize_date(date)}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_c(file_location: str, date: datetime, seller_name: str):
+    report_data = report_c(date, seller_name)
+    table_header = [
+        "Šifra", 
+        "Film", 
+        "Sala", 
+        "Status", 
+        "Datum",
+        "Vreme početka",
+        "Vreme kraja",
+        "Sedište",
+        "Ime i prezime",
+        "Prodavac"
+    ]
+    table_data = [
+        [ticket_data[ticket_data_map_keys[column_name]] for column_name in table_header]
+        for ticket_data in report_data
+    ]
+    header_text = f"Izveštaj C: \nLista prodatih karata za odabran datum prodaje i odabranog prodavca.\n\nOdabrani datum: {Serialize.serialize_date(date)}\nOdabrani prodavac: {seller_name}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_d(file_location: str, day: Models.Days):
+    report_data = report_d(day)
+    table_header = [
+        "Broj karata", 
+        "Ukupna cena karata"
+    ]
+    table_data = [[report_data[0], report_data[1]]]
+    header_text = f"Izveštaj D: \nUkupan broj i ukupna cena prodatih karata za izabran dan prodaje.\n\nOdabrani dan: {day}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_e(file_location: str, day: Models.Days):
+    report_data = report_e(day)
+    table_header = [
+        "Broj karata", 
+        "Ukupna cena karata"
+    ]
+    table_data = [[report_data[0], report_data[1]]]
+    header_text = f"Izveštaj E: \nUkupan broj i ukupna cena prodatih karata za izabran dan održavanja projekcije.\n\nOdabrani dan: {day}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_f(file_location: str, film_name: str):
+    report_data = report_f(film_name)
+    table_header = [
+        "Broj karata", 
+        "Ukupna cena karata"
+    ]
+    table_data = [[report_data[0], report_data[1]]]
+    header_text = f"Izveštaj F: \nUkupna cena prodatih karata za zadati film u svim projekcijama.\n\nOdabrani film: {film_name}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_g(file_location: str, day: Models.Days, seller_name: str):
+    report_data = report_g(day, seller_name)
+    table_header = [
+        "Broj karata", 
+        "Ukupna cena karata"
+    ]
+    table_data = [[report_data[0], report_data[1]]]
+    header_text = f"Izveštaj G: \nUkupan broj i ukupna cena prodatih karata za izabran dan prodaje i odabranog prodavca\n\nOdabrani dan: {day}\nOdabrani prodavac: {seller_name}\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+
+def save_report_h(file_location: str, ):
+    report_data = report_h()
+    table_header = [
+        "Prodavac",
+        "Broj karata",
+        "Ukupna cena"
+    ]
+    table_data = [
+        [ticket_data[ticket_data_map_keys[column_name]] for column_name in table_header]
+        for ticket_data in report_data
+    ]
+    header_text = f"Izveštaj H: \nUkupan broj i ukupna cena prodatih karata po prodavcima u poslednjih 30 dana.\n\n"
+    print_report(file_location, header_text, table_header, table_data)
+

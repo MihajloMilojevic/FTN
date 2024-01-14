@@ -3,7 +3,8 @@ from screens.reports.report_d.UI import setupUi
 from datetime import datetime
 import database.models as Models
 import app.state as State
-from utils.reports import report_d
+from utils.reports import report_d, save_report_d
+from utils.save_file_dialog import get_save_file_name
 
 def ReportDScreen(parent):
     frame = QtWidgets.QFrame()
@@ -15,10 +16,17 @@ def ReportDScreen(parent):
     table: QtWidgets.QTableWidget = components["table"]
     day_select: QtWidgets.QComboBox = components["day_select"]
     back_button: QtWidgets.QPushButton = components["back_button"]
+    save_button: QtWidgets.QPushButton = components["save_button"]
 
     def back_button_click():
         parent.back()
     back_button.clicked.connect(back_button_click)
+
+    def save_button_click():
+        file_name = get_save_file_name(frame)
+        if file_name:
+            save_report_d(file_name, day_select.currentText())
+    save_button.clicked.connect(save_button_click)
 
     def refresh_table():
         print("refresh")

@@ -3,7 +3,8 @@ from screens.reports.report_f.UI import setupUi
 from datetime import datetime
 import database.models as Models
 import app.state as State
-from utils.reports import report_f
+from utils.reports import report_f, save_report_f
+from utils.save_file_dialog import get_save_file_name
 
 def ReportFScreen(parent):
     frame = QtWidgets.QFrame()
@@ -15,10 +16,16 @@ def ReportFScreen(parent):
     table: QtWidgets.QTableWidget = components["table"]
     film_select: QtWidgets.QComboBox = components["film_select"]
     back_button: QtWidgets.QPushButton = components["back_button"]
+    save_button: QtWidgets.QPushButton = components["save_button"]
 
     def back_button_click():
         parent.back()
     back_button.clicked.connect(back_button_click)
+    def save_button_click():
+        file_name = get_save_file_name(frame)
+        if file_name:
+            save_report_f(file_name, film_select.currentText())
+    save_button.clicked.connect(save_button_click)
 
     def populate_films():
         filmnames = set([film.name for film in State.db.films.SelectAll()])

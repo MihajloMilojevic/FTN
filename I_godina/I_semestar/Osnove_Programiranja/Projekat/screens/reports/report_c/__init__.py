@@ -3,7 +3,8 @@ from screens.reports.report_c.UI import setupUi
 from datetime import datetime
 import database.models as Models
 import app.state as State
-from utils.reports import report_c
+from utils.reports import report_c, save_report_c
+from utils.save_file_dialog import get_save_file_name
 
 def ReportCScreen(parent):
     frame = QtWidgets.QFrame()
@@ -16,11 +17,19 @@ def ReportCScreen(parent):
     datepicker: QtWidgets.QDateEdit = components["datepicker"]
     seller_select: QtWidgets.QComboBox = components["seller_select"]
     back_button: QtWidgets.QPushButton = components["back_button"]
+    save_button: QtWidgets.QPushButton = components["save_button"]
 
     def back_button_click():
         datepicker.setDate(datetime.today().date())
         parent.back()
     back_button.clicked.connect(back_button_click)
+    def save_button_click():
+        file_name = get_save_file_name(frame)
+        if file_name:
+            input_data = datepicker.date().toPyDate()
+            date = datetime(input_data.year, input_data.month, input_data.day)
+            save_report_c(file_name, date, seller_select.currentText())
+    save_button.clicked.connect(save_button_click)
 
     def populate_sellers():
         def isSeller(user: Models.User):

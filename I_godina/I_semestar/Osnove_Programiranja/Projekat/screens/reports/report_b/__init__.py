@@ -1,7 +1,8 @@
 from PyQt5 import QtWidgets, QtGui, QtCore
 from screens.reports.report_b.UI import setupUi
 from datetime import datetime
-from utils.reports import report_b
+from utils.reports import report_b, save_report_b
+from utils.save_file_dialog import get_save_file_name
 
 def ReportBScreen(parent):
     frame = QtWidgets.QFrame()
@@ -13,11 +14,20 @@ def ReportBScreen(parent):
     table: QtWidgets.QTableWidget = components["table"]
     datepicker: QtWidgets.QDateEdit = components["datepicker"]
     back_button: QtWidgets.QPushButton = components["back_button"]
+    save_button: QtWidgets.QPushButton = components["save_button"]
 
     def back_button_click():
         datepicker.setDate(datetime.today().date())
         parent.back()
     back_button.clicked.connect(back_button_click)
+    
+    def save_button_click():
+        file_name = get_save_file_name(frame)
+        if file_name:
+            input_data = datepicker.date().toPyDate()
+            date = datetime(input_data.year, input_data.month, input_data.day)
+            save_report_b(file_name, date)
+    save_button.clicked.connect(save_button_click)
 
     def refresh_table():
         print("refresh")

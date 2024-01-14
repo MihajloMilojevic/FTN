@@ -128,6 +128,10 @@ def setupUi( frame):
 
     center_layout.addWidget(table)
 
+    bottom_layout = QtWidgets.QHBoxLayout()
+    bottom_layout.setContentsMargins(0, 0, 0, 0)
+    bottom_layout.setObjectName("bottom_layout")
+
     back_button = QtWidgets.QPushButton()
     back_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
     back_button.setFocusPolicy(QtCore.Qt.ClickFocus)
@@ -144,8 +148,31 @@ def setupUi( frame):
     back_button.setDefault(False)
     back_button.setFlat(True)
     back_button.setObjectName("back_button")
+
+    bottom_layout.addWidget(back_button)
+    bottom_layout.addStretch()
+
     
-    center_layout.addWidget(back_button)
+    save_button = QtWidgets.QPushButton()
+    save_button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+    save_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+    save_button.setText("Sačuvaj")
+    save_button.setFont(font)
+    save_button.setMaximumWidth(300)
+    save_button.setStyleSheet("background: white;\n"
+"color: black;\n"
+"border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"outline: none;\n"
+"padding: 10px 30px;")
+    save_button.setAutoDefault(False)
+    save_button.setDefault(False)
+    save_button.setFlat(True)
+    save_button.setObjectName("save_button")
+
+    bottom_layout.addWidget(save_button)
+    
+    center_layout.addLayout(bottom_layout)
 
     frame_layout.addLayout(center_layout)
     frame.setLayout(frame_layout)
@@ -155,4 +182,5 @@ def setupUi( frame):
         "datepicker": datepicker,
         "seller_select": seller_select,
         "back_button": back_button,
+        "save_button": save_button
     }
