@@ -1,0 +1,170 @@
+* {
+  font-family: Tahoma, Verdana, Geneva,  sans-serif;
+}
+
+html{
+  background-color: white;
+}
+
+ body{
+  background-color:aquamarine;
+  margin: 0;
+  padding: 1em;
+  /* padding-top: 50px; */
+  /* width: 70%;
+  margin: 0 auto; */
+}
+
+h1, h2, h3{
+  background-color: rgb(246, 198, 138);
+}
+
+
+main{
+  background-color:azure;
+}
+
+body>header{
+  width: 100%;
+  background: red;
+  line-height: 50px;
+  position: fixed;
+  padding: 0 50px;
+  top:0;
+  left:0;
+  
+} 
+
+/* klase */
+
+.minH200{
+  min-height: 200px;
+  overflow:scroll;
+}
+
+.maxH300{
+  max-height: 300px !important;
+}
+
+.minH400{
+  min-height: 400px;
+}
+
+.borderRed{
+  border: 1px solid red;
+}
+
+.W250{
+  width: 250px;
+}
+
+.box{
+  width: 24%;
+  min-height: 5em;
+  margin: 0.5em auto;
+  display: inline-block;
+}
+
+.box100{
+  height: 100px;
+  width: 100px;
+}
+
+.box200{
+  height: 200px;
+  width: 200px;
+}
+
+.box300{
+  height: 300px;
+  width: 300px;
+}
+
+.box24p{
+  height: 200px;
+  width: 22%;
+  margin-top:1em
+}
+
+.boxFloat{
+  width: 22%;
+  min-height: 200px;
+  margin: 0.5em;
+  float: right;
+}
+
+.inlineBox{
+  width: 22%;
+  min-height: 200px;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+.nowrap{
+  white-space: nowrap;
+  overflow:scroll;
+}
+
+.ib-200{
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0.5em;
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 4px 6px 8px #333333;
+}
+
+.border{
+  border: 1px solid #999999;
+}
+
+.br50{
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+.rose{
+  background: rgb(250, 164, 164)
+}
+
+.white{
+  background: white
+}
+
+.bgYellow{
+  background-color: yellow;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+
+.absoluteCenter{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+/* flex properties */
+.flex-container{
+  background: #FFaa00;
+  display: flex;
+  flex-direction: row; /* row | column */
+  flex-wrap: wrap; /* nowrap |wrap | wrap-reverse */
+  justify-content: space-evenly; /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+  align-items: center; /* flex-start | flex-end | center | stretch | baseline
+} 
