@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="unos" action="#" method="get">
+        <label for="ime"> Input text-Ime:</label>
+        <input type="text" name="ime"/>
+        <br/>
+
+        <label for="sifra"> Input password-Sifra:</label>
+        <input type="password" name="sifra"/>
+        <br/>
+
+        <label> Input checkbox-Pol:</label>
+        <input type="checkbox" id="muski" name="pol" value="muski">
+        <label for="muski"> muski</label>
+        <input type="checkbox" id="zenski" name="pol" value="zenski">
+        <label for="zenski"> zenski</label>
+        <input type="checkbox" id="drugo" name="pol" value="drugo">
+        <label for="zenski"> drugo</label>
+        <br/>
+
+        <label > Input radio-Pol2:</label>
+        <input type="radio" id="muski" name="pol" value="muski">
+        <label for="muski">muski</label>
+        <input type="radio" id="zenski" name="pol" value="zenski">
+        <label for="zenski">zenski</label>
+        <input type="radio" id="drugo" name="pol" value="drugo">
+        <label for="drugo">drugo</label>
+        <br/>
+
+        <label for="godine"> Input number-Godine:</label>
+        <input type="number" name="godine"/>
+        <br/>
+
+        <label for="datumRodjenja"> Input date-Datum rodjenja:</label>
+        <input type="date" name="datumRodjenja"/>
+        <br/>
+
+        <label for="boja"> Input color-Boja:</label>
+        <input type="color" name="boja"/>
+        <br/>
+
+        <label for="auto" name="auto">Select1</label>
+        <select  name="auto" id="auto   ">
+            <option  value="volvo" >Volvo </option>
+            <option  value="saab" >Saab</option>
+            <option  value="mercedes" selected>Mercedes</option>
+            <option  value="audi" >Audi</option>
+        </select>
+        <br/>
+
+        <label name="autoGroup">Select2</label>
+        <select for="autoGroup" name="autoGroup">
+            <optgroup label="Swedish Cars">
+                <option value="volvo" >Volvo</option>
+                <option value="saab" >Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes" >Mercedes</option>
+                <option value="audi" >Audi</option>
+            </optgroup>
+        </select>
+        <br/>
+
+        <label name="autoDatalist">Datalist</label>
+        <input list="cars" type="text" name="autoGroup" id="autoGroup">
+        <datalist id="cars">
+            <option value="Volvo">
+            <option value="Mercedes">
+            <option value="Saab">
+            <option value="Audi ">
+        </datalist>
+        <br/>
+
+        <label for="opis">Textarea</label>
+        <textarea name="opis" cols="50" rows="4">
+            Ovo je inicijalni tekst koji ce biti prikazan u textarea polju
+        </textarea>
+        <br/>
+
+        <h5 >Akcije u formi </h5>
+        <input type="button" value="button"/>
+        <input type="reset" value="reset"/>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>
