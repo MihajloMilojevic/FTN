@@ -1,0 +1,24 @@
+{
+    "cars": {
+        "-MNVEu6iMr2EFlQO6TW6": {
+            "brand": "Peugeot",
+            "model": "308",
+            "year": 2015
+        },
+        "-MNVFR8uuJD3dS1iyydB": {
+            "brand": "Opel",
+            "model": "Corsa",
+            "year": 2008
+        },
+        "-MNVFWloD2Oa_koZhFEx": {
+            "brand": "Audi",
+            "model": "A6",
+            "year": 2011
+        },
+        "-MNVFcCqmYrRccCuOdTh": {
+            "brand": "Volkswagen",
+            "model": "Golf",
+            "year": 2006
+        }
+    }
+}

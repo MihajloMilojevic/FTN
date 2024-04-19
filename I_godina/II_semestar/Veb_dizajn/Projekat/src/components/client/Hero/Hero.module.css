@@ -1,0 +1,50 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    color: var(--color-main);
+} 
+.bg {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 110%;
+    height: 110%;
+    filter: blur(5px) grayscale(0.3) brightness(0.5);
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+}
+.hero p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}

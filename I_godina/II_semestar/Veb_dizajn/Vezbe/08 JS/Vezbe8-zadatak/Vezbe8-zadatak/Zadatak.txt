@@ -1,0 +1,1 @@
+let photosURL = "https://jsonplaceholder.typicode.com/photos";

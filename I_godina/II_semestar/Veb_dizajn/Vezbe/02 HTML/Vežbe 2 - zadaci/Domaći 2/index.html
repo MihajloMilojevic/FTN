@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - Registration</title>
+</head>
+<body>
+    <h1>Create an Account</h1>
+    <form action="#">
+        <p>
+            <label for="full_name">Full Name:</label> <br>
+            <input type="text" name="full_name" id="full_name" required pattern="^((\p{L})+(\s(\p{L})+)+)$"> 
+        </p>
+        <p>
+            <label for="email">Email:</label> <br>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="password">Password:</label> <br>
+            <input type="password" name="password" id="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+        </p>
+        <p>
+            <label for="age">Age:</label> <br>
+            <select name="age" id="age">
+                <option value="">-- Select Age --</option>
+                <option value="-18">Under 18</option>
+                <option value="18-30">18 to 30</option>
+                <option value="31-45">31 to 45</option>
+                <option value="46-60">46 to 60</option>
+                <option value="61-">61+</option>
+            </select>
+        </p>
+        <p>
+            Gender:
+            <label for="male">
+                <input type="radio" name="gender" id="male">
+                Male
+            </label>
+            <label for="female">
+                <input type="radio" name="gender" id="female">
+                Female
+            </label>
+        </p>
+        <p>
+            <label for="more">Tell us a little about yourself: </label> <br>
+            <textarea name="" id="" cols="40" rows="5"></textarea>
+        </p>
+        <p>
+            <input type="checkbox" name="agree" id="agree" required>
+            <label for="agree">
+                I agree to the <a href="http://www.dumb.com/terms" target="_blank">Terms & Conditions</a>
+            </label>
+        </p>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+tekst:
+Na ovoj stranici mozete videti trenutno vreme ili vremensku prognozu za 5 dana za traženu lokaciju. Unesite naziv mesta u polje za pretragu u navigaciji.
+
+Trenutna prognoza -> https://openweathermap.org/current
+prognoza za 5 dana -> https://openweathermap.org/forecast5
+API dokumentacija -> https://openweathermap.org/api
+OpenWeatherMap -> https://openweathermap.org/api

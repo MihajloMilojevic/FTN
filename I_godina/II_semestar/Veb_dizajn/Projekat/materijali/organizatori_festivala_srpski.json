@@ -1,0 +1,718 @@
+{
+    "organizatoriFestivala": {
+        "-MNQgy9N5foEWTmmA_1U": {
+            "naziv": "BeoArt Fest",
+            "adresa": "Knez Mihailova 48, Beograd, 11000",
+            "godinaOsnivanja": "2015",
+            "logo": "https://i.imgur.com/OV15WM6.jpeg",
+            "kontaktTelefon": "011/3042-568",
+            "email": "kontakt@beoartfest.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW63"
+        },
+        "-MNQftJa4rskH-dBqE9Z": {
+            "naziv": "Etno Srbija",
+            "adresa": "Vojvode Stepe 321, Beograd, 11000",
+            "godinaOsnivanja": "2010",
+            "logo": "https://i.imgur.com/jsFrKCn.jpeg",
+            "kontaktTelefon": "011/4223-690",
+            "email": "info@etnosrbija.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW60"
+        },
+        "-MNQg8Nd8YPRs-5Kbgqu": {
+            "naziv": "Lazarevac Fest",
+            "adresa": "Karađorđeva 12, Lazarevac, 11550",
+            "godinaOsnivanja": "2018",
+            "logo": "https://i.imgur.com/NhAzBBF.jpeg",
+            "kontaktTelefon": "014/7552-322",
+            "email": "office@lazarevacmusicdays.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW61"
+        },
+        "-MNQgI0t2nV3AT1YxNAr": {
+            "naziv": "Dunavski Horizonti",
+            "adresa": "Zelena 22, Bečej, 21220",
+            "godinaOsnivanja": "2003",
+            "logo": "https://i.imgur.com/k4nEZm6.jpeg",
+            "kontaktTelefon": "021/880-304",
+            "email": "info@dunavskihorizonti.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW62"
+        },
+        "-MNQgO7Cm756dkG36efQ": {
+            "naziv": "Urban Beat",
+            "adresa": "Makedonska 30, Beograd, 11000",
+            "godinaOsnivanja": "2012",
+            "logo": "https://i.imgur.com/nmAOOHF.jpeg",
+            "kontaktTelefon": "011/4040-2020",
+            "email": "contact@urbanbeat.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW64"
+        },
+        "-MNQgUTr_lN9O7L8AoUS": {
+            "naziv": "Gari Fest",
+            "adresa": "Bulevar Oslobođenja 77, Novi Sad, 21000",
+            "godinaOsnivanja": "1998",
+            "logo": "https://i.imgur.com/GXPCPrq.jpeg",
+            "kontaktTelefon": "021/422-455",
+            "email": "jazzcarnival@ns.com",
+            "festivali": "-MNVEu6iMr2EFlQO6TW65"
+        },
+        "-MNQgfzXvQgwB8K-SVfF": {
+            "naziv": "EtnoFest Beograd",
+            "adresa": "Gavrila Principa 47, Beograd, 11000",
+            "godinaOsnivanja": "2007",
+            "logo": "https://i.imgur.com/LpxNm2V.jpeg",
+            "kontaktTelefon": "011/322-9087",
+            "email": "kontakt@etnofestbgd.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW66"
+        },
+        "-MNQgnHVDMtvSasYG0C8": {
+            "naziv": "Belgrade Urban Fest",
+            "adresa": "Topličin Venac 22, Beograd, 11000",
+            "godinaOsnivanja": "2011",
+            "logo": "https://i.imgur.com/koU4UuR.jpeg",
+            "kontaktTelefon": "011/764-2002",
+            "email": "info@bufest.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW67"
+        },
+        "-MNQg_nhfUBoPJKBu72e": {
+            "naziv": "Niš Fest",
+            "adresa": "Obrenovićeva 20, Niš, 18000",
+            "godinaOsnivanja": "1999",
+            "logo": "https://i.imgur.com/zUrrGam.jpeg",
+            "kontaktTelefon": "018/520-084",
+            "email": "office@nisvillejazzblues.rs",
+            "festivali": "-MNVEu6iMr2EFlQO6TW68"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW60": {
+        "-MNQftJa4rskH-dBqF9Z0": {
+            "naziv": "Festival Grčkih Melodija",
+            "opis": "Istražite bogatstvo grčke muzičke tradicije kroz niz koncerata i radionica, gde će vas voditi kroz istoriju grčke muzike, od antike do modernih dana, uz prelepi ambijent Sitonije.",
+            "slike": [
+                "https://i.imgur.com/LMOgMnP.jpeg",
+                "https://i.imgur.com/yBtIoEE.jpeg",
+                "https://i.imgur.com/aHRcuqe.jpeg",
+                "https://i.imgur.com/HxEZ2EO.jpeg",
+                "https://i.imgur.com/WhhEFXe.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Autobus",
+            "cena": "1500",
+            "maxOsoba": "300"
+        },
+        "-MNQftJa4rskH-dBqF9Z1": {
+            "naziv": "Atoski Slikarski Dnevnik",
+            "opis": "Pridružite se umetnicima na Atosu dok slikaju inspirisani prirodom i monaškim životom. Ovaj slikarski maraton je prilika za sve posetioce da se upuste u kreativnost i razmene iskustva sa umetnicima.",
+            "slike": [
+                "https://i.imgur.com/13NPfCE.jpeg",
+                "https://i.imgur.com/elM9ZuF.jpeg",
+                "https://i.imgur.com/ljLJJPc.jpeg",
+                "https://i.imgur.com/Ddo6ETm.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Sopstveni",
+            "cena": "2500",
+            "maxOsoba": "200"
+        },
+        "-MNQftJa4rskH-dBqF9Z2": {
+            "naziv": "Karneval u Platamonu",
+            "opis": "Platamon se pretvara u živopisno središte kulture i zabave sa karnevalom koji privlači izvođače i posetioce iz celog sveta. Uživajte u muzici, plesu, umetnosti i tradicionalnoj kuhinji.",
+            "slike": [
+                "https://i.imgur.com/zHG54w5.jpeg",
+                "https://i.imgur.com/UhJy3mO.jpeg",
+                "https://i.imgur.com/oNkVgeB.jpeg",
+                "https://i.imgur.com/AmAjjp9.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "2000",
+            "maxOsoba": "500"
+        },
+        "-MNQftJa4rskH-dBqF9Z3": {
+            "naziv": "Egejske Kulturne Noći",
+            "opis": "Provedite večeri uživajući u raznolikom programu koji uključuje muzičke nastupe, tradicionalni ples i priče pod zvezdanim nebom Sitonije. Savršena kombinacija opuštanja i kulturnog obogaćivanja.",
+            "slike": [
+                "https://i.imgur.com/S6vhQ9h.jpeg",
+                "https://i.imgur.com/etlD1v9.jpeg",
+                "https://i.imgur.com/RXo8fpd.jpeg",
+                "https://i.imgur.com/38DNu92.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Autobus",
+            "cena": "24784",
+            "maxOsoba": "41"
+        },
+        "-MNQftJa4rskH-dBqF9Z4": {
+            "naziv": "Vrasna Etno Festival",
+            "opis": "Oživite duh tradicionalne Grčke na Etno Festivalu u Nea Vrasni, gde lokalna zajednica predstavlja svoju kulturu kroz muziku, ples, i gastronomiju. Istinski doživljaj grčkog gostoprimstva i kulture.",
+            "slike": [
+                "https://i.imgur.com/QORUNqY.jpeg",
+                "https://i.imgur.com/yW1f61r.jpeg",
+                "https://i.imgur.com/dzDnwie.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "18999",
+            "maxOsoba": "40"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW61": {
+        "-MNQftJa4rskH-dBqE9Z5": {
+            "naziv": "Festival Jadranskih Zvjezda",
+            "opis": "U srcu Kušadasija, ovaj festival okuplja vrhunske izvođače iz regije i svijeta, obećavajući nezaboravne noći pod zvezdama. Uživajte u muzici, plesu i umetničkim performansima uz more.",
+            "slike": [
+                "https://i.imgur.com/Xr7tC1k.jpeg",
+                "https://i.imgur.com/9O1Q9.jpeg",
+                "https://i.imgur.com/ce5xcAr.jpeg",
+                "https://i.imgur.com/cQkZ9iH.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "45000",
+            "maxOsoba": "1500"
+        },
+        "-MNQftJa4rskH-dBqE9Z6": {
+            "naziv": "Marmaris Međunarodni Filmski Karneval",
+            "opis": "Doživite čarobnu atmosferu filmskih priča na otvorenom u Marmarisu. Ovaj filmski karneval predstavlja selekciju domaćih i stranih filmskih ostvarenja, upotpunjenu radionicama i gostovanjima poznatih filmskih stvaralaca.",
+            "slike": [
+                "https://i.imgur.com/G2CpQ7G.jpeg",
+                "https://i.imgur.com/IDf3fDZ.jpeg",
+                "https://i.imgur.com/QjTeoNa.jpeg",
+                "https://i.imgur.com/7EFaYUX.jpeg"
+            ],
+            "tip": "Filmski",
+            "prevoz": "Avion",
+            "cena": "52000",
+            "maxOsoba": "200"
+        },
+        "-MNQftJa4rskH-dBqE9Z7": {
+            "naziv": "Belek Gurmanski Festival",
+            "opis": "Zaronite u svijet ukusa na Gurmanskom festivalu u Beleku. Ovo jedinstveno kulinarsko iskustvo spaja tradicionalne ukuse sa modernim kulinarskim trendovima, uz učešće renomiranih šefova kuhinja.",
+            "slike": [
+                "https://i.imgur.com/exbQ5PA.jpeg",
+                "https://i.imgur.com/bO54Wzy.jpeg",
+                "https://i.imgur.com/WmAYEz0.jpeg"
+            ],
+            "tip": "Gastronomski",
+            "prevoz": "Avion",
+            "cena": "60000",
+            "maxOsoba": "500"
+        },
+        "-MNQftJa4rskH-dBqE9Z8": {
+            "naziv": "Antika Fest Side",
+            "opis": "Oživite duh drevne Side na Antika Festu, gdje istorija susreće modernu kulturu. Festival karakterišu dramatične rekonstrukcije, muzičke numere i autentične prodavnice.",
+            "slike": [
+                "https://i.imgur.com/4LRGGyb.jpeg",
+                "https://i.imgur.com/PgVcwu1.jpeg",
+                "https://i.imgur.com/6HXzmSc.jpeg",
+                "https://i.imgur.com/Gm46ZVU.jpeg",
+                "https://i.imgur.com/hFhqj6u.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Avion",
+            "cena": "36000",
+            "maxOsoba": "500"
+        },
+        "-MNQftJa4rskH-dBqE9Z9": {
+            "naziv": "Rimski Festival Svetlosti",
+            "opis": "Doživite čaroliju večnog grada tokom Rimskog Festivala Svetlosti. Ovaj događaj transformiše gradsko jezgro spektakularnim svetlosnim instalacijama i umetničkim projekcijama.",
+            "slike": [
+                "https://i.imgur.com/mHY2Ayb.jpeg",
+                "https://i.imgur.com/bsDUf1e.jpeg",
+                "https://i.imgur.com/Jaf1QAP.jpeg",
+                "https://i.imgur.com/JmOPk9F.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "28000",
+            "maxOsoba": "220"
+        },
+        "-MNQftJa4rskH-dBqE9K0": {
+            "naziv": "Milanski Festival Mode",
+            "opis": "Milanski Festival Mode predstavlja epicentar svetskih trendova, gdje se poznati dizajneri i nadolazeći talenti susreću da pokažu svoje najnovije kolekcije.",
+            "slike": [
+                "https://i.imgur.com/Fia7una.jpeg",
+                "https://i.imgur.com/g38s2Um.jpeg",
+                "https://i.imgur.com/uyCP5UY.jpeg",
+                "https://i.imgur.com/0eS4nvr.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "50000",
+            "maxOsoba": "800"
+        },
+        "-MNQftJa4rskH-dBqE9K1": {
+            "naziv": "Venecijanski Festival Umjetnosti",
+            "opis": "Otkrijte čari Venecije kroz njen Festival Umjetnosti, praznik vizuelnih, izvođačkih i digitalnih umetnosti koji privlači umetnike i posetioce iz celog sveta.",
+            "slike": [
+                "https://i.imgur.com/qIL83Vn.jpeg",
+                "https://i.imgur.com/AQGagK9.jpeg",
+                "https://i.imgur.com/S1CHGHU.jpeg",
+                "https://i.imgur.com/UptsBj2.jpeg",
+                "https://i.imgur.com/J7uh4u3.jpeg",
+                "https://i.imgur.com/5kMKf8Q.jpeg",
+                "https://i.imgur.com/7twbq9o.jpeg",
+                "https://i.imgur.com/2hNKHDR.jpeg",
+                "https://i.imgur.com/ePvy1.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "32000",
+            "maxOsoba": "420"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW62": {
+        "-MNQftJa4rskH-dAqR9W0": {
+            "naziv": "Festival Morske Muzike",
+            "opis": "Doživite čaroliju Festivala Morske Muzike u Nei Pori, gde se talasi Egejskog mora spajaju sa zvucima tradicionalnih i modernih muzičkih numera.",
+            "slike": [
+                "https://i.imgur.com/JHE7FzG.jpeg",
+                "https://i.imgur.com/38DNu92.jpeg",
+                "https://i.imgur.com/yW1f61r.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Sopstveni",
+            "cena": "45000",
+            "maxOsoba": "150"
+        },
+        "-MNQftJa4rskH-dAqR9W1": {
+            "naziv": "Olimpski Festival Pustolovina",
+            "opis": "Otkrijte avanturistički duh Leptokarije na Olimpskom Festivalu Pustolovina, gdje posetioci mogu učestvovati u planinarenju, biciklizmu i drugim aktivnostima na otvorenom.",
+            "slike": [
+                "https://i.imgur.com/8eealIc.jpeg",
+                "https://i.imgur.com/aIYwY6p.jpeg",
+                "https://i.imgur.com/hI6NdRE.jpeg",
+                "https://i.imgur.com/EbD3APf.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Autobus",
+            "cena": "37500",
+            "maxOsoba": "200"
+        },
+        "-MNQftJa4rskH-dAqR9W2": {
+            "naziv": "Festival Prirode Asprovalta",
+            "opis": "Zeleni brežuljci i čist vazduh Asprovalte su domaćin Festivala Prirode, događaja koji slavi održivost, prirodu i ekološku svest kroz radionice, predavanja i izlete.",
+            "slike": [
+                "https://i.imgur.com/NXNEpZB.jpeg",
+                "https://i.imgur.com/Pn0UHiM.jpeg",
+                "https://i.imgur.com/AqOxgvU.jpeg",
+                "https://i.imgur.com/rEgCfvQ.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Autobus",
+            "cena": "49000",
+            "maxOsoba": "300"
+        },
+        "-MNQftJa4rskH-dAqR9W3": {
+            "naziv": "Festival Zalazaka Stavros",
+            "opis": "Uživajte u Festivalu Zalazaka u Stavrosu, gde se svetlost sunca i muzika spajaju u savršenom skladu uz obalu, stvarajući nezaboravne večeri.",
+            "slike": [
+                "https://i.imgur.com/HQjJRF5.jpeg",
+                "https://i.imgur.com/8YrL46d.jpeg",
+                "https://i.imgur.com/cMcL5sq.jpeg",
+                "https://i.imgur.com/c1QUpXf.jpeg",
+                "https://i.imgur.com/kIq4M4i.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Autobus",
+            "cena": "40000",
+            "maxOsoba": "100"
+        },
+        "-MNQftJa4rskH-dAqR9W4": {
+            "naziv": "Prag Zimske Svetlosti",
+            "opis": "Otkrijte čar Praga zimi, kroz festival 'Prag Zimske Svetlosti', koji obasjava grad u spektaklu svetla i boja, pretvarajući istorijske lokacije u živopisne umetničke instalacije.",
+            "slike": [
+                "https://i.imgur.com/HJ7tFU2.jpeg",
+                "https://i.imgur.com/4mJwavP.jpeg",
+                "https://i.imgur.com/WovxmzR.jpeg",
+                "https://i.imgur.com/QEq4pdc.jpeg",
+                "https://i.imgur.com/on2Sj6m.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Avion",
+            "cena": "45000",
+            "maxOsoba": "500"
+        },
+        "-MNQftJa4rskH-dAqR9W5": {
+            "naziv": "Toskanski Vinski Karneval",
+            "opis": "Doživite jedinstveni Toskanski Vinski Karneval, gde se proslavlja bogatstvo vinske tradicije regije kroz degustacije, parade i kulturne predstave.",
+            "slike": [
+                "https://i.imgur.com/pSQfbd3.jpeg",
+                "https://i.imgur.com/nobYaoy.jpeg",
+                "https://i.imgur.com/aZLnuDt.jpeg",
+                "https://i.imgur.com/1w0EmIg.jpeg",
+                "https://i.imgur.com/HunVnmO.jpeg"
+            ],
+            "tip": "Gastronomski",
+            "prevoz": "Autobus",
+            "cena": "30000",
+            "maxOsoba": "200"
+        },
+        "-MNQftJa4rskH-dAqR9W6": {
+            "naziv": "Francuski Festival Vina i Sira",
+            "opis": "Doživite čari Francuske kroz njen čuveni Festival vina i sira. Upustite se u avanturu otkrivanja skrivenih dragulja francuske kulture, uz degustaciju najfinijih vina i sireva.",
+            "slike": [
+                "https://i.imgur.com/OrzO5Nd.jpeg",
+                "https://i.imgur.com/X2dpgUP.jpeg",
+                "https://i.imgur.com/ub1UOGl.jpeg",
+                "https://i.imgur.com/rd1QLOC.jpeg",
+                "https://i.imgur.com/Wbe20Jn.jpeg"
+            ],
+            "tip": "Gastronomski",
+            "prevoz": "Sopstveni",
+            "cena": "55000",
+            "maxOsoba": "100"
+        },
+        "-MNQftJa4rskH-dAqR9W7": {
+            "naziv": "Austrijski Karavan Muzike",
+            "opis": "Iskusite Austriju na jedinstven način uz Austrijski Karavan Muzike, koji vas vodi kroz zimske čarolije uz zvuke tradicionalne i moderne muzike.",
+            "slike": [
+                "https://i.imgur.com/0pD1inU.jpeg",
+                "https://i.imgur.com/Oe2Xy1Z.jpeg",
+                "https://i.imgur.com/5lBmI5E.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Autobus",
+            "cena": "82000",
+            "maxOsoba": "50"
+        },
+        "-MNQftJa4rskH-dAqR9W8": {
+            "naziv": "Slovenija Zeleni Festival",
+            "opis": "Uživajte u Slovenija Zelenom Festivalu, gdje se priroda i održivost susreću. Otkrijte lepote slovenačkih pejzaža kroz interaktivne radionice, šetnje prirodom i kulturna dešavanja.",
+            "slike": [
+                "https://i.imgur.com/h2Ult2l.jpeg",
+                "https://i.imgur.com/aZrq7YW.jpeg",
+                "https://i.imgur.com/VAFxMqU.jpeg",
+                "https://i.imgur.com/epFzema.jpeg",
+                "https://i.imgur.com/3ecTSso.jpeg",
+                "https://i.imgur.com/Bq4bvx1.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Sopstveni",
+            "cena": "50000",
+            "maxOsoba": "100"
+        },
+        "-MNQftJa4rskH-dAqR9W9": {
+            "naziv": "Festival Sarajevske Zime",
+            "opis": "Otkrijte čaroliju Sarajeva zimi kroz Festival Sarajevske Zime, događaj koji spaja umetnost, kulturu i sport. Uživajte u raznovrsnim aktivnostima, od koncerata i izložbi do zimskih sportova, u ovom istorijskom gradu.",
+            "slike": [
+                "https://i.imgur.com/hnnhsQM.jpeg",
+                "https://i.imgur.com/RaiLS17.jpeg",
+                "https://i.imgur.com/1mxMivE.jpeg",
+                "https://i.imgur.com/PrNYIPc.jpeg",
+                "https://i.imgur.com/rmTUJ.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Sopstveni",
+            "cena": "40000",
+            "maxOsoba": "100"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW63": {
+        "-MNQftJa4rskH-dBqF9L0": {
+            "naziv": "Festival Ostrvske Muzike",
+            "opis": "Zamislite festival gdje pulsirajući ritmovi i melodije ispunjavaju vazduh na pozadini tropskog raja. Festival Ostrvske Muzike na Zanzibaru mesto je gde se svetski DJ-evi i umetnici susreću, stvarajući nezaboravno iskustvo pod zvezdama.",
+            "slike": [
+                "https://i.imgur.com/nIhAjPQ.jpeg",
+                "https://i.imgur.com/XJRsDJZ.jpeg",
+                "https://i.imgur.com/CAx5RSt.jpeg",
+                "https://i.imgur.com/WdrdkfY.jpeg",
+                "https://i.imgur.com/ZGXCGm0.jpeg",
+                "https://i.imgur.com/pN3ugei.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "111256",
+            "maxOsoba": "33"
+        },
+        "-MNQftJa4rskH-dBqF9L1": {
+            "naziv": "Maldivi Pod Zvezdama",
+            "opis": "Maldivi Pod Zvezdama transformišu već prelepe plaže u večernje pozornice za žive nastupe. Uživajte u intimnim koncertima i setovima DJ-eva sa pogledom na beskrajni Indijski okean, što čini ovaj festival jedinstvenim begom od realnosti.",
+            "slike": [
+                "https://i.imgur.com/NJxBerG.jpeg",
+                "https://i.imgur.com/vDxxJYW.jpeg",
+                "https://i.imgur.com/bJVCCxK.jpeg",
+                "https://i.imgur.com/X8x8IcT.png",
+                "https://i.imgur.com/E6JJwO2.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "103254",
+            "maxOsoba": "22"
+        },
+        "-MNQftJa4rskH-dBqF9L2": {
+            "naziv": "Kopaonik Zimski Fest",
+            "opis": "Kopaonik Zimski Fest je više od skijanja i snowboardinga; to je mesto gde se zimska magija susreće sa muzikom. Predstavljamo vam noćni festival u srcu planine, gdje nastupaju bendovi i DJ-evi uživo, okruženi zasneženim pejzažima.",
+            "slike": [
+                "https://i.imgur.com/roanJFQ.jpeg",
+                "https://i.imgur.com/pjX4CVq.jpeg",
+                "https://i.imgur.com/5N6SBMa.jpeg",
+                "https://i.imgur.com/wvTfgwW.jpeg",
+                "https://i.imgur.com/AE9iOfg.jpeg",
+                "https://i.imgur.com/Yw9hmxE.jpeg",
+                "https://i.imgur.com/mbdQIzN.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Sopstveni",
+            "cena": "77898",
+            "maxOsoba": "50"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW64": {
+        "-MNQftJa4rskH-dBqG9L3": {
+            "naziv": "Kopaonik Film Festival",
+            "opis": "Za ljubitelje filma i planinskih avantura, Kopaonik Film Festival predstavlja spoj kinematografije i prirode. Uživajte u gledanju međunarodnih i domaćih filmova pod zvezdanim nebom, okruženi zimskim čarima Kopaonika.",
+            "slike": [
+                "https://i.imgur.com/roanJFQ.jpeg",
+                "https://i.imgur.com/pjX4CVq.jpeg",
+                "https://i.imgur.com/5N6SBMa.jpeg",
+                "https://i.imgur.com/wvTfgwW.jpeg",
+                "https://i.imgur.com/AE9iOfg.jpeg",
+                "https://i.imgur.com/Yw9hmxE.jpeg",
+                "https://i.imgur.com/mbdQIzN.jpeg"
+            ],
+            "tip": "Filmski",
+            "prevoz": "Sopstveni",
+            "cena": "43121",
+            "maxOsoba": "12"
+        },
+        "-MNQftJa4rskH-dBqG9L4": {
+            "naziv": "Zanzibar Jazz & Arts Festival",
+            "opis": "Osetite ritam ostrva na Zanzibar Jazz & Arts Festivalu, gde se muzika spaja s umetnošću pod tropskim suncem. Ovo višednevno događanje privlači umetnike i muzičare iz celog sveta, obećavajući nezaboravno iskustvo pored kristalno čistih voda.",
+            "slike": [
+                "https://i.imgur.com/nIhAjPQ.jpeg",
+                "https://i.imgur.com/XJRsDJZ.jpeg",
+                "https://i.imgur.com/CAx5RSt.jpeg",
+                "https://i.imgur.com/WdrdkfY.jpeg",
+                "https://i.imgur.com/ZGXCGm0.jpeg",
+                "https://i.imgur.com/pN3ugei.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "323223",
+            "maxOsoba": "12"
+        },
+        "-MNQftJa4rskH-dBqG9L5": {
+            "naziv": "Kuşadasi Cultural Festival",
+            "opis": "Kuşadasi Cultural Festival je prozor u bogatu istoriju i kulturu Egejske obale. Festival obuhvata tradicionalnu muziku, ples, umetnost i gastronomiju, pružajući posetiocima dublji uvid u lokalnu nasleđe i savremeni život.",
+            "slike": [
+                "https://i.imgur.com/Xr7tC1k.jpeg",
+                "https://i.imgur.com/9O1Q9.jpeg",
+                "https://i.imgur.com/ce5xcAr.jpeg",
+                "https://i.imgur.com/cQkZ9iH.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Avion",
+            "cena": "3212",
+            "maxOsoba": "28"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW65": {
+        "-MNQftJa4rskH-dBqG9L6": {
+            "naziv": "Egejsko Letnje Pozorište",
+            "opis": "Otkrijte čaroliju Egejskog Letnjeg Pozorišta u Kušadasiju, festivala koji slavi bogatstvo otvorene scene uz more. Uz spektakularan pogled na Egejsko more, ovaj festival kombinuje pozorišne predstave, živu muziku i plesne performanse, ističući kulturnu raznolikost regiona.",
+            "slike": [
+                "https://i.imgur.com/Xr7tC1k.jpeg",
+                "https://i.imgur.com/9O1Q9.jpeg",
+                "https://i.imgur.com/ce5xcAr.jpeg",
+                "https://i.imgur.com/cQkZ9iH.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Avion",
+            "cena": "43212",
+            "maxOsoba": "16"
+        },
+        "-MNQftJa4rskH-dBqG9L7": {
+            "naziv": "Rimski Filmski Karneval",
+            "opis": "Rimski Filmski Karneval je jedinstveno iskustvo koje spaja filmsku umetnost sa istorijskim lepotama Rima. Posetioci mogu uživati u projekcijama pod zvezdama među antičkim ruševinama, uz posebne događaje koji oživljavaju duh Rima kao večnog grada.",
+            "slike": [
+                "https://i.imgur.com/mHY2Ayb.jpeg",
+                "https://i.imgur.com/bsDUf1e.jpeg",
+                "https://i.imgur.com/Jaf1QAP.jpeg",
+                "https://i.imgur.com/JmOPk9F.jpeg"
+            ],
+            "tip": "Filmski",
+            "prevoz": "Autobus",
+            "cena": "66345",
+            "maxOsoba": "43"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW66": {
+        "-MNQftJa4rskH-dBqG9T1": {
+            "naziv": "Milanski Modni Festival",
+            "opis": "Milanski Modni Festival pretvara ulice grada u živu pistu, odražavajući Milano kao svetsku prestonicu mode. Ovaj događaj spaja internacionalne dizajnere, nove talente i modnu publiku u jedinstvenom ambijentu grada poznatog po svojim istorijskim spomenicima i modernoj dinamici.",
+            "slike": [
+                "https://i.imgur.com/Fia7una.jpeg",
+                "https://i.imgur.com/g38s2Um.jpeg",
+                "https://i.imgur.com/uyCP5UY.jpeg",
+                "https://i.imgur.com/0eS4nvr.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "54232",
+            "maxOsoba": "43"
+        },
+        "-MNQftJa4rskH-dBqG9T2": {
+            "naziv": "Festival Venecijanske Maske",
+            "opis": "Festival Venecijanske Maske je tradicionalni spektakl koji slavi istorijsko nasleđe Venecije kroz muziku, ples, i naravno, čuvene venecijanske maske. Događaj oživljava magiju i misteriju gradskih kanala i gondola, pružajući posetiocima šansu da iskuse duh Venecije u punom sjaju.",
+            "slike": [
+                "https://i.imgur.com/qIL83Vn.jpeg",
+                "https://i.imgur.com/AQGagK9.jpeg",
+                "https://i.imgur.com/S1CHGHU.jpeg",
+                "https://i.imgur.com/UptsBj2.jpeg",
+                "https://i.imgur.com/J7uh4u3.jpeg",
+                "https://i.imgur.com/5kMKf8Q.jpeg",
+                "https://i.imgur.com/7twbq9o.jpeg",
+                "https://i.imgur.com/2hNKHDR.jpeg",
+                "https://i.imgur.com/ePvy1.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "54321",
+            "maxOsoba": "33"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW67": {
+        "-MNQftJa4rskH-dBqG9T3": {
+            "naziv": "Festival Grčke Mitologije na Sitoniji",
+            "opis": "Ovaj festival donosi duh drevne Grčke u srcu Sitonije, nudeći spoj mitoloških predstava, muzičkih i plesnih radionica, te kulturnih izložbi. Posetioci će imati priliku da nauče o bogatim mitološkim pričama koje su oblikovale region, uz istovremeno uživanje u prelepoj prirodi i gostoprimstvu lokalnog stanovništva.",
+            "slike": [
+                "https://i.imgur.com/LMOgMnP.jpeg",
+                "https://i.imgur.com/yBtIoEE.jpeg",
+                "https://i.imgur.com/aHRcuqe.jpeg",
+                "https://i.imgur.com/HxEZ2EO.jpeg",
+                "https://i.imgur.com/WhhEFXe.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Autobus",
+            "cena": "54221",
+            "maxOsoba": "12"
+        },
+        "-MNQftJa4rskH-dBqG9T4": {
+            "naziv": "Atos Duhovni Festival",
+            "opis": "Ovaj festival slavi duhovnu istoriju i prirodnu lepotu poluostrva Atos. Kroz predavanja, radionice i vođene ture po manastirima, posetioci će istražiti duhovno nasleđe Atosa i njegov značaj u pravoslavnom hrišćanstvu, kao i jedinstvenu prirodu koja ga okružuje.",
+            "slike": [
+                "https://i.imgur.com/13NPfCE.jpeg",
+                "https://i.imgur.com/elM9ZuF.jpeg",
+                "https://i.imgur.com/ljLJJPc.jpeg",
+                "https://i.imgur.com/Ddo6ETm.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Autobus",
+            "cena": "43211",
+            "maxOsoba": "32"
+        },
+        "-MNQftJa4rskH-dBqG9T5": {
+            "naziv": "Platamon Plaža Fest",
+            "opis": "Platamon Plaža Fest poziva posetioce da dožive leto puno muzike, sporta i zabave na plaži. Festival kombinuje žive nastupe bendova i DJ-eva sa turnirima u odbojci na pesku i surf takmičenjima, nudeći nezaboravno iskustvo na jednoj od najlepših plaža Grčke.",
+            "slike": [
+                "https://i.imgur.com/zHG54w5.jpeg",
+                "https://i.imgur.com/UhJy3mO.jpeg",
+                "https://i.imgur.com/oNkVgeB.jpeg",
+                "https://i.imgur.com/AmAjjp9.jpeg"
+            ],
+            "tip": "Muzički",
+            "prevoz": "Autobus",
+            "cena": "44321",
+            "maxOsoba": "21"
+        }
+    },
+    "-MNVEu6iMr2EFlQO6TW68": {
+        "-MNQftJa4rskH-dBqR9T6": {
+            "naziv": "Festival Ribarske Tradicije Nei Pori",
+            "opis": "Ovaj festival proslavlja bogatu ribarsku tradiciju Nei Pori kroz degustacije sveže ribe, kulinarske radionice i obrazovne ture o ribolovu. Uzivajte u ribolovačkim takmičenjima i saznajte više o lokalnoj kulturi i tradiciji, dok se opuštate na prelepim plažama Nei Pori.",
+            "slike": [
+                "https://i.imgur.com/JHE7FzG.jpeg",
+                "https://i.imgur.com/38DNu92.jpeg",
+                "https://i.imgur.com/yW1f61r.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Sopstveni",
+            "cena": "12321",
+            "maxOsoba": "55"
+        },
+        "-MNQftJa4rskH-dBqR9T7": {
+            "naziv": "Olimpski Kulturni Festival Leptokaria",
+            "opis": "Provedite dane uživajući u kulturnom bogatstvu Leptokarije na Olimpskom Kulturnom Festivalu. Otkrijte istoriju i mitologiju Olimpa kroz umetničke izložbe, predstave i priče, uz autentičnu muziku i ples ovog regiona. Festival je prilika za učenje o istoriji i uživanje u lepotama Leptokarije.",
+            "slike": [
+                "https://i.imgur.com/8eealIc.jpeg",
+                "https://i.imgur.com/aIYwY6p.jpeg",
+                "https://i.imgur.com/hI6NdRE.jpeg",
+                "https://i.imgur.com/EbD3APf.jpeg"
+            ],
+            "tip": "Umetnički",
+            "prevoz": "Autobus",
+            "cena": "43121",
+            "maxOsoba": "71"
+        },
+        "-MNQftJa4rskH-dBqR9T8": {
+            "naziv": "Asprovalta Avantura & Priroda Fest",
+            "opis": "Asprovalta Avantura & Priroda Fest vodi posetioce na istraživanje prelepih prirodnih pejzaža kroz planinarenje, biciklizam i ekološke radionice. Učestvujte u avanturističkim aktivnostima koje slave očuvanje prirode, uz uživanje u lokalnim gastronomskim specijalitetima.",
+            "slike": [
+                "https://i.imgur.com/NXNEpZB.jpeg",
+                "https://i.imgur.com/Pn0UHiM.jpeg",
+                "https://i.imgur.com/AqOxgvU.jpeg",
+                "https://i.imgur.com/rEgCfvQ.jpeg"
+            ],
+            "tip": "Edukativni",
+            "prevoz": "Autobus",
+            "cena": "55555",
+            "maxOsoba": "55"
+        }
+    },
+    "korisnici": {
+        "-MNQo55Aw0tLdwahMZMK": {
+            "korisnickoIme": "petar_p",
+            "lozinka": "novapetar321",
+            "ime": "Petar",
+            "prezime": "Pavlović",
+            "email": "petar.pavlovic@example.com",
+            "datumRodjenja": "1994-10-22",
+            "adresa": "Bulevar Oslobođenja 101, Novi Sad, 21000",
+            "telefon": "061123123",
+            "zanimanje": "Softverski inženjer"
+        },
+        "-MNQoCqEXydVTdCNV47C": {
+            "korisnickoIme": "jovana_j",
+            "lozinka": "novajovana321",
+            "ime": "Jovana",
+            "prezime": "Janković",
+            "email": "jovana.jankovic@example.com",
+            "datumRodjenja": "1982-05-05",
+            "adresa": "Nikole Pašića 15, Zrenjanin, 23000",
+            "telefon": "062987987",
+            "zanimanje": "Grafički dizajner"
+        },
+        "-MNQoJw2p9rci4Rm_rYY": {
+            "korisnickoIme": "markom",
+            "lozinka": "novamarko321",
+            "ime": "Marko",
+            "prezime": "Marić",
+            "email": "marko.maric@example.com",
+            "datumRodjenja": "1990-09-17",
+            "adresa": "Knez Mihailova 22, Beograd, 11000",
+            "telefon": "063456456",
+            "zanimanje": "Projektni menadžer"
+        },
+        "-MNQoR-5erkWvcm8Hdnk": {
+            "korisnickoIme": "filipf",
+            "lozinka": "novafilip321",
+            "ime": "Filip",
+            "prezime": "Frušić",
+            "email": "filip.frusic@example.com",
+            "datumRodjenja": "1973-03-10",
+            "adresa": "Temerinska 33, Novi Sad, 21000",
+            "telefon": "064987987",
+            "zanimanje": "Arhitekta"
+        },
+        "-MNQoWt_gDudX5W8TLQj": {
+            "korisnickoIme": "tijanat",
+            "lozinka": "novatijana321",
+            "ime": "Tijana",
+            "prezime": "Trifunović",
+            "email": "tijana.trifunovic@example.com",
+            "datumRodjenja": "1998-06-29",
+            "adresa": "Cara Dušana 8, Zrenjanin, 23000",
+            "telefon": "065321321",
+            "zanimanje": "Web developer"
+        }
+    }
+}

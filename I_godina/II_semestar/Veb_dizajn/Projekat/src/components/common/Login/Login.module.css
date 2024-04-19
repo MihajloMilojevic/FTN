@@ -1,0 +1,136 @@
+.form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    align-self: stretch;
+}
+.form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: 0;
+}
+.error {
+    color: red;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+}
+.inputs > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+.inputs  div label {
+    flex: 1;
+}
+.inputs  div input {
+    flex: 2;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.buttons button {
+    min-width: 100px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-auxiliary-1);
+    color: var(--color-main);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.buttons button[type="submit"] {
+    background-color: var(--color-auxiliary-2);
+    color: var(--color-bg-secondary);
+}
+.buttons button:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-main);
+}
+.buttons button[type="submit"]:hover {
+    background-color: var(--color-main);
+    color: var(--color-bg-secondary);
+}
+
+.wrapper {
+    min-width: 40%;
+    min-height: 45%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pass {
+    position: relative;
+}
+.pass button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        min-width: 80%;
+    }
+    .form h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 512px) {
+    .wrapper {
+        width: 100%;
+    }
+    .inputs > div {
+        flex-direction: column;
+    }
+    .inputs div input {
+        width: 100%;
+    }
+    .pass button {
+        bottom: 25%;
+        transform: translateY(50%);
+    }
+}

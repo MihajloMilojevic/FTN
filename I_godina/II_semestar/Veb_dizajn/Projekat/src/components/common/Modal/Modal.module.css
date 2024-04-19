@@ -1,0 +1,37 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    /* transform: translateY(-50%); */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.visible {
+    opacity: 1;
+    pointer-events: all;
+    /* transform: translateY(-20px); */
+}
+.content {
+    position: relative;
+    top: 20px;
+    overflow-y: auto;
+    background-color: var(--color-bg-main);
+    max-height: 100%;
+    border-radius: 1rem;    
+    padding: 1rem;
+    transition: all 0.5s;
+}
+.visible .content {
+    transform: translateY(-20px);
+}

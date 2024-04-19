@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables - Invoice</title>
+</head>
+<body>
+    <table border="1" cellpadding="8" align="center" width="500px"> 
+        <thead>
+            <tr>
+                <th rowspan="2" colspan="3">Invoice #12345ABC</th>
+                <th>18th July 2019</th>
+            </tr>
+            <tr>
+                <th>11:47 a.m.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <strong>Pay To:</strong><br>
+                    The Tech Park <br>
+                    123 Willow Street <br>
+                    Los Angeles
+                </td>
+                <td colspan="2">
+                    <strong>Customer:</strong> <br>
+                    John Davis <br>
+                    456 Main Street <br>
+                    Los Angeles
+                </td>
+            </tr>
+            <tr>
+                <th align="left">Name</th>
+                <th align="left">Quantity</th>
+                <th align="left">MRP</th>
+                <th align="left">Amount</th>
+            </tr>
+            <tr>
+                <td>Wireless Mouse</td>
+                <td>4</td>
+                <td>$23.50</td>
+                <td>$94.00</td>
+            </tr>
+            <tr>
+                <td>USB 3.0 Hub</td>
+                <td>6</td>
+                <td>$13.00</td>
+                <td>$78.00</td>
+            </tr>
+            <tr>
+                <th colspan="3" align="left">Subtotal:</th>
+                <td>$172.00</td>
+            </tr>
+            <tr>
+                <th colspan="2" align="left">Tax:</th>
+                <td>20.00%</td>
+                <td>$34.00</td>
+            </tr>
+            <tr>
+                <th colspan="3" align="left">Grand Total:</th>
+                <td>$206.40</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

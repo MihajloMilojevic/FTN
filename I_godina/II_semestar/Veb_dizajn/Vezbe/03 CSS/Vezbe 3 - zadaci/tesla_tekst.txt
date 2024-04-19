@@ -1,0 +1,20 @@
+Nikola Tesla
+NBS izdaje NUMIZMATIČKI NOVAC od srebra sa likom Nikole Tesle
+
+
+Nikola Tesla (1856 — 1943) bio je srpski i američki pronalazač, inženjer  elektrotehnike i mašinstva i futurista, najpoznatiji po svom doprinosu u projektovanju modernog sistema napajanja naizmeničnom strujom. 
+Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega u oblasti elektrotehnike 112.
+
+Lik Nilole Tesle će se tako ponovo naći na po 210.000 apoena od 100 dinara sa godinama izdavanja 2022. i 2023. Ukupna vrednost novčanica je 41. milion dinara.
+U središnjem delu novčanice je poluprofil Nikole Tesle dok je iznad portreta, sleva latinicom, a zdesna ćirilicom, ispisano Nikola Tesla.Ispod portreta,
+pisaće electrical visionary a na obodu polukružno powernig the future. Između je prikaz munje. Kako se dodaje u odluci NBS numizmatički novac prodaje po ceni koju odredi.
+Sporazum, iz februara 2018. godine, predviđa da NBS u svakoj kalendarskoj godini tokom trajanja sporazuma izradi 210.000 kovanica.
+
+Pre nego što sam napravim skicu na papiru, cela ideja je razrađena mentalno. U mojem umu menjam konstrukciju, radim poboljšanja, pa čak i pokrećem uređaj.
+
+Avers je jedinstven za svih pet godina važenja sporazuma, lik Nikole Tesle, i ne menja se, dok se obeležja na reversu mogu menjati pojedinačnim ugovorima zamišljeno je da bude najmanje pet takvih izmena, kako bi bilo zastupljeno najmanje pet izuma Nikole Tesle.
+Tako je na primer u 2019. godini, na reversu, u centralnom delu bio prikazan model radijski upravljanog broda, kojim je demonstriran radijski i bežični prenos, kao jedan od izuma Nikole Tesle.
+
+*link Sledeca vest- https://edukacija.rs/izreke-i-citati/nikola-tesla
+*pozadina stranice- linear-gradient(#7b7b7b 10%, #ffffff 100%)
+                    background-repeat: no-repeat;

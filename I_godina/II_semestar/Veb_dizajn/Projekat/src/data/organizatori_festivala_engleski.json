@@ -1,0 +1,731 @@
+{
+    "data": {
+        "festivalOrganizers": {
+            "-MNQgy9N5foEWTmmA_1U": {
+                "name": "BeoArt Fest",
+                "address": "Knez Mihailova 48, Belgrade, 11000",
+                "yearOfEstablishment": "2015",
+                "logo": "https://i.imgur.com/OV15WM6.jpeg",
+                "contactPhone": "011/3042-568",
+                "email": "contact@beoartfest.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW63"
+            },
+            "-MNQftJa4rskH-dBqE9Z": {
+                "name": "Ethno Serbia",
+                "address": "Vojvode Stepe 321, Belgrade, 11000",
+                "yearOfEstablishment": "2010",
+                "logo": "https://i.imgur.com/jsFrKCn.jpeg",
+                "contactPhone": "011/4223-690",
+                "email": "info@etnosrbija.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW60"
+            },
+            "-MNQg8Nd8YPRs-5Kbgqu": {
+                "name": "Lazarevac Fest",
+                "address": "Karađorđeva 12, Lazarevac, 11550",
+                "yearOfEstablishment": "2018",
+                "logo": "https://i.imgur.com/NhAzBBF.jpeg",
+                "contactPhone": "014/7552-322",
+                "email": "office@lazarevacmusicdays.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW61"
+            },
+            "-MNQgI0t2nV3AT1YxNAr": {
+                "name": "Danube Horizons",
+                "address": "Zelena 22, Bečej, 21220",
+                "yearOfEstablishment": "2003",
+                "logo": "https://i.imgur.com/k4nEZm6.jpeg",
+                "contactPhone": "021/880-304",
+                "email": "info@danubehorizons.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW62"
+            },
+            "-MNQgO7Cm756dkG36efQ": {
+                "name": "Urban Beat",
+                "address": "Makedonska 30, Belgrade, 11000",
+                "yearOfEstablishment": "2012",
+                "logo": "https://i.imgur.com/nmAOOHF.jpeg",
+                "contactPhone": "011/4040-2020",
+                "email": "contact@urbanbeat.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW64"
+            },
+            "-MNQgUTr_lN9O7L8AoUS": {
+                "name": "Gari Fest",
+                "address": "Bulevar Oslobođenja 77, Novi Sad, 21000",
+                "yearOfEstablishment": "1998",
+                "logo": "https://i.imgur.com/GXPCPrq.jpeg",
+                "contactPhone": "021/422-455",
+                "email": "jazzcarnival@ns.com",
+                "festivals": "-MNVEu6iMr2EFlQO6TW65"
+            },
+            "-MNQgfzXvQgwB8K-SVfF": {
+                "name": "EtnoFest Belgrade",
+                "address": "Gavrila Principa 47, Belgrade, 11000",
+                "yearOfEstablishment": "2007",
+                "logo": "https://i.imgur.com/LpxNm2V.jpeg",
+                "contactPhone": "011/322-9087",
+                "email": "contact@etnofestbgd.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW66"
+            },
+            "-MNQgnHVDMtvSasYG0C8": {
+                "name": "Belgrade Urban Fest",
+                "address": "Topličin Venac 22, Belgrade, 11000",
+                "yearOfEstablishment": "2011",
+                "logo": "https://i.imgur.com/koU4UuR.jpeg",
+                "contactPhone": "011/764-2002",
+                "email": "info@bufest.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW67"
+            },
+            "-MNQg_nhfUBoPJKBu72e": {
+                "name": "Niš Fest",
+                "address": "Obrenovićeva 20, Niš, 18000",
+                "yearOfEstablishment": "1999",
+                "logo": "https://i.imgur.com/zUrrGam.jpeg",
+                "contactPhone": "018/520-084",
+                "email": "office@nisvillejazzblues.rs",
+                "festivals": "-MNVEu6iMr2EFlQO6TW68"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW60": {
+            "-MNQftJa4rskH-dBqF9Z0": {
+                "name": "Festival of Greek Melodies",
+                "description": "Explore the richness of the Greek Music tradition through a series of concerts and workshops, where you will be guided through the history of Greek music, from antiquity to modern days, in the beautiful setting of Sithonia.",
+                "images": [
+                    "https://i.imgur.com/LMOgMnP.jpeg",
+                    "https://i.imgur.com/yBtIoEE.jpeg",
+                    "https://i.imgur.com/aHRcuqe.jpeg",
+                    "https://i.imgur.com/HxEZ2EO.jpeg",
+                    "https://i.imgur.com/WhhEFXe.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Bus",
+                "price": "1500",
+                "maxPerson": "300"
+            },
+            "-MNQftJa4rskH-dBqF9Z1": {
+                "name": "Athos Painter's Diary",
+                "description": "Join artists on Athos as they paint inspired by nature and monastic life. This painting marathon is an opportunity for all visitors to engage in creativity and exchange experiences with artists.",
+                "images": [
+                    "https://i.imgur.com/13NPfCE.jpeg",
+                    "https://i.imgur.com/elM9ZuF.jpeg",
+                    "https://i.imgur.com/ljLJJPc.jpeg",
+                    "https://i.imgur.com/Ddo6ETm.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Own",
+                "price": "2500",
+                "maxPerson": "200"
+            },
+            "-MNQftJa4rskH-dBqF9Z2": {
+                "name": "Carnival in Platamon",
+                "description": "Platamon is transformed into a vibrant center of culture and entertainment with a carnival that attracts performers and visitors from all over the world. Enjoy music, dance, art and traditional cuisine.",
+                "images": [
+                    "https://i.imgur.com/zHG54w5.jpeg",
+                    "https://i.imgur.com/UhJy3mO.jpeg",
+                    "https://i.imgur.com/oNkVgeB.jpeg",
+                    "https://i.imgur.com/AmAjjp9.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "2000",
+                "maxPerson": "500"
+            },
+            "-MNQftJa4rskH-dBqF9Z3": {
+                "name": "Aegean Cultural Nights",
+                "description": "Spend the evenings enjoying a varied program that includes musical performances, traditional dance and stories under the starry skies of Sithonia. The perfect combination of relaxation and cultural enrichment.",
+                "images": [
+                    "https://i.imgur.com/S6vhQ9h.jpeg",
+                    "https://i.imgur.com/etlD1v9.jpeg",
+                    "https://i.imgur.com/RXo8fpd.jpeg",
+                    "https://i.imgur.com/38DNu92.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Bus",
+                "price": "24784",
+                "maxPerson": "41"
+            },
+            "-MNQftJa4rskH-dBqF9Z4": {
+                "name": "Vrasna Ethno Festival",
+                "description": "Relive the spirit of traditional Greece at the Ethno Festival in Nea Vrasna, where the local community presents its culture through music, dance, and gastronomy. A true experience of Greek hospitality and culture.",
+                "images": [
+                    "https://i.imgur.com/QORUNqY.jpeg",
+                    "https://i.imgur.com/yW1f61r.jpeg",
+                    "https://i.imgur.com/dzDnwie.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "18999",
+                "maxPerson": "40"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW61": {
+            "-MNQftJa4rskH-dBqE9Z5": {
+                "name": "Adriatic Stars Festival",
+                "description": "In the heart of Kusadasi, this festival brings together top performers from the region and the world, promising unforgettable nights under the stars. Enjoy music, dance and Artm performances by the sea.",
+                "images": [
+                    "https://i.imgur.com/Xr7tC1k.jpeg",
+                    "https://i.imgur.com/9O1Q9.jpeg",
+                    "https://i.imgur.com/ce5xcAr.jpeg",
+                    "https://i.imgur.com/cQkZ9iH.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "45000",
+                "maxPerson": "1500"
+            },
+            "-MNQftJa4rskH-dBqE9Z6": {
+                "name": "Marmaris International Film Carnival",
+                "description": "Experience the magical atmosphere of outdoor movie stories in Marmaris. This film carnival presents a selection of domestic and foreign film productions, complemented by workshops and guest appearances by famous filmmakers.",
+                "images": [
+                    "https://i.imgur.com/G2CpQ7G.jpeg",
+                    "https://i.imgur.com/IDf3fDZ.jpeg",
+                    "https://i.imgur.com/QjTeoNa.jpeg",
+                    "https://i.imgur.com/7EFaYUX.jpeg"
+                ],
+                "type": "Film",
+                "transportation": "Plane",
+                "price": "52000",
+                "maxPerson": "200"
+            },
+            "-MNQftJa4rskH-dBqE9Z7": {
+                "name": "Belek Gourmet Festival",
+                "description": "Dive into the world of flavors at the Gourmet Festival in Belek. This unique culinary experience combines traditional flavors with modern culinary trends, with the participation of renowned chefs.",
+                "images": [
+                    "https://i.imgur.com/exbQ5PA.jpeg",
+                    "https://i.imgur.com/bO54Wzy.jpeg",
+                    "https://i.imgur.com/WmAYEz0.jpeg"
+                ],
+                "type": "Food",
+                "transportation": "Plane",
+                "price": "60000",
+                "maxPerson": "500"
+            },
+            "-MNQftJa4rskH-dBqE9Z8": {
+                "name": "Antika Fest Side",
+                "description": "Relive the spirit of ancient Side at Antika Fest, where history meets modern culture. The festival is characterized by dramatic reconstructions, musical numbers and authentic shops.",
+                "images": [
+                    "https://i.imgur.com/4LRGGyb.jpeg",
+                    "https://i.imgur.com/PgVcwu1.jpeg",
+                    "https://i.imgur.com/6HXzmSc.jpeg",
+                    "https://i.imgur.com/Gm46ZVU.jpeg",
+                    "https://i.imgur.com/hFhqj6u.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Plane",
+                "price": "36000",
+                "maxPerson": "500"
+            },
+            "-MNQftJa4rskH-dBqE9Z9": {
+                "name": "Rome Festival of Light",
+                "description": "Experience the magic of the Eternal City during Rome's Festival of Lights. This event transforms the city center with spectacular light installations and Artm projections.",
+                "images": [
+                    "https://i.imgur.com/mHY2Ayb.jpeg",
+                    "https://i.imgur.com/bsDUf1e.jpeg",
+                    "https://i.imgur.com/Jaf1QAP.jpeg",
+                    "https://i.imgur.com/JmOPk9F.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "28000",
+                "maxPerson": "220"
+            },
+            "-MNQftJa4rskH-dBqE9K0": {
+                "name": "Milan Fashion Festival",
+                "description": "The Milan Fashion Festival is the epicenter of world trends, where famous designers and up-and-coming talents meet to show their latest collections.",
+                "images": [
+                    "https://i.imgur.com/Fia7una.jpeg",
+                    "https://i.imgur.com/g38s2Um.jpeg",
+                    "https://i.imgur.com/uyCP5UY.jpeg",
+                    "https://i.imgur.com/0eS4nvr.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "50000",
+                "maxPerson": "800"
+            },
+            "-MNQftJa4rskH-dBqE9K1": {
+                "name": "Venice Art Festival",
+                "description": "Discover the charms of Venice through its Festival of the Arts, a celebration of visual, performing and digital arts that attracts artists and visitors from all over the world.",
+                "images": [
+                    "https://i.imgur.com/qIL83Vn.jpeg",
+                    "https://i.imgur.com/AQGagK9.jpeg",
+                    "https://i.imgur.com/S1CHGHU.jpeg",
+                    "https://i.imgur.com/UptsBj2.jpeg",
+                    "https://i.imgur.com/J7uh4u3.jpeg",
+                    "https://i.imgur.com/5kMKf8Q.jpeg",
+                    "https://i.imgur.com/7twbq9o.jpeg",
+                    "https://i.imgur.com/2hNKHDR.jpeg",
+                    "https://i.imgur.com/ePvy1.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "32000",
+                "maxPerson": "420"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW62": {
+            "-MNQftJa4rskH-dAqR9W0": {
+                "name": "Sea Music Festival",
+                "description": "Experience the magic of the Sea Music Festival in Nei Pori, where the waves of the Aegean Sea merge with the sounds of traditional and modern Music tracks.",
+                "images": [
+                    "https://i.imgur.com/JHE7FzG.jpeg",
+                    "https://i.imgur.com/38DNu92.jpeg",
+                    "https://i.imgur.com/yW1f61r.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Own",
+                "price": "45000",
+                "maxPerson": "150"
+            },
+            "-MNQftJa4rskH-dAqR9W1": {
+                "name": "Olympic Adventure Festival",
+                "description": "Discover the adventurous spirit of Leptokarija at the Olympic Adventure Festival, where visitors can participate in hiking, biking and other outdoor activities.",
+                "images": [
+                    "https://i.imgur.com/8eealIc.jpeg",
+                    "https://i.imgur.com/aIYwY6p.jpeg",
+                    "https://i.imgur.com/hI6NdRE.jpeg",
+                    "https://i.imgur.com/EbD3APf.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Bus",
+                "price": "37500",
+                "maxPerson": "200"
+            },
+            "-MNQftJa4rskH-dAqR9W2": {
+                "name": "Asprovalta Nature Festival",
+                "description": "The green hills and clean air of Asprovalta host the Nature Festival, an event that celebrates sustainability, nature and environmental awareness through workshops, lectures and excursions.",
+                "images": [
+                    "https://i.imgur.com/NXNEpZB.jpeg",
+                    "https://i.imgur.com/Pn0UHiM.jpeg",
+                    "https://i.imgur.com/AqOxgvU.jpeg",
+                    "https://i.imgur.com/rEgCfvQ.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Bus",
+                "price": "49000",
+                "maxPerson": "300"
+            },
+            "-MNQftJa4rskH-dAqR9W3": {
+                "name": "Stavros Sunset Festival",
+                "description": "Enjoy the Sunset Festival in Stavros, where sunlight and music come together in perfect harmony along the coast, creating unforgettable evenings.",
+                "images": [
+                    "https://i.imgur.com/HQjJRF5.jpeg",
+                    "https://i.imgur.com/8YrL46d.jpeg",
+                    "https://i.imgur.com/cMcL5sq.jpeg",
+                    "https://i.imgur.com/c1QUpXf.jpeg",
+                    "https://i.imgur.com/kIq4M4i.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Bus",
+                "price": "40000",
+                "maxPerson": "100"
+            },
+            "-MNQftJa4rskH-dAqR9W4": {
+                "name": "Threshold of Winter Light",
+                "description": "Discover the charm of Prague in winter, through the 'Prague of Winter Lights' festival, which illuminates the city in a spectacle of light and color, transforming historic sites into colorful art installations.",
+                "images": [
+                    "https://i.imgur.com/HJ7tFU2.jpeg",
+                    "https://i.imgur.com/4mJwavP.jpeg",
+                    "https://i.imgur.com/WovxmzR.jpeg",
+                    "https://i.imgur.com/QEq4pdc.jpeg",
+                    "https://i.imgur.com/on2Sj6m.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Plane",
+                "price": "45000",
+                "maxPerson": "500"
+            },
+            "-MNQftJa4rskH-dAqR9W5": {
+                "name": "Tuscan Wine Carnival",
+                "description": "Experience the unique Tuscan Wine Carnival, where the richness of the region's wine tradition is celebrated through tastings, parades and cultural performances.",
+                "images": [
+                    "https://i.imgur.com/pSQfbd3.jpeg",
+                    "https://i.imgur.com/nobYaoy.jpeg",
+                    "https://i.imgur.com/aZLnuDt.jpeg",
+                    "https://i.imgur.com/1w0EmIg.jpeg",
+                    "https://i.imgur.com/HunVnmO.jpeg"
+                ],
+                "type": "Food",
+                "transportation": "Bus",
+                "price": "30000",
+                "maxPerson": "200"
+            },
+            "-MNQftJa4rskH-dAqR9W6": {
+                "name": "French Wine and Cheese Festival",
+                "description": "Experience the charms of France through its famous Wine and Cheese Festival. Embark on an adventure of discovering the hidden gems of French culture, while tasting the finest wines and cheeses.",
+                "images": [
+                    "https://i.imgur.com/OrzO5Nd.jpeg",
+                    "https://i.imgur.com/X2dpgUP.jpeg",
+                    "https://i.imgur.com/ub1UOGl.jpeg",
+                    "https://i.imgur.com/rd1QLOC.jpeg",
+                    "https://i.imgur.com/Wbe20Jn.jpeg"
+                ],
+                "type": "Food",
+                "transportation": "Own",
+                "price": "55000",
+                "maxPerson": "100"
+            },
+            "-MNQftJa4rskH-dAqR9W7": {
+                "name": "Austrian Caravan of Music",
+                "description": "Experience Austria in a unique way with the Austrian Music Caravan, which takes you through winter magic with the sounds of traditional and modern music.",
+                "images": [
+                    "https://i.imgur.com/0pD1inU.jpeg",
+                    "https://i.imgur.com/Oe2Xy1Z.jpeg",
+                    "https://i.imgur.com/5lBmI5E.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Bus",
+                "price": "82000",
+                "maxPerson": "50"
+            },
+            "-MNQftJa4rskH-dAqR9W8": {
+                "name": "Slovenia Green Festival",
+                "description": "Enjoy the Slovenia Green Festival, where nature and sustainability meet. Discover the beauty of Slovenian landscapes through interactive workshops, nature walks and cultural events.",
+                "images": [
+                    "https://i.imgur.com/h2Ult2l.jpeg",
+                    "https://i.imgur.com/aZrq7YW.jpeg",
+                    "https://i.imgur.com/VAFxMqU.jpeg",
+                    "https://i.imgur.com/epFzema.jpeg",
+                    "https://i.imgur.com/3ecTSso.jpeg",
+                    "https://i.imgur.com/Bq4bvx1.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Own",
+                "price": "50000",
+                "maxPerson": "100"
+            },
+            "-MNQftJa4rskH-dAqR9W9": {
+                "name": "Sarajevo Winter Festival",
+                "description": "Discover the magic of Sarajevo in winter through the Sarajevo Winter Festival, an event that combines art, culture and sport. Enjoy a variety of activities, from concerts and exhibitions to winter sports, in this historic city.",
+                "images": [
+                    "https://i.imgur.com/hnnhsQM.jpeg",
+                    "https://i.imgur.com/RaiLS17.jpeg",
+                    "https://i.imgur.com/1mxMivE.jpeg",
+                    "https://i.imgur.com/PrNYIPc.jpeg",
+                    "https://i.imgur.com/rmTUJ.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Own",
+                "price": "40000",
+                "maxPerson": "100"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW63": {
+            "-MNQftJa4rskH-dBqF9L0": {
+                "name": "Island Music Festival",
+                "description": "Imagine a festival where pulsating rhythms and melodies fill the air against the backdrop of a tropical paradise. Zanzibar Island Music Festival is where the world's DJs and artists meet, creating an unforgettable experience under the stars.",
+                "images": [
+                    "https://i.imgur.com/nIhAjPQ.jpeg",
+                    "https://i.imgur.com/XJRsDJZ.jpeg",
+                    "https://i.imgur.com/CAx5RSt.jpeg",
+                    "https://i.imgur.com/WdrdkfY.jpeg",
+                    "https://i.imgur.com/ZGXCGm0.jpeg",
+                    "https://i.imgur.com/pN3ugei.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "111256",
+                "maxPerson": "33"
+            },
+            "-MNQftJa4rskH-dBqF9L1": {
+                "name": "Maldives Under the Stars",
+                "description": "Maldives Under the Stars transform the already beautiful beaches into evening stages for live performances. Enjoy intimate concerts and DJ sets overlooking the endless Indian Ocean, making this festival a unique escape from reality.",
+                "images": [
+                    "https://i.imgur.com/NJxBerG.jpeg",
+                    "https://i.imgur.com/vDxxJYW.jpeg",
+                    "https://i.imgur.com/bJVCCxK.jpeg",
+                    "https://i.imgur.com/X8x8IcT.png",
+                    "https://i.imgur.com/E6JJwO2.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "103254",
+                "maxPerson": "22"
+            },
+            "-MNQftJa4rskH-dBqF9L2": {
+                "name": "Kopaonik Winter Fest",
+                "description": "Kopaonik Winter Fest is more than skiing and snowboarding; it's where winter magic meets music. We present to you a night festival in the heart of the mountain, where live bands and DJs perform, surrounded by snowy landscapes.",
+                "images": [
+                    "https://i.imgur.com/roanJFQ.jpeg",
+                    "https://i.imgur.com/pjX4CVq.jpeg",
+                    "https://i.imgur.com/5N6SBMa.jpeg",
+                    "https://i.imgur.com/wvTfgwW.jpeg",
+                    "https://i.imgur.com/AE9iOfg.jpeg",
+                    "https://i.imgur.com/Yw9hmxE.jpeg",
+                    "https://i.imgur.com/mbdQIzN.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Own",
+                "price": "77898",
+                "maxPerson": "50"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW64": {
+            "-MNQftJa4rskH-dBqG9L3": {
+                "name": "Kopaonik Film Festival",
+                "description": "For fans of film and mountain adventures, the Kopaonik Film Festival represents a combination of cinematography and nature. Enjoy watching international and domestic films under the starry sky, surrounded by the winter charms of Kopaonik.",
+                "images": [
+                    "https://i.imgur.com/roanJFQ.jpeg",
+                    "https://i.imgur.com/pjX4CVq.jpeg",
+                    "https://i.imgur.com/5N6SBMa.jpeg",
+                    "https://i.imgur.com/wvTfgwW.jpeg",
+                    "https://i.imgur.com/AE9iOfg.jpeg",
+                    "https://i.imgur.com/Yw9hmxE.jpeg",
+                    "https://i.imgur.com/mbdQIzN.jpeg"
+                ],
+                "type": "Film",
+                "transportation": "Own",
+                "price": "43121",
+                "maxPerson": "12"
+            },
+            "-MNQftJa4rskH-dBqG9L4": {
+                "name": "Zanzibar Jazz & Arts Festival",
+                "description": "Feel the rhythm of the island at the Zanzibar Jazz & Arts Festival, where music meets art under the tropical sun. This multi-day event attracts artists and musicians from all over the world, promising an unforgettable experience next to the crystal clear waters.",
+                "images": [
+                    "https://i.imgur.com/nIhAjPQ.jpeg",
+                    "https://i.imgur.com/XJRsDJZ.jpeg",
+                    "https://i.imgur.com/CAx5RSt.jpeg",
+                    "https://i.imgur.com/WdrdkfY.jpeg",
+                    "https://i.imgur.com/ZGXCGm0.jpeg",
+                    "https://i.imgur.com/pN3ugei.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "323223",
+                "maxPerson": "12"
+            },
+            "-MNQftJa4rskH-dBqG9L5": {
+                "name": "Kuşadasi Cultural Festival",
+                "description": "Kuşadasi Cultural Festival is a window into the rich history and culture of the Aegean coast. The festival includes traditional music, dance, art and gastronomy, giving visitors a deeper insight into local heritage and contemporary life.",
+                "images": [
+                    "https://i.imgur.com/Xr7tC1k.jpeg",
+                    "https://i.imgur.com/9O1Q9.jpeg",
+                    "https://i.imgur.com/ce5xcAr.jpeg",
+                    "https://i.imgur.com/cQkZ9iH.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Plane",
+                "price": "3212",
+                "maxPerson": "28"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW65": {
+            "-MNQftJa4rskH-dBqG9L6": {
+                "name": "Aegean Summer Theatre",
+                "description": "Discover the magic of the Aegean Summer Theater in Kusadasi, a festival that celebrates the richness of the outdoor stage by the sea. With a spectacular view of the Aegean Sea, this festival combines theater performances, live music and dance performances, highlighting the cultural diversity of the region.",
+                "images": [
+                    "https://i.imgur.com/Xr7tC1k.jpeg",
+                    "https://i.imgur.com/9O1Q9.jpeg",
+                    "https://i.imgur.com/ce5xcAr.jpeg",
+                    "https://i.imgur.com/cQkZ9iH.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Plane",
+                "price": "43212",
+                "maxPerson": "16"
+            },
+            "-MNQftJa4rskH-dBqG9L7": {
+                "name": "Roman Film Carnival",
+                "description": "The Rome Film Carnival is a unique experience that combines the art of cinema with the historical beauty of Rome. Visitors can enjoy screenings under the stars among the ancient ruins, along with special events that revive the spirit of Rome as an eternal city.",
+                "images": [
+                    "https://i.imgur.com/mHY2Ayb.jpeg",
+                    "https://i.imgur.com/bsDUf1e.jpeg",
+                    "https://i.imgur.com/Jaf1QAP.jpeg",
+                    "https://i.imgur.com/JmOPk9F.jpeg"
+                ],
+                "type": "Film",
+                "transportation": "Bus",
+                "price": "66345",
+                "maxPerson": "43"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW66": {
+            "-MNQftJa4rskH-dBqG9T1": {
+                "name": "Milan Fashion Festival",
+                "description": "The Milan Fashion Festival transforms the streets of the city into a lively runway, reflecting Milan as the world capital of fashion. This event brings together international designers, new talents and the fashion crowd in the unique setting of a city known for its historical monuments and modern dynamics.",
+                "images": [
+                    "https://i.imgur.com/Fia7una.jpeg",
+                    "https://i.imgur.com/g38s2Um.jpeg",
+                    "https://i.imgur.com/uyCP5UY.jpeg",
+                    "https://i.imgur.com/0eS4nvr.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "54232",
+                "maxPerson": "43"
+            },
+            "-MNQftJa4rskH-dBqG9T2": {
+                "name": "Venice Mask Festival",
+                "description": "The Venetian Mask Festival is a traditional spectacle that celebrates the historical heritage of Venice through music, dance, and of course, the famous Venetian masks. The event brings to life the magic and mystery of the city's canals and gondolas, giving visitors the chance to experience the spirit of Venice at its best.",
+                "images": [
+                    "https://i.imgur.com/qIL83Vn.jpeg",
+                    "https://i.imgur.com/AQGagK9.jpeg",
+                    "https://i.imgur.com/S1CHGHU.jpeg",
+                    "https://i.imgur.com/UptsBj2.jpeg",
+                    "https://i.imgur.com/J7uh4u3.jpeg",
+                    "https://i.imgur.com/5kMKf8Q.jpeg",
+                    "https://i.imgur.com/7twbq9o.jpeg",
+                    "https://i.imgur.com/2hNKHDR.jpeg",
+                    "https://i.imgur.com/ePvy1.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "54321",
+                "maxPerson": "33"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW67": {
+            "-MNQftJa4rskH-dBqG9T3": {
+                "name": "Festival of Greek Mythology in Sithonia",
+                "description": "This festival brings the spirit of ancient Greece to the heart of Sithonia, offering a combination of mythological performances, music and dance workshops, and cultural exhibitions. Visitors will have the opportunity to learn about the rich mythological stories that have shaped the region, while enjoying the beautiful nature and hospitality of the local people.",
+                "images": [
+                    "https://i.imgur.com/LMOgMnP.jpeg",
+                    "https://i.imgur.com/yBtIoEE.jpeg",
+                    "https://i.imgur.com/aHRcuqe.jpeg",
+                    "https://i.imgur.com/HxEZ2EO.jpeg",
+                    "https://i.imgur.com/WhhEFXe.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Bus",
+                "price": "54221",
+                "maxPerson": "12"
+            },
+            "-MNQftJa4rskH-dBqG9T4": {
+                "name": "Athos Spiritual Festival",
+                "description": "This festival celebrates the spiritual history and natural beauty of the Athos Peninsula. Through lectures, workshops and guided tours of the monasteries, visitors will explore the spiritual heritage of Athos and its importance in Orthodox Christianity, as well as the unique nature that surrounds it.",
+                "images": [
+                    "https://i.imgur.com/13NPfCE.jpeg",
+                    "https://i.imgur.com/elM9ZuF.jpeg",
+                    "https://i.imgur.com/ljLJJPc.jpeg",
+                    "https://i.imgur.com/Ddo6ETm.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Bus",
+                "price": "43211",
+                "maxPerson": "32"
+            },
+            "-MNQftJa4rskH-dBqG9T5": {
+                "name": "Platamon Beach Fest",
+                "description": "Platamon Beach Fest invites visitors to experience a summer full of music, sports and fun on the beach. The festival combines live bands and DJs with beach volleyball tournaments and surf competitions, offering an unforgettable experience on one of Greece's most beautiful beaches.",
+                "images": [
+                    "https://i.imgur.com/zHG54w5.jpeg",
+                    "https://i.imgur.com/UhJy3mO.jpeg",
+                    "https://i.imgur.com/oNkVgeB.jpeg",
+                    "https://i.imgur.com/AmAjjp9.jpeg"
+                ],
+                "type": "Music",
+                "transportation": "Bus",
+                "price": "44321",
+                "maxPerson": "21"
+            }
+        },
+        "-MNVEu6iMr2EFlQO6TW68": {
+            "-MNQftJa4rskH-dBqR9T6": {
+                "name": "Festival of Fishing Traditions Nei Pori",
+                "description": "This festival celebrates Nei Pori's rich fishing tradition through fresh fish tastings, cooking workshops and educational fishing tours. Enjoy fishing competitions and learn about local culture and traditions while relaxing on the beautiful beaches of Nei Pori.",
+                "images": [
+                    "https://i.imgur.com/JHE7FzG.jpeg",
+                    "https://i.imgur.com/38DNu92.jpeg",
+                    "https://i.imgur.com/yW1f61r.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Own",
+                "price": "12321",
+                "maxPerson": "55"
+            },
+            "-MNQftJa4rskH-dBqR9T7": {
+                "name": "Olympic Cultural Festival Leptokaria",
+                "description": "Spend your days enjoying the cultural richness of Leptokarija at the Olympic Cultural Festival. Discover the history and mythology of Olympus through art exhibitions, performances and stories, accompanied by the authentic music and dance of the region. The festival is an opportunity to learn about the history and enjoy the beauty of Leptokarija.",
+                "images": [
+                    "https://i.imgur.com/8eealIc.jpeg",
+                    "https://i.imgur.com/aIYwY6p.jpeg",
+                    "https://i.imgur.com/hI6NdRE.jpeg",
+                    "https://i.imgur.com/EbD3APf.jpeg"
+                ],
+                "type": "Art",
+                "transportation": "Bus",
+                "price": "43121",
+                "maxPerson": "71"
+            },
+            "-MNQftJa4rskH-dBqR9T8": {
+                "name": "Asprovalta Adventure & Nature Fest",
+                "description": "Asprovalta Adventure & Nature Fest takes visitors to explore beautiful natural landscapes through hiking, biking and environmental workshops. Take part in adventure activities that celebrate nature conservation, while enjoying local gastronomic specialties.",
+                "images": [
+                    "https://i.imgur.com/NXNEpZB.jpeg",
+                    "https://i.imgur.com/Pn0UHiM.jpeg",
+                    "https://i.imgur.com/AqOxgvU.jpeg",
+                    "https://i.imgur.com/rEgCfvQ.jpeg"
+                ],
+                "type": "Education",
+                "transportation": "Bus",
+                "price": "55555",
+                "maxPerson": "55"
+            }
+        },
+        "users": {
+            "-MNQo55Aw0tLdwahMZMK": {
+                "username": "petar_p",
+                "password": "novapetar321",
+                "name": "Petar",
+                "surname": "Pavlović",
+                "email": "petar.pavlovic@example.com",
+                "dateOfBirth": "1994-10-22",
+                "address": "Bulevar Oslobođenja 101, Novi Sad, 21000",
+                "phone": "061123123",
+                "profession": "Software engineer"
+            },
+            "-MNQoCqEXydVTdCNV47C": {
+                "username": "jovana_j",
+                "password": "novajovana321",
+                "name": "Jovana",
+                "surname": "Janković",
+                "email": "jovana.jankovic@example.com",
+                "dateOfBirth": "1982-05-05",
+                "address": "Nikole Pašića 15, Zrenjanin, 23000",
+                "phone": "062987987",
+                "profession": "Graphic designer"
+            },
+            "-MNQoJw2p9rci4Rm_rYY": {
+                "username": "markom",
+                "password": "novamarko321",
+                "name": "Marko",
+                "surname": "Marić",
+                "email": "marko.maric@example.com",
+                "dateOfBirth": "1990-09-17",
+                "address": "Knez Mihailova 22, Belgrade, 11000",
+                "phone": "063456456",
+                "profession": "Project manager"
+            },
+            "-MNQoR-5erkWvcm8Hdnk": {
+                "username": "filipf",
+                "password": "novafilip321",
+                "name": "Filip",
+                "surname": "Frušić",
+                "email": "filip.frusic@example.com",
+                "dateOfBirth": "1973-03-10",
+                "address": "Temerinska 33, Novi Sad, 21000",
+                "phone": "064987987",
+                "profession": "Architect"
+            },
+            "-MNQoWt_gDudX5W8TLQj": {
+                "username": "tijanat",
+                "password": "novatijana321",
+                "name": "Tijana",
+                "surname": "Trifunović",
+                "email": "tijana.trifunovic@example.com",
+                "dateOfBirth": "1998-06-29",
+                "address": "Cara Dušana 8, Zrenjanin, 23000",
+                "phone": "065321321",
+                "profession": "Web developer"
+            },
+            "-MNQoWt_gDudX5W8TLQa": {
+                "username": "test",
+                "password": "test123",
+                "name": "Test",
+                "surname": "Test",
+                "email": "test@example.com",
+                "dateOfBirth": "1998-06-29",
+                "address": "test 8, test, 23000",
+                "phone": "06512345678",
+                "profession": "QA tester"
+            }
+        }
+    }
+}

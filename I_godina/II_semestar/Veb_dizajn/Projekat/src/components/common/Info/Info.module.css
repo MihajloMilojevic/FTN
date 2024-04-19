@@ -1,0 +1,43 @@
+.info {
+    flex: 1;
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: var(--color-main);
+    transition: all 0.3s;
+}
+.info .no_break {
+    min-width: max-content;
+    word-wrap:normal;
+    word-break:keep-all;
+}
+.info .break {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.info .connect {
+    min-width: 1rem;
+    flex: 1;
+    align-self: last baseline;
+    border-bottom: 2.5px dotted var(--color-main);
+    opacity: 0.6;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='5' stroke-dasharray='2%2c 8' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+
+.info:hover {
+    color: var(--color-auxiliary-2);
+}
+.info:hover .connect {
+    border-color: var(--color-auxiliary-2);
+}
+
+@media screen and (max-width: 800px) {
+    .info {
+        font-size: 1rem;
+    }
+}

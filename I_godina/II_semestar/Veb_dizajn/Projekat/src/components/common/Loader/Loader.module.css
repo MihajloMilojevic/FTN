@@ -1,0 +1,29 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    /* transform: translateY(-50%); */
+    background-color: var(--color-bg-secondary);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.overlay img {
+    width: 60%;
+    height: auto;
+    max-width: 300px;
+}
+.visible {
+    opacity: 1;
+    pointer-events: all;
+    /* transform: translateY(-20px); */
+}

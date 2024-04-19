@@ -1,0 +1,305 @@
+.table_wrapper {
+    overflow-x: auto;
+    flex: 1;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th {
+    text-align: left;
+}
+.table tbody tr{
+    border-top: 1px solid white;
+}
+.table tbody tr:nth-child(even) {
+    background-color: hsla(240, 9%, 13%, 0.75);
+}
+.table tbody tr:hover {
+    background-color: hsla(265, 100%, 45%, 0.5);
+}
+
+.table thead {
+    position: sticky;
+    background-color: var(--color-auxiliary-2);
+    color: var(--color-bg-secondary);
+}
+.table th, .table td {
+    padding: 0.5rem;
+}
+.table a:hover {
+    text-decoration: underline;
+}
+.action_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--color-auxiliary-2);
+    color: var(--color-bg-secondary);
+    border-radius: 999999999px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.gallery {
+    
+    max-width: 300px;
+    width: 100vw;
+    aspect-ratio: 3/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.gallery img.active {
+    opacity: 1;
+}
+.gallery img:not(:first-of-type) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gallery .btn {
+    background-color: var(--color-auxiliary-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gallery .btn:first-of-type {
+    left: 0;
+}
+.gallery .btn:last-of-type {
+    right: 0;
+}
+.gallery .circle_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    /* left: 0;
+    transform: translateX(-50%); */
+}
+.gallery .circle {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--color-auxiliary-1);
+}
+.gallery .circle.current {
+    background-color: var(--color-auxiliary-2);
+}
+
+.icon_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/*  FROM REGISTER */
+
+
+.form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    align-self: stretch;
+}
+.form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin: 0;
+}
+.error {
+    color: red;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+    transition: all 0.3s;
+}
+.inputs > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+.inputs  div label {
+    flex: 1;
+}
+.inputs  div input, .inputs  div select, .inputs  div textarea{
+    flex: 2;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.buttons div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons button {
+    min-width: 100px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--color-auxiliary-1);
+    color: var(--color-main);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.buttons button[type="submit"] {
+    background-color: var(--color-auxiliary-2);
+    color: var(--color-bg-secondary);
+}
+.buttons button:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-main);
+}
+.buttons button[type="submit"]:hover {
+    background-color: var(--color-main);
+    color: var(--color-bg-secondary);
+}
+.preview {
+    flex: 1;
+    max-width: 75px;
+    aspect-ratio: 1;
+    position: relative;
+    margin-right: 10px;
+    /* overflow: hidden; */
+}
+.preview div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.preview .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-auxiliary-2);
+    color: var(--color-bg-secondary);
+    border: none;
+    border-radius: 50%;
+    padding: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.wrapper {
+    min-width: 50%;
+    min-height: 90%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_logo {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+}
+.form_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        min-width: 80%;
+    }
+    .form h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 512px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .inputs > div {
+        flex-direction: column;
+    }
+    .inputs div input {
+        width: 100%;
+    }
+    .preview {
+        max-width: 150px;
+    }
+}

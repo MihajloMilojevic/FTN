@@ -1,0 +1,64 @@
+*** Naslov stranice: CSS - Acme Photography
+
+*** Boja pozadine stranice: #eee
+
+*** Font teksta na stranici: Roboto Condensed
+
+
+Acme Photography
+
+Beautiful Natural Photography
+    - boja teksta: #888
+
+View Work
+    - link koji spušta stranicu na Our Work podnaslov (sekciju)
+    - boja okvira (linije): #ccc
+    - boja teksta: #333
+    - boja nakon prelaska mišem: #ececec
+
+
+*** Pozadinska slika: https://source.unsplash.com/De8wMYoSSBc
+
+
+Our Work
+
+
+*** NAPOMENA 1: Neće vam se uvek učitati iste slike, jer učitavanje linkova zapravo 
+    aktivira pretragu koja učitava nasumičnu sliku koja odgovara kriterijumu pretrage
+
+*** NAPOMENA 2: Svaki tekst koji opisuje sliku se odnosi na sliku iznad, a ne ispod
+
+*** Link do slike: https://source.unsplash.com/1600x900/?nature,water
+Photo One
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.
+
+
+*** Link do slike: https://source.unsplash.com/1600x900/?nature,trees
+Photo Two
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.
+
+
+*** Link do slike: https://source.unsplash.com/1600x900/?nature,flowers
+Photo Three
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.
+
+
+*** Link do slike: https://source.unsplash.com/1600x900/?nature,animals
+Photo Four
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.
+
+
+*** Link do slike: https://source.unsplash.com/1600x900/?nature,clouds
+Photo Five
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.
+
+
+Get In Touch
+Email or call us to set up a consult
+Email:
+contact@acmephotos.test
+
+Phone:
+(617) 555-5555
+
+*** Boja teksta na dnu stranice: #333

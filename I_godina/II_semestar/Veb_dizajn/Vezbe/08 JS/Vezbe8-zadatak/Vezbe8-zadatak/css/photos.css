@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-image: url("../slike/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*Omogucuje da pozadinska slika ostaje fiksna i kada se scroll-uje sadrzaj body-ja */
+    height: 100%;
+    font-family: "Open Sans Condensed";
+}
+
+nav {
+    background-color: rgba(255, 102, 72, 0.8);
+    height: 100%;
+    min-width: 12%;
+    width: 12%;
+    position: fixed;
+}
+
+.nav-item {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.nav-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 5px 0px;
+}
+
+.nav-item a:hover {
+    background-color: black;
+}
+
+#content {
+    margin-left: 12%;
+    padding: 5px 15px;
+}
+
+.previewDiv {
+    width: 12%;
+    height: 10vw;
+    background: black;
+    border-radius: 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.7;
+    margin: 2%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.previewDiv:hover {
+    opacity: 1;
+}
+
+#overlay {
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    top: 5%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.arrows {
+    width: 8%;
+    height: 7vw;
+    font-size: 66px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    float: left;
+    margin-top: 20%;
+}
+
+#imgDiv {
+    width: 80%;
+    height: 90%;
+    float: left;
+    padding: 2%;
+    text-align: center;
+}
+
+#imgDiv img {
+    height: 80%;
+}
+
+#imgDiv p {
+    width: 100%;
+    height: 15%;
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#albumList {
+    width: 100%;
+    list-style: none;
+}
+
+#albumList li {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#albumList li:hover {
+    color: rgb(255, 102, 72);
+}
