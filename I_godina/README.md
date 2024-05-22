@@ -1,6 +1,6 @@
 # I godina
 
-## I semestar - Zimski semestar I godine
+## [I semestar - Zimski semestar I godine](./I_semestar/)
 
 ### Predmeti
 - [Arhitektura računara](./I_semestar/Arhitektura_racunara/)
@@ -9,7 +9,7 @@
 - [Engleski](./I_semestar/Engleski/)
 - [Sociologija tehnike](./I_semestar/Sociologija%20tehnike/)
 
-## II semestar - Letnji semestar I godine
+## [II semestar - Letnji semestar I godine](./II_semestar/)
 
 ### Predmeti
 
