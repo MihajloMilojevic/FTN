@@ -8,7 +8,9 @@ Asistent: [Bojana Dragaš](http://www.ftn.uns.ac.rs/2048337305/bojana-dragas)
 
 Izvođenje nastave: 3 časa predavanja + 3 časa vežbi nedeljno
 
-ESBP: 9
+ESPB: 9
+
+Sajt predmeta: [na canvasu](https://canvas.ftn.uns.ac.rs/)
 
 ## Sadržaj predmeta
 

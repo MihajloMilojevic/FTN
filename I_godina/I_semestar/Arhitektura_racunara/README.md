@@ -10,6 +10,8 @@ Izvođenje nastave: 3 časa predavanja + 3 časa računarskih vežbi nedeljno
 
 ESPB: 9
 
+Sajt predmeta: [obaveštenja](http://www.acs.uns.ac.rs/sr/arsiit), [materijali](http://www.acs.uns.ac.rs/sr/node/237/4598463)
+
 # Sadržaj predmeta
 
 Na predavanjima se iz [udžbenika](./Udzbenik2019.pdf) rade:
@@ -48,3 +50,5 @@ Ovi parcijalni testovi su na zaokruživanje i rade se u terminu predavanja u 3 g
 Prvi parcijalni obuhvata prve 3 glave iz udžbenika (uvod, brojni sistemi, i asemblersko programiranje). Primer prvog parcijalnog može se naći [ovde](.AR_SIIT_Primer_PI1.pdf). 
 Drugi parcijalni obuhvata druge 3 glave (procesor i memorija, organizacija procesora, i računar KONCEPT). Primer drugog parcijalnog može se naći [ovde](.AR_SIIT_Primer_PI2.pdf).
 Da bi se položio ispit preko parcijalnih ispita potrebno je osvojiti minimum od 16 bodova u zbiru. Moguće je popraviti ili nadoknaditi jedan od parcijalnih u januarskom roku. Ukoliko se ne položi preko parcijalnih moguće je raditi ispit u celosti. Na integralni ispit dolaze sve glave kao i na parcijalnim ali i još neke dodatne glave (mislim 7, 13, 14 ili 14, 15 nisam siguran).
+
+Moguće je dobiti dodatne bodove na predavanjima odgovaranjem na neka pitanja ili prisustvom na nadoknadama ili slično. Ovi bodovi se dodaju na ispit ali se ne može preći 30 poena. Takođe je moguće dobiti i dodatke bodove na vežbama i to za svaki termin ako se uspešno odrade neki zadaci, a nama su davali i nagradnih 10 ako dobro uradimo pripremu za SOV. Ovi poeni se dodaju na predispitne ali se ne može preći 70 poena. Ovi dodatni bodovi se ne mogu mešati, na primer ako na predispitnim imaš 70, a na ispitu 20, dodatni sa predispitnih se ne mogu dodati na ispit.
