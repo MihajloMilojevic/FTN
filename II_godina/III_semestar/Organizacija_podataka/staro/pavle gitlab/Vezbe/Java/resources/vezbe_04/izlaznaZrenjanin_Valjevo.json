@@ -1,0 +1,12 @@
+[ {
+  "id" : "2",
+  "mestoPolaska" : "Zrenjanin",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "18",
+  "cenaKarte" : 752.3655230306781,
+  "prodateKarte" : 10
+} ]

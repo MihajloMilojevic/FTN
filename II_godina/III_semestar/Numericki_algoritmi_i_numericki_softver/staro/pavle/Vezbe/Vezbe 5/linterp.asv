@@ -1,0 +1,23 @@
+function p = linterp(x, y)
+	% Lagranz
+	% f(x) = y(1)*(x)(x-x2)(x-x3)/((x1-x2)(x1-x3))
+	n = length(x);
+	p = zeros(n, 1)';
+	for i = 1:n
+		L = 1;
+		L2 = 1;
+		for j = 1:n
+			if (j ~= i)
+				L = conv(L, [1, x(j)])/(x(i) - x(j));
+			end
+		end
+		for j = 1:n
+			if (j ~= i)
+				L2 = L2/(x(i) - x(j));
+			end
+		end
+		p = p + y(i)*L*L2;
+	end
+	return	
+end
+

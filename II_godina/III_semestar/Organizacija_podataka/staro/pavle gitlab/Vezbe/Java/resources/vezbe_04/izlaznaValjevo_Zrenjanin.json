@@ -1,0 +1,111 @@
+[ {
+  "id" : "70",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "16",
+  "cenaKarte" : 872.7763818180925,
+  "prodateKarte" : 9
+}, {
+  "id" : "71",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 449.92199088351845,
+  "prodateKarte" : 50
+}, {
+  "id" : "72",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "14",
+  "cenaKarte" : 836.5554923818182,
+  "prodateKarte" : 59
+}, {
+  "id" : "73",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 716.3881697382176,
+  "prodateKarte" : 44
+}, {
+  "id" : "74",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "15",
+  "cenaKarte" : 944.6893891831035,
+  "prodateKarte" : 27
+}, {
+  "id" : "75",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 164.8028877100143,
+  "prodateKarte" : 44
+}, {
+  "id" : "76",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "11",
+  "cenaKarte" : 771.7689131380548,
+  "prodateKarte" : 1
+}, {
+  "id" : "77",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 420.0334013650949,
+  "prodateKarte" : 36
+}, {
+  "id" : "78",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "19",
+  "cenaKarte" : 652.5015933825453,
+  "prodateKarte" : 2
+}, {
+  "id" : "79",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "12",
+  "cenaKarte" : 640.0122555585411,
+  "prodateKarte" : 26
+} ]

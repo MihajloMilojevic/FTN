@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1605800861 source:c:\users\envy\desktop\dejana\organizacija\main.c
+	<stdio.h>
+	<stdlib.h>
+

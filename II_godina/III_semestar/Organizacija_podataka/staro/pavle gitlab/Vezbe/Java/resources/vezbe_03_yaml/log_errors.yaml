@@ -1,0 +1,11 @@
+Date: 2001-11-23T20:03:17Z
+User: ed
+Fatal: Unknown variable "bar"
+Stack:
+- file: TopClass.py
+  line: 23
+  code: |
+    x = MoreObject("345\n")
+- file: MoreClass.py
+  line: 58
+  code: foo = bar

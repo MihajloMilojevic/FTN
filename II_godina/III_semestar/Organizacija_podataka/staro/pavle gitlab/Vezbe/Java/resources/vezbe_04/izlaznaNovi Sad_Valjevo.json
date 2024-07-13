@@ -1,0 +1,78 @@
+[ {
+  "id" : "52",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "18",
+  "cenaKarte" : 533.6585468635461,
+  "prodateKarte" : 45
+}, {
+  "id" : "53",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 436.2891758449213,
+  "prodateKarte" : 25
+}, {
+  "id" : "54",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 513.8845896928725,
+  "prodateKarte" : 22
+}, {
+  "id" : "55",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "1",
+  "cenaKarte" : 92.26041500855354,
+  "prodateKarte" : 43
+}, {
+  "id" : "56",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 692.2179847049232,
+  "prodateKarte" : 5
+}, {
+  "id" : "57",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "15:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 904.2708733213077,
+  "prodateKarte" : 47
+}, {
+  "id" : "58",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "10",
+  "cenaKarte" : 154.25168260927535,
+  "prodateKarte" : 4
+} ]

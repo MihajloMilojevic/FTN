@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-collections4-4.2.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-lang3-3.7.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-compile-dependencies/commons-text-1.3.jar"/>
+	<classpathentry kind="lib" path="libraries/csv/opencsv-4.6.jar"/>
+	<classpathentry kind="lib" path="libraries/json/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="libraries/json/jackson-core-2.9.10.jar"/>
+	<classpathentry kind="lib" path="libraries/json/jackson-databind-2.9.10.jar"/>
+	<classpathentry kind="lib" path="libraries/yaml/snakeyaml-1.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

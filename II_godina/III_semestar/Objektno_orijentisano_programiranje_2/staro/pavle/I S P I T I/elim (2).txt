@@ -1,0 +1,64 @@
+1.) Neka je dat tip A koji definiše virtuelnu metodu foo i tip B koji nasleđuje tip A i definiše istu tu metodu foo.
+Ako imamo sledeći kod 
+x->foo();
+kako treba da bude definisana promenljiva x da bi taj kod bio ispravan i da bi se pozvala metoda foo iz B?
+	a) B* x = new B();      (Ovo je tacno)
+	b) A  y;  B* x = &y;        (a value of type A* cannot be used to initialize an entity of type B)
+	v) B  y;  B& x = y;           (expression must have pointer type)
+	g) A* x = new B();       (Ovo je tacno)
+
+2.) Ako su date sledeće promenljive i deklaracija funkcije, koji su ispravni pozivi te funkcije?
+	std::string x;
+	double y;
+	void foo(std::string a, const double& b);
+
+	a) foo(x, const&y);      (nije tacno zbog const& y)
+	b) foo(std::string a = x, const double& b = y);    (type name is not allowed – ne moze)
+	v) foo(x, y);     (ovo je tacno)
+	g) foo(x, *y);    (ovo ne moze, jer y nije pointer)
+	d) foo(x, &y);      (ne moze)
+
+
+
+
+
+3.)  Napisi telo funkcije ispis, tako da ispisuje na standardan izlaz vrednosti elemenata liste x.
+#include <iostream>
+#include <list>
+void ispis(const std::list<int>& x)
+{
+	std::list<int>::const_iterator it;
+	for (it = x.begin(); it != x.end(); ++it)
+	{
+		cout << *it;
+	}
+}
+4.) Koje su tvrdnje tacne, a koje ne?
+	a) C++ je u potpunosti staticki tipski bezbedan jezik.
+	b) C++ je u potpunosti dinamicki tipski bezbedan jezik.
+	v) C++ podrzava iskljucivo paradigmu objektno orijentisanog programiranja.
+	g) Tip std::string je ugradjeni tip u C++-u. 
+
+5.) Neka je A slozeni tip i y promenljiva tog tipa. Ako imamo ovakav ispravan kod 
+	A  x(y);
+      Kako se zove funkcija koja ce na tom mestu biti pozvana?
+a)	Podrazumevani konstruktor
+b)	Konstruktor kopije -da
+c)	Muv konstruktor
+d)	Operator dodele
+
+6.) Napisi deklaraciju:
+	a) Promenljive tipa STL mape koja preslikava elemente tipa STL stringa u elemente int tipa.
+		std::map<std::string, int> mapa;
+	b) Promenljive korisnicki definisanog tipa, koji se zove MojTip.
+		MojTip mojtip;
+	v) Slozenog tipa kojeg cine dva javna polja tipa float I jedna privatna funkcija koja prima STL 
+                   vector int-ova I vraca vrednost tipa int.
+
+	 class SlozenTip
+	{
+	private:
+		int Funkcija(stl::vector<int> vektor);
+public:
+	float x, y;
+};

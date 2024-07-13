@@ -1,0 +1,122 @@
+[ {
+  "id" : "114",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 622.4842697166293,
+  "prodateKarte" : 1
+}, {
+  "id" : "115",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 43.075524509108234,
+  "prodateKarte" : 31
+}, {
+  "id" : "116",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "10",
+  "cenaKarte" : 397.2723308143996,
+  "prodateKarte" : 29
+}, {
+  "id" : "117",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "8",
+  "cenaKarte" : 699.0501685254653,
+  "prodateKarte" : 17
+}, {
+  "id" : "118",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "1",
+  "cenaKarte" : 200.40803714087497,
+  "prodateKarte" : 46
+}, {
+  "id" : "119",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "15:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "19",
+  "cenaKarte" : 288.4142139433522,
+  "prodateKarte" : 34
+}, {
+  "id" : "120",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 168.18279730954467,
+  "prodateKarte" : 30
+}, {
+  "id" : "121",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 25.564399478512634,
+  "prodateKarte" : 35
+}, {
+  "id" : "122",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "11",
+  "cenaKarte" : 351.34117890072514,
+  "prodateKarte" : 56
+}, {
+  "id" : "123",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "19",
+  "cenaKarte" : 388.36657258219344,
+  "prodateKarte" : 54
+}, {
+  "id" : "124",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 116.80556223116301,
+  "prodateKarte" : 30
+} ]

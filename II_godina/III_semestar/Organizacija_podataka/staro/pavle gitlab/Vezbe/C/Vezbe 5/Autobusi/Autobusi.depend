@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1609015244 source:f:\fakultet\treci semestar\organizacija podataka\autobusi\bucket.c
+	"bucket.h"
+
+1609015442 f:\fakultet\treci semestar\organizacija podataka\autobusi\bucket.h
+	<stdio.h>
+	<stdlib.h>
+
+1609020218 source:f:\fakultet\treci semestar\organizacija podataka\autobusi\hash.c
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+	"bucket.h"
+	<string.h>
+
+1609019031 f:\fakultet\treci semestar\organizacija podataka\autobusi\hash.h
+	"bucket.h"
+
+1609019740 source:f:\fakultet\treci semestar\organizacija podataka\autobusi\main.c
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+	"bucket.h"
+

@@ -1,0 +1,133 @@
+[ {
+  "id" : "40",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 733.7758202153191,
+  "prodateKarte" : 39
+}, {
+  "id" : "41",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 508.0111576123443,
+  "prodateKarte" : 52
+}, {
+  "id" : "42",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 582.8428427933993,
+  "prodateKarte" : 6
+}, {
+  "id" : "43",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 898.6056946942865,
+  "prodateKarte" : 22
+}, {
+  "id" : "44",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 999.770655629961,
+  "prodateKarte" : 7
+}, {
+  "id" : "45",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "15",
+  "cenaKarte" : 501.2815630241153,
+  "prodateKarte" : 43
+}, {
+  "id" : "46",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "6",
+  "cenaKarte" : 18.92601036573016,
+  "prodateKarte" : 59
+}, {
+  "id" : "47",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 767.5386560302304,
+  "prodateKarte" : 45
+}, {
+  "id" : "48",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 421.1192000928764,
+  "prodateKarte" : 6
+}, {
+  "id" : "49",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "6",
+  "cenaKarte" : 294.30047694841767,
+  "prodateKarte" : 12
+}, {
+  "id" : "50",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "1",
+  "cenaKarte" : 279.1425115794898,
+  "prodateKarte" : 3
+}, {
+  "id" : "51",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Beograd",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 940.6833533333688,
+  "prodateKarte" : 11
+} ]

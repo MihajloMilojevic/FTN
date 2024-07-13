@@ -1,0 +1,11 @@
+h = @(x)x.^2-2+x.^2-2
+
+x = linspace(-2, 2, 1000);
+
+y = h(x);
+
+plot(x, y, 'blue'), hold on
+
+plot([-5 5], [0 0], 'k'), hold on
+
+[x y] = zero_bisection(h)

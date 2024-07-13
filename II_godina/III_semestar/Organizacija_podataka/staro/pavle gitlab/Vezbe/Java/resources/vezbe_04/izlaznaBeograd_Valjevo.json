@@ -1,0 +1,89 @@
+[ {
+  "id" : "46",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "13",
+  "cenaKarte" : 811.0776765284421,
+  "prodateKarte" : 40
+}, {
+  "id" : "47",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 785.9480296594024,
+  "prodateKarte" : 33
+}, {
+  "id" : "48",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "10",
+  "cenaKarte" : 685.9177433117148,
+  "prodateKarte" : 5
+}, {
+  "id" : "49",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 24.496814037615945,
+  "prodateKarte" : 40
+}, {
+  "id" : "50",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 481.29058297951,
+  "prodateKarte" : 34
+}, {
+  "id" : "51",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 677.4530979326516,
+  "prodateKarte" : 8
+}, {
+  "id" : "52",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 973.6433575453751,
+  "prodateKarte" : 36
+}, {
+  "id" : "53",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "13:00",
+  "stanicniPeron" : "14",
+  "cenaKarte" : 108.66988940390677,
+  "prodateKarte" : 56
+} ]

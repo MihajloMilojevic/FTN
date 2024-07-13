@@ -1,0 +1,100 @@
+[ {
+  "id" : "105",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 29.964743956831352,
+  "prodateKarte" : 47
+}, {
+  "id" : "106",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "14",
+  "cenaKarte" : 302.6226155066698,
+  "prodateKarte" : 30
+}, {
+  "id" : "107",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "13",
+  "cenaKarte" : 461.6322863490216,
+  "prodateKarte" : 36
+}, {
+  "id" : "108",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "7",
+  "cenaKarte" : 548.8924565802915,
+  "prodateKarte" : 29
+}, {
+  "id" : "109",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "11",
+  "cenaKarte" : 141.84500921078802,
+  "prodateKarte" : 12
+}, {
+  "id" : "110",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "16",
+  "cenaKarte" : 232.57252525983242,
+  "prodateKarte" : 10
+}, {
+  "id" : "111",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 551.8923535063236,
+  "prodateKarte" : 49
+}, {
+  "id" : "112",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "19",
+  "cenaKarte" : 112.57776884197756,
+  "prodateKarte" : 4
+}, {
+  "id" : "113",
+  "mestoPolaska" : "Valjevo",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 710.3190241635865,
+  "prodateKarte" : 10
+} ]

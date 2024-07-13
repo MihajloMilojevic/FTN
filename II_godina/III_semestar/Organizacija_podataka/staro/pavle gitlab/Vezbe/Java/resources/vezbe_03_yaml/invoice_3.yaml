@@ -1,0 +1,19 @@
+!!vezbe_03_yaml.example03.Invoice
+billTo: &id001
+  address:
+    city: Royal Oak
+    lines: |
+      458 Walkman Dr.
+      Suite #292
+    postal: '48046'
+    state: MI
+  family: Dumars
+  given: Chris
+comments: Late afternoon is best. Backup contact is Nancy Billsmer @ 338-4338.
+date: '2001-01-23'
+invoice: 34843
+product:
+- {description: Super Giga Hoop, price: 1000.0, quantity: 1, sku: BL222J}
+shipTo: *id001
+tax: 61.42052
+total: 1000.0

@@ -1,0 +1,56 @@
+[ {
+  "id" : "65",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "16",
+  "cenaKarte" : 876.56207130068,
+  "prodateKarte" : 4
+}, {
+  "id" : "66",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 346.11532417114,
+  "prodateKarte" : 30
+}, {
+  "id" : "67",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 572.9241232360608,
+  "prodateKarte" : 43
+}, {
+  "id" : "68",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "16",
+  "cenaKarte" : 886.9591842736629,
+  "prodateKarte" : 15
+}, {
+  "id" : "69",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Zrenjanin",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "5",
+  "cenaKarte" : 923.4027473703555,
+  "prodateKarte" : 51
+} ]

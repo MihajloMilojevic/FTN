@@ -1,0 +1,67 @@
+[ {
+  "id" : "59",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "12",
+  "cenaKarte" : 311.0077997183015,
+  "prodateKarte" : 53
+}, {
+  "id" : "60",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "14",
+  "cenaKarte" : 884.4970716484992,
+  "prodateKarte" : 40
+}, {
+  "id" : "61",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 286.5379884743354,
+  "prodateKarte" : 46
+}, {
+  "id" : "62",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "18",
+  "cenaKarte" : 562.5976915007748,
+  "prodateKarte" : 9
+}, {
+  "id" : "63",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "9",
+  "cenaKarte" : 590.8462310733164,
+  "prodateKarte" : 21
+}, {
+  "id" : "64",
+  "mestoPolaska" : "Novi Sad",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "0",
+  "cenaKarte" : 430.51632889189915,
+  "prodateKarte" : 12
+} ]

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1606406950 source:c:\users\envy\desktop\dejana\vezbe 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdbool.h>
+	<string.h>
+

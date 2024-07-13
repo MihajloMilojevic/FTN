@@ -1,0 +1,10 @@
+NAPOMENA: Za polaganje predmeta nije potrebno da koristite ove notebooke, dovoljno je da koristite materijale u pdf formatu.
+
+Uputstvo za pokretanje notebooka
+
+1. Instalirajte neku Python distribuciju, lično preferiram Anaconda distribuciju https://www.anaconda.com/products/individual.
+2. Ako ste instalirali Anaconda distribuciju već imate jupyter notebook, a ako niste onda instalirajte jypter notebook https://jupyter.org/.
+3. Instalirajte Octave https://www.gnu.org/software/octave/index.
+4. Podesite sistemsku promenjljivu OCTAVE_EXECUTABLE na lokaciju octave-cli.exe  (kod mene je C:\Octave\Octave-5.2.0\mingw64\bin\octave-cli.exe).
+5. Instalirajte https://pypi.org/project/octave-kernel/.
+6. Predjite u folder u kome se nalazi notebook i pokrenite jypter lab ili jupyter notebook.

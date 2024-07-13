@@ -1,0 +1,45 @@
+[ {
+  "id" : "1",
+  "mestoPolaska" : "Zrenjanin",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 403.811147383248,
+  "prodateKarte" : 52
+}, {
+  "id" : "2",
+  "mestoPolaska" : "Zrenjanin",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "9",
+  "cenaKarte" : 303.31535738919,
+  "prodateKarte" : 43
+}, {
+  "id" : "3",
+  "mestoPolaska" : "Zrenjanin",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "8",
+  "cenaKarte" : 237.66795926858407,
+  "prodateKarte" : 56
+}, {
+  "id" : "4",
+  "mestoPolaska" : "Zrenjanin",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "15",
+  "cenaKarte" : 803.4181193930224,
+  "prodateKarte" : 17
+} ]

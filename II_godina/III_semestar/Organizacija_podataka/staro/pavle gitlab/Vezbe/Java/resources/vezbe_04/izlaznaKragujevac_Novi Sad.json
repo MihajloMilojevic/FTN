@@ -1,0 +1,78 @@
+[ {
+  "id" : "125",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "10",
+  "cenaKarte" : 703.0968412622495,
+  "prodateKarte" : 42
+}, {
+  "id" : "126",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 984.871894816418,
+  "prodateKarte" : 51
+}, {
+  "id" : "127",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "13",
+  "cenaKarte" : 408.4156208292835,
+  "prodateKarte" : 43
+}, {
+  "id" : "128",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "1",
+  "cenaKarte" : 963.3265371725331,
+  "prodateKarte" : 17
+}, {
+  "id" : "129",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "14",
+  "cenaKarte" : 729.1052143855976,
+  "prodateKarte" : 22
+}, {
+  "id" : "130",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "6",
+  "cenaKarte" : 551.0218903459992,
+  "prodateKarte" : 52
+}, {
+  "id" : "131",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Novi Sad",
+  "datumPolaska" : "22.11.2020.",
+  "datumDolaska" : "22.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 136.81713634256977,
+  "prodateKarte" : 45
+} ]

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607612107 source:c:\users\envy\desktop\dejana\automobililiste\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

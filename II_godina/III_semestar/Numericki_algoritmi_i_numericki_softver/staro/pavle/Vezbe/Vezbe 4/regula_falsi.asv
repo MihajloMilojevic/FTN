@@ -1,0 +1,11 @@
+function [ x, y ] = regula_falsi(f, x0, x1, maxIter, err, iter)
+	for i=1:iter
+		x2 = x1 - f(x1)*(x1 - x0)/(f(x1) - f(x0));
+		if abs(f(x2)) < err
+			break;
+		end
+		if
+	end
+
+end
+

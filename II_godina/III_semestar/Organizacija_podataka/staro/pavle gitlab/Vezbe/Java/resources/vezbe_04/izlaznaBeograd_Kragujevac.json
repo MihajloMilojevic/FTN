@@ -1,0 +1,56 @@
+[ {
+  "id" : "54",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "18",
+  "cenaKarte" : 67.00881334113551,
+  "prodateKarte" : 54
+}, {
+  "id" : "55",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "17",
+  "cenaKarte" : 884.6221520301389,
+  "prodateKarte" : 19
+}, {
+  "id" : "56",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 316.76481308543646,
+  "prodateKarte" : 28
+}, {
+  "id" : "57",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "3",
+  "cenaKarte" : 771.6753774420251,
+  "prodateKarte" : 28
+}, {
+  "id" : "58",
+  "mestoPolaska" : "Beograd",
+  "mestoDolaska" : "Kragujevac",
+  "datumPolaska" : "21.11.2020.",
+  "datumDolaska" : "21.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "2",
+  "cenaKarte" : 529.8479350489483,
+  "prodateKarte" : 55
+} ]

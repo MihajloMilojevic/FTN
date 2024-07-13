@@ -1,0 +1,78 @@
+[ {
+  "id" : "95",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "08:00",
+  "vremePolaska" : "07:00",
+  "stanicniPeron" : "11",
+  "cenaKarte" : 97.97630852026428,
+  "prodateKarte" : 25
+}, {
+  "id" : "96",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "09:00",
+  "vremePolaska" : "08:00",
+  "stanicniPeron" : "4",
+  "cenaKarte" : 125.52484780447604,
+  "prodateKarte" : 52
+}, {
+  "id" : "97",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "10:00",
+  "vremePolaska" : "09:00",
+  "stanicniPeron" : "11",
+  "cenaKarte" : 771.8314129486862,
+  "prodateKarte" : 10
+}, {
+  "id" : "98",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "11:00",
+  "vremePolaska" : "10:00",
+  "stanicniPeron" : "6",
+  "cenaKarte" : 733.5623653222574,
+  "prodateKarte" : 22
+}, {
+  "id" : "99",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "12:00",
+  "vremePolaska" : "11:00",
+  "stanicniPeron" : "18",
+  "cenaKarte" : 955.3346374138322,
+  "prodateKarte" : 14
+}, {
+  "id" : "100",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "13:00",
+  "vremePolaska" : "12:00",
+  "stanicniPeron" : "19",
+  "cenaKarte" : 285.5587878541159,
+  "prodateKarte" : 46
+}, {
+  "id" : "101",
+  "mestoPolaska" : "Kragujevac",
+  "mestoDolaska" : "Valjevo",
+  "datumPolaska" : "20.11.2020.",
+  "datumDolaska" : "20.11.2020.",
+  "vremeDolaska" : "14:00",
+  "vremePolaska" : "13:00",
+  "stanicniPeron" : "15",
+  "cenaKarte" : 750.9274103501373,
+  "prodateKarte" : 35
+} ]

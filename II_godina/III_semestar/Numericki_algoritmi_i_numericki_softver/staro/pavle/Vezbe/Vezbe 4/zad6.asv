@@ -1,0 +1,16 @@
+h = @(x)sin(2*x) - x;
+dh = diff(sym)
+x = linspace(0, 2*pi, 1000);
+
+y = h(x);	
+
+plot(x, y, 'blue'), hold on
+
+plot([0 2*pi], [0 0], 'k'), hold on
+plot([0 0], [-5 5], 'k')
+
+[x y] = zero_bisection(h, 0, pi/4, 10^-4, 100000)
+plot(x, y, 'green*')
+
+[x y] = zero_bisection(h, pi/4, 2*pi, 10^-4, 100000)
+plot(x, y, 'green*')

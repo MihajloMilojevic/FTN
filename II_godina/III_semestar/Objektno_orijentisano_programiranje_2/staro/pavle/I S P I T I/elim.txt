@@ -1,0 +1,46 @@
+1.) Neka je dat tip A koji definiše virtuelnu metodu foo i tip B koji nasleđuje tip A i definiše istu tu metodu foo.
+Ako imamo sledeći kod 
+x-foo();
+kako treba da bude definisana promenljiva x da bi taj kod bio ispravan i da bi se pozvala metoda foo iz B
+	a) B x = new B();
+	b) A  y;  B x = &y;
+	v) B  y;  B& x = y;
+	g) A x = new B();
+
+2.) Ako su date sledeće promenljive i deklaracija funkcije, koji su ispravni pozivi te funkcije
+	stdstring x;
+	double y;
+	void foo(stdstring a, const double& b);
+
+	a) foo(x, const&y);
+	b) foo(stdstring a = x, const double& b = y);
+	v) foo(x, y);
+	g) foo(x, y);
+	d) foo(x, &y);
+3.)  Napisi telo funkcije ispis, tako da ispisuje na standardan izlaz vrednosti elemenata liste x.
+#include iostream
+#include list
+void ispis(const stdlistint& x)
+{
+}
+4.) Koje su tvrdnje tacne, a koje ne
+	a) C++ je u potpunosti staticki tipski bezbedan jezik.
+	b) C++ je u potpunosti dinamicki tipski bezbedan jezik.
+	v) C++ podrzava iskljucivo paradigmu objektno orijentisanog programiranja.
+	g) Tip stdstring je ugradjeni tip u C++-u. 
+
+5.) Neka je A slozeni tip i y promenljiva tog tipa. Ako imamo ovakav ispravan kod 
+	A  x(y);
+      Kako se zove funkcija koja ce na tom mestu biti pozvana
+a)	Podrazumevani konstruktor
+b)	Konstruktor kopije
+c)	Muv konstruktor
+d)	Operator dodele
+
+6.) Napisi deklaraciju
+	a) Promenljive tipa STL mape koja preslikava elemente tipa STL stringa u elemente int tipa.
+	b) Promenljive korisnicki definisanog tipa, koji se zove MojTip.
+	v) Slozenog tipa kojeg cine dva javna polja tipa float I jedna privatna funkcija koja prima STL 
+                   vector int-ova I vraca vrednost tipa int.
+
+
