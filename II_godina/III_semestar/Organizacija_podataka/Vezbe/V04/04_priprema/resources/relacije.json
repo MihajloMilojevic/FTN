@@ -1,0 +1,101 @@
+[ {
+  "sifra" : "001",
+  "polaziste" : "Novi Sad",
+  "odrediste" : "Beograd",
+  "polasci" : [ {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "10:00",
+    "vremeDolaska" : "11:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 25,
+    "datum" : "31-10-2024"
+  }, {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "15:00",
+    "vremeDolaska" : "16:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 30,
+    "datum" : "31-10-2024"
+  }, {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "20:00",
+    "vremeDolaska" : "21:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 18,
+    "datum" : "31-10-2024"
+  } ]
+}, {
+  "sifra" : "002",
+  "polaziste" : "Beograd",
+  "odrediste" : "Kraljevo",
+  "polasci" : [ {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "11:00",
+    "vremeDolaska" : "16:00",
+    "peron" : "7",
+    "cenaKarte" : 1300.0,
+    "brojPutnika" : 15,
+    "datum" : "31-10-2024"
+  }, {
+    "datumPolaska" : "01-11-2024",
+    "vremePolaska" : "11:00",
+    "vremeDolaska" : "16:00",
+    "peron" : "7",
+    "cenaKarte" : 1300.0,
+    "brojPutnika" : 30,
+    "datum" : "01-11-2024"
+  } ]
+}, {
+  "sifra" : "003",
+  "polaziste" : "Kraljevo",
+  "odrediste" : "Nis",
+  "polasci" : [ {
+    "datumPolaska" : "01-11-2024",
+    "vremePolaska" : "11:00",
+    "vremeDolaska" : "14:00",
+    "peron" : "7",
+    "cenaKarte" : 1300.0,
+    "brojPutnika" : 15,
+    "datum" : "01-11-2024"
+  }, {
+    "datumPolaska" : "02-11-2024",
+    "vremePolaska" : "11:00",
+    "vremeDolaska" : "14:00",
+    "peron" : "7",
+    "cenaKarte" : 1300.0,
+    "brojPutnika" : 30,
+    "datum" : "02-11-2024"
+  } ]
+}, {
+  "sifra" : "004",
+  "polaziste" : "Beograd",
+  "odrediste" : "Novi Sad",
+  "polasci" : [ {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "10:00",
+    "vremeDolaska" : "11:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 25,
+    "datum" : "31-10-2024"
+  }, {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "15:00",
+    "vremeDolaska" : "16:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 30,
+    "datum" : "31-10-2024"
+  }, {
+    "datumPolaska" : "31-10-2024",
+    "vremePolaska" : "20:00",
+    "vremeDolaska" : "21:00",
+    "peron" : "1",
+    "cenaKarte" : 300.0,
+    "brojPutnika" : 18,
+    "datum" : "31-10-2024"
+  } ]
+} ]

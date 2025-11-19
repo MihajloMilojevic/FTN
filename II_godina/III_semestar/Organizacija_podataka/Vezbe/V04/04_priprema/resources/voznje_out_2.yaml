@@ -1,0 +1,20 @@
+!!voznje.Zadatak2$Rezultat
+najduzi_polazak:
+  brojPutnika: 15
+  cenaKarte: 1300.0
+  datum: 31-10-2024
+  datumPolaska: 31-10-2024
+  peron: '7'
+  relacija: {odrediste: Kraljevo, polaziste: Beograd, sifra: '002'}
+  vremeDolaska: '16:00'
+  vremePolaska: '11:00'
+najisplativiji_polazak:
+  brojPutnika: 30
+  cenaKarte: 1300.0
+  datum: 01-11-2024
+  datumPolaska: 01-11-2024
+  peron: '7'
+  relacija: {odrediste: Kraljevo, polaziste: Beograd, sifra: '002'}
+  vremeDolaska: '16:00'
+  vremePolaska: '11:00'
+relacija_najvise_polazaka: '001'

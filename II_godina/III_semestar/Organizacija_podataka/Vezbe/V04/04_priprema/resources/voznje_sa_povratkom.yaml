@@ -1,0 +1,11 @@
+!!set
+? !!voznje.Relacija
+    odrediste: Beograd
+    polaziste: Novi Sad
+    sifra: '001'
+: null
+? !!voznje.Relacija
+    odrediste: Novi Sad
+    polaziste: Beograd
+    sifra: '004'
+: null

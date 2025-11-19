@@ -1,0 +1,5 @@
+Na kolokvijumu dobijamo:
+main.py
+Record.py
+BinaryFile.py
+in.txt
