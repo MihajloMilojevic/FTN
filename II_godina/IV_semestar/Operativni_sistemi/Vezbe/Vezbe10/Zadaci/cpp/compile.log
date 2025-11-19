@@ -1,0 +1,9 @@
+c.cpp: In function ‘int main()’:
+c.cpp:4:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    4 |     cout << "Hello, World!" << std::endl;
+      |     ^~~~
+      |     std::cout
+In file included from c.cpp:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
