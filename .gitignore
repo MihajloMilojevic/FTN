@@ -1,0 +1,8 @@
+# Ignore all .metadata folders
+.metadata/
+
+# Ignore all .vs folders (Visual Studio)
+.vs/
+
+# Ignore all .vscode folders (Visual Studio Code)
+.vscode/
