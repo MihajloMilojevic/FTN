@@ -1,0 +1,123 @@
+-r
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\1_nqueens_serial\e000\st000
+--mrte-mode=auto
+--return-app-exitcode
+--follow-child
+--strategy=ld-linux.so.2:notrace:notrace,ld-linux-x86-64.so.2:notrace:notrace
+--interval=10
+--itt-config=frame,task,event,counter,model
+--type=projection:stack
+--no-stack-stitching
+--stackwalk=offline
+--data-limit-mb=500
+--mrte-type=java,dotnet,python
+--opencl-trace-mode=default
+--search-dir
+sym=C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release
+--search-dir
+sym:r=C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor
+--search-dir
+bin=C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release
+--search-dir
+bin=C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\..\\..\\ocloc\\latest\\bin
+--search-dir
+bin=C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\bin
+--search-dir
+bin=C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\lib
+--search-dir
+bin=C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\..\\..\\tbb\\latest\\bin
+--search-dir
+bin=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64
+--search-dir
+bin=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64
+--search-dir
+bin=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86
+--search-dir
+bin=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\tools
+--search-dir
+bin=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\ide
+--search-dir
+bin=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64
+--search-dir
+bin=C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319
+--search-dir
+bin=C:\\WINDOWS\\Microsoft.NET\\Framework\\v4.0.30319
+--search-dir
+bin=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin
+--search-dir
+bin=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin
+--search-dir
+bin=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\libnvvp
+--search-dir
+bin=C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin
+--search-dir
+bin=C:\\Program Files\\Common Files\\Oracle\\Java\\javapath
+--search-dir
+bin=C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath
+--search-dir
+bin=C:\\WINDOWS\\system32
+--search-dir
+bin=C:\\WINDOWS
+--search-dir
+bin=C:\\WINDOWS\\System32\\Wbem
+--search-dir
+bin=C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0
+--search-dir
+bin=C:\\WINDOWS\\System32\\OpenSSH
+--search-dir
+bin=C:\\Program Files\\Git\\cmd
+--search-dir
+bin=C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn
+--search-dir
+bin=C:\\Program Files\\dotnet
+--search-dir
+bin=C:\\Program Files\\Docker\\Docker\\resources\\bin
+--search-dir
+bin=C:\\Program Files\\Java\\jdk-21\\bin
+--search-dir
+bin=C:\\Program Files\\MongoDB\\Tools\\100\\bin
+--search-dir
+bin=C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2024.3.2
+--search-dir
+bin=C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common
+--search-dir
+bin=C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR
+--search-dir
+bin=C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit
+--search-dir
+bin=C:\\Program Files\\GitHub CLI
+--search-dir
+bin=C:\\Program Files\\Go\\bin
+--search-dir
+bin=C:\\Program Files\\nodejs
+--search-dir
+bin=C:\\Users\\Mihajlo\\.cargo\\bin
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\Programs\\Python\\Python311\\Scripts
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\Programs\\Python\\Python311
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\Microsoft\\WindowsApps
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin
+--search-dir
+bin=C:\\Program Files\\Java\\scripts
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\Android\\Sdk\\platform-tools
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Local\\JetBrains\\Toolbox\\scripts
+--search-dir
+bin=C:\\MinGW\\bin
+--search-dir
+bin=C:\\msys64\\ucrt64\\bin
+--search-dir
+bin=C:\\Program Files\\mongosh
+--search-dir
+bin=C:\\Users\\Mihajlo\\go\\bin
+--search-dir
+bin=C:\\Users\\Mihajlo\\AppData\\Roaming\\npm
+--search-dir
+bin=C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor
+--app-working-dir=C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release
+--
+C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release\\1_nqueens_serial.exe

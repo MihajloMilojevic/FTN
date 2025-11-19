@@ -1,0 +1,14 @@
+﻿  Clip.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(22,23): warning C4244: '=': conversion from 'short' to 'unsigned char', possible loss of data
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(31,60): warning C4267: 'argument': conversion from 'size_t' to 'Value', possible loss of data
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(31,60): warning C4267:         with
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(31,60): warning C4267:         [
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(31,60): warning C4267:             Value=int
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(31,60): warning C4267:         ]
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\Paralell\Clip.cpp(30,5): warning C4102: 'tbb': unreferenced label
+  Generating code
+  1 of 930 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Paralell.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba04_coma\Priprema\x64\Release\Paralell.exe

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<bag xmlns:boolean="http://www.w3.org/2001/XMLSchema#boolean" xmlns:int="http://www.w3.org/2001/XMLSchema#int" int:version="1">
+ <SurveyView int:survey_view_int_operations_mode="0">
+  <BottomUpGrid>
+   <ColumnStructure DefaultColumnLayout="Default"/>
+  </BottomUpGrid>
+  <TopDownGrid>
+   <ColumnStructure DefaultColumnLayout="Top Down"/>
+  </TopDownGrid>
+  <RooflineChart rooflineState="{&quot;threadCount4RoofIdx&quot;:0,&quot;stackViewVisible&quot;:false}"/>
+ </SurveyView>
+ <workflow int:selected="1" boolean:accuracyEnable="true">
+  <pmVectorization>
+   <checked boolean:a1="true" boolean:a3="false" boolean:a6="false" boolean:a7="false"/>
+  </pmVectorization>
+  <pmThreading>
+   <checked boolean:a1="true" boolean:a3="false" boolean:a5="false" boolean:a7="false"/>
+  </pmThreading>
+ </workflow>
+ <MainView int:SidebarWidth="411"/>
+ <FilterView boolean:VectorizedButtonChecked="true" boolean:NotVectorizedButtonChecked="true" boolean:FakeLoopButtonChecked="false" boolean:LibrariesButtonChecked="false" ModuleFilterValue="All Modules" SourceFilterValue="All Sources" LoopModeFilterValue="Loops And Functions" ThreadFilterValue="All Threads"/>
+</bag>

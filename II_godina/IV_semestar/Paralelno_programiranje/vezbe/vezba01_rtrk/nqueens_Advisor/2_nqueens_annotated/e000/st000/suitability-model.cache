@@ -1,0 +1,84 @@
+(version 3 2)
+
+[ Sites ]
+(site solve 0 "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 99 solve
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" solve "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 99 "0x1709" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" main "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 142 "0x16d8" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" invoke_main D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl 78 "0x2097" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" "__scrt_common_main_seh()" D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl 288 "0x2076" NATIVE CALL
+    C:\WINDOWS\System32\KERNEL32.DLL BaseThreadInitThunk "" -1 "0x2e8d6" NATIVE CALL
+    C:\WINDOWS\SYSTEM32\ntdll.dll RtlUserThreadStart "" -1 "0x3c34b" NATIVE CALL
+)
+
+[ Tasks ]
+(task setQueen 0 "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 103 setQueen
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" "" "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 103 "0x1728" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" solve "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 103 "0x1720" NATIVE LOOP
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" main "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 142 "0x16d8" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" invoke_main D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl 78 "0x2097" NATIVE CALL
+    "C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe" "__scrt_common_main_seh()" D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl 288 "0x2076" NATIVE CALL
+    C:\WINDOWS\System32\KERNEL32.DLL BaseThreadInitThunk "" -1 "0x2e8d6" NATIVE CALL
+    C:\WINDOWS\SYSTEM32\ntdll.dll RtlUserThreadStart "" -1 "0x3c34b" NATIVE CALL
+)
+
+[ Locks ]
+
+[ Program ]
+(para solve 1 1
+  (comp 4040000 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 380822601 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 417451998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 449772998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 498613998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 449392998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 444881998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 480123998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 489826998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 454940998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 530528998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 484123998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 479088998 0 0 0 0 0)
+  )
+  (comp 2 0 0 0 0 0)
+  (spawn setQueen 1 1
+    (comp 375746998 0 0 0 0 0)
+  )
+  (comp 578394276 0 0 0 0 0)
+)
+(comp 206445569 0 0 0 0 0)
+
+[ End ]

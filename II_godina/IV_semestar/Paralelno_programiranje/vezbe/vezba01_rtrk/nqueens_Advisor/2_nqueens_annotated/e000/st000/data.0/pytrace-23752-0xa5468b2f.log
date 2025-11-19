@@ -1,0 +1,23 @@
+
+9204 : 0x1ca546a828 : 3 : logger_init :  LOG FILE OPENED (by collectunits.logger), level: 4
+9204 : 0x1ca546a90d : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca547db2a : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca548fbd9 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca54ceba0 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca54f0d55 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca54f8e34 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca5567bc6 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca557135f : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca559a93d : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca55d8df8 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca55e253b : 4 : pytrace_start_profiling :  [CALLED]
+9204 : 0x1ca55e300c : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca55fa010 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca561e8ba : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca5624515 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca5628fa0 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca59d589d : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca59ddf15 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca5f9ef85 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+9204 : 0x1ca5fa314f : 4 : pytrace_stop_profiling :  [CALLED]
+9204 : 0x1ca5fa318f : 3 : logger_fini :  LOG FILE CLOSED (by collectunits.logger)

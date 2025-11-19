@@ -1,0 +1,7 @@
+﻿  Fibonacci.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba05_2\primeri\primer 1\Fibonacci\Fibonacci.cpp(43,21): warning C4129: 'P': unrecognized character escape sequence
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 135 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ParallelFib.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba05_2\primeri\primer 1\Fibonacci\x64\Release\Fibonacci.exe

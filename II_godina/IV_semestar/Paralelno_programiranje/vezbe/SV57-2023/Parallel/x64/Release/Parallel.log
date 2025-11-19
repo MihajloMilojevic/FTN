@@ -1,0 +1,12 @@
+﻿  Counter.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\Parallel\Counter.cpp(79,70): warning C4267: 'argument': conversion from 'size_t' to 'Value', possible loss of data
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\Parallel\Counter.cpp(79,70): warning C4267:         with
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\Parallel\Counter.cpp(79,70): warning C4267:         [
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\Parallel\Counter.cpp(79,70): warning C4267:             Value=int
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\Parallel\Counter.cpp(79,70): warning C4267:         ]
+  Generating code
+  1 of 1025 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Parallel.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\SV57-2023\x64\Release\Parallel.exe

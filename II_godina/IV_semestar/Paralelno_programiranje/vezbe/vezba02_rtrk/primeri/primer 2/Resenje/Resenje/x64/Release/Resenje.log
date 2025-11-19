@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba02_rtrk\primeri\primer 2\Resenje\main.cpp(51,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 165 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Resenje.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba02_rtrk\primeri\primer 2\Resenje\x64\Release\Resenje.exe

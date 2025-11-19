@@ -1,0 +1,30 @@
+﻿  In file included from C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp:47:
+  In file included from C:\Program Files (x86)\Intel\oneAPI\advisor\latest\include\advisor-annotate.h:1:
+C:\Program Files (x86)\Intel\oneAPI\advisor\latest\sdk\include\advisor-annotate.h(309,24): : warning : 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+    309 |             lib_name = getenv("INTEL_LIBITTNOTIFY64");
+        |                        ^
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+   1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+        |                    ^
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+    368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+        |                                                       ^
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+    358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+        |                                               ^
+  In file included from C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp:47:
+  In file included from C:\Program Files (x86)\Intel\oneAPI\advisor\latest\include\advisor-annotate.h:1:
+C:\Program Files (x86)\Intel\oneAPI\advisor\latest\sdk\include\advisor-annotate.h(311,24): : warning : 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+    311 |             lib_name = getenv("INTEL_LIBITTNOTIFY32");
+        |                        ^
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+   1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+        |                    ^
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+    368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+        |                                                       ^
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+    358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+        |                                               ^
+  2 warnings generated.
+  2_nqueens_annotated.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\x64\Release\2_nqueens_annotated.exe

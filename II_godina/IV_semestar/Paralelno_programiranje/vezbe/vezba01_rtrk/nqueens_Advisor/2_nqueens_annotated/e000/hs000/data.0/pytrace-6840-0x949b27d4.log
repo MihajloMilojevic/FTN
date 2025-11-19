@@ -1,0 +1,23 @@
+
+23732 : 0x1c949b76c4 : 3 : logger_init :  LOG FILE OPENED (by collectunits.logger), level: 4
+23732 : 0x1c949b7920 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94a0f591 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94a2aef0 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94ab0c95 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94ad6069 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94ae0c85 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94b51fc6 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94b5d7e5 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94b8393d : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94bb46c2 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94bc2193 : 4 : pytrace_start_profiling :  [CALLED]
+23732 : 0x1c94bc3dd3 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94bd9515 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94bfcedb : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94c01672 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94c0671e : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c94ff99dc : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c95007877 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c955f5fe3 : 4 : pytrace_try_probe_python_functions :  Python version is detected as == 0x0
+23732 : 0x1c955fce0d : 4 : pytrace_stop_profiling :  [CALLED]
+23732 : 0x1c955fce6b : 3 : logger_fini :  LOG FILE CLOSED (by collectunits.logger)

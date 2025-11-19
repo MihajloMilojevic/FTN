@@ -1,0 +1,16 @@
+﻿  main.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN_Pojedinacno\Paralelno_programiranje\vezbe\vezba08_rtrk\vezba08\primeri\VectorAddition\main.cpp(245,14): warning C4996: 'clCreateCommandQueue': was declared deprecated
+main.obj : error LNK2001: unresolved external symbol _clCreateBuffer@24
+main.obj : error LNK2001: unresolved external symbol _clEnqueueNDRangeKernel@36
+main.obj : error LNK2001: unresolved external symbol _clBuildProgram@24
+main.obj : error LNK2001: unresolved external symbol _clCreateCommandQueue@20
+main.obj : error LNK2001: unresolved external symbol _clEnqueueReadBuffer@36
+main.obj : error LNK2001: unresolved external symbol _clGetDeviceIDs@24
+main.obj : error LNK2001: unresolved external symbol _clCreateContext@24
+main.obj : error LNK2001: unresolved external symbol _clGetPlatformIDs@12
+main.obj : error LNK2001: unresolved external symbol _clGetPlatformInfo@20
+main.obj : error LNK2001: unresolved external symbol _clEnqueueWriteBuffer@36
+main.obj : error LNK2001: unresolved external symbol _clCreateKernel@12
+main.obj : error LNK2001: unresolved external symbol _clCreateProgramWithSource@20
+main.obj : error LNK2001: unresolved external symbol _clSetKernelArg@16
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN_Pojedinacno\Paralelno_programiranje\vezbe\vezba08_rtrk\vezba08\primeri\VectorAddition\Release\VectorAddition.exe : fatal error LNK1120: 13 unresolved externals

@@ -1,0 +1,106 @@
+67 [10560] INFO perfrun.launcher <> - Launcher main begin
+76 [10560] INFO perfrun.launcher <> - MessageCatalogInit finished
+76 [10560] INFO perfrun.launcher <> - Launcher instance created
+76 [10560] INFO perfrun.launcher <> - argc = 7; cmdline = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\advixe-runss.exe --ui-output-format xml --ui-output-fd 9156 --option-file C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\config\runss.options 
+103 [10560] INFO perfrun.launcher <> - New signal handler callback was added
+198 [10560] INFO perfrun.launcher <> - create msngr2::ICliToolContext
+201 [10560] INFO perfrun.launcher <> - create file finder object
+201 [10560] INFO perfrun.launcher <> - create a result directory: pattern = C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000 pid = 4294967295
+209 [10560] INFO perfrun.launcher <> - create data directory = C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0
+209 [10560] INFO perfrun.launcher <> - Creating the master collection flag
+218 [10560] INFO perfrun.launcher <> - Done creating the master collection flag
+219 [23812] INFO perfrun.launcher <> - plugin [remoteplug] was disabled because it doesn't support the given collection type.
+219 [23812] INFO perfrun.sdk <> - Allocating TMU :C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0\systemcollector-17008-Milojevic.sc
+220 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.launcher <> - plugin [gpu] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+222 [23812] INFO perfrun.mrte <> - system-wide mode is 0
+222 [23812] INFO perfrun.mrte <> - Getting  mrte profiling environment ...
+238 [23812] INFO perfrun.mrte <> - INTEL_MRTE_DATA_DIR=C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0
+238 [23812] INFO perfrun.mrte <> - INTEL_MRTE_HOST_NAME=Milojevic
+238 [23812] INFO perfrun.mrte <> - JAVA_TOOL_OPTIONS=-agentlib:advixe_samplingmrte_javaprof_1.0
+238 [23812] INFO perfrun.mrte <> - PATH=C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\bin;C:\app\Mihajlo\product\21c\dbhomeXE\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.2\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\nodejs\;${OCL_ROOT}\include;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\Mihajlo\.cargo\bin;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Users\Mihajlo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Program Files\Java\scripts;C:\Users\Mihajlo\AppData\Local\Android\Sdk\platform-tools;C:\Users\Mihajlo\AppData\Local\JetBrains\Toolbox\scripts;C:\MinGW\bin;C:\msys64\ucrt64\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\mongosh\;C:\Users\Mihajlo\go\bin;C:\Users\Mihajlo\AppData\Roaming\npm
+238 [23812] INFO perfrun.mrte <> - COR_ENABLE_PROFILING=1
+238 [23812] INFO perfrun.mrte <> - COR_PROFILER={10337B79-F6CD-4df9-8D18-26A67272096B}
+238 [23812] INFO perfrun.mrte <> - COMPLUS_ProfAPI_ProfilerCompatibilitySetting=EnableV2Profiler
+238 [23812] INFO perfrun.mrte <> - CORECLR_ENABLE_PROFILING=1
+238 [23812] INFO perfrun.mrte <> - CORECLR_PROFILER={10337B79-F6CD-4df9-8D18-26A67272096B}
+238 [23812] INFO perfrun.mrte <> - CORECLR_PROFILER_PATH=C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64/advixe_samplingmrte_clrprof_1.0.dll
+238 [23812] INFO perfrun.mrte <> - INTEL_MRTE_PROFILER_MODE=mixed
+238 [23812] INFO perfrun.mrte <> - Data directory: C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0
+238 [23812] INFO perfrun.mrte <> - Mrte plugin is initialized
+238 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.tpss <> - initialize tpss controller
+239 [23812] INFO perfrun.tpss <> - configure collection mode: value = projection:stack
+239 [23812] INFO perfrun.tpss <> - default obj-size-min=1024
+239 [23812] INFO perfrun.tpss <> - default hash-table-size=0
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [23812] INFO perfrun.launcher <> - plugin [] was disabled because it doesn't support the given collection type.
+239 [10560] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\bin;C:\app\Mihajlo\product\21c\dbhomeXE\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.2\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\nodejs\;${OCL_ROOT}\include;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\Mihajlo\.cargo\bin;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Users\Mihajlo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Program Files\Java\scripts;C:\Users\Mihajlo\AppData\Local\Android\Sdk\platform-tools;C:\Users\Mihajlo\AppData\Local\JetBrains\Toolbox\scripts;C:\MinGW\bin;C:\msys64\ucrt64\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\mongosh\;C:\Users\Mihajlo\go\bin;C:\Users\Mihajlo\AppData\Roaming\npm
+239 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY32 = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\runtime\ittnotify_collector.dll
+240 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_LIBITTNOTIFY64 = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime\ittnotify_collector.dll
+240 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_ITTNOTIFY_GROUPS = 
+240 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER32 = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\runtime\ittnotify_collector.dll
+240 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_JIT_PROFILER64 = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime\ittnotify_collector.dll
+240 [10560] INFO perfrun.launcher <> - set environment variable: CCL_ITT_LEVEL = 1
+240 [10560] INFO perfrun.launcher <> - set environment variable: ENABLE_JITPROFILING = 1
+240 [10560] INFO perfrun.launcher <> - set environment variable: CL_CONFIG_USE_VTUNE = True
+241 [10560] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES = 0
+241 [10560] INFO perfrun.launcher <> - set environment variable: KMP_FORKJOIN_FRAMES_MODE = 0
+241 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_DATA_DIR = C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0
+241 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_HOST_NAME = Milojevic
+241 [10560] INFO perfrun.launcher <> - set environment variable: JAVA_TOOL_OPTIONS = -agentlib:advixe_samplingmrte_javaprof_1.0
+241 [10560] INFO perfrun.launcher <> - set environment variable: PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\runtime;C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime;C:\\Program Files (x86)\\Intel\\oneAPI\\compiler\\2025.1\\bin;C:\app\Mihajlo\product\21c\dbhomeXE\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-21\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.2\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\GitHub CLI\;C:\Program Files\Go\bin;C:\Program Files\nodejs\;${OCL_ROOT}\include;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\Mihajlo\.cargo\bin;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Mihajlo\AppData\Local\Programs\Python\Python311\;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Users\Mihajlo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Program Files\Java\scripts;C:\Users\Mihajlo\AppData\Local\Android\Sdk\platform-tools;C:\Users\Mihajlo\AppData\Local\JetBrains\Toolbox\scripts;C:\MinGW\bin;C:\msys64\ucrt64\bin;C:\Users\Mihajlo\.dotnet\tools;C:\Users\Mihajlo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\mongosh\;C:\Users\Mihajlo\go\bin;C:\Users\Mihajlo\AppData\Roaming\npm
+241 [10560] INFO perfrun.launcher <> - set environment variable: COR_ENABLE_PROFILING = 1
+241 [10560] INFO perfrun.launcher <> - set environment variable: COR_PROFILER = {10337B79-F6CD-4df9-8D18-26A67272096B}
+241 [10560] INFO perfrun.launcher <> - set environment variable: COMPLUS_ProfAPI_ProfilerCompatibilitySetting = EnableV2Profiler
+241 [10560] INFO perfrun.launcher <> - set environment variable: CORECLR_ENABLE_PROFILING = 1
+241 [10560] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER = {10337B79-F6CD-4df9-8D18-26A67272096B}
+242 [10560] INFO perfrun.launcher <> - set environment variable: CORECLR_PROFILER_PATH = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64/advixe_samplingmrte_clrprof_1.0.dll
+242 [10560] INFO perfrun.launcher <> - set environment variable: INTEL_MRTE_PROFILER_MODE = mixed
+242 [10560] INFO perfrun.launcher <> - RpcServer: run RPC server to handle requests
+251 [10560] INFO perfrun.sdk <> - IProcessUtil: the given executable 'C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release\\2_nqueens_annotated.exe' is valid.
+251 [10560] INFO perfrun.launcher <> - Launcher: command line to start before modification = C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release\\2_nqueens_annotated.exe
+254 [10560] INFO perfrun.launcher <> - Launcher: command line to start after modification = C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\pin.exe -error_file C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0\pinerr.tpsslog -detach_reattach -probe -follow_execv -p32 C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\pin.exe -p64 C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\pin.exe -t64 C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\tpsstool.dll -t C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin32\tpsstool.dll -server_name tpss_ipc.17008 -prd_dir C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1 -- C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Paralelno_programiranje\\vezbe\\vezba01_rtrk\\nqueens_Advisor\\x64\\Release\\2_nqueens_annotated.exe
+254 [10560] INFO perfrun.launcher <> - ProcessCreator object was created
+258 [10560] INFO perfrun.launcher <> - Launcher: the process was started in suspend mode
+273 [23812] INFO perfrun.itt <> - start itt controller for pid #18400
+274 [23812] INFO perfrun.tpss <> - start tpss controller for pid #18400
+335 [10560] INFO perfrun.launcher <> - Launcher: all plugins were started
+335 [10560] INFO perfrun.launcher <> - DirectoryMonitor object was created
+335 [10560] INFO perfrun.launcher <> - DirectoryMonitor: a callback was added
+335 [10560] INFO perfrun.launcher <> - DirectoryMonitor was started with pingTime = 1000
+335 [10560] INFO perfrun.launcher <> - DeadlineTimer is going to be constructed
+336 [10560] INFO perfrun.launcher <> - DeadlineTimer: a callback was added
+347 [10560] INFO perfrun.launcher <> - Launcher: resume the profiled application and  wait its termination or stop command
+1672 [10560] INFO perfrun.launcher <> - Launcher: the profiled application was terminated  with exit code = 0
+1699 [23812] WARN perfrun.system <> - Only 2 usec accuracy achieved for reference point, at file: vcs\perfrun1\plugins\system\src\trace_writer.cpp:320
+1712 [23812] INFO perfrun.itt <> - detach itt controller
+1712 [23812] INFO perfrun.itt <> - detach itt controller done
+1712 [23812] INFO perfrun.tpss <> - stop tpss controller
+1713 [23812] INFO perfrun.sdk <> - De-allocating TMU: C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0\systemcollector-17008-Milojevic.sc
+1732 [23812] INFO perfrun.system <> - closed the system trace file: C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\e000\st000\data.0\systemcollector-17008-Milojevic.sc
+1732 [10560] INFO perfrun.launcher <> - Launcher: all plugins were stopped.
+1732 [10560] INFO perfrun.launcher <> - DeadlineTimer is going to be destroyed
+1733 [10560] INFO perfrun.launcher <> - DeadlineTimer was destroyed
+1733 [10560] INFO perfrun.launcher <> - DirectoryMonitor object was destroyed
+1733 [10560] WARN perfrun.launcher <> - Stop command is ignored because it is received when collection is already stopped, at file: vcs\perfrun1\launcher\src\command_handler.cpp:226
+1734 [10560] INFO perfrun.launcher <> - Application exit code: 0
+1734 [10560] INFO perfrun.launcher <> - Exit code: 0

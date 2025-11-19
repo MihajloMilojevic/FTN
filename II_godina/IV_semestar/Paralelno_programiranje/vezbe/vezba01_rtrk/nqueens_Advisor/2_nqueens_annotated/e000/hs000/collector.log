@@ -1,0 +1,50 @@
+Collection status has changed. 1
+Collection has been started.
+Collection has stopped. Application exit code:  0
+Finalizing results
+Finalizing the result
+Clearing the database
+The database has been cleared, elapsed time is 0.538 seconds.
+Loading raw data to the database
+Loading 'systemcollector-24424-Milojevic.sc' file
+Loading '11508-6840.0.trace' file
+Loading 'userapicollector-6840-9500cc74.trace' file
+Updating precomputed scalar metrics
+Raw data has been loaded to the database, elapsed time is 0.278 seconds.
+Processing profile metrics and debug information
+Data transformations have been finished, elapsed time is 0.005 seconds.
+Setting data model parameters
+Resolving module symbols
+Warning: Cannot locate file `pincrt.dll'.
+Resolving information for `2_nqueens_annotated.exe'
+Resolving information for `pincrt.dll'
+Resolving information for `KERNEL32.DLL'
+Resolving information for `ntdll.dll'
+Resolving information for `ittnotify_collector.dll'
+Warning: Cannot locate debugging information for file `C:\WINDOWS\System32\KERNEL32.DLL'.
+Warning: Cannot locate debugging information for file `C:\WINDOWS\SYSTEM32\ntdll.dll'.
+Warning: Cannot locate debugging information for file `C:\Program Files (x86)\Intel\oneAPI\advisor\2025.1\bin64\runtime\ittnotify_collector.dll'.
+Resolving bottom user stack information
+Resolving thread name information
+Resolving call target names for dynamic code
+Symbol resolution has been finished, elapsed time is 1.182 seconds.
+Processing profile metrics and debug information
+Deferred data transformations have been finished, elapsed time is 0.010 seconds.
+Setting data model parameters
+Data model parameters have been set, elapsed time is 0.024 seconds.
+Precomputing frequently used data
+Precomputing frequently used data
+Updating precomputed scalar metrics
+Precomputing frequently used data has been finished, elapsed time is 0.079 seconds.
+Discarding redundant overtime data
+Saving the result
+Redundant overtime data has been discarded, elapsed time is 0.003 seconds.
+Raw collector data has been discarded, elapsed time is 0.000 seconds.
+Finalizing the result took 2.522 seconds.
+Preparing data for display of survey call tree
+Resolving module symbols
+Resolving information for dangling locations
+Resolving bottom user stack information
+Resolving thread name information
+Resolving call target names for dynamic code
+Precomputing frequently used data

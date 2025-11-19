@@ -1,0 +1,3 @@
+﻿  fatal error: UTF-16 (LE) byte order mark detected in 'Fibonacci.cpp', but encoding is not supported
+  1 error generated.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Platforms\x64\PlatformToolsets\Intel C++ Compiler 2025\Toolset.targets(384,5): error MSB6006: "icx-cl.exe" exited with code 1.

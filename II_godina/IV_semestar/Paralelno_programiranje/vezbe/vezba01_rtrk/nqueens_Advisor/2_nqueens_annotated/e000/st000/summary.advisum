@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="0.1" 
+                             kind="DATAKIND_SUITABILITY" 
+                             duration_total="6.724197E-01"
+                             num_processors="8" 
+                             num_mic_threads="128" 
+                             threading_paradigm="tbb" 
+                             target_system="cpu" 
+                             program_max_gain="5.669694E+00" >
+  <site filename="C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 
+        line_no="99" 
+        label="solve">
+    <suitability duration_total="6.517752E-01" 
+                 num_instances="1">
+      <estimated_speedup>
+       <scaling threading_paradigm="tbb" 
+                site_overhead="false" 
+                task_overhead="false" 
+                task_chunking="false" 
+                lock_overhead="false" 
+                lock_contention="false" >
+          <scale cpu="8" speedup="9.796238E-02" />
+        </scaling>
+      </estimated_speedup>
+    </suitability>
+  </site>
+  <task filename="C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp" 
+        line_no="103" 
+        label="setQueen" 
+        duration_total="5.935318E-01" 
+        num_instances="13" />
+</IntelParallelAdvisorSummary >

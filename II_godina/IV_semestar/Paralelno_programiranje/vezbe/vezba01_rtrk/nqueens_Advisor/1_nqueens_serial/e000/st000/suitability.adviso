@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSuitabilityOptions SYSTEM  "IntelParallelAdvisorSuitabilityOptions.dtd"> -->
+
+<IntelParallelAdvisorSuitabilityOptions version="0.1" 
+                                        num_processors="8" 
+                                        num_mic_threads="128" 
+                                        threading_paradigm="tbb" >
+</IntelParallelAdvisorSuitabilityOptions >

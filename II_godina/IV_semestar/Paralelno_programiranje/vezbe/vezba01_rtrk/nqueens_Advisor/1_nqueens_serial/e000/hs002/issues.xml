@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<bag xmlns:int="http://www.w3.org/2001/XMLSchema#int" xmlns:unsignedLong="http://www.w3.org/2001/XMLSchema#unsignedLong" int:version="16">
+ <issues/>
+ <traits>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>4</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>7</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>4</int:id>
+   <text>Low Trip Counts May Produce Ineffective Peeled/Remainder Loops After Vectorization - Consider Adding Data Padding or Identifying Expected Number of Iterations </text>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>148</int:fieldId>
+   <int:id>5</int:id>
+   <text>Low Trip Counts May Produce Ineffective Peeled/Remainder Loops After Vectorization - Consider Adding Data Padding or Identifying Expected Number of Iterations </text>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </trait>
+ </traits>
+</bag>

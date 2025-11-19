@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp"
+           line_no="66"
+           routine="setQueen"
+           is_vectorized="0"
+           self_time="3.145413E-01"
+           total_time="3.145413E-01"
+           trip_counts=""
+           func_instance="10"
+           priority="0"/>
+  <hotspot filename="C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp"
+           line_no="84"
+           routine="setQueen"
+           is_vectorized="0"
+           self_time="1.579880E-02"
+           total_time="5.850323E-01"
+           trip_counts=""
+           func_instance="8"
+           priority="0"/>
+  <hotspot filename="C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Paralelno_programiranje\vezbe\vezba01_rtrk\nqueens_Advisor\2_nqueens_annotated\nqueens_annotated.cpp"
+           line_no="100"
+           routine="solve"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="5.850323E-01"
+           trip_counts=""
+           func_instance="5"
+           priority="0"/>
+</IntelParallelAdvisorSummary >
