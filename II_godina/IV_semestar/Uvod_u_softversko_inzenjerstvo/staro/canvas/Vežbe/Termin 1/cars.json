@@ -1,0 +1,41 @@
+[
+  {
+    "$id": "1",
+    "Model": "XM5",
+    "Marka": "Peugeot",
+    "Boja": "crna",
+    "GodinaProizvodnje": 2020,
+    "Goriva": 1,
+    "Motor": {
+      "$id": "2",
+      "Naziv": "SW3",
+      "Kubikaza": 2000,
+      "Snaga": 120
+    }
+  },
+  {
+    "$id": "3",
+    "Model": "TTY",
+    "Marka": "Opel",
+    "Boja": "siva",
+    "GodinaProizvodnje": 2021,
+    "Goriva": 1,
+    "Motor": {
+      "$id": "4",
+      "Naziv": "TY1",
+      "Kubikaza": 1600,
+      "Snaga": 140
+    }
+  },
+  {
+    "$id": "5",
+    "Model": "QQO",
+    "Marka": "Hyundai",
+    "Boja": "crvena",
+    "GodinaProizvodnje": 2022,
+    "Goriva": 0,
+    "Motor": {
+      "$ref": "4"
+    }
+  }
+]
