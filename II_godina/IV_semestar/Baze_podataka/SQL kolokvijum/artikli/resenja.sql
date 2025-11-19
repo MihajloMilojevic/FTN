@@ -1,0 +1,96 @@
+-- zadatak 1
+SELECT nazkup
+FROM kupac
+WHERE mestkup = 'Novi Sad';
+
+-- zadatak 2
+SELECT brfak
+FROM faktura
+WHERE datum BETWEEN DATE '2010-01-01' AND DATE '2010-12-31';
+
+-- zadatak 3
+SELECT brfak, nazkup
+FROM faktura f JOIN kupac k ON f.IDKUP = k.IDKUP;
+
+-- zadatak 4
+SELECT brfak
+FROM faktura f JOIN kupac k ON f.IDKUP = k.IDKUP
+WHERE k.idkup IN (1, 2)
+ORDER BY brfak DESC;
+
+-- zadatak 5
+SELECT idart, nazart
+FROM ARTIKAL
+WHERE jcena BETWEEN 15 AND 450
+ORDER BY IDART ASC, NAZART DESC;
+
+-- zadatak 6
+SELECT a.NAZART, SUM(s.KOL)
+FROM ARTIKAL a JOIN STAVKA s ON a.IDART = s.IDART
+GROUP BY a.NAZART;
+
+-- zadatak 7
+SELECT DISTINCT k.NAZKUP, a.NAZART
+FROM KUPAC k 
+    JOIN FAKTURA f ON f.IDKUP = k.IDKUP
+    JOIN STAVKA s ON s.BRFAK = f.BRFAK
+    JOIN ARTIKAL a ON a.IDART = s.IDART
+ORDER BY k.NAZKUP;
+
+-- zadatak 8
+SELECT s.RBRST, a.JCENA
+FROM STAVKA s JOIN ARTIKAL a ON a.IDART = s.IDART
+WHERE s.BRFAK = 4 AND a.NAZART LIKE '%a%';
+
+-- zadatak 9
+WITH potrosnja_kupca AS (
+    SELECT k.IDKUP, SUM(s.CENA) as ukupno
+    FROM KUPAC k JOIN FAKTURA f ON f.IDKUP = k.IDKUP
+    JOIN STAVKA s ON s.BRFAK = f.BRFAK
+    GROUP BY k.IDKUP
+)
+SELECT f.BRFAK, a.NAZART
+FROM FAKTURA f JOIN STAVKA s ON s.BRFAK = f.BRFAK
+JOIN ARTIKAL a ON a.IDART = s.IDART 
+JOIN potrosnja_kupca pk ON pk.IDKUP = f.IDKUP
+WHERE pk.ukupno > 20000
+ORDER BY f.BRFAK DESC;
+
+-- zadatak 10
+SELECT k.IDKUP, COUNT(brfak)
+FROM KUPAC k LEFT JOIN FAKTURA f on k.IDKUP = f.IDKUP
+GROUP by k.IDKUP
+ORDER BY k.IDKUP;
+
+-- zadatak 11
+CREATE OR REPLACE VIEW TopArtikli AS (
+    SELECT a.IDART, a.NAZART
+    FROM ARTIKAL a JOIN STAVKA s ON s.IDART = a.IDART
+    GROUP BY a.IDART, a.NAZART
+    HAVING SUM(s.KOL) > (SELECT AVG(KOL) FROM STAVKA)
+);
+
+SELECT * FROM TOPARTIKLI;
+
+-- zadatak 12
+CREATE TABLE   Popust (
+    idpop INTEGER NOT NULL,
+    nazpop VARCHAR2(100),
+    datumPocetka DATE NOT NULL,
+    datumZavrsetka DATE NOT NULL,
+    idArt INTEGER NOT NULL,
+    CONSTRAINT popust_pk PRIMARY KEY (idpop),
+    CONSTRAINT popust_fk FOREIGN KEY (idart) REFERENCES ARTIKAL(idart)
+);
+
+SELECT table_name FROM user_tables;
+DESCRIBE Popust;
+
+-- ZADATAK 13
+CREATE TABLE STAVKA_COPY AS 
+SELECT * FROM STAVKA;
+
+SELECT * FROM STAVKA_COPY;
+
+DELETE FROM STAVKA_COPY
+WHERE BRFAK IN (SELECT brfak from kupac NATURAL JOIN FAKTURA WHERE mestkup = 'Novi Sad');
