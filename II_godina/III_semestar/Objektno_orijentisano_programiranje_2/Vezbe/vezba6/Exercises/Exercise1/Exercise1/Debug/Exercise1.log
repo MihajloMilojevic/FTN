@@ -1,0 +1,3 @@
+﻿  MyRectangle.cpp
+main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Exercise1.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\vezba6\Exercises\Exercise1\Debug\Exercise1.exe

@@ -1,0 +1,4 @@
+- očekuje se potpuna kontrola i provera unosa (ako se unosi short, mora se raditi provera da je unešen short i sl.)
+- program ne treba da puca za nepravilne ulaze
+- obradu unosa ne bi trebalo odvajati u posebne .h fajlove, već mogu biti funkcije u mainu
+- očekuje se da se prave klase

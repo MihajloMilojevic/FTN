@@ -1,0 +1,4 @@
+﻿  calculator02buggy.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\SimpleCalculator\calculator02buggy.cpp(76,1): warning C4715: 'Token_stream::get': not all control paths return a value
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\SimpleCalculator\calculator02buggy.cpp(105,1): warning C4715: 'primary': not all control paths return a value
+  SimpleCalculator.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\SimpleCalculator\x64\Debug\SimpleCalculator.exe

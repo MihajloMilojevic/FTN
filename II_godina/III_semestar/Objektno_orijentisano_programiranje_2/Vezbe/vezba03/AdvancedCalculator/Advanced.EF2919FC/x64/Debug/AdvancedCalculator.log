@@ -1,0 +1,5 @@
+﻿  calculator08buggy.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\AdvancedCalculator\calculator08buggy.cpp(102,1): warning C4715: 'get_value': not all control paths return a value
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\AdvancedCalculator\calculator08buggy.cpp(145,1): warning C4715: 'primary': not all control paths return a value
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\AdvancedCalculator\calculator08buggy.cpp(74,1): warning C4715: 'Token_stream::get': not all control paths return a value
+  AdvancedCalculator.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\vezba03\AdvancedCalculator\x64\Debug\AdvancedCalculator.exe

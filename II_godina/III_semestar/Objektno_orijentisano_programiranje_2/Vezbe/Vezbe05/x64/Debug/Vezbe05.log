@@ -1,0 +1,5 @@
+﻿  Vezbe05.cpp
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\Vezbe05\Vezbe05.cpp(10,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\Vezbe05\Vezbe05.cpp(13,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\Vezbe05\Vezbe05.cpp(14,15): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Vezbe05.vcxproj -> C:\MIHAJLO_MILOJEVIC\SKOLA\FTN - Pojedinacno\Objektno_orijentisano_programiranje_2\Vezbe\Vezbe\x64\Debug\Vezbe05.exe

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Objektno_orijentisano_programiranje_2\\Kolokvijum\\Ranac\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4858844F-838D-4803-9AA1-42B45E61E89E}|Ranac.vcxproj|C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Objektno_orijentisano_programiranje_2\\Kolokvijum\\Ranac\\Ranac.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4858844F-838D-4803-9AA1-42B45E61E89E}|Ranac.vcxproj|solutionrelative:Ranac.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ranac.cpp",
+              "DocumentMoniker": "C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Objektno_orijentisano_programiranje_2\\Kolokvijum\\Ranac\\Ranac.cpp",
+              "RelativeDocumentMoniker": "Ranac.cpp",
+              "ToolTip": "C:\\MIHAJLO_MILOJEVIC\\SKOLA\\FTN - Pojedinacno\\Objektno_orijentisano_programiranje_2\\Kolokvijum\\Ranac\\Ranac.cpp",
+              "RelativeToolTip": "Ranac.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-24T22:40:06.28Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
