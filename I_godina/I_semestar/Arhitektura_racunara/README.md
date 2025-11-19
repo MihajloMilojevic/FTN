@@ -2,15 +2,15 @@
 
 ## Opšte informacije
 
-Profesor: [Dušan Gajić](http://www.ftn.uns.ac.rs/2048337311/dusan-gajic)
+Profesor: [Dušan Gajić](https://ftn.uns.ac.rs/2079/dusan-gajic)
 
-Asistent: [Petar Trifunović](http://www.ftn.uns.ac.rs/2048345986/petar-trifunovic) (bar meni a ima ih još)
+Asistent: [Petar Trifunović](https://ftn.uns.ac.rs/2984/petar-trifunovic) (bar meni a ima ih još) !NAPUSTIO FAKULTET
 
 Izvođenje nastave: 3 časa predavanja + 3 časa računarskih vežbi nedeljno
 
 ESPB: 9
 
-Sajt predmeta: [obaveštenja](http://www.acs.uns.ac.rs/sr/arsiit), [materijali](http://www.acs.uns.ac.rs/sr/node/237/4598463)
+Sajt predmeta: [obaveštenja](http://www.acs.uns.ac.rs/sr/arsiit), [materijali](https://www.acs.uns.ac.rs/sr/node/237/40)
 
 # Sadržaj predmeta
 

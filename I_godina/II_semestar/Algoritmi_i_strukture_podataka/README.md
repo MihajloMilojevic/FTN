@@ -1,4 +1,4 @@
-# Osnove Programiranje
+# Algoritmi i strukture podataka
 
 ## Opšte informacije
 

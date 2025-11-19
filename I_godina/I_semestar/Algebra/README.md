@@ -2,9 +2,9 @@
 
 ## Opšte informacije
 
-Profesor: [Ksenija Doroslovački](http://www.ftn.uns.ac.rs/2048307418/ksenija-doroslovacki)
+Profesor: [Ksenija Doroslovački](https://ftn.uns.ac.rs/1040/ksenija-doroslovacki)
 
-Asistent: [Aleksandar Janjoš](http://www.ftn.uns.ac.rs/2048338086/aleksandar-janjos)
+Asistent: [Aleksandar Janjoš](https://ftn.uns.ac.rs/2119/aleksandar-janjos)
 
 Izvođenje nastave: 4 časa predavanja + 4 časa vežbi nedeljno
 

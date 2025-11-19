@@ -2,7 +2,7 @@
 
 ## Opšte informacije
 
-Profesor: [Sonja Pejić](http://www.ftn.uns.ac.rs/2048312223/sonja-pejic)
+Profesor: [Sonja Pejić](https://ftn.uns.ac.rs/1540/sonja-pejic) (ona je bila na zameni dok je redovna profesorka bila na trudničkom)
 
 Izvođenje nastave: 2 časa predavanja nedeljno
 
@@ -11,6 +11,10 @@ ESPB: 3
 ## Materijali
 
 Pošalje na teams [Materijale za ispit](./SOCIOLOGIJA%20TEHNIKE%20MATERIJAL%20ZA%20ISPIT.pdf) i to možda neke prezentacije ali svakako su beskorisne. Uči se iz skripti, a valjalo bi pročitati i materijale jednom.
+
+### Napomena
+
+Ovaj spisak ispitnih pitanja je kraći u odnosu na onaj koji daje redovna profesorka.
 
 ## Polaganje predmeta
 

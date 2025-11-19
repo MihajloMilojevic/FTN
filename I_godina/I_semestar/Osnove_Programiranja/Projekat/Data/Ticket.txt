@@ -271,3 +271,6 @@ RNTIQBETDA|4779AB|6-F|False|09.01.2024|sara|None|450.0|prle
 ZPMOARLZYZ|4779AB|7-D|False|09.01.2024|sara|None|450.0|prle
 GRXSZLQEGR|4779AB|7-E|True|None|sara|None|None|None
 IAGRBZHYPY|4779AB|7-F|True|None|sara|None|None|None
+GVIPVLQYMP|4964AI|11-F|True|None|alex|None|None|None
+LJGQBEZYKQ|4964AI|11-G|True|None|alex|None|None|None
+IYBGXJKBNY|4964AI|11-H|True|None|alex|None|None|None

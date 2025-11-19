@@ -2,7 +2,7 @@
 
 ## Opšte informacije
 
-Profesor: [Vesna Bulatović](http://www.ftn.uns.ac.rs/2048316102/vesna-bulatovic)
+Profesor: [Vesna Bulatović](https://ftn.uns.ac.rs/1250/vesna-bulatovic)
 
 Izvođenje nastave: 2 časa predavanja nedeljno
 
