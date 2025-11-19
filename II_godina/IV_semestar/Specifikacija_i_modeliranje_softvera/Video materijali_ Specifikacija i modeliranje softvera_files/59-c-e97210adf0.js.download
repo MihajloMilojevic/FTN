@@ -1,0 +1,171 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[59],{"6NVu":function(t,e,n){"use strict"
+n.d(e,"a",(function(){return o}))
+var a=n("IxAH")
+const i={true:true,false:false,null:null}
+function o(t,e){if(!t||"boolean"===typeof t){const t=window.location.search
+if(!t)return{}
+return o(t,...arguments)}const n={}
+t.replace(/\+/g," ").split("&").forEach(t=>{let[a,o]=t.split("=")
+a=decodeURIComponent(a)
+o=decodeURIComponent(o)
+e&&(o=o&&!isNaN(o)?+o:"undefined"===o?void 0:void 0!==i[o]?i[o]:o)
+n[a]=o})
+return Object(a["a"])(n)}},"8t0o":function(t,e,n){"use strict"
+n.d(e,"a",(function(){return Q}))
+var a=n("rePB")
+var i=n("Ff2n")
+var o=n("1OyB")
+var r=n("vuIU")
+var c=n("JX7q")
+var l=n("Ji7U")
+var s=n("LK+K")
+n("DEX3")
+var f=n("q1tI")
+var u=n.n(f)
+var b=n("17x9")
+var d=n.n(b)
+var H=n("TSYQ")
+var h=n.n(H)
+var y=n("n12J")
+var p=n("J2CL")
+var m=n("rW8M")
+var _=n("/UXv")
+var v=n("kR0I")
+var k=n("nAyT")
+var g=n("E+IV")
+var x=n("jtGx")
+var T=n("4Awi")
+var B=n("tCl5")
+var O=n("KgFQ")
+var G=n("oXx0")
+var I=n("o4+2")
+function j(t){var e=t.colors,n=t.typography,a=t.borders,i=t.spacing
+return{fontFamily:n.fontFamily,fontWeight:n.fontWeightNormal,color:e.textLink,textDecorationWithinText:"underline",hoverTextDecorationWithinText:"none",textDecorationOutsideText:"none",hoverTextDecorationOutsideText:"underline",focusOutlineWidth:a.widthMedium,focusOutlineColor:e.borderBrand,focusOutlineStyle:a.style,hoverColor:Object(I["a"])(e.textLink,10),colorInverse:e.textLight,focusInverseOutlineColor:e.borderLightest,focusInverseIconOutlineColor:e.borderLightest,iconSize:"1.125em",iconPlusTextMargin:i.xxSmall}}j["canvas"]=function(t){return{color:t["ic-link-color"],focusOutlineColor:t["ic-brand-primary"],hoverColor:Object(I["a"])(t["ic-link-color"],10)}}
+j["canvas-high-contrast"]=function(t){return{textDecorationOutsideText:"underline",hoverTextDecorationOutsideText:"none"}}
+var C,w,S,V,M,D
+var P={componentId:"fbyHH",template:function(t){return"\n\n.fbyHH_bGBk,a.fbyHH_bGBk,button.fbyHH_bGBk{box-sizing:border-box;font-family:".concat(t.fontFamily||"inherit",";font-weight:").concat(t.fontWeight||"inherit",";outline-color:transparent;outline-offset:0.25rem;outline-style:").concat(t.focusOutlineStyle||"inherit",";outline-width:").concat(t.focusOutlineWidth||"inherit",";transition:outline-color 0.2s;vertical-align:baseline}\n\n.fbyHH_bGBk:focus,a.fbyHH_bGBk:focus,button.fbyHH_bGBk:focus{outline-color:").concat(t.focusOutlineColor||"inherit","}\n\n.fbyHH_bGBk[aria-disabled],a.fbyHH_bGBk[aria-disabled],button.fbyHH_bGBk[aria-disabled]{cursor:not-allowed;opacity:0.5;pointer-events:none}\n\n.fbyHH_bGBk::-moz-focus-inner,a.fbyHH_bGBk::-moz-focus-inner,button.fbyHH_bGBk::-moz-focus-inner{border:0}\n\na.fbyHH_bGBk,button.fbyHH_bGBk{color:").concat(t.color||"inherit",";cursor:pointer}\n\na.fbyHH_bGBk.fbyHH_vIby,button.fbyHH_bGBk.fbyHH_vIby{-webkit-text-decoration:").concat(t.textDecorationWithinText||"inherit",";text-decoration:").concat(t.textDecorationWithinText||"inherit","}\n\na.fbyHH_bGBk.fbyHH_bSMN,button.fbyHH_bGBk.fbyHH_bSMN{-webkit-text-decoration:").concat(t.textDecorationOutsideText||"inherit",";text-decoration:").concat(t.textDecorationOutsideText||"inherit","}\n\na.fbyHH_bGBk:focus,button.fbyHH_bGBk:focus{color:").concat(t.color||"inherit","}\n\na.fbyHH_bGBk:active,a.fbyHH_bGBk:hover,button.fbyHH_bGBk:active,button.fbyHH_bGBk:hover{color:").concat(t.hoverColor||"inherit","}\n\na.fbyHH_bGBk:active.fbyHH_vIby,a.fbyHH_bGBk:hover.fbyHH_vIby,button.fbyHH_bGBk:active.fbyHH_vIby,button.fbyHH_bGBk:hover.fbyHH_vIby{-webkit-text-decoration:").concat(t.hoverTextDecorationWithinText||"inherit",";text-decoration:").concat(t.hoverTextDecorationWithinText||"inherit","}\n\na.fbyHH_bGBk:active.fbyHH_bSMN,a.fbyHH_bGBk:hover.fbyHH_bSMN,button.fbyHH_bGBk:active.fbyHH_bSMN,button.fbyHH_bGBk:hover.fbyHH_bSMN{-webkit-text-decoration:").concat(t.hoverTextDecorationOutsideText||"inherit",";text-decoration:").concat(t.hoverTextDecorationOutsideText||"inherit","}\n\n.fbyHH_bGBk.fbyHH_dQmH,a.fbyHH_bGBk.fbyHH_dQmH:link,a.fbyHH_bGBk.fbyHH_dQmH:visited,button.fbyHH_bGBk.fbyHH_dQmH{color:").concat(t.colorInverse||"inherit","}\n\n.fbyHH_bGBk.fbyHH_dQmH:focus,a.fbyHH_bGBk.fbyHH_dQmH:link:focus,a.fbyHH_bGBk.fbyHH_dQmH:visited:focus,button.fbyHH_bGBk.fbyHH_dQmH:focus{outline-color:").concat(t.focusInverseOutlineColor||"inherit","}\n\n.fbyHH_bGBk.fbyHH_dQmH:active,.fbyHH_bGBk.fbyHH_dQmH:focus,.fbyHH_bGBk.fbyHH_dQmH:hover,a.fbyHH_bGBk.fbyHH_dQmH:link:active,a.fbyHH_bGBk.fbyHH_dQmH:link:focus,a.fbyHH_bGBk.fbyHH_dQmH:link:hover,a.fbyHH_bGBk.fbyHH_dQmH:visited:active,a.fbyHH_bGBk.fbyHH_dQmH:visited:focus,a.fbyHH_bGBk.fbyHH_dQmH:visited:hover,button.fbyHH_bGBk.fbyHH_dQmH:active,button.fbyHH_bGBk.fbyHH_dQmH:focus,button.fbyHH_bGBk.fbyHH_dQmH:hover{color:").concat(t.colorInverse||"inherit","}\n\nbutton.fbyHH_bGBk{-moz-appearance:none;-ms-user-select:text;-webkit-appearance:none;-webkit-user-select:text;appearance:none;background:none;border:none;cursor:pointer;font-size:1em;margin:0;padding:0;text-align:inherit;user-select:text}\n\n[dir=ltr] button.fbyHH_bGBk,[dir=rtl] button.fbyHH_bGBk{text-align:inherit}\n\n.fbyHH_dnnz{box-sizing:border-box;font-size:").concat(t.iconSize||"inherit","}\n\n.fbyHH_ddMx .fbyHH_dnnz{-webkit-padding-end:").concat(t.iconPlusTextMargin||"inherit",";-webkit-padding-start:0;padding-inline-end:").concat(t.iconPlusTextMargin||"inherit",";padding-inline-start:0}\n\n[dir=ltr] .fbyHH_ddMx .fbyHH_dnnz{padding-left:0;padding-right:").concat(t.iconPlusTextMargin||"inherit","}\n\n[dir=rtl] .fbyHH_ddMx .fbyHH_dnnz{padding-left:").concat(t.iconPlusTextMargin||"inherit",";padding-right:0}\n\n.fbyHH_bkXt .fbyHH_dnnz{-webkit-padding-end:0;-webkit-padding-start:").concat(t.iconPlusTextMargin||"inherit",";padding-inline-end:0;padding-inline-start:").concat(t.iconPlusTextMargin||"inherit","}\n\n[dir=ltr] .fbyHH_bkXt .fbyHH_dnnz{padding-left:").concat(t.iconPlusTextMargin||"inherit",";padding-right:0}\n\n[dir=rtl] .fbyHH_bkXt .fbyHH_dnnz{padding-left:0;padding-right:").concat(t.iconPlusTextMargin||"inherit","}\n\n.fbyHH_FcDy.fbyHH_bkXt,.fbyHH_FcDy.fbyHH_ddMx{align-items:center}")},root:"fbyHH_bGBk",isWithinText:"fbyHH_vIby",isOutsideText:"fbyHH_bSMN","color--link-inverse":"fbyHH_dQmH",icon:"fbyHH_dnnz","iconPlacement--start":"fbyHH_ddMx","iconPlacement--end":"fbyHH_bkXt",truncates:"fbyHH_FcDy"}
+var Q=(C=Object(k["a"])("8.0.0",{linkRef:"elementRef",variant:"color"}),w=Object(G["a"])(),S=Object(p["j"])(j,P),C(V=w(V=S(V=(D=M=function(t){Object(l["a"])(n,t)
+var e=Object(s["a"])(n)
+function n(){var t
+Object(o["a"])(this,n)
+for(var a=arguments.length,i=new Array(a),r=0;r<a;r++)i[r]=arguments[r]
+t=e.call.apply(e,[this].concat(i))
+t.state={hasFocus:false}
+t.handleElementRef=function(e){var n=t.props,a=n.elementRef,i=n.linkRef
+t._link=e
+"function"===typeof i&&i(e)
+"function"===typeof a&&a(e)}
+t.handleClick=function(e){var n=t.props.onClick
+var a=Object(c["a"])(t),i=a.interaction
+if("disabled"===i){e.preventDefault()
+e.stopPropagation()}else"function"===typeof n&&n(e)}
+t.handleFocus=function(e){t.setState({hasFocus:true})
+"function"===typeof t.props.onFocus&&t.props.onFocus(e)}
+t.handleBlur=function(e){t.setState({hasFocus:false})
+"function"===typeof t.props.onBlur&&t.props.onBlur(e)}
+return t}Object(r["a"])(n,[{key:"focus",value:function(){this._link&&this._link.focus()}},{key:"renderIcon",value:function(){this.props.display
+return u.a.createElement("span",{className:P.icon},Object(g["a"])(this.props.renderIcon))}},{key:"render",value:function(){var t
+var e=this.props,n=e.children,o=e.onClick,r=e.color,c=e.href,l=e.margin,s=e.renderIcon,f=e.iconPlacement,b=e.isWithinText,d=e.variant,H=Object(i["a"])(e,["children","onClick","color","href","margin","renderIcon","iconPlacement","isWithinText","variant"])
+var p=(t={},Object(a["a"])(t,P.root,true),Object(a["a"])(t,P["color--link-inverse"],"inverse"===d||"link-inverse"===r),Object(a["a"])(t,P["iconPlacement--".concat(f)],s&&this.hasVisibleChildren),Object(a["a"])(t,P.truncates,this.containsTruncateText),Object(a["a"])(t,P["is".concat(b?"Within":"Outside","Text")],true),t)
+var m=this.interaction
+var _="disabled"===m
+var v=o&&"button"!==this.element?"button":null
+var k="button"===this.element||"input"===this.element?"button":null
+var g="button"!==v||_?null:"0"
+return u.a.createElement(y["a"],Object.assign({},Object(x["b"])(H),{elementRef:this.handleElementRef,as:this.element,display:this.display,margin:l,href:c,onClick:this.handleClick,onFocus:this.handleFocus,onBlur:this.handleBlur,"aria-disabled":_?"true":null,role:v,type:k,tabIndex:g,className:h()(p)}),s&&"start"===f&&this.renderIcon(),n,s&&"end"===f&&this.renderIcon())}},{key:"containsTruncateText",get:function(){var t=false
+u.a.Children.forEach(this.props.children,(function(e){e&&Object(T["a"])(e,["TruncateText"])&&(t=true)}))
+!t||this.props.display
+return t}},{key:"display",get:function(){if(this.props.display)return this.props.display
+var t=this.containsTruncateText
+return this.props.renderIcon?t?"inline-flex":"inline-block":t?"block":"auto"}},{key:"interaction",get:function(){return Object(B["a"])({props:this.props,interactionTypes:["disabled"]})}},{key:"element",get:function(){return Object(O["a"])(n,this.props)}},{key:"focused",get:function(){return Object(_["a"])(this._link)}},{key:"focusable",get:function(){return Object(v["a"])(this._link)}},{key:"hasVisibleChildren",get:function(){return Object(m["a"])(this.props.children)}}])
+n.displayName="Link"
+return n}(f["Component"]),M.propTypes={children:d.a.node.isRequired,href:d.a.string,color:d.a.oneOf(["link","link-inverse"]),elementRef:d.a.func,as:d.a.elementType,interaction:d.a.oneOf(["enabled","disabled"]),margin:p["c"].spacing,renderIcon:d.a.oneOfType([d.a.func,d.a.node]),iconPlacement:d.a.oneOf(["start","end"]),display:d.a.oneOf(["auto","block","inline-block","flex","inline-flex"]),isWithinText:d.a.bool,onClick:d.a.func,onFocus:d.a.func,onBlur:d.a.func,linkRef:d.a.func,variant:d.a.oneOf(["default","inverse"])},M.defaultProps={href:void 0,elementRef:void 0,interaction:void 0,margin:void 0,renderIcon:void 0,display:void 0,color:"link",as:void 0,iconPlacement:"start",isWithinText:true,onClick:void 0,onFocus:void 0,onBlur:void 0},D))||V)||V)||V)},IxAH:function(t,e,n){"use strict"
+n.d(e,"a",(function(){return o}))
+var a=n("Y/W1")
+var i=n.n(a)
+function o(t){return i()(t).reduce((t,e,n)=>{let a=n.split("][")
+let o=a.length-1
+if(/\[/.test(a[0])&&/\]$/.test(a[o])){a[o]=a[o].replace(/\]$/,"")
+a=a.shift().split("[").concat(a)
+o=a.length-1}else o=0
+if(o){let i=0
+let r=t
+while(i<=o){n=""===a[i]?r.length:a[i]
+r=r[n]=i<o?r[n]||(a[i+1]&&isNaN(a[i+1])?{}:[]):e
+i++}}else i.a.isArray(t[n])?t[n].push(e):null!=t[n]?t[n]=[t[n],e]:t[n]=e
+return t},Object.create(null))}},TvTI:function(t,e,n){"use strict"
+var a=n("ouhR")
+var i=n.n(a)
+var o=n("gI0r")
+n("8JEM")
+i.a.fn.fillTemplateData=function(t){if(this.length&&t){t.iterator&&this.find("*").andSelf().each((function(){const e=i()(this)
+i.a.each(["name","id","class"],(n,a)=>{e.attr(a)&&e.attr(a,e.attr(a).replace(/-iterator-/,t.iterator))})}))
+t.id&&this.attr("id",t.id)
+let a=false
+if(t.data)for(var e in t.data){if(t.except&&-1!=i.a.inArray(e,t.except))continue
+t.data[e]&&t.dataValues&&-1!=i.a.inArray(e,t.dataValues)&&this.data(e,t.data[e].toString())
+const r=this.find("."+e)
+var n=t.avoid||""
+r.each((function(){const r=i()(this)
+if(r.length>0&&0===r.closest(n).length){"undefined"!==typeof t.data[e]&&null!==t.data[e]||(t.data[e]="")
+if(t.htmlValues&&-1!=i.a.inArray(e,t.htmlValues)){r.html(i.a.raw(t.data[e].toString()))
+if(r.hasClass("user_content")){a=true
+r.removeClass("enhanced")
+r.data("unenhanced_content_html",t.data[e].toString())}}else if("INPUT"==r[0].tagName.toUpperCase())r.val(t.data[e])
+else try{const n=t.data[e].toString()
+r.html(Object(o["a"])(n))}catch(t){}}}))}t.hrefValues&&t.data&&this.find("a,span[rel]").each((function(){let e,n,a,o=i()(this)
+for(const r in t.hrefValues){if(!t.hrefValues.hasOwnProperty(r))continue
+const c=t.hrefValues[r]
+if(e=o.attr("href")){const n=i.a.replaceTags(e,c,encodeURIComponent(t.data[c]))
+const a=o.text()===o.html()?o.text():null
+if(e!==n){o.attr("href",n)
+a&&o.text(a)}}(n=o.attr("rel"))&&o.attr("rel",i.a.replaceTags(n,c,t.data[c]));(a=o.attr("name"))&&o.attr("name",i.a.replaceTags(a,c,t.data[c]))}}))
+a&&i()(document).triggerHandler("user_content_change")}return this}
+i.a.fn.fillTemplateData.defaults={htmlValues:null,hrefValues:null}
+i.a.fn.getTemplateData=function(t){if(!this.length||!t)return{}
+var e,n={}
+if(t.textValues){const e=this
+t.textValues.forEach(t=>{const o=e.find("."+t.replace(/\[/g,"\\[").replace(/\]/g,"\\]")+":first")
+a=i.a.trim(o.text())
+"&nbsp;"===o.html()&&(a="")
+1===a.length&&160===a.charCodeAt(0)&&(a="")
+n[t]=a})}if(t.dataValues)for(e in t.dataValues){var a=this.data(t.dataValues[e])
+a&&(n[t.dataValues[e]]=a)}if(t.htmlValues)for(e in t.htmlValues){const o=this.find("."+t.htmlValues[e].replace(/\[/g,"\\[").replace(/\]/g,"\\]")+":first")
+a=null
+a=o.hasClass("user_content")&&o.data("unenhanced_content_html")?o.data("unenhanced_content_html"):i.a.trim(o.html())
+n[t.htmlValues[e]]=a}return n}
+i.a.fn.getTemplateValue=function(t,e){const n=i.a.extend({},e,{textValues:[t]})
+return this.getTemplateData(n)[t]}},bbn0:function(t,e,n){"use strict"
+var a=n("HGxv")
+var i=n("Y/W1")
+var o=n.n(i)
+var r=n("gI0r")
+var c=n("ouhR")
+var l=n.n(c)
+var s=n("6NVu")
+const f=Object(a["useScope"])("mediaCommentThumbnail")
+const u={normal:{width:140,height:100},small:{width:70,height:50}}
+function b(t,e,n){if(!INST.kalturaSettings)return console.log("Kaltura has not been enabled for this account")
+let a,i
+const o=l()(t)
+try{const t=document.createElement("a")
+t.href=o.attr("href")
+i=t}catch(t){}if(i&&Object(s["a"])(i.search).no_preview)return
+const c=u[e]||u.normal
+const b=o.data("media_comment_id")||l.a.trim(o.find(".media_comment_id:first").text())||(a=o.attr("id"))&&a.match(/^media_comment_/)&&a.substring(14)||l.a.trim(o.parent().find(".media_comment_id:first").text())
+const d=o.data("author")
+const H=o.data("created_at")
+let h
+h=d&&H?f.t("Play media comment by %{name} from %{createdAt}.",{name:d,createdAt:H}):f.t("Play media comment.")
+if(b){const t="https://"+INST.kalturaSettings.resource_domain
+const a=`${t}/p/${INST.kalturaSettings.partner_id}/thumbnail/entry_id/${b}/width/${c.width}/height/${c.height}/bgcolor/000000/type/2/vid_sec/5`
+const i=l()(`<span\n        style='background-image: url(${Object(r["a"])(a)});'\n        class='media_comment_thumbnail media_comment_thumbnail-${Object(r["a"])(e)}'\n      >\n        <span class='media_comment_thumbnail_play_button'>\n          <span class='screenreader-only'>\n            ${Object(r["a"])(h)}\n          </span>\n        </span>\n      </span>`)
+const s=o.closest("p")
+s.attr("title")||s.attr("title",Object(r["a"])(h))
+let f=o
+if(n){f=o.clone().empty().removeClass("instructure_file_link")
+const t=o.parent(".instructure_file_link_holder")
+t.length?f.appendTo(t):o.after(f)}else o.empty()
+f.data("download",f.attr("href")).prop("href","#").addClass("instructure_inline_media_comment").append(i).css({backgroundImage:"",padding:0})}}l.a.fn.mediaCommentThumbnail=function(t="normal",e){return this.each((function(){o.a.defer(b,this,t,e)}))}}}])
+
+//# sourceMappingURL=59-c-e97210adf0.js.map
