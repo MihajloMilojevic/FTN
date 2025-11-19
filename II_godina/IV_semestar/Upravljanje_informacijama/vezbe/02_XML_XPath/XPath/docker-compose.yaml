@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  existdb:
+    image: existdb/existdb:6.2.0
+    container_name: existdb
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+      - existdb_data:/exist/data
+      - existdb_logs:/exist/logs
+      - existdb_conf:/exist/conf
+    environment:
+      - EXIST_ENV=production
+      - JAVA_OPTS=-Xmx2g -Xms512m
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/exist/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  existdb_data:
+    driver: local
+  existdb_logs:
+    driver: local
+  existdb_conf:
+    driver: local

@@ -1,0 +1,18 @@
+Zbog simulacije "izvrsavanja upita" se u par navrata funkcionalnosi izvrsavaju
+U zasebnim nitima koristeci python biblioteku threading. Od vas se ne zahteva da
+znate kako treba da radite sa ovom bibliotekom. Ako za neki zadatak bude bilo potrebe
+da se kod izvrsava u vise niti, dobicete taj deo koda uradjen.
+
+Objasnjenje threading biblioteke:
+Python skripta "executor" treba da simulira izvrsavanje nekog upita, ali 
+za vreme izvrsavanja upita treba da se paralelno obradjuju ostale poruke
+koje stizu na message queue "validated_queries".
+Flask biblioteka po defaultu radi u single thread rezimu, te nije bilo moguce
+paralelno simulirati izvrsavanje upita (koristeci time.sleep() funkciju) i
+obradjivat ostale zahteva koje salje kafka_dummy skripta. Najjednostavnije
+resenje je bilo izvrsavanje funkcije za simulaciju izvrsavanja upita u zasebnoj niti,
+sto je uradjeno u 46. i 47. liniji executor skripte
+
+Isti threading mehanizam se koristi i u generator.py skripti, do duse iz skroz
+drugog razloga. Ovde zelimo da odlozimo slanje poruka za par sekundi, dok se
+ne pokrene flask aplikacije u 58. liniji.

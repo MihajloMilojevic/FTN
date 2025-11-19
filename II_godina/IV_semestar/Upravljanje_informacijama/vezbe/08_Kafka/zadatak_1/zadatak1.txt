@@ -1,0 +1,11 @@
+Producer upisuje nasumicno generisane transakcije u queue.
+Te transakcije stizu do fraud detection servisa gde simuliramo proceduru
+provere validnosti transakcije. Posto je ovo skupa operacije, ne zelimo da
+proveravamo sve poruke, vec samo one gde je kolicina novca preko 9000.
+
+Napraviti jos jednu komponentu koja ce nadgledati sve transakcije i samo
+odabrane prosledjivati fraud detection-u.
+
+Prilikom izrade zadatka mozete menjati naziv niza u koji producer upisuje poruke,
+i/ili na koji je fraud_detection pretplacen. Takodje mozete kreirati nove nizove
+ako smatrate da ima potrebe.

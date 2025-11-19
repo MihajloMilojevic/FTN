@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="potvrda_o_uradjenom_projektu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="podaci_o_instituciji">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="univerzitet" type="xs:string" />
+							<xs:element name="fakultet" type="xs:string" />
+							<xs:element name="adresa" maxOccurs="2">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="mesto" type="xs:string" />
+										<xs:element name="postanski_broj" type="xs:string" />
+										<xs:element name="ulica" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="podaci_o_studentu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ime" type="xs:string" />
+							<xs:element name="nadimak" minOccurs="0" type="xs:string" />
+							<xs:element name="prezime" type="xs:string" />
+							<xs:element name="broj_indeksa" type="xs:string" />
+							<xs:element name="odsek" type="xs:string" />
+							<xs:element name="smer" type="xs:string" />
+							<xs:element name="usmerenje" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="podaci_o_projektu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="naslov" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="jezik" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ocena" type="xs:string" />
+							<xs:element name="datum_odbrane" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="podaci_o_mentoru">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ime" type="xs:string" />
+							<xs:element name="nadimak" minOccurs="0" type="xs:string" />
+							<xs:element name="prezime" type="xs:string" />
+							<xs:element name="titula" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

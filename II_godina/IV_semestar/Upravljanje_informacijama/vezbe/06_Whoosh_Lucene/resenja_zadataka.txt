@@ -1,0 +1,29 @@
+1. Pronađite sve fajlove koji sadrže reč 'algoritam' u naslovu
+# Rešenje: searcher.search("title:algoritam", "Zadatak 1")
+
+2. Pronađite dokumente koji sadrže 'python' ALI NE sadrže 'java' 
+# Rešenje: searcher.search("python NOT java", "Zadatak 2")
+		
+3. Pronađite sve .py fajlove
+# Rešenje: searcher.search("filename:*.py", "Zadatak 3")
+
+4. Pronađite dokumente koji sadrže tačnu frazu 'data structure'
+# Rešenje: searcher.search('"data structure"', "Zadatak 4")
+		
+5. Pronađite fajlove veće od 2000 bajtova
+# Rešenje: searcher.search("file_size:[2000 TO *]", "Zadatak 5")
+		
+6. Pronađite dokumente koji sadrže 'web' ILI 'internet'
+# Rešenje: searcher.search("web OR internet", "Zadatak 6")
+		
+7. Fuzzy pretraga za reči slične sa 'programiranje' (dozvoli greške)"
+# Rešenje: searcher.search("programiranje~", "Zadatak 7")
+		
+8. Pronađite dokumente koji sadrže reči koje počinju sa 'soft'
+# Rešenje: searcher.search("soft*", "Zadatak 8")
+		
+9. Pronađite manje fajlove (ispod 1000 bajtova) koji sadrže 'test'
+# Rešenje: searcher.search("test AND file_size:[* TO 1000]", "Zadatak 9")
+		
+10. Pojačana pretraga - daj veći značaj reči 'important' u rezultatima
+# Rešenje: searcher.search("important^3 algorithm", "Zadatak 10")

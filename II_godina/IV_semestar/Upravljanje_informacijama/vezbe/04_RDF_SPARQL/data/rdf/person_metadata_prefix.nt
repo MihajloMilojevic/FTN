@@ -1,0 +1,19 @@
+@prefix ex: <http://www.ftn.uns.ac.rs/rdf/examples/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:person/Jane_Smith ex:predicate/childOf ex:person/John_Smith .
+ex:person/Jack_Smith ex:predicate/hobby "skydiving" .
+ex:person/Jane_Smith ex:predicate/hobby "gardening" .
+ex:person/John_Smith ex:predicate/hobby "chess" .
+ex:person/Jack_Smith ex:predicate/livesIn "Glasgow" .
+ex:person/Jane_Smith ex:predicate/livesIn "London" .
+ex:person/John_Smith ex:predicate/livesIn "London" .
+ex:person/John_Smith ex:predicate/parentTo ex:person/Jane_Smith .
+ex:person/Jack_Smith ex:predicate/profession "programmer" .
+ex:person/Jane_Smith ex:predicate/profession "dietician" .
+ex:person/John_Smith ex:predicate/profession "university professor" .
+ex:person/Jack_Smith ex:predicate/date "1983-01-31"^^xsd:date .
+ex:person/Jane_Smith ex:predicate/date "1993-01-31"^^xsd:date .
+ex:person/John_Smith ex:predicate/date "1986-01-31"^^xsd:date .
+ex:person/John_Smith ex:predicate/favouriteTeam "Everton" .
+ex:person/Jane_Smith ex:predicate/favouriteTeam "Chelsea" .

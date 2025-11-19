@@ -1,0 +1,35 @@
+Servis 'Zahtev za letove' periodicno na topic sa nazivom "zahtevi_za_letove" salje poruku
+za zauzimanje jedne od pista.
+Zahtev se salje u vidu JSON-a sa sledecim poljima:
+    {
+        id_leta: string,
+        broj_piste: integer
+    }
+Moze da zauzme let tek kad svi servisi koji nadgledaju pistu odobre zahtev.
+Servis koji salje zahteve za zauzimanje piste ne zna koji sve servisi treba da odobre let,
+i ocekuje da se na topic-u sa nazivom "odgovori_na_zahteve" pojavi poruka u formatu:
+    {
+        id_leta: string,
+        let_odobren: boolean
+    }
+
+Svaki od 3 servisa za nadgledanje piste (kontrolni toranj, odrzavanje piste, i uprava aerodroma)
+primaju zahteve za let i nakon odredjene pauze (izmedju 1 i 5 sekundi) vracaju svoj odgovor u formatu:
+    {
+        id_leta: string,
+        let_odobren: boolean
+    }
+na topic sa nazivom "odgovori_na_zahteve".
+
+Zadatak faust aplikacije je da:
+    1) akumulira odgovore koje salju svaki od 3 servisa za nadgledanje piste, i nakon toga 
+    posalje konacni odgovor servisu za zahtev letova. Zahtev je odobren jedino ako ga sva tri servisa
+    za nadgledanje piste odobre.
+    2) Sve dok traje odobravanje leta za pistu sa odredjenim rednim brojem (koji se moze posmatrati i kao
+    id piste), faust aplikacija treba automatski da odbije svaki zahtev koji trazi pistu sa istim rednim brojem.
+
+NAPOMENA: Servisi koje ste dobili (cetiri .py skripte) koriste 2 kafka topic-a ("zahtevi_za_letove" i
+"odgovori_na_zahteve"). Ako je potrebno za resenje zadatka, mozete kreirati nove topic-e, ili brisati postojece.
+
+Skripta "primljeni_odgovori.py" slusa na topic-u "odgovori_na_zahteve" i samo ispisuje odgovore na std.out. Ako
+vidite potrebu, mozete promeniti i u ovoj skriptni koji topic slusa za odgovore.

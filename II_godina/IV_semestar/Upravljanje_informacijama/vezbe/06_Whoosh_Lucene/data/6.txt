@@ -1,0 +1,11 @@
+Quantum Computing: Principles and Applications
+
+Quantum computing represents a revolutionary approach to information processing that leverages quantum mechanical phenomena like superposition and entanglement. Unlike classical bits that exist in either 0 or 1 states, quantum bits (qubits) can exist in multiple states simultaneously.
+
+This quantum superposition allows quantum computers to perform certain calculations exponentially faster than classical computers. Quantum entanglement creates strong correlations between qubits, enabling complex quantum algorithms to solve problems that are intractable for traditional computing.
+
+Major technology companies including IBM, Google, Microsoft, and Amazon are investing heavily in quantum computing research. Google claimed "quantum supremacy" in 2019 by performing a specific calculation faster than the world's most powerful supercomputers.
+
+Potential applications include cryptography, drug discovery, financial modeling, optimization problems, and machine learning. Quantum algorithms like Shor's algorithm for factoring large numbers could revolutionize cybersecurity.
+
+Current challenges include quantum decoherence, error correction, and the need for extremely low temperatures. Despite these hurdles, quantum computing promises to transform multiple industries and scientific disciplines.

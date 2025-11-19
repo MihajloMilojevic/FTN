@@ -1,0 +1,131 @@
+pozvati pomoću .find(...) metode
+
+0.
+1.{"gender":"male"}
+2.{"gender":"male", "from":"Subotica"}
+3.{"gender":"female", "age": {"$gt": 30}}
+4.{"gender":"female", "age": {"$gt": 30, "$lt":50}}
+5.{"number":{"$regex": "^1.*.1"}} ili {"number":{"$regex": "^1", "$regex": "1$"}}
+6.{"from":{"$in": ["Subotica","Novi Sad"]}}
+-------------------
+pozvati pomoću .aggregate(...) metode
+
+7.[
+    {
+        $match: {
+            "from":"Subotica"
+        }
+    },
+    {
+        $count:"ukupan broj"
+    }
+]
+
+8.[
+    {"$group":{
+        "_id":"$gender",
+        "prosecne_god":{"$avg":"$age"}
+    }}
+]
+
+9.[
+    {"$group":{
+        "_id":"$from",
+        "max_god":{"$max":"$age"}
+    }}
+]
+
+10.[
+    {"$sort":{"age":-1}},
+    {"$group":{
+        "_id":"$from",
+        "max_god":{"$max":"$age"},
+        "naziv":{"$first":"$firstName"}
+    }}
+]
+
+----------------------------------------------
+{"status": "active"}
+{"name": "Alice"}
+{"age": {"$gt": 25}}
+{"skills": "Python"}
+{"skills": {"$all": ["Python", "MongoDB"]}}
+{
+  "$or": [
+    {"age": {"$lt": 30}},
+    {"status": "active"}
+  ]
+}
+---------------------------------------------
+
+[
+  { "$group": { "_id": "$status", "count": { "$sum": 1 } } }
+]
+
+
+[
+  { "$match": {"status": "active"} },
+  { "$group": { "_id": null, "avgSalary": { "$avg": "$salary" } } }
+]
+
+
+[
+  { "$group": {
+    "_id": null,
+    "maxSalary": { "$max": "$salary" },
+    "minSalary": { "$min": "$salary" }
+  } }
+]
+
+[
+  { "$unwind": "$skills" },
+  { "$group": { "_id": "$skills", "count": { "$sum": 1 } } },
+  { "$sort": { "count": -1 } }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+[
+  {
+    $match: {
+      $or: [
+        {age: {$gt: 25}},
+        {status: "active"}
+      ]
+    }
+  },
+  {
+    $project: {
+      name: 1,
+      age: 1,
+      status: 1,
+      skillCount: {$size: "$skills"},
+      salary: 1
+    }
+  },
+  {
+    $sort: {salary: -1}
+  },
+  {
+    "$group": {
+      "_id": "$status",
+      averageAge: {$avg: "$age"},
+      averageSalary: {$avg: "$salary"},
+      maxSalary: {$max: "$salary"},
+      minSalary: {$min: "$salary"},
+      total: {$sum: 1}
+    }
+  },
+  {
+    $sort: {averageSalary: -1}
+  }
+])

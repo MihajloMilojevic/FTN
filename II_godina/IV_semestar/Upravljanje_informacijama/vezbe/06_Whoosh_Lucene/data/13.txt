@@ -1,0 +1,13 @@
+Financial Markets and Economic Principles
+
+Financial markets facilitate the allocation of capital and risk management through various instruments including stocks, bonds, derivatives, and currencies. These markets connect savers and borrowers, enabling economic growth and investment opportunities.
+
+Stock markets allow companies to raise capital by selling ownership shares to investors. Market indices like the S&P 500 and Dow Jones track overall market performance and serve as benchmarks for investment portfolios.
+
+Bond markets provide debt financing for governments and corporations. Interest rates, credit ratings, and inflation expectations significantly influence bond prices and yields. Central banks use monetary policy tools to influence interest rates and economic activity.
+
+Foreign exchange markets facilitate international trade and investment by enabling currency conversions. Exchange rates fluctuate based on economic fundamentals, political stability, and market sentiment.
+
+Behavioral economics studies how psychological factors influence economic decisions. Concepts like loss aversion, anchoring bias, and herding behavior explain market inefficiencies and investor mistakes.
+
+Cryptocurrency markets represent a new asset class with unique characteristics. Digital currencies operate independently of traditional banking systems, offering both opportunities and risks for investors and regulators.

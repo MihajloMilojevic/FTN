@@ -1,0 +1,6 @@
+SELECT * WHERE { 
+	?person <http://www.ftn.uns.ac.rs/rdf/examples/predicate/hobby> ?hobby .
+	?person <http://www.ftn.uns.ac.rs/rdf/examples/predicate/profession> ?profession .
+  	?person <http://www.ftn.uns.ac.rs/rdf/examples/predicate/livesIn> ?location .
+  	FILTER (regex(str(?location), "^.*on$"))
+}

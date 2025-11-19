@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpath_examples>
+
+	<expression>//title</expression>
+	<expression>/bookstore/book/title</expression>
+	<expression>/bookstore/book/title[@lang='en']</expression>
+	<expression>//title[@lang='en']/..</expression>
+	<expression>/bookstore/book[position()=1]/title</expression>
+	<expression>/bookstore/book[last()-1]/author</expression>
+	<expression>//book[@category='WEB']/author</expression>
+	<expression>/bookstore/book[price>35]/title/text()</expression>
+	<expression>//book[@category="WEB"][price>40]</expression>
+</xpath_examples>

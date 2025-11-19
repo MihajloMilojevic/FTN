@@ -1,0 +1,30 @@
+Selektovanje svih uplatnica:
+//uplatnica
+
+Selektovanje svih uplatnica iz Novog Sada:
+//uplatnica[@mesto='Novi Sad']
+
+Selektovanje naziva svih dužnika:
+//duznik/naziv
+
+Selektovanje svih primalaca čiji je račun počinje sa '380':
+//primalac[racun[starts-with(., '380')]]
+
+Selektovanje svih uplatnica koje imaju valutu RSD:
+//uplatnica[uplata/valuta='RSD']
+
+Selektovanje adrese svih dužnika iz Beograda:
+//duznik[adresa/grad='Beograd']/adresa
+
+Selektovanje naziva i adrese svih primalaca za uplatnice iz Subotice:
+//uplatnica[@mesto='Subotica']/primalac/naziv | //uplatnica[@mesto='Subotica']/primalac/adresa
+
+Selektovanje svih uplatnica koje imaju poziv na broj sa prefiksom '123':
+//uplatnica[duznik/poziv_na_broj[starts-with(., '123')] | primalac/poziv_na_broj[starts-with(., '123')]]
+
+Selektovanje iznosa uplate za sve uplatnice u evrima (EUR):
+//uplatnica[uplata/valuta='EUR']/uplata/iznos
+
+Selektovanje svih uplatnica koje imaju broj modela '97' za dužnika:
+//uplatnica[duznik/broj_modela='97']
+

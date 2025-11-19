@@ -1,0 +1,10 @@
+1. Pronađite sve fajlove koji sadrže reč 'algoritam' u naslovu
+2. Pronađite dokumente koji sadrže 'python' ALI NE sadrže 'java' 
+3. Pronađite sve .py fajlove
+4. Pronađite dokumente koji sadrže tačnu frazu 'data structure'
+5. Pronađite fajlove veće od 2000 bajtova
+6. Pronađite dokumente koji sadrže 'web' ILI 'internet'
+7. Fuzzy pretraga za reči slične sa 'programiranje' (dozvoli greške)"
+8. Pronađite dokumente koji sadrže reči koje počinju sa 'soft'
+9. Pronađite manje fajlove (ispod 1000 bajtova) koji sadrže 'test'
+10. Pojačana pretraga - daj veći značaj reči 'important' u rezultatima

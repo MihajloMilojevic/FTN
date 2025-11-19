@@ -1,0 +1,62 @@
+Imate podignute Fuseki baze podataka na dve ip adrese:
+http://161.35.68.117:3030
+http://147.91.177.197:80
+
+1 Ko je sve zavrsio state univerzitet?
+
+SELECT ?person WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/graduatedFrom> <http://www.example.org/rdf/examples/university/StateUniversity> .
+}
+
+2 Ko su autori knjiga "Frankenstein" i "Foundation"?
+
+SELECT ?author ?book WHERE {
+  ?author <http://www.example.org/rdf/examples/predicate/wrote> ?book .
+  FILTER (?book IN ("Frankenstein", "Foundation"))
+}
+
+3 Ko sve radi u "TechInnovations" i koja im je pozicija unutar firme (hasRole)? Ispisite ime zaposlenog cak i ako nema definisano rolu
+
+SELECT ?person ?role WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/worksAt> <http://www.example.org/rdf/examples/company/TechInnovations> .
+  OPTIONAL {
+    ?person <http://www.example.org/rdf/examples/predicate/hasRole> ?role .
+  }
+}
+
+4 Ko je sve zavrsio univerzitet koji se nalazi u New Your-u?
+
+SELECT ?person WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/graduatedFrom> ?university .
+  ?university <http://www.example.org/rdf/examples/predicate/locatedIn> "New York" .
+}
+
+5 Nadjite sve parove (marriedTo) gde oba partnera rade u istoj firmi
+
+SELECT ?person1 ?person2 ?company WHERE {
+  ?person1 <http://www.example.org/rdf/examples/predicate/marriedTo> ?person2 .
+  ?person1 <http://www.example.org/rdf/examples/predicate/worksAt> ?company .
+  ?person2 <http://www.example.org/rdf/examples/predicate/worksAt> ?company .
+}
+
+6 Za svaku kompaniju ispisite broj ljudi koji radi u njoj
+
+SELECT ?company (COUNT(?person) AS ?employeeCount) WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/worksAt> ?company .
+} GROUP BY ?company
+
+7 Za svaku osobu ispisite njeno interesovanje, i broj ljudi koji deli isto interesovanje
+
+SELECT ?interest (COUNT(?otherPerson) AS ?sharedInterestCount) WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/interestIn> ?interest .
+  ?otherPerson <http://www.example.org/rdf/examples/predicate/interestIn> ?interest .
+  FILTER (?person != ?otherPerson)
+} GROUP BY ?interest
+
+8 Napisite sve ljude koji su rodjeni nakon 1970 godine, i sortirajte resenje u od najmladje do najstarije osobe
+
+SELECT ?person ?birthdate WHERE {
+  ?person <http://www.example.org/rdf/examples/predicate/bornOn> ?birthdate .
+  FILTER (?birthdate > "1970-01-01"^^<http://www.w3.org/2001/XMLSchema#date>)
+}
+ORDER BY DESC(?birthdate)

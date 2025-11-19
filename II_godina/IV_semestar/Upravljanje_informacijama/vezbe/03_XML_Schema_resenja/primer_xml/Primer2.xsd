@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="article">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="section" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:choice minOccurs="1" maxOccurs="unbounded">
+							<xs:sequence>
+								<xs:element name="heading" type="xs:string" />
+								<xs:element name="paragraph">
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="link" minOccurs="0">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="ref" />
+															<xs:attribute name="id_ref" />
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="highlight" minOccurs="0" type="xs:string" />
+											<xs:element name="code" minOccurs="0" type="xs:string" />
+											<xs:element name="list" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="item" maxOccurs="unbounded">
+															<xs:complexType mixed="true">
+																<xs:sequence>
+																	<xs:element name="highlight" type="xs:string" />
+																	<xs:element name="code" />
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:element name="list">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="id" use="required" />
+														<xs:attribute name="label" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="title" use="required" />
+						<xs:attribute name="link" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="title" use="required" />
+			<xs:attribute name="link" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

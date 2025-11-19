@@ -1,0 +1,38 @@
+[
+  {
+    "_id": 1,
+    "name": "Alice",
+    "age": 30,
+    "email": "alice@example.com",
+    "status": "active",
+    "skills": ["Python", "MongoDB"],
+    "salary": 70000
+  },
+  {
+    "_id": 2,
+    "name": "Bob",
+    "age": 22,
+    "email": "bob@example.com",
+    "status": "inactive",
+    "skills": ["JavaScript", "React"],
+    "salary": 65000
+  },
+  {
+    "_id": 3,
+    "name": "Charlie",
+    "age": 28,
+    "email": "charlie@example.com",
+    "status": "active",
+    "skills": ["Java", "Spring"],
+    "salary": 80000
+  },
+  {
+    "_id": 4,
+    "name": "Diana",
+    "age": 35,
+    "email": "diana@example.com",
+    "status": "active",
+    "skills": ["C#", ".NET", "Python"],
+    "salary": 72000
+  }
+]

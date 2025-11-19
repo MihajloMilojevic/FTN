@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  fuseki:
+    image: veljkomaxi97/fuseki-jena
+    container_name: fusekiJena
+    volumes:
+      - ./docker-data:/data/fuseki

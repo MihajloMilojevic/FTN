@@ -1,0 +1,9 @@
+//title
+/bookstore/book/title
+/bookstore/book/title[@lang='en']
+//title[@lang='en']/..
+/bookstore/book[position()=1]/title
+/bookstore/book[last()-1]/author
+//book[@category='WEB']/author
+/bookstore/book[price>35]/title/text()
+//book[@category="WEB"][price>40]

@@ -1,0 +1,5 @@
+SELECT ?parent ?child WHERE { 
+  ?parent <http://www.ftn.uns.ac.rs/rdf/examples/predicate/livesIn> "London" .
+  ?child <http://www.ftn.uns.ac.rs/rdf/examples/predicate/livesIn> "London" .
+  ?parent <http://www.ftn.uns.ac.rs/rdf/examples/predicate/parentTo> ?child .
+}

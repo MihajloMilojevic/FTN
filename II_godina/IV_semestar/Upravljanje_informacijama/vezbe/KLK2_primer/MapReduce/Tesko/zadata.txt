@@ -1,0 +1,8 @@
+U data datoteci se nalaze informacije o transakcijama u CSV formatu.
+Prva kolona oznacava naziv osobe koja dobija novac, druga kolona nazi osobe
+koja palca transakciju, i treca kolona je kolicina novca za transakciju.
+
+Zadatak map reduce algoritma je da sve transakcije izmedju dve osobe sumera u jednu stavku,
+za ovaj izmedju ostalog na izlazu treba da se pojavi informacija da osoba A duguje osobi F 200
+dinara. Na izlazu programa ne smeju da se pojave negativni brojevi, i ako je dug izmedju dve osobe
+na kraju sumiranja svih transakcija 0, ta transakcija ne treba da se ispise.

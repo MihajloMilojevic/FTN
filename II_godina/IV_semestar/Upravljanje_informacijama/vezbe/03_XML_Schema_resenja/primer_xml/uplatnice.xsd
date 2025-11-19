@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="uplatnice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="uplatnica" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nalogodavac" type="person">
+              </xs:element>
+              <xs:element name="primalac" type="person">
+              </xs:element>
+              <xs:element name="podaci_o_uplati">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="sifra" type="xs:unsignedByte" />
+                    <xs:element name="valuta">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="datum" type="xs:string" />
+                          <xs:element name="naziv" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="iznos" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="hitno" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="person">
+    <xs:sequence>
+      <xs:element name="ime" type="xs:string" />
+      <xs:element name="adresa">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="grad">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="postanski_broj" type="xs:unsignedShort" use="required" />
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ulica" type="xs:string" />
+            <xs:element name="broj" type="xs:unsignedByte" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="broj_racuna" type="xs:string" />
+      <xs:element name="model" type="xs:unsignedByte" />
+      <xs:element name="poziv_na_broj" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

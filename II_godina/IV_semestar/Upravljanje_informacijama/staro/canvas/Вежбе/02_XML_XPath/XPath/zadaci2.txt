@@ -1,0 +1,15 @@
+Selektovanje svih uplatnica:
+Selektovanje svih uplatnica iz Novog Sada:
+Selektovanje naziva svih dužnika:
+Selektovanje svih primalaca čiji je račun počinje sa '380':
+Selektovanje svih uplatnica koje imaju valutu RSD:
+Selektovanje adrese svih dužnika iz Beograda:
+
+Za narendna 2 upita mozete koristiti operator | koji spaja 2 razlicita upita
+
+Selektovanje naziva i adrese svih primalaca za uplatnice iz Subotice:
+Selektovanje svih uplatnica koje imaju poziv na broj sa prefiksom '123':
+
+Selektovanje iznosa uplate za sve uplatnice u evrima (EUR):
+Selektovanje svih uplatnica koje imaju broj modela '97' za dužnika:
+

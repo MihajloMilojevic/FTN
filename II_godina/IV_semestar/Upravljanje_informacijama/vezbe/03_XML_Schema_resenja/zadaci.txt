@@ -1,0 +1,11 @@
+Kreirati XML Scheme za 3 xml datoteke koje se nalaze u primer_xml folderu:
+
+1) Uplatnice.xml:
+  Obratiti pažnju da u 'uplatnice' elementu može biti više uplatnica
+2) Primer1.xml
+  Fakultet može da ima 2 adrese
+  Student i mentor mogu (ali ne moraju) da imaju nadimak. Ako imaju nadimak, element mora da ze
+  nalazi između elemenata 'ime' i 'prezime'
+3) Primer2.xml
+  Elementi "heading" i "paragraph" uvek moraju biti u paru (ne može da se
+  pojavi paragraph element ako direktno iznad njega nije heading element, i obrnuto)

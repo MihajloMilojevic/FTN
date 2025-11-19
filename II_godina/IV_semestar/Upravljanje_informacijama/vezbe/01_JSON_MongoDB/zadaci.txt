@@ -1,0 +1,211 @@
+Sample 1 datase:
+
+1. Dobaviti sve muškarce
+db.collection.find({
+  gender: "male"
+})
+2. Dobaviti sve muškarce iz Subotice
+db.collection.find({
+  gender: "male",
+  from: "Subotica"
+})
+3. Dobaviti sve žene koje imaju više od 30 godina
+db.collection.find({
+  gender: "female",
+  age: {
+    "$gt": 30
+  }
+})
+4. Dobaviti sve žene koje imaju više od 30 godina i manje od 50 godina
+db.collection.find({
+  gender: "female",
+  age: {
+    "$gt": 30,
+    "$lt": 50
+  }
+})
+5. Dobaviti sve osobe čiji broj počinje sa cifrom 1 i završava se sa cifrom 1
+db.collection.find({
+  "number": {
+    "$regex": "^1.*.1"
+  }
+})
+6. Dobaviti sve osobe koje žive ili u Subotici ili u Novom Sad-u
+db.collection.find({
+  "from": {
+    "$in": [
+      "Novi Sad",
+      "Subotica"
+    ]
+  }
+})
+----------------------------------------------------------------
+7. Koliko ima ljudi koji žive u Subotici
+db.collection.aggregate([
+  {
+    "$match": {
+      "from": "Subotica"
+    }
+  },
+  {
+    "$count": "ukupno"
+  }
+])
+8. Prosečan broj godina u zavisnosti od pola osobe
+db.collection.aggregate([
+  {
+    "$group": {
+      "_id": "$gender",
+      "prosek": {
+        "$avg": "$age"
+      }
+    }
+  }
+])
+9. Za svai grad ispisati koliko godina ima najstarija osoba
+db.collection.aggregate([
+  {
+    "$group": {
+      "_id": "$from",
+      "najstarija": {
+        "$max": "$age"
+      }
+    }
+  }
+])
+10. Za svaki grad ispisati ime i prezime najstarije osobe
+db.collection.aggregate([
+  {
+    "$sort": {
+      "age": -1
+    }
+  },
+  {
+    "$group": {
+      "_id": "$from",
+      "najstarija": {
+        "$first": {
+          "name": "$firstName",
+          "surname": "$lastName",
+          "age": "$age"
+        }
+      }
+    }
+  }
+])
+Developers dataset:
+
+1. Dobaviti sve aktivne programere
+db.collection.find({
+  status: "active"
+})
+
+2. Dobaviti osobu sa imenom "Alice"
+db.collection.find({
+  name: "Alice"
+})
+3. Dobaviti programere starije od 25 godina
+db.collection.find({
+  age: {
+    $gt: 25
+  }
+})
+4. Dobaviti programere koli znaju Python
+db.collection.find({
+  skills: "Python"
+})
+5. Dobaviti programere koji znaju i Python i MongoDB
+db.collection.find({
+  skills: {
+    "$all": [
+      "MongoDB",
+      "Python"
+    ]
+  }
+})
+6. Dobaviti programere koji su ili aktivni, ili mlađi od 30 godina
+db.collection.find({
+  $or: [
+    {
+      age: {
+        $lt: 30
+      }
+    },
+    {
+      status: "active"
+    }
+  ]
+})
+----------------------------------------------------------------
+7. Prosečna plata aktivnih programera
+db.collection.aggregate([
+  {
+    "$match": {
+      status: "active"
+    }
+  },
+  {
+    "$group": {
+      "_id": null,
+      "prosek": {
+        "$avg": "$salary"
+      }
+    }
+  },
+  {
+    "$project": {
+      "prosek": 1,
+      _id: 0
+    }
+  }
+])
+8. Prosečna starost programera u zavisnosti od njihovog statusa (aktivni/neaktivni)
+db.collection.aggregate([
+  {
+    "$group": {
+      "_id": "$status",
+      "prosek": {
+        "$avg": "$age"
+      }
+    }
+  }
+])
+9. Najviša i najniža plata
+db.collection.aggregate([
+  {
+    "$group": {
+      "_id": null,
+      "min": {
+        "$min": "$salary"
+      },
+      "max": {
+        "$max": "$salary"
+      }
+    }
+  }
+])
+10. Koliko ima aktivnih, a koliko neaktivnih programera
+db.collection.aggregate([
+  {
+    "$group": {
+      "_id": "$status",
+      "broj": {
+        "$count": {}
+      }
+    }
+  }
+])
+11. Lista "veština", i koliko programera ima da poseduju tu veštinu
+db.collection.aggregate([
+  {
+    "$unwind": "$skills"
+  },
+  {
+    "$group": {
+      "_id": "$skills",
+      "broj": {
+        "$count": {}
+      }
+    }
+  }
+])

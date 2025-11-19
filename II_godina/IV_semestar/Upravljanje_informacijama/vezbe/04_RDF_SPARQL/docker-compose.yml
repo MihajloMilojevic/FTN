@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  fuseki:
+    image: zacanbot/fuseki:3.17.0
+    container_name: fusekiJena
+    ports:
+      - 443:3030
+    environment:
+      - ADMIN_PASSWORD=admin
+    volumes:
+      - ./docker-data:/data/fuseki

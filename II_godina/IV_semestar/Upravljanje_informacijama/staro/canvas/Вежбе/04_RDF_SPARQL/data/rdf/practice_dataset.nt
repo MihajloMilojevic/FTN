@@ -1,0 +1,27 @@
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/graduatedFrom> <http://www.example.org/rdf/examples/university/StateUniversity> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/worksAt> <http://www.example.org/rdf/examples/company/TechInnovations> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/hasRole> "QA"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Bob_Green> <http://www.example.org/rdf/examples/predicate/worksAt> <http://www.example.org/rdf/examples/company/TechInnovations> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/marriedTo> <http://www.example.org/rdf/examples/person/Bob_Green> .
+<http://www.example.org/rdf/examples/person/Charles_Green> <http://www.example.org/rdf/examples/predicate/retiredFrom> <http://www.example.org/rdf/examples/company/GlobalIndustries> .
+<http://www.example.org/rdf/examples/person/Bob_Green> <http://www.example.org/rdf/examples/predicate/hasDegreeIn> "Computer Science"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/hasDegreeIn> "Biology"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Charles_Green> <http://www.example.org/rdf/examples/predicate/interestIn> "Classical Music"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Bob_Green> <http://www.example.org/rdf/examples/predicate/interestIn> "Classical Music"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/interestIn> "Classical Music"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Bob_Green> <http://www.example.org/rdf/examples/predicate/bornOn> "1975-08-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/bornOn> "1978-04-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/rdf/examples/person/Charles_Green> <http://www.example.org/rdf/examples/predicate/bornOn> "1948-11-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/rdf/examples/person/Emma_Green> <http://www.example.org/rdf/examples/predicate/favouriteAuthor> <http://www.example.org/rdf/examples/author/Mary_Shelley> .
+<http://www.example.org/rdf/examples/person/Bob_Green> <http://www.example.org/rdf/examples/predicate/favouriteAuthor> <http://www.example.org/rdf/examples/author/Isaac_Asimov> .
+<http://www.example.org/rdf/examples/person/Charles_Green> <http://www.example.org/rdf/examples/predicate/favouriteCity> "Paris"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.example.org/rdf/examples/university/StateUniversity> <http://www.example.org/rdf/examples/predicate/locatedIn> "New York"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/company/TechInnovations> <http://www.example.org/rdf/examples/predicate/foundedIn> "1999-03-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.example.org/rdf/examples/company/GlobalIndustries> <http://www.example.org/rdf/examples/predicate/industry> "Manufacturing"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/author/Mary_Shelley> <http://www.example.org/rdf/examples/predicate/wrote> "Frankenstein"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/author/Isaac_Asimov> <http://www.example.org/rdf/examples/predicate/wrote> "Foundation"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/company/TechInnovations> <http://www.example.org/rdf/examples/predicate/ceo> <http://www.example.org/rdf/examples/person/Nancy_Wells> .
+<http://www.example.org/rdf/examples/person/Isaac_Asimov> <http://www.example.org/rdf/examples/predicate/interestIn> "Artificial Intelligence"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Nancy_Wells> <http://www.example.org/rdf/examples/predicate/interestIn> "Artificial Intelligence"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/rdf/examples/person/Nancy_Wells> <http://www.example.org/rdf/examples/predicate/bornOn> "1965-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .

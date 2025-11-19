@@ -1,0 +1,36 @@
+Selektovanje svih uplatnica: 
+//uplatnica
+
+Selektovanje svih uplatnica iz Novog Sada: 
+//uplatnica[@mesto = "Novi Sad"]
+
+Selektovanje naziva svih dužnika: 
+//uplatnica/duznik/naziv
+
+Selektovanje svih primalaca čiji je račun počinje sa '380': 
+//uplatnica/primalac[starts-with(racun, "380")]
+
+Selektovanje svih uplatnica koje imaju valutu RSD: 
+//uplatnica[uplata/valuta = "RSD"] 
+ili 
+//uplatnica/uplata/valuta[text() = "RSD"]/ancestor::uplatnica
+
+Selektovanje adrese svih dužnika iz Beograda: 
+//uplatnica/duznik/adresa[grad = "Beograd"]
+
+Za narendna 2 upita mozete koristiti operator | koji spaja 2 razlicita upita
+
+
+Selektovanje naziva i adrese svih primalaca za uplatnice iz Subotice:
+//uplatnica[@mesto = "Subotica"]/primalac/naziv | //uplatnica[@mesto = "Subotica"]/primalac/adresa
+
+Selektovanje svih uplatnica koje imaju poziv na broj sa prefiksom '123':
+//uplatnica//poziv_na_broj[starts-with(., "123")]/ancestor::uplatnica
+
+
+Selektovanje iznosa uplate za sve uplatnice u evrima (EUR):
+//uplatnica/uplata[valuta="EUR"]/iznos
+
+Selektovanje svih uplatnica koje imaju broj modela '97' za dužnika:
+//uplatnica[duznik/broj_modela = 97]
+

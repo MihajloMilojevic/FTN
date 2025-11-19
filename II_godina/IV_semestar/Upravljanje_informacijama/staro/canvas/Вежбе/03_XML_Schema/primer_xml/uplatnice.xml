@@ -1,0 +1,35 @@
+<uplatnice>
+    <uplatnica>
+        <nalogodavac>
+            <ime>Fakultet Tehnickih Nauka</ime>
+            <adresa>
+                <grad postanski_broj="21000">Novi Sad</grad>
+                <ulica>Trg Dositeja Obradovica</ulica>
+                <broj>6</broj>
+            </adresa>
+            <broj_racuna>840-1710660-30</broj_racuna>
+            <model>97</model>
+            <poziv_na_broj>123-456</poziv_na_broj>
+        </nalogodavac>
+        <primalac>
+            <ime>TELEKOM SRBIJA</ime>
+            <adresa>
+                <grad postanski_broj="21000">Novi Sad</grad>
+                <ulica>Sutjeska</ulica>
+                <broj>2</broj>
+            </adresa>
+            <broj_racuna>380-3569852365147-41</broj_racuna>
+            <model>97</model>
+            <poziv_na_broj>12345-67</poziv_na_broj>
+        </primalac>
+        <podaci_o_uplati>
+            <sifra>153</sifra>
+            <valuta>
+                <datum>15.06.2012</datum>
+                <naziv>RSD</naziv>
+            </valuta>
+            <iznos>8000,00</iznos>
+        </podaci_o_uplati>
+        <hitno/>
+    </uplatnica>
+</uplatnice>

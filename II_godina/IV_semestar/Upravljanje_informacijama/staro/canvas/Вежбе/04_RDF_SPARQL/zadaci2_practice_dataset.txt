@@ -1,0 +1,14 @@
+Imate podignute Fuseki baze podataka na dve ip adrese:
+http://161.35.68.117:3030
+http://147.91.177.197:80
+
+Upiti se odnose na practice_dataset.nt
+
+1 Ko je sve zavrsio state univerzitet?
+2 Ko su autori knjiga "Frankenstein" i "Foundation"?
+3 Ko sve radi u "TechInnovations" i koja im je pozicija unutar firme (hasRole)? Ispisite ime zaposlenog cak i ako nema definisano rolu
+4 Ko je sve zavrsio univerzitet koji se nalazi u New Your-u?
+5 Nadjite sve parove (marriedTo) gde oba partnera rade u istoj firmi
+6 Za svaku kompaniju ispisite broj ljudi koji radi u njoj
+7 Za svaku osobu ispisite njeno interesovanje, i broj ljudi koji deli isto interesovanje
+8 Napisite sve ljude koji su rodjeni nakon 1970 godine, i sortirajte resenje u od najmladje do najstarije osobe

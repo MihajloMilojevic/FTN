@@ -1,0 +1,19 @@
+https://xmlgrid.net/ sajt za vizuelizaciju xml dokumenata (uključujući i xml scheme)
+
+
+
+xs - namespace za sve xml elemente koji su deo XSD gramatike
+xs:schema - root element svaki xml scheme
+xs:element - opisuje element koji ce se naci u xml dokumentu
+    'name' - atribut pomoću kog zadajemo ime elementa
+    'type' - ako je u pitanju 'prost' element, ovde navodimo kog tipa je (xs:string, xs:int)
+    'mixOccurs' i 'maxOccurs' - koliko puta se element mora pojaviti unutar xml dokumenta
+    'fixed' - ograničenje na vrednost elementa
+    'default' - defaultna vrednost elementa
+xs:complexType - Ako je u putanju kompleksan element (element koji kao svoj sadrža ima druge elemente), onda se ti elementi navode ovde
+xs:sequence - enkapsulira set elemenata koji se moraju pojaviti u sadatom redosledu
+xs:choice - enkapsulira set elemenata od kojih se može pojaviti samo jedan
+xs:all - enkapsulira set elemenata koji se mogu pojaviti u bilo kom redosledu
+xs:attribute - definiše atribut elementa
+    ima atribute 'name', 'type', 'fixed' i 'defalut'
+    'use' - sa use="requured" naglašavamo da je atribut obavezan
